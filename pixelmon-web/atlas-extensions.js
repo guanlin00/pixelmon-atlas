@@ -136,14 +136,61 @@ function atlasMergeRegistry(data){
  window.atlasItemCategoryNames=cats;
  return count;
 }
+
+function atlasMergeMinecraft(data){
+ if(!data||!Array.isArray(data.items))return 0;
+ let added=0;
+ const cats=window.atlasItemCategoryNames||[];
+ const bySlug=new Map();
+ for(const i of ITEMS){
+  const key=atlasCatalogSlug(i.en);
+  if(!bySlug.has(key))bySlug.set(key,[]);
+  bySlug.get(key).push(i);
+ }
+ for(const rec of data.items){
+  const slug=rec.name;
+  const match=(bySlug.get(slug)||[]).find(i=>
+   i.minecraftGameId===rec.gameId
+   ||(!i.minecraftGameId&&!i.pixelmonGameId&&!i.id.startsWith('pixelmon:')&&!i.id.startsWith('registry:'))
+  );
+  let dest=match;
+  if(!dest){
+   dest={
+    id:'minecraft:'+slug,zh:rec.zh||rec.en,en:rec.en,
+    kind:rec.category,pixelmonCategory:rec.category,
+    icon:'▣',searchSlug:slug,
+    desc:'Minecraft 原版物品；取得方式及合成配方依原版資料來源，與 Pixelmon 專屬道具分開。',
+    texture:rec.texture||slug
+   };
+   ITEMS.push(dest);added++;
+   if(!bySlug.has(slug))bySlug.set(slug,[]);
+   bySlug.get(slug).push(dest);
+  }
+  if(!cats.includes(rec.category))cats.push(rec.category);
+  dest.pixelmonCategory=rec.category;
+  dest.pixelmonCategoryOrder=cats.indexOf(rec.category);
+  dest.minecraftGameId=rec.gameId;
+  dest.minecraftRecipe=rec.recipe||null;
+  dest.minecraftMethod=rec.method||'';
+  dest.minecraftMethodStatus=rec.methodStatus||'Minecraft 原版取得方法待核實';
+  dest.minecraftMethodSource=rec.source;
+  dest.minecraftDetailSource=rec.source;
+  dest.searchSlug=slug;
+  if(!dest.texture&&!dest.pixelmonSprite)dest.texture=rec.texture||slug;
+  if(rec.zh)dest.zh=rec.zh;
+ }
+ window.atlasItemCategoryNames=cats;
+ return added;
+}
 function drawItemDirectory(){if(!atlasCatalogInstalled&&!itemBusy)loadItems()}
 async function loadItems(){
  if(itemBusy)return;itemBusy=true;
  try{
-  const [namesRes,catalogRes,registryRes]=await Promise.all([
+  const [namesRes,catalogRes,registryRes,minecraftRes]=await Promise.all([
    fetch('item-zh.json',{cache:'force-cache'}),
    fetch('pixelmon-item-categories.json',{cache:'no-store'}),
-   fetch('pixelmon-item-index.json',{cache:'no-store'})
+   fetch('pixelmon-item-index.json',{cache:'no-store'}),
+   fetch('minecraft-item-index.json',{cache:'no-store'})
   ]);
   if(!catalogRes.ok)throw Error('Pixelmon Wiki catalogue HTTP '+catalogRes.status);
   if(namesRes.ok)atlasItemZH=await namesRes.json();
@@ -153,11 +200,14 @@ async function loadItems(){
   let registryCount=0;
   if(registryRes.ok){registryCount=atlasMergeRegistry(await registryRes.json());}
   else console.warn('Item-ID reference unavailable; Wiki categories remain available');
+  let minecraftCount=0;
+  if(minecraftRes.ok)minecraftCount=atlasMergeMinecraft(await minecraftRes.json());
+  else console.warn('Minecraft vanilla item index unavailable');
   if(route()==='items'&&typeof atlasRefreshItemList==='function'){
    if(location.hash==='#items'&&typeof window.render==='function')window.render();
    else atlasRefreshItemList();
   }
-  console.info('Pixelmon Wiki categories:',source.categories.length,'new Wiki cards:',added,'new ID-index cards:',registryCount);
+  console.info('Pixelmon Wiki categories:',source.categories.length,'new Wiki cards:',added,'new ID-index cards:',registryCount,'new Minecraft cards:',minecraftCount);
  }catch(e){
   console.warn('Pixelmon category index not loaded; original items still available.',e);
  }finally{itemBusy=false}
