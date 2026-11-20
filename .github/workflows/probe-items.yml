@@ -37,10 +37,15 @@ jobs:
                     cssUrl=requests.compat.urljoin(url,href)
                     try:
                       cssText=requests.get(cssUrl,timeout=15).text
-                      for pat in ['.pi{','.pi {','i.pi','pixelmon_img','items.png']:
+                      for pat in ['.pi{','.pi {','i.pi','background-image: url(','background-image:url(','item-sprite','items.png','pixelmon-sprite']:
                         at=cssText.find(pat)
-                        if at>=0:print('STYLE_MATCH',cssUrl,pat,cssText[max(0,at-130):at+420].replace('\\n',' '),flush=True)
+                        if at>=0:print('STYLE_MATCH',cssUrl,pat,cssText[max(0,at-150):at+550].replace('\\n',' '),flush=True)
                     except Exception as ex:print('CSS_ERR',cssUrl,str(ex)[:90],flush=True)
+                print('INLINE_STYLES',[(z.get('src'),z.get('href')) for z in soup.find_all(['script','link']) if 'sprite' in str(z).lower()][:10],flush=True)
+                import re
+                for term in ['.pi {','.pi{','sprites.png','sprites.jpg','sprite.png','spritesheet','pixelmon-items']:
+                    at=r.text.find(term)
+                    if at>=0:print('HTML_SPRITE_CONTEXT',term,r.text[max(0,at-170):at+420].replace('\\n',' '),flush=True)
                 for row in ts[0].find_all('tr')[1:4]:
                   print('RAW_ID_ROW',str(row)[:1500].replace('\\n',' '),flush=True)
                 for row in ts[0].find_all('tr'):
