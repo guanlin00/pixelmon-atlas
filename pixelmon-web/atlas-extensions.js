@@ -34,9 +34,68 @@ async function loadForms(id,section){const box=section.querySelector('#atlasForm
 const byKey=new Set();const filtered=[];for(const f of formResults){if(byKey.has(f.key))continue;byKey.add(f.key);if(f.key==='greninja-battle-bond'&&formResults.some(x=>x.key==='greninja-ash'))continue;if(f.key==='greninja-battle-bond'&&formResults.some(x=>x.key==='greninja'&&x.image===f.image))continue;filtered.push(f)}
 const regional=filtered.filter(f=>!f.key.includes('-')||/(alola|galar|hisui|paldea|mega|ash|origin|therian|battle-bond|gmax)/.test(f.key));const skins=(special[id]||[]).map(s=>({...s,image:'',title:s.name}));activeFormRecords=[...regional,...skins];box.replaceChildren();const main=make('div','atlas-form-subheading','一般／地區／戰鬥形態');box.append(main);regional.forEach((f,i)=>box.append(formCard(f,i)));if(skins.length){box.append(make('div','atlas-form-subheading','Pixelmon 特殊外觀'));skins.forEach((s,i)=>box.append(formCard(s,regional.length+i)))}box.insertAdjacentElement('afterend',make('p','atlas-help','注意：PokéAPI 的形態不代表 Pixelmon 9.4.2 全部可取得。沒有核實的取得方式會明確標示。'))}catch(err){if(section.isConnected)box.replaceChildren(make('p','atlas-help','形態資料無法載入，請確認網路後重新開啟。'))}}
 function showForm(index){const f=activeFormRecords[index];if(!f)return;let dialog=document.getElementById('atlasFormModal');if(!dialog){dialog=make('dialog','atlas-form-modal');dialog.id='atlasFormModal';document.body.append(dialog);dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()})}dialog.replaceChildren();const wrap=make('div','atlas-form-modal-body');const header=make('div','atlas-form-modal-head');header.append(make('h2','',f.name));const close=make('button','atlas-modal-close','✕');close.type='button';close.setAttribute('aria-label','關閉');close.addEventListener('click',()=>dialog.close());header.append(close);wrap.append(header,make('p','atlas-help',f.en+' · '+f.kind));if(f.image){const img=make('img','atlas-modal-art');img.src=f.image;img.alt=f.name;wrap.append(img)}wrap.append(make('h3','',f.title||'取得與變身方式'));wrap.append(make('p','atlas-method',f.method||'目前只有形態與外觀資料，尚未從 Pixelmon 9.4.2 的官方生成／進化設定核實具體取得方式。請勿直接套用主系列遊戲條件。'));const tag=make('p','atlas-form-status',f.verified==='wiki'?'資料狀態：Pixelmon 官方 Wiki 參考（9.4.2 仍須核對）':f.verified==='partial'?'資料狀態：部分官方資料已確認，生成規則待核對':'資料狀態：尚待核對 Pixelmon 9.4.2');wrap.append(tag);if(f.url&&f.url.startsWith(WIKI)){const link=make('a','atlas-wiki-link','查看 Pixelmon Wiki 說明 ↗');link.href=f.url;link.target='_blank';link.rel='noopener noreferrer';wrap.append(link)}dialog.append(wrap);if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','')}
-function drawItemDirectory(){const root=document.querySelector('#itemResults');if(!root||document.getElementById('atlasItemDirectory'))return;const section=make('section','atlas-item-directory');section.id='atlasItemDirectory';section.innerHTML='<div class="atlas-section-title"><h3>更多寶可夢系列道具（PokéAPI 索引）</h3><p>圖鑑道具不一定存在於 Pixelmon 9.4.2。此索引不代表模組合成／掉落資料。</p></div><input id="atlasExtraItemQuery" type="search" placeholder="搜尋英文道具名稱，例如 master-ball"><div id="atlasItemStatus" class="atlas-help">正在載入道具索引…</div><div id="atlasExtraItems" class="atlas-extra-items"></div>';root.insertAdjacentElement('afterend',section);if(!itemList&&!itemBusy)loadItems();else updateItems()}
-async function loadItems(){itemBusy=true;try{const r=await fetch('https://pokeapi.co/api/v2/item?limit=2500');if(!r.ok)throw Error(r.status);const d=await r.json();itemList=d.results||[];updateItems()}catch{const s=document.getElementById('atlasItemStatus');if(s)s.textContent='索引載入失敗。'}finally{itemBusy=false}}
-function updateItems(){const target=document.getElementById('atlasExtraItems'),s=document.getElementById('atlasItemStatus');if(!target||!s||!itemList)return;const q=(document.getElementById('atlasExtraItemQuery')?.value||'').trim().toLowerCase();const found=itemList.filter(x=>x.name.includes(q));s.textContent=`共 ${itemList.length} 筆寶可夢遊戲道具，符合 ${found.length} 筆（最多顯示 60 筆）`;target.replaceChildren();for(const item of found.slice(0,60)){const card=make('div','atlas-extra-item');const img=make('img');img.loading='lazy';img.alt=item.name;img.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+item.name+'.png';img.onerror=()=>img.style.display='none';card.append(img,make('span','',item.name.replaceAll('-',' ')));target.append(card)}}
+// Official Traditional Chinese names are pre-generated from PokeAPI item_names.csv (language 4).
+let atlasItemZH=null;
+const atlasVanillaZH={'vines':'藤蔓','twisting-vines':'扭曲藤蔓','weeping-vines':'垂泣藤蔓','wheat':'小麥','string':'線','feather':'羽毛','leather':'皮革','rotten-flesh':'腐肉','cooked-mutton':'烤羊肉','gunpowder':'火藥','bone':'骨頭','bone-meal':'骨粉','redstone':'紅石粉','glowstone-dust':'螢石粉','slime-ball':'史萊姆球','blaze-rod':'烈焰桿','ender-pearl':'終界珍珠','iron-ingot':'鐵錠','gold-ingot':'金錠','copper-ingot':'銅錠','diamond':'鑽石','emerald':'綠寶石','sand':'沙子','flint':'燧石','coal':'煤炭','sweet-berries':'甜莓','apple':'蘋果','carrot':'胡蘿蔔','potato':'馬鈴薯','sugar':'糖','spider-eye':'蜘蛛眼','ink-sac':'墨囊','prismarine-shard':'海磷碎片','prismarine-crystals':'海磷晶體','amethyst-shard':'紫水晶碎片','quartz':'地獄石英','nether-wart':'地獄疙瘩','pumpkin':'南瓜','oak-log':'橡木原木','cobblestone':'鵝卵石','dirt':'泥土','glass':'玻璃','white-wool':'白色羊毛','bamboo':'竹子'};
+const atlasItemSlug=x=>String(x||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const atlasItemName=slug=>(atlasItemZH&&atlasItemZH[slug])||atlasVanillaZH[slug]||'';
+function localizeWikiItems(){
+ if(!atlasItemZH)return false;
+ let changed=false;
+ for(const item of ITEMS){
+  const slug=atlasItemSlug(item.en);
+  const name=atlasItemName(slug);
+  if(name&&(item.zh===item.en||item.zh===slug||!item.zh)){item.zh=name;changed=true}
+  // Sprite for Pokémon-specific drops, while existing Minecraft textures keep priority.
+  if(!item.texture&&!item.pokeSprite&&atlasItemZH[slug])item.pokeSprite='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+slug+'.png';
+ }
+ return changed;
+}
+function drawItemDirectory(){const root=document.querySelector('#itemResults');if(!root||document.getElementById('atlasItemDirectory'))return;const section=make('section','atlas-item-directory');section.id='atlasItemDirectory';section.innerHTML='<div class="atlas-section-title"><h3>更多寶可夢系列道具</h3><p>顯示 PokéAPI 的官方繁體中文名稱；部分道具沒有公開圖示，會顯示替代圖案。這份清單不代表 Pixelmon 全部已實裝。</p></div><input id="atlasExtraItemQuery" type="search" placeholder="搜尋中文或英文道具，例如：大師球、master-ball"><div id="atlasItemStatus" class="atlas-help">正在載入道具索引…</div><div id="atlasExtraItems" class="atlas-extra-items"></div>';root.insertAdjacentElement('afterend',section);if(!itemList&&!itemBusy)loadItems();else updateItems()}
+async function loadItems(){
+ itemBusy=true;
+ try{
+  const [r,names]=await Promise.all([fetch('https://pokeapi.co/api/v2/item?limit=2500'),fetch('item-zh.json',{cache:'force-cache'})]);
+  if(!r.ok)throw Error('Item index HTTP '+r.status);
+  if(!names.ok)throw Error('Translations HTTP '+names.status);
+  const [data,zh]=await Promise.all([r.json(),names.json()]);
+  itemList=data.results||[];atlasItemZH=zh;
+  const changed=localizeWikiItems();
+  // Main card search and Pokémon drop labels are refreshed only after translation loads.
+  if(changed&&route()==='items'){
+   const mainQuery=document.getElementById('itemSearch')?.value||'';
+   const root=document.getElementById('itemResults');
+   if(root&&typeof itemCard==='function')root.innerHTML=ITEMS.filter(i=>(i.zh+' '+i.en).toLowerCase().includes(mainQuery.toLowerCase())).map(itemCard).join('');
+  }
+  updateItems();
+ }catch(e){
+  const status=document.getElementById('atlasItemStatus');
+  if(status)status.textContent='道具索引載入失敗，原有道具仍可查詢。';
+  console.warn('Item directory:',e);
+ }finally{itemBusy=false}
+}
+function updateItems(){
+ const target=document.getElementById('atlasExtraItems'),status=document.getElementById('atlasItemStatus');
+ if(!target||!status||!itemList)return;
+ const q=(document.getElementById('atlasExtraItemQuery')?.value||'').trim().toLowerCase();
+ const found=itemList.filter(item=>{const name=atlasItemName(item.name);return (item.name+' '+name).toLowerCase().includes(q)});
+ status.textContent='已收錄 '+itemList.length+' 種寶可夢系列道具 · 符合 '+found.length+' 種（顯示前 100 種）';
+ target.replaceChildren();
+ for(const item of found.slice(0,100)){
+  const card=make('div','atlas-extra-item');
+  card.title=atlasItemName(item.name)||item.name.replaceAll('-',' ');
+  const frame=make('span','atlas-item-pic');
+  const img=make('img');
+  img.loading='lazy';img.alt=card.title;
+  img.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+encodeURIComponent(item.name)+'.png';
+  const fallback=make('span','atlas-item-fallback','◇');fallback.setAttribute('aria-label','暫無官方圖片');
+  img.onerror=()=>{img.remove();fallback.style.display='grid'};
+  frame.append(img,fallback);
+  const labels=make('span','atlas-item-labels');
+  labels.append(make('strong','',atlasItemName(item.name)||item.name.replaceAll('-',' ')),make('small','',item.name.replaceAll('-',' ')));
+  card.append(frame,labels);target.append(card);
+ }
+}
 document.addEventListener('input',e=>{if(e.target.id==='atlasExtraItemQuery')updateItems()});
 document.addEventListener('click',e=>{const genButton=e.target.closest('[data-generation]');if(genButton){generation=+genButton.dataset.generation;window.render?.();requestAnimationFrame(()=>{const target=document.querySelector('#results .results-head')||document.getElementById('results');if(target){const top=Math.max(0,window.scrollY+target.getBoundingClientRect().top-88);window.scrollTo({top,behavior:'instant'})}else window.scrollTo({top:0,behavior:'instant'})});return}const form=e.target.closest('[data-form-index]');if(form){showForm(+form.dataset.formIndex);return}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('atlasFormModal')?.close?.()}});
@@ -49,7 +108,8 @@ const css=make('style');css.textContent=`
 .atlas-form-section{margin-top:16px}.atlas-section-title h3{margin:0 0 5px;font-size:19px}.atlas-section-title p{margin:0 0 16px;color:var(--muted);font-size:12px}.atlas-form-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:12px}.atlas-form-subheading{grid-column:1/-1;font-weight:800;color:var(--text);font-size:14px;margin:9px 0 0;padding-bottom:8px;border-bottom:1px solid var(--border)}
 .atlas-form-card{font:inherit;text-align:center;color:var(--text);border:1px solid var(--border);border-radius:12px;background:var(--surface2);padding:12px;display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0;transition:transform .15s,border-color .15s;cursor:pointer}.atlas-form-card:hover,.atlas-form-card:focus-visible{border-color:var(--accent);transform:translateY(-2px)}.atlas-form-card strong{font-size:13px}.atlas-form-card small{color:var(--muted);word-break:break-word}.atlas-form-picture{height:138px;width:100%;background:var(--surface);border-radius:10px;display:grid;place-items:center;overflow:hidden}.atlas-form-picture img{width:100%;height:100%;object-fit:contain}.atlas-no-image{color:var(--muted);font-size:12px}.atlas-form-kind{background:color-mix(in srgb,var(--accent) 15%,var(--surface));color:var(--accent);padding:4px 7px;border-radius:6px;font-size:11px}.atlas-form-types{color:var(--text);font-size:12px}.atlas-form-open{margin-top:auto;padding-top:10px;font-size:12px;color:var(--accent);font-weight:700}
 .atlas-form-modal{width:min(560px,calc(100vw - 28px));max-height:min(85vh,760px);border:1px solid var(--border);border-radius:18px;background:var(--surface);color:var(--text);padding:0;box-shadow:0 22px 90px #0009}.atlas-form-modal::backdrop{background:#0009;backdrop-filter:blur(5px)}.atlas-form-modal-body{padding:clamp(18px,3vw,28px);overflow:auto;max-height:85vh}.atlas-form-modal-head{display:flex;align-items:start;justify-content:space-between;gap:12px}.atlas-form-modal-head h2{margin:0;font-size:22px}.atlas-modal-close{background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:9px;padding:7px 11px}.atlas-modal-art{height:160px;max-width:100%;display:block;object-fit:contain;margin:12px auto}.atlas-method{line-height:1.9;font-size:14px;white-space:pre-line}.atlas-form-status{font-size:12px;padding:12px;background:var(--surface2);border-radius:9px;color:var(--muted)}.atlas-wiki-link{color:var(--accent);text-decoration:underline;font-size:13px}
-.atlas-item-directory{margin-top:24px}#atlasExtraItemQuery{width:100%;border:1px solid var(--border);background:var(--surface2);color:var(--text);padding:12px;border-radius:9px}.atlas-extra-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:9px}.atlas-extra-item{display:flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface2);border-radius:9px;padding:8px;word-break:break-word;font-size:12px}.atlas-extra-item img{height:30px;width:30px;object-fit:contain;image-rendering:pixelated}
+.atlas-item-directory{margin-top:24px}#atlasExtraItemQuery{width:100%;border:1px solid var(--border);background:var(--surface2);color:var(--text);padding:12px;border-radius:9px}.atlas-extra-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:9px}.atlas-extra-item{display:flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface2);border-radius:9px;padding:8px;word-break:break-word;font-size:12px}.atlas-item-pic{width:36px;height:36px;display:grid;place-items:center;flex-shrink:0;background:var(--surface);border-radius:8px}.atlas-item-pic img{max-width:30px;max-height:30px;width:30px;height:30px;object-fit:contain;image-rendering:pixelated}.atlas-item-fallback{display:none;width:30px;height:30px;place-items:center;font-size:22px;color:var(--muted)}.atlas-item-labels{display:grid;gap:3px;min-width:0}.atlas-item-labels strong{font-size:12px;color:var(--text);font-weight:700}.atlas-item-labels small{font-size:10px;color:var(--muted);word-break:break-word}
+.atlas-extra-item img{height:30px;width:30px;object-fit:contain;image-rendering:pixelated}
 @media(max-width:1350px){.catalog:has(.atlas-gen){grid-template-columns:250px minmax(0,1fr)}.atlas-gen{grid-column:1/-1;grid-row:1;position:static;max-height:none}.atlas-gen-buttons{grid-template-columns:repeat(5,minmax(0,1fr))}}@media(max-width:900px){.catalog:has(.atlas-gen){grid-template-columns:1fr}.atlas-gen{grid-column:1;grid-row:auto}.atlas-gen-buttons{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:480px){.atlas-gen-buttons,.atlas-form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-form-picture{height:110px}}`;
 document.head.append(css);update();
 })();
