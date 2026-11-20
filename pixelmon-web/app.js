@@ -134,6 +134,25 @@ function atlasRefreshItemList(){const target=document.getElementById('itemResult
 function atlasCategoryButtons(){const choices=['all',...(window.atlasItemCategoryNames||[]),'材料與掉落物'];if(!choices.includes(atlasItemCategory))atlasItemCategory='all';return choices.map(cat=>{const count=cat==='all'?ITEMS.length:ITEMS.filter(i=>i.pixelmonCategory===cat).length;const label=cat==='all'?'全部道具':cat;return '<button type="button" data-item-category="'+esc(cat)+'" class="atlas-category-btn'+(cat===atlasItemCategory?' active':'')+'">'+esc(label)+' <small>'+count+'</small></button>'}).join('')}
 function renderItems(){const result=atlasItemResults();return `<section class="page-heading"><div><div class="eyebrow">Items / Reverse Lookup</div><h1>道具百科</h1><p>收錄 Pixelmon 官方 Wiki 道具種類，依用途分類；相同系列集中顯示，每個道具仍可點擊查看詳細資訊。</p></div></section><input class="search-input" type="search" id="itemSearch" value="${esc(atlasItemQuery)}" placeholder="⌕　搜尋中文或英文：零餘果、藤蔓、Chesto Berry…"><div class="atlas-categories" id="atlasCategories">${atlasCategoryButtons()}</div><p id="itemCount" class="soft">符合 ${result.total} 種道具${result.total>atlasItemVisible?' · 往下滑可自動載入更多':''}</p><section class="item-grid" id="itemResults" style="margin-top:18px">${result.markup}</section>`}
 function itemCard(i){return `<a class="panel item-card" href="#items/${i.id}"><div class="item-icon">${itemPicture(i)}</div><div class="eyebrow">${i.kind}</div><h3>${i.zh}</h3><small class="soft">${i.en}</small><p>${i.desc}</p><span class="inline-link">查看詳情 →</span></a>`}
+
+function atlasIndividualAcquisition(i){
+ const methods=i.pixelmonIndividualMethods||[];
+ if(!methods.length&&!i.pixelmonCreativeCommand)return '';
+ const labels={'Raid Drops':'團體戰獎勵','Pokechests Drops':'寶可夢寶箱獎勵','Pokéchests Drops':'寶可夢寶箱獎勵','Shopkeeper':'NPC 商店','Fishing':'釣魚','Drops':'戰鬥掉落','Obtaining':'取得方式'};
+ const cards=methods.map(m=>{
+   let name=labels[m.text]||m.text;
+   if(m.type==='shop-or-source'){
+      const shop=m.text.toLowerCase().includes('bought from shopkeepers');
+      name=shop?'可向寶可夢商店店員購買':m.text;
+   }
+   const rows=Array.isArray(m.rows)?m.rows:[];
+   const table=rows.length?'<div class="atlas-acquisition-table"><table><tbody>'+rows.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>':'';
+   return '<div class="atlas-acquisition-entry"><strong>'+esc(name)+'</strong>'+table+'</div>';
+ }).join('');
+ return '<section class="atlas-evidence"><h3>個別來源記載的取得途徑</h3>'+cards
+ +(i.pixelmonCreativeCommand?'<div class="atlas-acquisition-entry"><strong>創造模式／管理員指令</strong><code>'+esc(i.pixelmonCreativeCommand)+'</code></div>':'')
+ +'<p class="soft" style="font-size:12px">以上為第三方參考網站個別條目記載，戰利品權重不是直接掉落機率；生存模式、伺服器設定與版本可能不同。</p></section>';
+}
 function renderItemDetail(i){
  const entries=(i.wikiDrops?.length?i.wikiDrops.map(d=>({p:POKEMON.find(x=>x.id===d.pokemonId),chance:d.chance,quantity:d.quantity})):i.id==='pearl'?PEARL_DROPS.map(([id,zh,en,chance,quantity])=>({p:POKEMON.find(x=>x.id===id),chance,quantity})):[]).filter(x=>x.p);
  const info=VERIFIED_ITEM_DATA[i.id];const catalogSource=i.pixelmonDetailSource||i.minecraftDetailSource||i.wikiSource||null;const recipe=i.pixelmonRecipe||i.minecraftRecipe;const acquisition=i.pixelmonMethod||i.minecraftMethod||'';const methodLink=i.pixelmonMethodSource||i.minecraftMethodSource||catalogSource;
@@ -141,6 +160,7 @@ function renderItemDetail(i){
  <div class="item-hero-new"><div class="item-avatar">${itemPicture(i)}</div><div><div class="eyebrow">ITEM DATABASE · ${i.kind}</div><h1>${i.zh}</h1><p>${i.en}</p><div class="source-meta">${info?'已匯入官方 Wiki 資料':(entries.length?'已有掉落物參考紀錄':i.pixelmonGameId?'Pixelmon 道具 ID 參考資料':i.minecraftGameId?'Minecraft 原版物品與配方參考資料':catalogSource?'已收錄於 Pixelmon Wiki，道具取得方式待核實':'資料待核對')} · Pixelmon Atlas</div></div></div>
  <div class="section-top"><h2>取得方式</h2>${info?`<a class="inline-link" href="${info.source}" target="_blank" rel="noopener">查看官方資料 ↗</a>`:''}</div>
  <div class="method-grid"><div class="method-card"><span class="method-icon">✦</span><div><strong>寶可夢掉落</strong><p>${entries.length?`已收錄 ${entries.length} 筆掉落紀錄；包含機率與數量。`:'尚無已核對之 Pixelmon 掉落資料。'}</p></div></div><div class="method-card"><span class="method-icon">⌖</span><div><strong>其他取得方法</strong><p>${acquisition?esc(acquisition):info?'終界（End）可透過 Forage 搜尋取得。':'尚未找到已核實的個別取得方法。'}</p></div></div></div>
+ ${atlasIndividualAcquisition(i)}
  <div class="section-top"><h2>哪些寶可夢會掉落？</h2><span class="soft">${entries.length} 筆 Wiki 參考來源</span></div>
  ${entries.length?`<div class="drop-grid">${entries.map(({p,chance,quantity})=>`<a class="drop-row" href="#pokemon/${p.id}"><span class="drop-img">${sprite(p.id)}</span><span class="drop-info"><strong>${p.zh}</strong><small>${p.en} · #${String(p.id).padStart(4,'0')}</small></span><span class="drop-values"><b>${chance}%</b><small>${quantity} 個</small></span><span class="drop-arrow">↗</span></a>`).join('')}</div>`:'<div class="empty">本項目尚無已驗證的掉落資料。</div>'}
  <div class="section-top"><h2>合成配方與材料</h2></div><div class="recipe-panel">
@@ -181,3 +201,5 @@ document.addEventListener('click',event=>{const btn=event.target.closest('[data-
 {const style=document.createElement('style');style.textContent='.pixelmon-sheet{display:block;flex:none;width:32px;height:32px;background-image:url("https://pixelmon.site/images/pi.png");background-repeat:no-repeat;image-rendering:pixelated}.item-icon .pixelmon-sheet{transform:scale(1.6)}.item-avatar .pixelmon-sheet{transform:scale(2.4)}.drop-img .pixelmon-sheet{transform:scale(.85)}.atlas-recipe-details{display:flex;align-items:start;gap:18px;flex-wrap:wrap}.atlas-recipe-image{max-width:250px;width:auto;max-height:250px;image-rendering:pixelated;border-radius:10px;background:#fff;padding:5px}.atlas-recipe-details strong{display:block;margin-bottom:7px}.atlas-recipe-details p{line-height:1.8}.atlas-game-id{font-size:12px;color:var(--muted);margin-top:18px;overflow-wrap:anywhere}.atlas-method-source{display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-top:15px}.atlas-method-source small{color:var(--muted)}';document.head.append(style)}
 
 {const st=document.createElement('style');st.textContent='.atlas-craft-grid{display:grid;grid-template-columns:repeat(3,82px);gap:4px;max-width:260px}.atlas-craft-grid>span{width:82px;height:82px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.2;font-size:11px;padding:4px;overflow-wrap:anywhere;border:1px solid var(--border);border-radius:5px;background:var(--surface2)}.atlas-categories{flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:thin;max-width:100%;padding-bottom:10px;white-space:nowrap}.atlas-category-btn{flex-shrink:0}';document.head.append(st)}
+
+{const style=document.createElement('style');style.textContent='.atlas-evidence{margin:16px 0;border:1px solid var(--border);background:var(--surface2);padding:18px;border-radius:13px}.atlas-evidence h3{margin:0 0 12px}.atlas-acquisition-entry{margin:9px 0;padding:11px 12px;border-radius:8px;background:var(--surface)}.atlas-acquisition-entry strong{display:block;margin-bottom:5px}.atlas-acquisition-entry code{display:block;overflow-wrap:anywhere;padding:5px 0}.atlas-acquisition-table{overflow-x:auto;max-width:100%}.atlas-acquisition-table table{border-collapse:collapse;font-size:12px;width:100%;min-width:250px}.atlas-acquisition-table td{border:1px solid var(--border);padding:6px 9px}';document.head.append(style)}
