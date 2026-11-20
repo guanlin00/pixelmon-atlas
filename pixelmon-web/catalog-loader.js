@@ -39,9 +39,10 @@ async function importNationalDex(){
  if(loaded.length<1000)throw Error('資料筆數不足：'+loaded.length);
  POKEMON.splice(0,POKEMON.length,...loaded);
  if(typeof addVerifiedSpawns==='function')addVerifiedSpawns();
+ if(typeof loadWikiReference==='function')await loadWikiReference();
  window.nationalDexImported=true;
  setCatalogStatus(`已載入 ${loaded.length} 隻全國圖鑑資料（中文、英文、屬性、分類）`);
  if(typeof render==='function')render();
- }catch(err){console.warn('Pokédex import unavailable',err);setCatalogStatus('圖鑑來源暫時無法載入，僅顯示已內建的部分資料。請保持連線並重新整理。')}
+ }catch(err){if(typeof loadWikiReference==='function')await loadWikiReference();console.warn('Pokédex import unavailable',err);setCatalogStatus('圖鑑來源暫時無法載入，僅顯示已內建的部分資料。請保持連線並重新整理。')}
 }
 importNationalDex();

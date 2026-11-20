@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "source": "https://pixelmonmod.com/wiki/Bulbasaur",
+    "sourceType": "Pixelmon Wiki reference; NOT confirmed in 9.4.2 JAR",
+    "targetVersion": "9.4.2",
+    "updated": "2026-11-20",
+    "speciesCount": 1
+  },
+  "pokemon": {
+    "1": {
+      "spawn": [
+        {"biome":"Birches","mod":"—","time":"Morning","location":"Land","condition":"—","rarity":"Ultra Rare"},
+        {"biome":"Forests","mod":"—","time":"Morning","location":"Land","condition":"—","rarity":"Ultra Rare"},
+        {"biome":"Ultra Forest","mod":"PM","time":"Morning","location":"Land","condition":"—","rarity":"Ultra Rare"},
+        {"biome":"Crag Gardens","mod":"BYG","time":"Morning","location":"Land","condition":"—","rarity":"Ultra Rare"}
+      ],
+      "drops": [
+        {"item":"Vines","chance":"100%","quantity":"1-2"},
+        {"item":"Twisting Vines","chance":"10%","quantity":"1"}
+      ],
+      "source":"https://pixelmonmod.com/wiki/Bulbasaur"
+    }
+  },
+  "items": {
+    "Vines": [{"pokemonId":1,"chance":"100%","quantity":"1-2"}],
+    "Twisting Vines": [{"pokemonId":1,"chance":"10%","quantity":"1"}]
+  }
+}

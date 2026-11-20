@@ -1,40 +1,30 @@
-# Pixelmon Atlas v0.5 — 圖鑑資料與圖片擴充
+# Pixelmon Atlas v0.7 — Wiki reference data importer
 
-## 本版真正完成的部分
+## 網站更新
+將這個資料夾的全部檔案（包含 `wiki-import.js`、`data/`）更新到 GitHub 既有的 `pixelmon-web/` 目錄。網站仍使用原本 Vercel 網址。
 
-- 從 PokéAPI CSV 導入 **全國圖鑑 1–1025 號的主要物種**，包括繁體中文、英文、屬性、是否傳說／幻之，以及進化親緣關係。
-- 圖鑑索引會在網頁開啟後，透過 HTTPS 從 PokéAPI 官方 GitHub 資料庫鏡像載入。首次載入需要網路；資料無法取得時會顯示清楚提示，並保留內建少量資料。
-- 每隻寶可夢使用其全國圖鑑編號讀取外部 PokeAPI 圖片，優先 official-artwork、失敗則嘗試一般 sprite，若都不可用會顯示替代符號。
-- 已收錄的 Minecraft 道具／材料顯示物品圖片，優先使用 Project-crafting 物品圖示服務；圖片失敗則保留替代圖案。
-- 寶可夢列表每次顯示 60 筆，避免一次載入逾千張圖片。
-- 清空原來尚未核對版本的「示範生成條件」，避免錯誤的搜尋結果。
-- 原有經 Pixelmon Wiki 核對的終界珍珠掉落反查資料（47 個來源）保留。
+## 匯入內容
+- 初始內建：妙蛙種子（Bulbasaur）官方 Wiki 的四筆生成資訊、兩筆掉落資訊（出處與圖片另外附於頁面）。
+- `tools/import_pixelmon_wiki.py` 可按圖鑑編號，從 Pixelmon 官方 Wiki 分批匯入 Spawn Biomes 與 Drops 表格。需電腦連網。
+- `data/wiki-reference.json` 是靜態輸出；`wiki-import.js` 會把它合併到網頁內的圖鑑、掉落物查詢、道具百科。沒有匯入的寶可夢仍顯示「待匯入」。
+- **Wiki 資料 ≠ 已驗證的 Pixelmon 9.4.2 模組檔**；沒有生成資料不代表不能生成；稀有度不等於固定生成百分比。
 
-## 尚未完成／重要限制
+## 在 Windows 一次批次匯入（需要 Python）
 
-1. **全國圖鑑 ≠ Pixelmon 版本內可獲得名單**。並非所有全國圖鑑物種都保證存在於你的 Pixelmon 版本。
-2. 沒有使用者的 **Minecraft 版本、Pixelmon 版本** 或可解析的官方該版本模組資料，不能可靠地宣稱已匯入全體野生生成規則、掉落率與合成配方。
-3. 不應因資料尚未匯入而猜測生成條件；生態域及時間篩選無已驗證規則時結果可能是 0。
-4. 圖片依賴第三方公開圖庫，受網路連線、資源覆蓋率、版權與主機穩定性影響；目前不是 Pixelmon 3D 模型圖，亦不保證每種地區形態、特殊形態有獨立圖片。
-5. 目前道具索引集中在原版 Minecraft 材料，**不是完整 Pixelmon 專屬道具庫**，其掉落/合成資料仍需後續匯入。
+```powershell
+py -m pip install requests beautifulsoup4
+cd pixelmon-web
+py tools/import_pixelmon_wiki.py --start 1 --batch-size 60 --global-drops
+```
 
-## 如何發布更新
+每次可變更 `--start` 到 61、121、181 ...。腳本限制存取速度，避免大量並發請求。各物種的特殊形態、重定向和不同結構的 Wiki 表格可能需要人工核對。
 
-將此目錄中的 `index.html`、`app.js`、`catalog-loader.js`、`verified-data.js`、`style.css`、`manifest.webmanifest`、`favicon.svg` 和 README 上傳至既有 GitHub repository 的**同一個 Vercel Root Directory**，提交至部署分支。不要新建 Vercel 專案。確認瀏覽器硬重新整理，檢視 `BETA v0.5` 和圖鑑匯入狀態。
+## 自動更新（GitHub Actions）
 
-## 引用與圖片來源
+將 `.github/workflows/wiki-import.yml` 放到 **GitHub 專案根目錄**的 `.github/workflows/`，不是 `pixelmon-web/.github/workflows/`。
+然後到 GitHub 儲存庫的 **Actions → Refresh Pixelmon Wiki reference data → Run workflow**，選擇 `start` 與 `batch_size`。完成後，Actions 自動提交 `pixelmon-web/data/wiki-reference.json`，Vercel 會部署新版。若儲存庫限制 Actions 寫入，需至 **Settings → Actions → General → Workflow permissions** 啟用 Read and write permissions。
 
-- https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv
-- https://github.com/PokeAPI/sprites
-- https://pixelmonmod.com/wiki/Ender_Pearl
-- https://github.com/Project-crafting/minecraft-auto-updated-textures-api
+注意：將工作流程檔放在根目錄時，網站的 Root Directory 仍保持 `pixelmon-web`。
 
-公開分發時務必自行核對素材使用權、Pokémon 和 Minecraft 品牌相關政策；此站不是官方產品。
-
-
-## v0.6
-- 進化鏈改為圖片／名稱／箭頭／條件的可點擊視覺樹。特定條件未核對時顯示待核對。
-- 由 Pixelmon 官方 Wiki 核對六隻寶可夢的生成條件：Pidgey、Sandshrew、Abra、Trapinch、Vibrava、Flygon。
-- Pixelmon 生態域分類與 Minecraft 精確生態域分開篩選，避免錯誤推斷。
-- 修正全國圖鑑載入覆蓋已核對生成資料的問題。
-- 尚未完成全部 Pixelmon 版本專屬生成資料，請先確認目標 Pixelmon 版本。
+## 圖片
+寶可夢圖片仍透過 PokéAPI 取得，道具先以 Minecraft 材質服務提供可用的圖示，若沒有對應圖片則顯示替代圖示。尚不能宣稱 Pixelmon 所有專屬道具均已取得正確圖片。
