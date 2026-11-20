@@ -37,6 +37,8 @@ jobs:
                     cssUrl=requests.compat.urljoin(url,href)
                     try:
                       cssText=requests.get(cssUrl,timeout=15).text
+                      import re
+                      for m in re.finditer(r'\.pi\s*\{[^}]+\}',cssText):print('ICON_CSS',cssUrl,m.group(0)[:750],flush=True)
                       for pat in ['.pi{','.pi {','i.pi','background-image: url(','background-image:url(','item-sprite','items.png','pixelmon-sprite']:
                         at=cssText.find(pat)
                         if at>=0:print('STYLE_MATCH',cssUrl,pat,cssText[max(0,at-150):at+550].replace('\\n',' '),flush=True)
