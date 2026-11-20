@@ -15,31 +15,17 @@ jobs:
       - run: |
           python - <<'PY'
           import requests
-          urls=[
-            'https://pixelmonmod.com/wiki/Bulbasaur',
-            'https://r.jina.ai/https://pixelmonmod.com/wiki/Bulbasaur',
-            'https://r.jina.ai/http://pixelmonmod.com/wiki/Bulbasaur',
-            'https://pixelmonmod.com/wiki/Generation_I_Spawning',
-            'https://r.jina.ai/https://pixelmonmod.com/wiki/Drops',
-            'https://pixelmonmod.com/api.php?action=parse&page=Bulbasaur&prop=wikitext&format=json',
-            'https://pixelmon.site/bulbasaur/',
-            'https://pixelmon.site/charmander/',
-            'https://sorb-pixelmon.fandom.com/wiki/Bulbasaur',
-          ]
-          for u in urls:
-            try:
-              r=requests.get(u,timeout=20,headers={'User-Agent':'Mozilla/5.0'})
-              print(r.status_code,len(r.content),r.url,r.text[:100].replace('\n',' '),flush=True)
-            except Exception as e:print('ERROR',u,str(e)[:140],flush=True)
           from bs4 import BeautifulSoup
-          text=requests.get('https://pixelmon.site/bulbasaur/',timeout=30).text
-          soup=BeautifulSoup(text,'html.parser')
+          url='https://pixelmon.site/bulbasaur/'
+          r=requests.get(url,timeout=30)
+          print(r.status_code,len(r.content))
+          soup=BeautifulSoup(r.text,'html.parser')
           for h in soup.find_all(['h2','h3']):
-            if h.get_text(' ',strip=True).lower() in ['spawn','drops','spawn variant 1']:
-              print('HEADING',h.name,h.get_text(' ',strip=True),flush=True)
-              n=h
-              for i in range(4):
-                n=n.find_next_sibling()
-                if n is None:break
-                print('SIBLING',n.name,n.get_text(' ',strip=True)[:500],str(n)[:200].replace('\\n',' '),flush=True)
-                    PY
+              if h.get_text(' ',strip=True).lower() in ('spawn','drops','spawn variant 1'):
+                  print('HEADING',h.name,h.get_text(' ',strip=True))
+                  n=h
+                  for i in range(6):
+                      n=n.find_next_sibling()
+                      if n is None: break
+                      print('SIBLING',n.name,n.get_text(' ',strip=True)[:450],str(n)[:160].replace('\n',' '))
+          PY
