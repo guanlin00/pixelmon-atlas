@@ -60,7 +60,7 @@ const EXTRA_MATERIALS=[
 for(const [id,zh,en,texture] of EXTRA_MATERIALS)ITEMS.push({id,zh,en,texture,icon:'▧',kind:'Minecraft 材料',desc:'已收錄物品與圖片；Pixelmon 掉落和配方資料尚待核對。'});
 // Remove fictional placeholder item: it is not an actual verified drop or recipe.
 const furIndex=ITEMS.findIndex(i=>i.id==='fur');if(furIndex>=0)ITEMS.splice(furIndex,1);
-for(const i of ITEMS){i.texture=({pearl:'ender_pearl',seed:'wheat_seeds',feather:'feather',redstone:'redstone',sand:'sand',string:'string',blaze:'blaze_powder'})[i.id]||null;}
+for(const i of ITEMS){i.texture=({pearl:'ender_pearl',seed:'wheat_seeds',feather:'feather',redstone:'redstone',sand:'sand',string:'string',blaze:'blaze_powder'})[i.id]||i.texture||null;}
 // Import a sourced slice of the wiki dataset without inventing per-Pokémon spawn rules.
 for(const [id,zh,en,chance,quantity,typeList] of PEARL_DROPS){
   const existing=POKEMON.find(p=>p.id===id);
@@ -85,7 +85,7 @@ const biName=id=>{const b=BIOMES.find(x=>x[0]===id);return b?`${b[1]}（${b[2]}�
 const typeName=id=>TYPES.find(t=>t[0]===id)?.[1]||id;
 const typeTags=types=>`<div class="type-tags">${types.map(t=>{const info=TYPES.find(x=>x[0]===t);return `<span class="type-tag" style="background:${info?.[2]||'#aaa'}">${typeName(t)}</span>`}).join('')}</div>`;
 const sprite=id=>`<img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png" alt="第 ${id} 號寶可夢圖片" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png'}else{this.onerror=null;this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<span class=placeholder aria-label=圖片暫不可用>◈</span>')}">`;
-const itemPicture=i=>i.texture?`<img loading="lazy" class="item-texture" src="https://Project-crafting.github.io/minecraft-auto-updated-textures-api/items/${i.texture}.png" alt="${esc(i.zh)}圖示" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="item-fallback" style="display:none">${i.icon}</span>`:`<span class="item-fallback">${i.icon}</span>`;
+const itemPicture=i=>{const src=i.texture?'https://Project-crafting.github.io/minecraft-auto-updated-textures-api/items/'+encodeURIComponent(i.texture)+'.png':i.pokeSprite||'';return src?`<img loading="lazy" class="item-texture" src="${esc(src)}" alt="${esc(i.zh)}圖示" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="item-fallback" style="display:none">◇</span>`:`<span class="item-fallback">◇</span>`};
 const timeLabel=id=>{const t=TIMES.find(t=>t.id===id);return t?`${t.zh}（${t.id}）｜${t.range}`:'不限時間（All Times）'};
 function currentRoute(){return (location.hash.slice(1).split('/')[0]||'home').split('?')[0]}
 function toast(message){const box=document.querySelector('#toast');box.textContent=message;box.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>box.classList.remove('show'),2500)}
