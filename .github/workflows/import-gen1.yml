@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - .github/workflows/import-gen1.yml
+      - pixelmon-web/tools/import_gen1_reference.py
 permissions:
   contents: write
 jobs:
