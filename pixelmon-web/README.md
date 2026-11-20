@@ -30,3 +30,11 @@
 - https://github.com/Project-crafting/minecraft-auto-updated-textures-api
 
 公開分發時務必自行核對素材使用權、Pokémon 和 Minecraft 品牌相關政策；此站不是官方產品。
+
+
+## v0.6
+- 進化鏈改為圖片／名稱／箭頭／條件的可點擊視覺樹。特定條件未核對時顯示待核對。
+- 由 Pixelmon 官方 Wiki 核對六隻寶可夢的生成條件：Pidgey、Sandshrew、Abra、Trapinch、Vibrava、Flygon。
+- Pixelmon 生態域分類與 Minecraft 精確生態域分開篩選，避免錯誤推斷。
+- 修正全國圖鑑載入覆蓋已核對生成資料的問題。
+- 尚未完成全部 Pixelmon 版本專屬生成資料，請先確認目標 Pixelmon 版本。

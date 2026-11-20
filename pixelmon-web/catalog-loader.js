@@ -38,6 +38,7 @@ async function importNationalDex(){
  loaded.push(obj)}
  if(loaded.length<1000)throw Error('資料筆數不足：'+loaded.length);
  POKEMON.splice(0,POKEMON.length,...loaded);
+ if(typeof addVerifiedSpawns==='function')addVerifiedSpawns();
  window.nationalDexImported=true;
  setCatalogStatus(`已載入 ${loaded.length} 隻全國圖鑑資料（中文、英文、屬性、分類）`);
  if(typeof render==='function')render();
