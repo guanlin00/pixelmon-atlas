@@ -97,7 +97,7 @@
         {
           "en": "Poké Ball",
           "zh": "精靈球",
-          "slug": "pok-ball"
+          "slug": "poke-ball"
         },
         {
           "en": "Premier Ball",
@@ -313,12 +313,12 @@
         {
           "en": "Poké Ball Disc",
           "zh": "精靈球圓盤",
-          "slug": "pok-ball-disc"
+          "slug": "poke-ball-disc"
         },
         {
           "en": "Poké Ball Lid",
           "zh": "精靈球球蓋",
-          "slug": "pok-ball-lid"
+          "slug": "poke-ball-lid"
         },
         {
           "en": "Premier Ball Disc",
@@ -1857,7 +1857,7 @@
         {
           "en": "King's Rock",
           "zh": "王者之證",
-          "slug": "king-s-rock"
+          "slug": "kings-rock"
         },
         {
           "en": "Lagging Tail",
