@@ -513,7 +513,7 @@
         },
         {
           "en": "Shiny Stone Shard",
-          "zh": null,
+          "zh": "光之石碎片",
           "slug": "shiny-stone-shard"
         },
         {
@@ -741,7 +741,7 @@
         },
         {
           "en": "Running Boots",
-          "zh": null,
+          "zh": "跑步鞋",
           "slug": "running-boots"
         },
         {
@@ -756,27 +756,27 @@
         },
         {
           "en": "Diamond Hammer",
-          "zh": null,
+          "zh": "鑽石錘",
           "slug": "diamond-hammer"
         },
         {
           "en": "Iron Hammer",
-          "zh": null,
+          "zh": "鐵錘",
           "slug": "iron-hammer"
         },
         {
           "en": "Gold Hammer",
-          "zh": null,
+          "zh": "金錘",
           "slug": "gold-hammer"
         },
         {
           "en": "Stone Hammer",
-          "zh": null,
+          "zh": "石錘",
           "slug": "stone-hammer"
         },
         {
           "en": "Wood Hammer",
-          "zh": null,
+          "zh": "木錘",
           "slug": "wood-hammer"
         },
         {
@@ -1462,12 +1462,12 @@
         },
         {
           "en": "Quirky Mint",
-          "zh": null,
+          "zh": "勤奮薄荷",
           "slug": "quirky-mint"
         },
         {
           "en": "Bashful Mint",
-          "zh": null,
+          "zh": "害羞薄荷",
           "slug": "bashful-mint"
         },
         {
@@ -1477,12 +1477,12 @@
         },
         {
           "en": "Docile Mint",
-          "zh": null,
+          "zh": "坦率薄荷",
           "slug": "docile-mint"
         },
         {
           "en": "Hardy Mint",
-          "zh": null,
+          "zh": "勤奮薄荷",
           "slug": "hardy-mint"
         }
       ]
@@ -1856,7 +1856,7 @@
         },
         {
           "en": "King's Rock",
-          "zh": null,
+          "zh": "王者之證",
           "slug": "king-s-rock"
         },
         {
@@ -2453,7 +2453,7 @@
         },
         {
           "en": "Vitamin",
-          "zh": null,
+          "zh": "營養補充劑",
           "slug": "vitamin"
         },
         {
@@ -2468,7 +2468,7 @@
         },
         {
           "en": "Max Mushroom",
-          "zh": null,
+          "zh": "極巨菇菇",
           "slug": "max-mushroom"
         }
       ]
@@ -3518,7 +3518,7 @@
         },
         {
           "en": "Touga Berry",
-          "zh": null,
+          "zh": "Touga 樹果",
           "slug": "touga-berry"
         },
         {
@@ -3543,7 +3543,7 @@
         },
         {
           "en": "Yago Berry",
-          "zh": null,
+          "zh": "Yago 樹果",
           "slug": "yago-berry"
         }
       ]
