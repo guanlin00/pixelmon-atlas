@@ -56,7 +56,7 @@ function localizeWikiItems(){
 // and Pixelmon Wiki drop references. PokeAPI's full item index is not a Pixelmon item list.
 // Source: Pixelmon Wiki's own category index, not the complete PokéAPI catalogue.
 let atlasCatalogInstalled=false;
-const atlasCatalogSlug=txt=>String(txt).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const atlasCatalogSlug=txt=>String(txt).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 function atlasInstallCatalog(data){
  if(atlasCatalogInstalled||!data||!Array.isArray(data.categories))return 0;
  const bySlug=new Map();
@@ -93,24 +93,71 @@ function atlasInstallCatalog(data){
  atlasCatalogInstalled=true;
  return added;
 }
+
+function atlasMergeRegistry(data){
+ if(!data||!Array.isArray(data.items))return 0;
+ const byName=new Map();
+ for(const item of ITEMS){const key=atlasCatalogSlug(item.en);if(!byName.has(key))byName.set(key,[]);byName.get(key).push(item)}
+ const cats=window.atlasItemCategoryNames||[];
+ let count=0;
+ for(const record of data.items){
+  const slug=atlasCatalogSlug(record.name);
+  const candidates=byName.get(slug)||[];
+  const match=candidates.find(it=>!it.pixelmonGameId||it.pixelmonGameId===record.gameId);
+  let dest=match;
+  if(!dest){
+   const group=record.category||'其他 Pixelmon 道具';
+   const prefix='registry:'+record.gameId.replace(/[^a-z0-9]+/gi,'_');
+   dest={
+    id:prefix,zh:(atlasItemZH&&atlasItemZH[slug])||record.name,
+    en:record.name,searchSlug:slug,
+    kind:group,pixelmonCategory:group,pixelmonCategoryOrder:cats.length+5,
+    desc:'Pixelmon 道具 ID 參考清單收錄；請查看詳情中的取得方式與資料來源。',
+    icon:'◇',wikiSource:record.source||record.idListSource
+   };
+   ITEMS.push(dest);count++;
+   if(!byName.has(slug))byName.set(slug,[]);
+   byName.get(slug).push(dest);
+  }
+  const group=dest.pixelmonCategory||record.category||'其他 Pixelmon 道具';
+  if(!cats.includes(group))cats.push(group);
+  dest.pixelmonCategory=group;
+  dest.pixelmonCategoryOrder=cats.indexOf(group);
+  dest.searchSlug=slug;
+  dest.pixelmonGameId=record.gameId;
+  dest.pixelmonSprite=Array.isArray(record.sprite)&&record.sprite.length===2?record.sprite:null;
+  dest.pixelmonMethod=record.method||'';
+  dest.pixelmonMethodSource=record.methodSource||record.source||'';
+  dest.pixelmonMethodStatus=record.methodStatus||'尚未核實';
+  dest.pixelmonRecipe=record.recipe||null;
+  dest.pixelmonDetailSource=record.source||record.idListSource;
+  if(!dest.zh||dest.zh===dest.en)dest.zh=(atlasItemZH&&atlasItemZH[slug])||dest.zh||dest.en;
+ }
+ window.atlasItemCategoryNames=cats;
+ return count;
+}
 function drawItemDirectory(){if(!atlasCatalogInstalled&&!itemBusy)loadItems()}
 async function loadItems(){
  if(itemBusy)return;itemBusy=true;
  try{
-  const [namesRes,catalogRes]=await Promise.all([
+  const [namesRes,catalogRes,registryRes]=await Promise.all([
    fetch('item-zh.json',{cache:'force-cache'}),
-   fetch('pixelmon-item-categories.json',{cache:'no-store'})
+   fetch('pixelmon-item-categories.json',{cache:'no-store'}),
+   fetch('pixelmon-item-index.json',{cache:'no-store'})
   ]);
   if(!catalogRes.ok)throw Error('Pixelmon Wiki catalogue HTTP '+catalogRes.status);
   if(namesRes.ok)atlasItemZH=await namesRes.json();
   localizeWikiItems();
   const source=await catalogRes.json();
   const added=atlasInstallCatalog(source);
+  let registryCount=0;
+  if(registryRes.ok){registryCount=atlasMergeRegistry(await registryRes.json());}
+  else console.warn('Item-ID reference unavailable; Wiki categories remain available');
   if(route()==='items'&&typeof atlasRefreshItemList==='function'){
    if(location.hash==='#items'&&typeof window.render==='function')window.render();
    else atlasRefreshItemList();
   }
-  console.info('Pixelmon Wiki categories:',source.categories.length,'new catalog items:',added);
+  console.info('Pixelmon Wiki categories:',source.categories.length,'new Wiki cards:',added,'new ID-index cards:',registryCount);
  }catch(e){
   console.warn('Pixelmon category index not loaded; original items still available.',e);
  }finally{itemBusy=false}
