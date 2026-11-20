@@ -1,8 +1,8 @@
 'use strict';
 /* Pixelmon Wiki reference data. Wiki entries do not guarantee 9.4.2 server compatibility. */
-const WIKI_ITEM_TEXTURES = {'Vines':'vine','Twisting Vines':'twisting_vines','Ender Pearl':'ender_pearl','Seeds':'wheat_seeds','Sand':'sand'};
+const WIKI_ITEM_TEXTURES = {"Vines":"vine","Twisting Vines":"twisting_vines","Blaze Powder":"blaze_powder","Charcoal":"charcoal","Blaze Rod":"blaze_rod","Magma Cream":"magma_cream","Kelp":"kelp","Scute":"scute","Seagrass":"seagrass","Prismarine Crystals":"prismarine_crystals","String":"string","Cobweb":"cobweb","Cornflower":"cornflower","Chorus Flower":"chorus_flower","Feather":"feather","Raw Chicken":"chicken","Glowstone Dust":"glowstone_dust","Apple":"apple","Cookie":"cookie","Ender Pearl":"ender_pearl","Seeds":"wheat_seeds","Sand":"sand"};
 const WIKI_BIOME_ZH={'Birches':'樺木林類','Forests':'森林類','Ultra Forest':'究極森林','Crag Gardens':'岩壁花園','Arid':'乾燥地帶','Plains':'平原類','Taigas':'針葉林類','Mesas':'惡地類','Land':'陸地'};
-const WIKI_ITEM_ZH={'Vines':'藤蔓','Twisting Vines':'扭曲藤蔓','Ender Pearl':'終界珍珠'};
+const WIKI_ITEM_ZH = {"Vines":"藤蔓","Twisting Vines":"扭曲藤蔓","Grass Gem":"草之寶石","Big Root":"大根莖","Blaze Powder":"烈焰粉","Charcoal":"木炭","Blaze Rod":"烈焰桿","Fire Gem":"火之寶石","Magma Cream":"岩漿球","Fire Stone Shard":"火之石碎片","Kelp":"海帶","Scute":"鱗甲","Seagrass":"海草","Water Gem":"水之寶石","Prismarine Crystals":"海磷晶體","String":"線","Cobweb":"蜘蛛網","Cornflower":"矢車菊","Shed Shell":"美麗空殼","Chorus Flower":"歌萊花","Silver Powder":"銀粉","Feather":"羽毛","Raw Chicken":"生雞肉","Glowstone Dust":"螢石粉","Thunder Stone Shard":"雷之石碎片","Pikanium Z":"皮卡丘Z","Apple":"蘋果","Cookie":"餅乾","Chesto Berry":"零餘果","Snorlium Z":"卡比獸Z","Ender Pearl":"終界珍珠"};
 function wikiItemId(en){if(en==='Ender Pearl')return 'pearl';return 'wiki:'+en.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'')}
 function importWikiReference(data){
  if(!data||typeof data!=='object'||!data.pokemon) return;
