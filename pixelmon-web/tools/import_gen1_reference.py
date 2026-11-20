@@ -109,8 +109,57 @@ def extract_drops(soup):
         results.append({'item':item,'chance':chance,'quantity':qty})
     return results,True
 
+
+# Four special-name species are supplemented from directly inspected OFFICIAL Pixelmon Wiki
+# tables, not inferred from the community mirror's missing entries.
+OFFICIAL_SPECIAL = {
+  29:{
+    'slug':'nidoran-f','url':'https://pixelmonmod.com/wiki/Nidoran%E2%99%80',
+    'spawn':[
+      {'biome':'Savannas','mod':'—','time':'Afternoon, Dusk','location':'Land','condition':'—','rarity':'Common'},
+      {'biome':'Savannas','mod':'—','time':'Day, Dusk','location':'Sweet Scent','condition':'—','rarity':'Common'}],
+    'drops':[{'item':'Raw Porkchop','chance':'100%','quantity':'1-2'},{'item':'Pungent Root','chance':'50%','quantity':'1'},{'item':'Poison Barb','chance':'10%','quantity':'1'}]
+  },
+  32:{
+    'slug':'nidoran-m','url':'https://pixelmonmod.com/wiki/Nidoran%E2%99%82',
+    'spawn':[
+      {'biome':'Savannas','mod':'—','time':'Dawn, Morning','location':'Land','condition':'—','rarity':'Common'},
+      {'biome':'Savannas','mod':'—','time':'Dawn, Day','location':'Sweet Scent','condition':'—','rarity':'Common'}],
+    'drops':[{'item':'Raw Porkchop','chance':'100%','quantity':'1-2'},{'item':'Pungent Root','chance':'50%','quantity':'1'},{'item':'Poison Barb','chance':'10%','quantity':'1'}]
+  },
+  83:{
+    'slug':'farfetchd','url':'https://pixelmonmod.com/wiki/Farfetch%27d',
+    'spawn':[
+      {'biome':'Lakes','mod':'—','time':'Day','location':'Land','condition':'—','rarity':'Rare'},
+      {'biome':'Plains (Category)','mod':'—','time':'Day','location':'Land','condition':'—','rarity':'Rare'},
+      {'biome':'River','mod':'MC','time':'Day','location':'Land','condition':'—','rarity':'Rare'}],
+    'drops':[{'item':'Feather','chance':'100%','quantity':'1-3'},{'item':'Large Leek','chance':'50%','quantity':'1-2'},{'item':'Sharp Beak','chance':'30%','quantity':'1'},{'item':'Muscle Feather','chance':'10%','quantity':'1'}]
+  },
+  122:{
+    'slug':'mr-mime','url':'https://pixelmonmod.com/wiki/Mr._Mime',
+    'spawn':[
+      {'biome':'Birches','mod':'—','time':'Night','location':'Land','condition':'—','rarity':'Ultra Rare'},
+      {'biome':'Forests','mod':'—','time':'Night','location':'Land','condition':'—','rarity':'Ultra Rare'}],
+    'drops':[{'item':'Sugar','chance':'100%','quantity':'1-3'},{'item':'Light Clay','chance':'50%','quantity':'1-2'},{'item':'Enigma Berry','chance':'10%','quantity':'1'}]
+  }
+}
+
 def fetch_one(pair):
     i,slug=pair
+    if i in OFFICIAL_SPECIAL:
+        special=OFFICIAL_SPECIAL[i]
+        record={
+          'source':special['url'],
+          'officialWiki':special['url'],
+          'spawn':special['spawn'],
+          'drops':special['drops'],
+          'verification':{
+            'sourceStatus':'Manually transcribed from official Pixelmon Wiki (source cited)',
+            'form':'default','spawnSectionPresent':True,'dropsSectionPresent':True,
+            'notes':'General form only; other forms are excluded.'
+          }
+        }
+        return i,slug,record,None
     url=urljoin(BASE,slug+'/')
     try:
         html=get(url)
@@ -167,7 +216,7 @@ def main():
               'pokemonId':int(k),'chance':drop['chance'],'quantity':drop['quantity']})
     existing['items']=all_items
     existing.setdefault('metadata',{}).update({
-      'source':BASE,'sourceType':'Third-party Pixelmon reference mirror, not official Pixelmon Wiki',
+      'source':BASE,'sourceType':'147 third-party Pixelmon mirror entries + 4 directly checked official Pixelmon Wiki entries',
       'importedGenerations':[1],
       'gen1Count':151,
       'gen1WithSpawns':sum(bool(rec['spawn']) for i,slug,rec,err in results),
@@ -175,7 +224,7 @@ def main():
       'speciesCount':len(existing['pokemon']),
       'itemCount':len(all_items),
       'updated':datetime.date.today().isoformat(),
-      'notes':'All Gen I 151 entries checked for page ID and drop table; data from pixelmon.site secondary reference. No version-match claim. Entries without Spawn section are marked accordingly.'
+      'notes':'147 Gen I entries checked for mirror page ID and drop table; 4 special-name species entered from official Wiki tables. Mirror is not official Wiki. No version-match claim. Entries without Spawn section are marked accordingly.'
     })
     audit=[]
     for i,slug,rec,err in results:
