@@ -6,14 +6,15 @@
     "updated": "2026-11-20",
     "speciesCount": 151,
     "batch": "manual-gen1-expanded-002",
-    "notes": "147 Gen I entries checked for mirror page ID and drop table; 4 special-name species entered from official Wiki tables. Mirror is not official Wiki. No version-match claim. Entries without Spawn section are marked accordingly.",
+    "notes": "147 Gen I entries checked for mirror page ID and drop table; 4 special-name species entered from official Wiki tables. Mirror is not official Wiki. No version-match claim. Entries without Spawn section are marked accordingly. Also includes six directly cited official-Wiki alternative acquisition methods.",
     "itemCount": 192,
     "importedGenerations": [
       1
     ],
     "gen1Count": 151,
     "gen1WithSpawns": 145,
-    "gen1WithDrops": 151
+    "gen1WithDrops": 151,
+    "gen1WithOtherObtaining": 6
   },
   "pokemon": {
     "1": {
@@ -936,232 +937,6 @@
         "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
       }
     },
-    "17": {
-      "source": "https://pixelmon.site/pidgeotto/",
-      "officialWiki": "https://pixelmonmod.com/wiki/Pidgeotto",
-      "spawn": [
-        {
-          "biome": "Taiga",
-          "mod": "—",
-          "time": "Day",
-          "location": "Air, Headbutt",
-          "condition": "等級：16-36",
-          "rarity": "權重 90"
-        },
-        {
-          "biome": "Sunflower Plains",
-          "mod": "—",
-          "time": "Day",
-          "location": "Air, Headbutt",
-          "condition": "等級：16-36",
-          "rarity": "權重 90"
-        },
-        {
-          "biome": "Plains",
-          "mod": "—",
-          "time": "Day",
-          "location": "Air, Headbutt",
-          "condition": "等級：16-36",
-          "rarity": "權重 90"
-        },
-        {
-          "biome": "Old Growth Spruce Taiga",
-          "mod": "—",
-          "time": "Day",
-          "location": "Air, Headbutt",
-          "condition": "等級：16-36",
-          "rarity": "權重 90"
-        },
-        {
-          "biome": "Old Growth Pine Taiga",
-          "mod": "—",
-          "time": "Day",
-          "location": "Air, Headbutt",
-          "condition": "等級：16-36",
-          "rarity": "權重 90"
-        },
-        {
-          "biome": "Meadow",
-          "mod": "—",
-          "time": "Day",
-          "location": "Air, Headbutt",
-          "condition": "等級：16-36",
-          "rarity": "權重 90"
-        },
-        {
-          "biome": "Forest",
-          "mod": "—",
-          "time": "Day",
-          "location": "Air, Headbutt",
-          "condition": "等級：16-36",
-          "rarity": "權重 90"
-        },
-        {
-          "biome": "Flower Forest",
-          "mod": "—",
-          "time": "Day",
-          "location": "Air, Headbutt",
-          "condition": "等級：16-36",
-          "rarity": "權重 90"
-        }
-      ],
-      "drops": [
-        {
-          "item": "Feather",
-          "chance": "100%",
-          "quantity": "1-2"
-        },
-        {
-          "item": "Chicken",
-          "chance": "50%",
-          "quantity": "1-2"
-        }
-      ],
-      "verification": {
-        "sourceStatus": "Imported from third-party pixelmon.site mirror; NOT independently verified against official Pixelmon Wiki",
-        "form": "default",
-        "spawnSectionPresent": true,
-        "dropsSectionPresent": true,
-        "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
-      }
-    },
-    "25": {
-      "source": "https://pixelmon.site/pikachu/",
-      "officialWiki": "https://pixelmonmod.com/wiki/Pikachu",
-      "spawn": [
-        {
-          "biome": "Old Growth Birch Forest",
-          "mod": "—",
-          "time": "Day",
-          "location": "Land",
-          "condition": "等級：5-35",
-          "rarity": "權重 40"
-        },
-        {
-          "biome": "Grove",
-          "mod": "—",
-          "time": "Day",
-          "location": "Land",
-          "condition": "等級：5-35",
-          "rarity": "權重 40"
-        },
-        {
-          "biome": "Forest",
-          "mod": "—",
-          "time": "Day",
-          "location": "Land",
-          "condition": "等級：5-35",
-          "rarity": "權重 40"
-        },
-        {
-          "biome": "Flower Forest",
-          "mod": "—",
-          "time": "Day",
-          "location": "Land",
-          "condition": "等級：5-35",
-          "rarity": "權重 40"
-        },
-        {
-          "biome": "Dark Forest",
-          "mod": "—",
-          "time": "Day",
-          "location": "Land",
-          "condition": "等級：5-35",
-          "rarity": "權重 40"
-        },
-        {
-          "biome": "Birch Forest",
-          "mod": "—",
-          "time": "Day",
-          "location": "Land",
-          "condition": "等級：5-35",
-          "rarity": "權重 40"
-        },
-        {
-          "biome": "Ultra Forest",
-          "mod": "—",
-          "time": "Day",
-          "location": "Land",
-          "condition": "等級：5-35",
-          "rarity": "權重 100"
-        }
-      ],
-      "drops": [
-        {
-          "item": "Glowstone Dust",
-          "chance": "100%",
-          "quantity": "1-2"
-        },
-        {
-          "item": "Thunder Stone Shard",
-          "chance": "50%",
-          "quantity": "1"
-        },
-        {
-          "item": "Pikanium Z",
-          "chance": "10%",
-          "quantity": "1"
-        }
-      ],
-      "verification": {
-        "sourceStatus": "Imported from third-party pixelmon.site mirror; NOT independently verified against official Pixelmon Wiki",
-        "form": "default",
-        "spawnSectionPresent": true,
-        "dropsSectionPresent": true,
-        "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
-      }
-    },
-    "143": {
-      "source": "https://pixelmon.site/snorlax/",
-      "officialWiki": "https://pixelmonmod.com/wiki/Snorlax",
-      "spawn": [
-        {
-          "biome": "Windswept Forest",
-          "mod": "—",
-          "time": "Afternoon, Dusk",
-          "location": "Land",
-          "condition": "等級：40-50",
-          "rarity": "權重 6"
-        },
-        {
-          "biome": "Grove",
-          "mod": "—",
-          "time": "Afternoon, Dusk",
-          "location": "Land",
-          "condition": "等級：40-50",
-          "rarity": "權重 6"
-        }
-      ],
-      "drops": [
-        {
-          "item": "Apple",
-          "chance": "100%",
-          "quantity": "1-3"
-        },
-        {
-          "item": "Cookie",
-          "chance": "50%",
-          "quantity": "1-2"
-        },
-        {
-          "item": "Chesto Berry",
-          "chance": "30%",
-          "quantity": "1-2"
-        },
-        {
-          "item": "Snorlium Z",
-          "chance": "10%",
-          "quantity": "1"
-        }
-      ],
-      "verification": {
-        "sourceStatus": "Imported from third-party pixelmon.site mirror; NOT independently verified against official Pixelmon Wiki",
-        "form": "default",
-        "spawnSectionPresent": true,
-        "dropsSectionPresent": true,
-        "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
-      }
-    },
     "13": {
       "source": "https://pixelmon.site/weedle/",
       "officialWiki": "https://pixelmonmod.com/wiki/Weedle",
@@ -1635,6 +1410,95 @@
           "item": "Chicken",
           "chance": "50%",
           "quantity": "1"
+        }
+      ],
+      "verification": {
+        "sourceStatus": "Imported from third-party pixelmon.site mirror; NOT independently verified against official Pixelmon Wiki",
+        "form": "default",
+        "spawnSectionPresent": true,
+        "dropsSectionPresent": true,
+        "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
+      }
+    },
+    "17": {
+      "source": "https://pixelmon.site/pidgeotto/",
+      "officialWiki": "https://pixelmonmod.com/wiki/Pidgeotto",
+      "spawn": [
+        {
+          "biome": "Taiga",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air, Headbutt",
+          "condition": "等級：16-36",
+          "rarity": "權重 90"
+        },
+        {
+          "biome": "Sunflower Plains",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air, Headbutt",
+          "condition": "等級：16-36",
+          "rarity": "權重 90"
+        },
+        {
+          "biome": "Plains",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air, Headbutt",
+          "condition": "等級：16-36",
+          "rarity": "權重 90"
+        },
+        {
+          "biome": "Old Growth Spruce Taiga",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air, Headbutt",
+          "condition": "等級：16-36",
+          "rarity": "權重 90"
+        },
+        {
+          "biome": "Old Growth Pine Taiga",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air, Headbutt",
+          "condition": "等級：16-36",
+          "rarity": "權重 90"
+        },
+        {
+          "biome": "Meadow",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air, Headbutt",
+          "condition": "等級：16-36",
+          "rarity": "權重 90"
+        },
+        {
+          "biome": "Forest",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air, Headbutt",
+          "condition": "等級：16-36",
+          "rarity": "權重 90"
+        },
+        {
+          "biome": "Flower Forest",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air, Headbutt",
+          "condition": "等級：16-36",
+          "rarity": "權重 90"
+        }
+      ],
+      "drops": [
+        {
+          "item": "Feather",
+          "chance": "100%",
+          "quantity": "1-2"
+        },
+        {
+          "item": "Chicken",
+          "chance": "50%",
+          "quantity": "1-2"
         }
       ],
       "verification": {
@@ -2336,6 +2200,92 @@
         },
         {
           "item": "Shed Shell",
+          "chance": "10%",
+          "quantity": "1"
+        }
+      ],
+      "verification": {
+        "sourceStatus": "Imported from third-party pixelmon.site mirror; NOT independently verified against official Pixelmon Wiki",
+        "form": "default",
+        "spawnSectionPresent": true,
+        "dropsSectionPresent": true,
+        "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
+      }
+    },
+    "25": {
+      "source": "https://pixelmon.site/pikachu/",
+      "officialWiki": "https://pixelmonmod.com/wiki/Pikachu",
+      "spawn": [
+        {
+          "biome": "Old Growth Birch Forest",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "等級：5-35",
+          "rarity": "權重 40"
+        },
+        {
+          "biome": "Grove",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "等級：5-35",
+          "rarity": "權重 40"
+        },
+        {
+          "biome": "Forest",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "等級：5-35",
+          "rarity": "權重 40"
+        },
+        {
+          "biome": "Flower Forest",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "等級：5-35",
+          "rarity": "權重 40"
+        },
+        {
+          "biome": "Dark Forest",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "等級：5-35",
+          "rarity": "權重 40"
+        },
+        {
+          "biome": "Birch Forest",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "等級：5-35",
+          "rarity": "權重 40"
+        },
+        {
+          "biome": "Ultra Forest",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "等級：5-35",
+          "rarity": "權重 100"
+        }
+      ],
+      "drops": [
+        {
+          "item": "Glowstone Dust",
+          "chance": "100%",
+          "quantity": "1-2"
+        },
+        {
+          "item": "Thunder Stone Shard",
+          "chance": "50%",
+          "quantity": "1"
+        },
+        {
+          "item": "Pikanium Z",
           "chance": "10%",
           "quantity": "1"
         }
@@ -10511,6 +10461,11 @@
         "spawnSectionPresent": false,
         "dropsSectionPresent": true,
         "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
+      },
+      "obtaining": {
+        "method": "百變怪的普通形態不依固定野外生成表直接尋找。官方 Wiki 記載：捕捉指定野生寶可夢時，預設有 0.1%（1/1000）的機會轉變為百變怪；超夢複製失敗也可能產生百變怪。",
+        "source": "https://pixelmonmod.com/wiki/Ditto",
+        "sourceStatus": "Pixelmon 官方 Wiki 個別條目"
       }
     },
     "133": {
@@ -10779,6 +10734,11 @@
         "spawnSectionPresent": false,
         "dropsSectionPresent": true,
         "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
+      },
+      "obtaining": {
+        "method": "普通多邊獸不會自然野生生成。使用多邊獸的零件合成多邊獸道具；相關零件可由製作 PC、治療機及交換機時取得。",
+        "source": "https://pixelmonmod.com/wiki/Porygon",
+        "sourceStatus": "Pixelmon 官方 Wiki 個別條目"
       }
     },
     "138": {
@@ -10981,6 +10941,57 @@
         "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
       }
     },
+    "143": {
+      "source": "https://pixelmon.site/snorlax/",
+      "officialWiki": "https://pixelmonmod.com/wiki/Snorlax",
+      "spawn": [
+        {
+          "biome": "Windswept Forest",
+          "mod": "—",
+          "time": "Afternoon, Dusk",
+          "location": "Land",
+          "condition": "等級：40-50",
+          "rarity": "權重 6"
+        },
+        {
+          "biome": "Grove",
+          "mod": "—",
+          "time": "Afternoon, Dusk",
+          "location": "Land",
+          "condition": "等級：40-50",
+          "rarity": "權重 6"
+        }
+      ],
+      "drops": [
+        {
+          "item": "Apple",
+          "chance": "100%",
+          "quantity": "1-3"
+        },
+        {
+          "item": "Cookie",
+          "chance": "50%",
+          "quantity": "1-2"
+        },
+        {
+          "item": "Chesto Berry",
+          "chance": "30%",
+          "quantity": "1-2"
+        },
+        {
+          "item": "Snorlium Z",
+          "chance": "10%",
+          "quantity": "1"
+        }
+      ],
+      "verification": {
+        "sourceStatus": "Imported from third-party pixelmon.site mirror; NOT independently verified against official Pixelmon Wiki",
+        "form": "default",
+        "spawnSectionPresent": true,
+        "dropsSectionPresent": true,
+        "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
+      }
+    },
     "144": {
       "source": "https://pixelmon.site/articuno/",
       "officialWiki": "https://pixelmonmod.com/wiki/Articuno",
@@ -11008,6 +11019,11 @@
         "spawnSectionPresent": false,
         "dropsSectionPresent": true,
         "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
+      },
+      "obtaining": {
+        "method": "急凍鳥透過冰凍祭壇（Frozen Shrine）召喚：在寒冷類生態域找到祭壇，放入充能完成的冰凍靈魂寶珠（Orb of Frozen Souls）。",
+        "source": "https://pixelmonmod.com/wiki/Articuno",
+        "sourceStatus": "Pixelmon 官方 Wiki 個別條目"
       }
     },
     "145": {
@@ -11037,6 +11053,11 @@
         "spawnSectionPresent": false,
         "dropsSectionPresent": true,
         "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
+      },
+      "obtaining": {
+        "method": "閃電鳥透過雷電祭壇（Static Shrine）召喚：在莽原類生態域找到祭壇，放入充能完成的雷電靈魂寶珠（Orb of Static Souls）。",
+        "source": "https://pixelmonmod.com/wiki/Zapdos",
+        "sourceStatus": "Pixelmon 官方 Wiki 個別條目"
       }
     },
     "146": {
@@ -11066,6 +11087,11 @@
         "spawnSectionPresent": false,
         "dropsSectionPresent": true,
         "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
+      },
+      "obtaining": {
+        "method": "火焰鳥透過火焰祭壇（Fiery Shrine）召喚：在惡地類生態域找到祭壇，放入充能完成的火焰靈魂寶珠（Orb of Fiery Souls）。",
+        "source": "https://pixelmonmod.com/wiki/Moltres",
+        "sourceStatus": "Pixelmon 官方 Wiki 個別條目"
       }
     },
     "147": {
@@ -11257,6 +11283,11 @@
         "spawnSectionPresent": false,
         "dropsSectionPresent": true,
         "notes": "Numeric rarity represents the source spawn weight, not a percent. Empty spawn means no listed Spawn section in source."
+      },
+      "obtaining": {
+        "method": "超夢透過複製機（Cloning Machine）複製夢幻取得。每隻夢幻最多可進行三次複製嘗試，失敗時可能生成百變怪。",
+        "source": "https://pixelmonmod.com/wiki/Mewtwo",
+        "sourceStatus": "Pixelmon 官方 Wiki 個別條目"
       }
     },
     "151": {
