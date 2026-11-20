@@ -58,6 +58,7 @@
  function translatePhrase(raw,dict,{compound=false}={}){
   const t=normalized(raw);if(blank.has(t))return '無特殊限制';
   if(dict[t])return `${dict[t]}（${t}）`;
+  if(/^權重\s*\d+(?:\.\d+)?$/.test(t))return `${t}（非百分比）`;
   if(compound && /[,;/]/.test(t)) return t.split(/\s*[,;/]\s*/).filter(Boolean).map(x=>translatePhrase(x,dict)).join('、');
   if(compound && /\s+or\s+/i.test(t))return t.split(/\s+or\s+/i).map(x=>translatePhrase(x,dict)).join(' 或 ');
   // Preserve incoming bilingual text if a recognized English term is bracketed.
