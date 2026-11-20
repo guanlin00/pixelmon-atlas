@@ -2,7 +2,7 @@
   "metadata": {
     "source": "https://pixelmonmod.com/wiki/Items/en",
     "sourceType": "Official Pixelmon Wiki categorized item reference (not full creative inventory dump)",
-    "notes": "Entries curated from official Wiki lists. Not all edition-specific items, variants, or user screenshots were independently identified. Individual item acquisition information may be pending."
+    "notes": "Curated public Pixelmon Wiki item categories, including creative-only items clearly separated. Names and groupings are references and not independently certified against the user's screenshots or a particular game version. No removed items included."
   },
   "categories": [
     {
@@ -2452,11 +2452,6 @@
           "slug": "carbos"
         },
         {
-          "en": "Vitamin",
-          "zh": "營養補充劑",
-          "slug": "vitamin"
-        },
-        {
           "en": "Ability Capsule",
           "zh": null,
           "slug": "ability-capsule"
@@ -2976,36 +2971,6 @@
       "icon": "★",
       "items": [
         {
-          "en": "TM Case",
-          "zh": null,
-          "slug": "tm-case"
-        },
-        {
-          "en": "TR Case",
-          "zh": "招式紀錄收納盒",
-          "slug": "tr-case"
-        },
-        {
-          "en": "Move Relearner",
-          "zh": "招式回憶裝置",
-          "slug": "move-relearner"
-        },
-        {
-          "en": "Poké Radar",
-          "zh": "寶可追蹤器",
-          "slug": "pok-radar"
-        },
-        {
-          "en": "Apricorn Box",
-          "zh": null,
-          "slug": "apricorn-box"
-        },
-        {
-          "en": "Fossil Display",
-          "zh": "化石展示台",
-          "slug": "fossil-display"
-        },
-        {
           "en": "Orb",
           "zh": "寶珠",
           "slug": "orb"
@@ -3054,81 +3019,6 @@
           "en": "DNA Splicers",
           "zh": null,
           "slug": "dna-splicers"
-        },
-        {
-          "en": "N-Solarizer",
-          "zh": "奈克洛索爾合體器",
-          "slug": "n-solarizer"
-        },
-        {
-          "en": "N-Lunarizer",
-          "zh": "奈克洛露奈合體器",
-          "slug": "n-lunarizer"
-        },
-        {
-          "en": "Rusted Sword",
-          "zh": null,
-          "slug": "rusted-sword"
-        },
-        {
-          "en": "Rusted Shield",
-          "zh": null,
-          "slug": "rusted-shield"
-        },
-        {
-          "en": "Reins of Unity",
-          "zh": null,
-          "slug": "reins-of-unity"
-        },
-        {
-          "en": "Zygarde Cube",
-          "zh": "基格爾德多面體",
-          "slug": "zygarde-cube"
-        },
-        {
-          "en": "Mega Ring",
-          "zh": "超級環",
-          "slug": "mega-ring"
-        },
-        {
-          "en": "Mega Bracelet",
-          "zh": null,
-          "slug": "mega-bracelet"
-        },
-        {
-          "en": "Mega Glasses",
-          "zh": null,
-          "slug": "mega-glasses"
-        },
-        {
-          "en": "Z-Ring",
-          "zh": null,
-          "slug": "z-ring"
-        },
-        {
-          "en": "Z-Power Ring",
-          "zh": null,
-          "slug": "z-power-ring"
-        },
-        {
-          "en": "Dynamax Band",
-          "zh": "極巨腕帶",
-          "slug": "dynamax-band"
-        },
-        {
-          "en": "Dynamax Candy",
-          "zh": null,
-          "slug": "dynamax-candy"
-        },
-        {
-          "en": "Wishing Piece",
-          "zh": "許願星塊",
-          "slug": "wishing-piece"
-        },
-        {
-          "en": "Wishing Star",
-          "zh": null,
-          "slug": "wishing-star"
         }
       ]
     },
@@ -3641,6 +3531,567 @@
           "en": "Water Gem",
           "zh": null,
           "slug": "water-gem"
+        }
+      ]
+    },
+    {
+      "name": "多邊獸零件",
+      "icon": "▧",
+      "items": [
+        {
+          "en": "Porygon (item)",
+          "zh": "多邊獸",
+          "slug": "porygon-item"
+        },
+        {
+          "en": "Porygon Body",
+          "zh": "多邊獸身體",
+          "slug": "porygon-body"
+        },
+        {
+          "en": "Porygon Head",
+          "zh": "多邊獸頭部",
+          "slug": "porygon-head"
+        },
+        {
+          "en": "Porygon Leg",
+          "zh": "多邊獸腿部",
+          "slug": "porygon-leg"
+        },
+        {
+          "en": "Porygon Tail",
+          "zh": "多邊獸尾部",
+          "slug": "porygon-tail"
+        }
+      ]
+    },
+    {
+      "name": "祭壇與環境方塊",
+      "icon": "🗿",
+      "items": [
+        {
+          "en": "Apricorn Tree",
+          "zh": "球果樹",
+          "slug": "apricorn-tree"
+        },
+        {
+          "en": "Arc Chalice",
+          "zh": "阿爾宙斯聖杯",
+          "slug": "arc-chalice"
+        },
+        {
+          "en": "Berry Tree",
+          "zh": "樹果樹",
+          "slug": "berry-tree"
+        },
+        {
+          "en": "Event Poké Gift",
+          "zh": null,
+          "slug": "event-poke-gift"
+        },
+        {
+          "en": "Fiery Shrine",
+          "zh": "火焰祭壇",
+          "slug": "fiery-shrine"
+        },
+        {
+          "en": "Frozen Shrine",
+          "zh": "冰凍祭壇",
+          "slug": "frozen-shrine"
+        },
+        {
+          "en": "Hidden Cube",
+          "zh": null,
+          "slug": "hidden-cube"
+        },
+        {
+          "en": "Ice Rock",
+          "zh": "冰岩石",
+          "slug": "ice-rock"
+        },
+        {
+          "en": "Master Chest",
+          "zh": "大師寶箱",
+          "slug": "master-chest"
+        },
+        {
+          "en": "Moss Rock",
+          "zh": "苔岩石",
+          "slug": "moss-rock"
+        },
+        {
+          "en": "Pixelmon Spawner",
+          "zh": "寶可夢生成器",
+          "slug": "pixelmon-spawner"
+        },
+        {
+          "en": "Poké Chest",
+          "zh": "寶可夢寶箱",
+          "slug": "poke-chest"
+        },
+        {
+          "en": "Static Shrine",
+          "zh": "雷電祭壇",
+          "slug": "static-shrine"
+        },
+        {
+          "en": "Timespace Altar",
+          "zh": "時空祭壇",
+          "slug": "timespace-altar"
+        },
+        {
+          "en": "Ultra Chest",
+          "zh": "高級寶箱",
+          "slug": "ultra-chest"
+        }
+      ]
+    },
+    {
+      "name": "創造模式與編輯工具",
+      "icon": "⚙",
+      "items": [
+        {
+          "en": "Park Ball",
+          "zh": "公園球",
+          "slug": "park-ball"
+        },
+        {
+          "en": "Warp Plate",
+          "zh": null,
+          "slug": "warp-plate"
+        },
+        {
+          "en": "Chisel",
+          "zh": "雕刻刀",
+          "slug": "chisel"
+        },
+        {
+          "en": "Grotto Spawner",
+          "zh": "隱藏樹洞生成器",
+          "slug": "grotto-spawner"
+        },
+        {
+          "en": "NPC Editor",
+          "zh": "NPC 編輯器",
+          "slug": "npc-editor"
+        },
+        {
+          "en": "Pokémon Editor",
+          "zh": "寶可夢編輯器",
+          "slug": "pokemon-editor"
+        },
+        {
+          "en": "Hiroku's Silver Lens",
+          "zh": null,
+          "slug": "hirokus-silver-lens"
+        },
+        {
+          "en": "Hiroku's Golden Lens",
+          "zh": null,
+          "slug": "hirokus-golden-lens"
+        },
+        {
+          "en": "Hidden Iron Door",
+          "zh": null,
+          "slug": "hidden-iron-door"
+        },
+        {
+          "en": "Hidden Wooden Door",
+          "zh": null,
+          "slug": "hidden-wooden-door"
+        },
+        {
+          "en": "Pixelmon Grass",
+          "zh": null,
+          "slug": "pixelmon-grass"
+        },
+        {
+          "en": "Spawner Cave Rock",
+          "zh": null,
+          "slug": "spawner-cave-rock"
+        }
+      ]
+    },
+    {
+      "name": "道館徽章",
+      "icon": "🏅",
+      "items": [
+        {
+          "en": "Balance Badge",
+          "zh": "Balance徽章",
+          "slug": "balance-badge"
+        },
+        {
+          "en": "Basic Badge",
+          "zh": "Basic徽章",
+          "slug": "basic-badge"
+        },
+        {
+          "en": "Cobble Badge",
+          "zh": "Cobble徽章",
+          "slug": "cobble-badge"
+        },
+        {
+          "en": "Fairy Badge",
+          "zh": "Fairy徽章",
+          "slug": "fairy-badge"
+        },
+        {
+          "en": "Fog Badge",
+          "zh": "Fog徽章",
+          "slug": "fog-badge"
+        },
+        {
+          "en": "Knuckle Badge",
+          "zh": "Knuckle徽章",
+          "slug": "knuckle-badge"
+        },
+        {
+          "en": "Legend Badge",
+          "zh": "Legend徽章",
+          "slug": "legend-badge"
+        },
+        {
+          "en": "Plain Badge",
+          "zh": "Plain徽章",
+          "slug": "plain-badge"
+        },
+        {
+          "en": "Relic Badge",
+          "zh": "Relic徽章",
+          "slug": "relic-badge"
+        },
+        {
+          "en": "Rising Badge",
+          "zh": "Rising徽章",
+          "slug": "rising-badge"
+        },
+        {
+          "en": "Rumble Badge",
+          "zh": "Rumble徽章",
+          "slug": "rumble-badge"
+        },
+        {
+          "en": "Soul Badge",
+          "zh": "Soul徽章",
+          "slug": "soul-badge"
+        },
+        {
+          "en": "Storm Badge",
+          "zh": "Storm徽章",
+          "slug": "storm-badge"
+        },
+        {
+          "en": "Toxic Badge",
+          "zh": "Toxic徽章",
+          "slug": "toxic-badge"
+        },
+        {
+          "en": "Trio Badge",
+          "zh": "Trio徽章",
+          "slug": "trio-badge"
+        }
+      ]
+    },
+    {
+      "name": "其他道具",
+      "icon": "✦",
+      "items": [
+        {
+          "en": "Blue Orb",
+          "zh": "藍色寶珠",
+          "slug": "blue-orb"
+        },
+        {
+          "en": "Blue Shard",
+          "zh": null,
+          "slug": "blue-shard"
+        },
+        {
+          "en": "Clear Bell",
+          "zh": null,
+          "slug": "clear-bell"
+        },
+        {
+          "en": "Exp. All",
+          "zh": null,
+          "slug": "exp-all"
+        },
+        {
+          "en": "Gift Box",
+          "zh": null,
+          "slug": "gift-box"
+        },
+        {
+          "en": "Isi's Golden Hourglass",
+          "zh": null,
+          "slug": "isis-golden-hourglass"
+        },
+        {
+          "en": "Isi's Silver Hourglass",
+          "zh": null,
+          "slug": "isis-silver-hourglass"
+        },
+        {
+          "en": "Max Repel",
+          "zh": "黃金噴霧",
+          "slug": "max-repel"
+        },
+        {
+          "en": "Meteorite",
+          "zh": null,
+          "slug": "meteorite"
+        },
+        {
+          "en": "Poké Gift",
+          "zh": null,
+          "slug": "poke-gift"
+        },
+        {
+          "en": "Red Orb",
+          "zh": "紅色寶珠",
+          "slug": "red-orb"
+        },
+        {
+          "en": "Red Shard",
+          "zh": null,
+          "slug": "red-shard"
+        },
+        {
+          "en": "Repel",
+          "zh": "除蟲噴霧",
+          "slug": "repel"
+        },
+        {
+          "en": "Ruby of Emotion",
+          "zh": null,
+          "slug": "ruby-of-emotion"
+        },
+        {
+          "en": "Ruby of Knowledge",
+          "zh": null,
+          "slug": "ruby-of-knowledge"
+        },
+        {
+          "en": "Ruby of Willpower",
+          "zh": null,
+          "slug": "ruby-of-willpower"
+        },
+        {
+          "en": "Super Repel",
+          "zh": "白銀噴霧",
+          "slug": "super-repel"
+        },
+        {
+          "en": "Tidal Bell",
+          "zh": null,
+          "slug": "tidal-bell"
+        }
+      ]
+    },
+    {
+      "name": "裝飾與家具",
+      "icon": "▥",
+      "items": [
+        {
+          "en": "Small TV",
+          "zh": "小型電視",
+          "slug": "small-tv"
+        },
+        {
+          "en": "TV",
+          "zh": "電視",
+          "slug": "tv"
+        },
+        {
+          "en": "Mug",
+          "zh": "馬克杯",
+          "slug": "mug"
+        },
+        {
+          "en": "Trash Can",
+          "zh": "垃圾桶",
+          "slug": "trash-can"
+        },
+        {
+          "en": "Washing Machine",
+          "zh": "洗衣機",
+          "slug": "washing-machine"
+        },
+        {
+          "en": "Street Light",
+          "zh": "路燈",
+          "slug": "street-light"
+        },
+        {
+          "en": "Picket Fence",
+          "zh": "木柵欄",
+          "slug": "picket-fence"
+        },
+        {
+          "en": "Poké Mart Sign",
+          "zh": "友好商店招牌",
+          "slug": "poke-mart-sign"
+        },
+        {
+          "en": "PokéCenter Sign",
+          "zh": "寶可夢中心招牌",
+          "slug": "pokecenter-sign"
+        },
+        {
+          "en": "PokéDirt",
+          "zh": "寶可泥土",
+          "slug": "pokedirt"
+        },
+        {
+          "en": "PokéGrass",
+          "zh": "寶可草",
+          "slug": "pokegrass"
+        },
+        {
+          "en": "Pokémon Painting",
+          "zh": "寶可夢畫作",
+          "slug": "pokemon-painting"
+        },
+        {
+          "en": "Oak Bench",
+          "zh": null,
+          "slug": "oak-bench"
+        },
+        {
+          "en": "Jungle Bench",
+          "zh": null,
+          "slug": "jungle-bench"
+        },
+        {
+          "en": "Spruce Bench",
+          "zh": null,
+          "slug": "spruce-bench"
+        },
+        {
+          "en": "Dark Oak Bench",
+          "zh": null,
+          "slug": "dark-oak-bench"
+        },
+        {
+          "en": "Temple Block",
+          "zh": "神殿方塊",
+          "slug": "temple-block"
+        },
+        {
+          "en": "Temple Brick",
+          "zh": "神殿磚",
+          "slug": "temple-brick"
+        },
+        {
+          "en": "Temple Brick Stairs",
+          "zh": null,
+          "slug": "temple-brick-stairs"
+        },
+        {
+          "en": "Temple Pillar",
+          "zh": "神殿柱",
+          "slug": "temple-pillar"
+        },
+        {
+          "en": "Temple Stairs",
+          "zh": null,
+          "slug": "temple-stairs"
+        },
+        {
+          "en": "Wooden Flooring",
+          "zh": null,
+          "slug": "wooden-flooring"
+        },
+        {
+          "en": "Ruins Wall",
+          "zh": null,
+          "slug": "ruins-wall"
+        },
+        {
+          "en": "Photo",
+          "zh": "相片",
+          "slug": "photo"
+        },
+        {
+          "en": "Black Armchair",
+          "zh": "黑扶手椅",
+          "slug": "black-armchair"
+        },
+        {
+          "en": "Blue Armchair",
+          "zh": "藍扶手椅",
+          "slug": "blue-armchair"
+        },
+        {
+          "en": "Brown Armchair",
+          "zh": "棕扶手椅",
+          "slug": "brown-armchair"
+        },
+        {
+          "en": "Cyan Armchair",
+          "zh": "青扶手椅",
+          "slug": "cyan-armchair"
+        },
+        {
+          "en": "Gray Armchair",
+          "zh": "灰扶手椅",
+          "slug": "gray-armchair"
+        },
+        {
+          "en": "Green Armchair",
+          "zh": "綠扶手椅",
+          "slug": "green-armchair"
+        },
+        {
+          "en": "Light Blue Armchair",
+          "zh": "淺扶手椅",
+          "slug": "light-blue-armchair"
+        },
+        {
+          "en": "Light Gray Armchair",
+          "zh": "淺扶手椅",
+          "slug": "light-gray-armchair"
+        },
+        {
+          "en": "Lime Armchair",
+          "zh": "黃綠扶手椅",
+          "slug": "lime-armchair"
+        },
+        {
+          "en": "Magenta Couch",
+          "zh": "洋紅沙發",
+          "slug": "magenta-couch"
+        },
+        {
+          "en": "Orange Couch",
+          "zh": "橘沙發",
+          "slug": "orange-couch"
+        },
+        {
+          "en": "Pink Couch",
+          "zh": "粉紅沙發",
+          "slug": "pink-couch"
+        },
+        {
+          "en": "Purple Couch",
+          "zh": "紫沙發",
+          "slug": "purple-couch"
+        },
+        {
+          "en": "Red Couch",
+          "zh": "紅沙發",
+          "slug": "red-couch"
+        },
+        {
+          "en": "White Couch",
+          "zh": "白沙發",
+          "slug": "white-couch"
+        },
+        {
+          "en": "Yellow Couch",
+          "zh": "黃沙發",
+          "slug": "yellow-couch"
         }
       ]
     }
