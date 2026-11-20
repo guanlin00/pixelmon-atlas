@@ -1,0 +1,3648 @@
+{
+  "metadata": {
+    "source": "https://pixelmonmod.com/wiki/Items/en",
+    "sourceType": "Official Pixelmon Wiki categorized item reference (not full creative inventory dump)",
+    "notes": "Entries curated from official Wiki lists. Not all edition-specific items, variants, or user screenshots were independently identified. Individual item acquisition information may be pending."
+  },
+  "categories": [
+    {
+      "name": "精靈球",
+      "icon": "◉",
+      "items": [
+        {
+          "en": "Beast Ball",
+          "zh": null,
+          "slug": "beast-ball"
+        },
+        {
+          "en": "Cherish Ball",
+          "zh": null,
+          "slug": "cherish-ball"
+        },
+        {
+          "en": "Dive Ball",
+          "zh": null,
+          "slug": "dive-ball"
+        },
+        {
+          "en": "Dusk Ball",
+          "zh": null,
+          "slug": "dusk-ball"
+        },
+        {
+          "en": "Fast Ball",
+          "zh": null,
+          "slug": "fast-ball"
+        },
+        {
+          "en": "Friend Ball",
+          "zh": null,
+          "slug": "friend-ball"
+        },
+        {
+          "en": "Great Ball",
+          "zh": "超級球",
+          "slug": "great-ball"
+        },
+        {
+          "en": "Heal Ball",
+          "zh": null,
+          "slug": "heal-ball"
+        },
+        {
+          "en": "Heavy Ball",
+          "zh": null,
+          "slug": "heavy-ball"
+        },
+        {
+          "en": "Level Ball",
+          "zh": null,
+          "slug": "level-ball"
+        },
+        {
+          "en": "Love Ball",
+          "zh": null,
+          "slug": "love-ball"
+        },
+        {
+          "en": "Lure Ball",
+          "zh": null,
+          "slug": "lure-ball"
+        },
+        {
+          "en": "Luxury Ball",
+          "zh": null,
+          "slug": "luxury-ball"
+        },
+        {
+          "en": "Master Ball",
+          "zh": "大師球",
+          "slug": "master-ball"
+        },
+        {
+          "en": "Moon Ball",
+          "zh": null,
+          "slug": "moon-ball"
+        },
+        {
+          "en": "Nest Ball",
+          "zh": null,
+          "slug": "nest-ball"
+        },
+        {
+          "en": "Net Ball",
+          "zh": null,
+          "slug": "net-ball"
+        },
+        {
+          "en": "Poké Ball",
+          "zh": "精靈球",
+          "slug": "pok-ball"
+        },
+        {
+          "en": "Premier Ball",
+          "zh": null,
+          "slug": "premier-ball"
+        },
+        {
+          "en": "Quick Ball",
+          "zh": null,
+          "slug": "quick-ball"
+        },
+        {
+          "en": "Repeat Ball",
+          "zh": null,
+          "slug": "repeat-ball"
+        },
+        {
+          "en": "Safari Ball",
+          "zh": null,
+          "slug": "safari-ball"
+        },
+        {
+          "en": "Sport Ball",
+          "zh": null,
+          "slug": "sport-ball"
+        },
+        {
+          "en": "Timer Ball",
+          "zh": null,
+          "slug": "timer-ball"
+        },
+        {
+          "en": "Ultra Ball",
+          "zh": "高級球",
+          "slug": "ultra-ball"
+        },
+        {
+          "en": "GS Ball",
+          "zh": "GS球",
+          "slug": "gs-ball"
+        },
+        {
+          "en": "Dream Ball",
+          "zh": null,
+          "slug": "dream-ball"
+        }
+      ]
+    },
+    {
+      "name": "精靈球零件",
+      "icon": "⚙",
+      "items": [
+        {
+          "en": "Aluminum Base",
+          "zh": "鋁製底座",
+          "slug": "aluminum-base"
+        },
+        {
+          "en": "Aluminum Disc",
+          "zh": "鋁製圓盤",
+          "slug": "aluminum-disc"
+        },
+        {
+          "en": "Iron Base",
+          "zh": "鐵製底座",
+          "slug": "iron-base"
+        },
+        {
+          "en": "Iron Disc",
+          "zh": "鐵製圓盤",
+          "slug": "iron-disc"
+        },
+        {
+          "en": "Dive Ball Disc",
+          "zh": null,
+          "slug": "dive-ball-disc"
+        },
+        {
+          "en": "Dive Ball Lid",
+          "zh": null,
+          "slug": "dive-ball-lid"
+        },
+        {
+          "en": "Dusk Ball Disc",
+          "zh": null,
+          "slug": "dusk-ball-disc"
+        },
+        {
+          "en": "Dusk Ball Lid",
+          "zh": null,
+          "slug": "dusk-ball-lid"
+        },
+        {
+          "en": "Fast Ball Disc",
+          "zh": null,
+          "slug": "fast-ball-disc"
+        },
+        {
+          "en": "Fast Ball Lid",
+          "zh": null,
+          "slug": "fast-ball-lid"
+        },
+        {
+          "en": "Friend Ball Disc",
+          "zh": null,
+          "slug": "friend-ball-disc"
+        },
+        {
+          "en": "Friend Ball Lid",
+          "zh": null,
+          "slug": "friend-ball-lid"
+        },
+        {
+          "en": "Great Ball Disc",
+          "zh": null,
+          "slug": "great-ball-disc"
+        },
+        {
+          "en": "Great Ball Lid",
+          "zh": null,
+          "slug": "great-ball-lid"
+        },
+        {
+          "en": "Heal Ball Disc",
+          "zh": null,
+          "slug": "heal-ball-disc"
+        },
+        {
+          "en": "Heal Ball Lid",
+          "zh": null,
+          "slug": "heal-ball-lid"
+        },
+        {
+          "en": "Heavy Ball Disc",
+          "zh": null,
+          "slug": "heavy-ball-disc"
+        },
+        {
+          "en": "Heavy Ball Lid",
+          "zh": null,
+          "slug": "heavy-ball-lid"
+        },
+        {
+          "en": "Level Ball Disc",
+          "zh": null,
+          "slug": "level-ball-disc"
+        },
+        {
+          "en": "Level Ball Lid",
+          "zh": null,
+          "slug": "level-ball-lid"
+        },
+        {
+          "en": "Love Ball Disc",
+          "zh": null,
+          "slug": "love-ball-disc"
+        },
+        {
+          "en": "Love Ball Lid",
+          "zh": null,
+          "slug": "love-ball-lid"
+        },
+        {
+          "en": "Lure Ball Disc",
+          "zh": null,
+          "slug": "lure-ball-disc"
+        },
+        {
+          "en": "Lure Ball Lid",
+          "zh": null,
+          "slug": "lure-ball-lid"
+        },
+        {
+          "en": "Luxury Ball Disc",
+          "zh": null,
+          "slug": "luxury-ball-disc"
+        },
+        {
+          "en": "Luxury Ball Lid",
+          "zh": null,
+          "slug": "luxury-ball-lid"
+        },
+        {
+          "en": "Moon Ball Disc",
+          "zh": null,
+          "slug": "moon-ball-disc"
+        },
+        {
+          "en": "Moon Ball Lid",
+          "zh": null,
+          "slug": "moon-ball-lid"
+        },
+        {
+          "en": "Nest Ball Disc",
+          "zh": null,
+          "slug": "nest-ball-disc"
+        },
+        {
+          "en": "Nest Ball Lid",
+          "zh": null,
+          "slug": "nest-ball-lid"
+        },
+        {
+          "en": "Net Ball Disc",
+          "zh": null,
+          "slug": "net-ball-disc"
+        },
+        {
+          "en": "Net Ball Lid",
+          "zh": null,
+          "slug": "net-ball-lid"
+        },
+        {
+          "en": "Poké Ball Disc",
+          "zh": null,
+          "slug": "pok-ball-disc"
+        },
+        {
+          "en": "Poké Ball Lid",
+          "zh": null,
+          "slug": "pok-ball-lid"
+        },
+        {
+          "en": "Premier Ball Disc",
+          "zh": null,
+          "slug": "premier-ball-disc"
+        },
+        {
+          "en": "Premier Ball Lid",
+          "zh": null,
+          "slug": "premier-ball-lid"
+        },
+        {
+          "en": "Quick Ball Disc",
+          "zh": null,
+          "slug": "quick-ball-disc"
+        },
+        {
+          "en": "Quick Ball Lid",
+          "zh": null,
+          "slug": "quick-ball-lid"
+        },
+        {
+          "en": "Repeat Ball Disc",
+          "zh": null,
+          "slug": "repeat-ball-disc"
+        },
+        {
+          "en": "Repeat Ball Lid",
+          "zh": null,
+          "slug": "repeat-ball-lid"
+        },
+        {
+          "en": "Safari Ball Disc",
+          "zh": null,
+          "slug": "safari-ball-disc"
+        },
+        {
+          "en": "Safari Ball Lid",
+          "zh": null,
+          "slug": "safari-ball-lid"
+        },
+        {
+          "en": "Sport Ball Disc",
+          "zh": null,
+          "slug": "sport-ball-disc"
+        },
+        {
+          "en": "Sport Ball Lid",
+          "zh": null,
+          "slug": "sport-ball-lid"
+        },
+        {
+          "en": "Timer Ball Disc",
+          "zh": null,
+          "slug": "timer-ball-disc"
+        },
+        {
+          "en": "Timer Ball Lid",
+          "zh": null,
+          "slug": "timer-ball-lid"
+        },
+        {
+          "en": "Ultra Ball Disc",
+          "zh": null,
+          "slug": "ultra-ball-disc"
+        },
+        {
+          "en": "Ultra Ball Lid",
+          "zh": null,
+          "slug": "ultra-ball-lid"
+        }
+      ]
+    },
+    {
+      "name": "材料與礦物",
+      "icon": "◆",
+      "items": [
+        {
+          "en": "Aluminum Ingot",
+          "zh": null,
+          "slug": "aluminum-ingot"
+        },
+        {
+          "en": "Aluminum Plate",
+          "zh": null,
+          "slug": "aluminum-plate"
+        },
+        {
+          "en": "Amethyst",
+          "zh": null,
+          "slug": "amethyst"
+        },
+        {
+          "en": "Amethyst Block",
+          "zh": null,
+          "slug": "amethyst-block"
+        },
+        {
+          "en": "Amethyst Ore",
+          "zh": null,
+          "slug": "amethyst-ore"
+        },
+        {
+          "en": "Bauxite Ore",
+          "zh": null,
+          "slug": "bauxite-ore"
+        },
+        {
+          "en": "Crystal",
+          "zh": null,
+          "slug": "crystal"
+        },
+        {
+          "en": "Crystal Block",
+          "zh": null,
+          "slug": "crystal-block"
+        },
+        {
+          "en": "Crystal Ore",
+          "zh": null,
+          "slug": "crystal-ore"
+        },
+        {
+          "en": "Dawn Stone Shard",
+          "zh": null,
+          "slug": "dawn-stone-shard"
+        },
+        {
+          "en": "DawnDusk Ore",
+          "zh": null,
+          "slug": "dawndusk-ore"
+        },
+        {
+          "en": "Dusk Stone Shard",
+          "zh": null,
+          "slug": "dusk-stone-shard"
+        },
+        {
+          "en": "Fire Stone Ore",
+          "zh": null,
+          "slug": "fire-stone-ore"
+        },
+        {
+          "en": "Fire Stone Shard",
+          "zh": null,
+          "slug": "fire-stone-shard"
+        },
+        {
+          "en": "Leaf Stone Ore",
+          "zh": null,
+          "slug": "leaf-stone-ore"
+        },
+        {
+          "en": "Leaf Stone Shard",
+          "zh": null,
+          "slug": "leaf-stone-shard"
+        },
+        {
+          "en": "Moon Stone Shard",
+          "zh": null,
+          "slug": "moon-stone-shard"
+        },
+        {
+          "en": "Ruby",
+          "zh": null,
+          "slug": "ruby"
+        },
+        {
+          "en": "Ruby Block",
+          "zh": null,
+          "slug": "ruby-block"
+        },
+        {
+          "en": "Ruby Ore",
+          "zh": null,
+          "slug": "ruby-ore"
+        },
+        {
+          "en": "Sapphire",
+          "zh": null,
+          "slug": "sapphire"
+        },
+        {
+          "en": "Sapphire Block",
+          "zh": null,
+          "slug": "sapphire-block"
+        },
+        {
+          "en": "Sapphire Ore",
+          "zh": null,
+          "slug": "sapphire-ore"
+        },
+        {
+          "en": "Shiny Stone Shard",
+          "zh": null,
+          "slug": "shiny-stone-shard"
+        },
+        {
+          "en": "Silicon",
+          "zh": null,
+          "slug": "silicon"
+        },
+        {
+          "en": "Silicon Ore",
+          "zh": null,
+          "slug": "silicon-ore"
+        },
+        {
+          "en": "Sun Stone Shard",
+          "zh": null,
+          "slug": "sun-stone-shard"
+        },
+        {
+          "en": "Thunder Stone Shard",
+          "zh": null,
+          "slug": "thunder-stone-shard"
+        },
+        {
+          "en": "Thunder Stone Ore",
+          "zh": null,
+          "slug": "thunder-stone-ore"
+        },
+        {
+          "en": "Water Stone Ore",
+          "zh": null,
+          "slug": "water-stone-ore"
+        },
+        {
+          "en": "Water Stone Shard",
+          "zh": null,
+          "slug": "water-stone-shard"
+        }
+      ]
+    },
+    {
+      "name": "機器與設備",
+      "icon": "▣",
+      "items": [
+        {
+          "en": "Anvil",
+          "zh": "鐵砧",
+          "slug": "anvil"
+        },
+        {
+          "en": "Cloning Machine",
+          "zh": "複製機",
+          "slug": "cloning-machine"
+        },
+        {
+          "en": "Elevator",
+          "zh": null,
+          "slug": "elevator"
+        },
+        {
+          "en": "Fossil Cleaner",
+          "zh": "化石清洗機",
+          "slug": "fossil-cleaner"
+        },
+        {
+          "en": "Fossil Machine",
+          "zh": "化石復活機",
+          "slug": "fossil-machine"
+        },
+        {
+          "en": "Healer",
+          "zh": "治療機",
+          "slug": "healer"
+        },
+        {
+          "en": "Mechanical Anvil",
+          "zh": "機械鐵砧",
+          "slug": "mechanical-anvil"
+        },
+        {
+          "en": "Movement Plate",
+          "zh": null,
+          "slug": "movement-plate"
+        },
+        {
+          "en": "PC",
+          "zh": "電腦",
+          "slug": "pc"
+        },
+        {
+          "en": "Ranch Block",
+          "zh": "牧場方塊",
+          "slug": "ranch-block"
+        },
+        {
+          "en": "Stick Plate",
+          "zh": null,
+          "slug": "stick-plate"
+        },
+        {
+          "en": "Timed Fall",
+          "zh": null,
+          "slug": "timed-fall"
+        },
+        {
+          "en": "Trade Machine",
+          "zh": "交換機",
+          "slug": "trade-machine"
+        },
+        {
+          "en": "Infuser",
+          "zh": "灌注器",
+          "slug": "infuser"
+        },
+        {
+          "en": "Blue Vending Machine",
+          "zh": null,
+          "slug": "blue-vending-machine"
+        },
+        {
+          "en": "Green Vending Machine",
+          "zh": null,
+          "slug": "green-vending-machine"
+        },
+        {
+          "en": "Orange Vending Machine",
+          "zh": null,
+          "slug": "orange-vending-machine"
+        },
+        {
+          "en": "Pink Vending Machine",
+          "zh": null,
+          "slug": "pink-vending-machine"
+        },
+        {
+          "en": "Red Vending Machine",
+          "zh": null,
+          "slug": "red-vending-machine"
+        },
+        {
+          "en": "Yellow Vending Machine",
+          "zh": null,
+          "slug": "yellow-vending-machine"
+        }
+      ]
+    },
+    {
+      "name": "機器零件",
+      "icon": "⚙",
+      "items": [
+        {
+          "en": "Cloner Cord",
+          "zh": null,
+          "slug": "cloner-cord"
+        },
+        {
+          "en": "Fossil Machine Base",
+          "zh": null,
+          "slug": "fossil-machine-base"
+        },
+        {
+          "en": "Fossil Machine Display",
+          "zh": null,
+          "slug": "fossil-machine-display"
+        },
+        {
+          "en": "Fossil Machine Tank",
+          "zh": null,
+          "slug": "fossil-machine-tank"
+        },
+        {
+          "en": "Fossil Machine Top",
+          "zh": null,
+          "slug": "fossil-machine-top"
+        },
+        {
+          "en": "Green Tank",
+          "zh": null,
+          "slug": "green-tank"
+        },
+        {
+          "en": "Orange Tank",
+          "zh": null,
+          "slug": "orange-tank"
+        }
+      ]
+    },
+    {
+      "name": "工具與釣竿",
+      "icon": "⚒",
+      "items": [
+        {
+          "en": "Camera",
+          "zh": null,
+          "slug": "camera"
+        },
+        {
+          "en": "Film",
+          "zh": null,
+          "slug": "film"
+        },
+        {
+          "en": "Good Rod",
+          "zh": "好釣竿",
+          "slug": "good-rod"
+        },
+        {
+          "en": "Old Rod",
+          "zh": "破舊釣竿",
+          "slug": "old-rod"
+        },
+        {
+          "en": "Super Rod",
+          "zh": "厲害釣竿",
+          "slug": "super-rod"
+        },
+        {
+          "en": "Itemfinder",
+          "zh": "探寶器",
+          "slug": "itemfinder"
+        },
+        {
+          "en": "Wailmer Pail",
+          "zh": null,
+          "slug": "wailmer-pail"
+        },
+        {
+          "en": "Running Boots",
+          "zh": null,
+          "slug": "running-boots"
+        },
+        {
+          "en": "Old Running Boots",
+          "zh": null,
+          "slug": "old-running-boots"
+        },
+        {
+          "en": "New Running Boots",
+          "zh": null,
+          "slug": "new-running-boots"
+        },
+        {
+          "en": "Diamond Hammer",
+          "zh": null,
+          "slug": "diamond-hammer"
+        },
+        {
+          "en": "Iron Hammer",
+          "zh": null,
+          "slug": "iron-hammer"
+        },
+        {
+          "en": "Gold Hammer",
+          "zh": null,
+          "slug": "gold-hammer"
+        },
+        {
+          "en": "Stone Hammer",
+          "zh": null,
+          "slug": "stone-hammer"
+        },
+        {
+          "en": "Wood Hammer",
+          "zh": null,
+          "slug": "wood-hammer"
+        },
+        {
+          "en": "Aluminum Axe",
+          "zh": null,
+          "slug": "aluminum-axe"
+        },
+        {
+          "en": "Aluminum Hammer",
+          "zh": null,
+          "slug": "aluminum-hammer"
+        },
+        {
+          "en": "Aluminum Hoe",
+          "zh": null,
+          "slug": "aluminum-hoe"
+        },
+        {
+          "en": "Aluminum Pickaxe",
+          "zh": null,
+          "slug": "aluminum-pickaxe"
+        },
+        {
+          "en": "Aluminum Shovel",
+          "zh": null,
+          "slug": "aluminum-shovel"
+        },
+        {
+          "en": "Aluminum Sword",
+          "zh": null,
+          "slug": "aluminum-sword"
+        },
+        {
+          "en": "Aluminum Helmet",
+          "zh": null,
+          "slug": "aluminum-helmet"
+        },
+        {
+          "en": "Aluminum Chestplate",
+          "zh": null,
+          "slug": "aluminum-chestplate"
+        },
+        {
+          "en": "Aluminum Leggings",
+          "zh": null,
+          "slug": "aluminum-leggings"
+        },
+        {
+          "en": "Aluminum Boots",
+          "zh": null,
+          "slug": "aluminum-boots"
+        },
+        {
+          "en": "Amethyst Axe",
+          "zh": null,
+          "slug": "amethyst-axe"
+        },
+        {
+          "en": "Amethyst Hammer",
+          "zh": null,
+          "slug": "amethyst-hammer"
+        },
+        {
+          "en": "Amethyst Hoe",
+          "zh": null,
+          "slug": "amethyst-hoe"
+        },
+        {
+          "en": "Amethyst Pickaxe",
+          "zh": null,
+          "slug": "amethyst-pickaxe"
+        },
+        {
+          "en": "Amethyst Shovel",
+          "zh": null,
+          "slug": "amethyst-shovel"
+        },
+        {
+          "en": "Amethyst Sword",
+          "zh": null,
+          "slug": "amethyst-sword"
+        },
+        {
+          "en": "Crystal Axe",
+          "zh": null,
+          "slug": "crystal-axe"
+        },
+        {
+          "en": "Crystal Hammer",
+          "zh": null,
+          "slug": "crystal-hammer"
+        },
+        {
+          "en": "Crystal Hoe",
+          "zh": null,
+          "slug": "crystal-hoe"
+        },
+        {
+          "en": "Crystal Pickaxe",
+          "zh": null,
+          "slug": "crystal-pickaxe"
+        },
+        {
+          "en": "Crystal Shovel",
+          "zh": null,
+          "slug": "crystal-shovel"
+        },
+        {
+          "en": "Crystal Sword",
+          "zh": null,
+          "slug": "crystal-sword"
+        },
+        {
+          "en": "Dawn Stone Axe",
+          "zh": null,
+          "slug": "dawn-stone-axe"
+        },
+        {
+          "en": "Dawn Stone Hammer",
+          "zh": null,
+          "slug": "dawn-stone-hammer"
+        },
+        {
+          "en": "Dawn Stone Hoe",
+          "zh": null,
+          "slug": "dawn-stone-hoe"
+        },
+        {
+          "en": "Dawn Stone Pickaxe",
+          "zh": null,
+          "slug": "dawn-stone-pickaxe"
+        },
+        {
+          "en": "Dawn Stone Shovel",
+          "zh": null,
+          "slug": "dawn-stone-shovel"
+        },
+        {
+          "en": "Dawn Stone Sword",
+          "zh": null,
+          "slug": "dawn-stone-sword"
+        },
+        {
+          "en": "Dawn Stone Helmet",
+          "zh": null,
+          "slug": "dawn-stone-helmet"
+        },
+        {
+          "en": "Dawn Stone Chestplate",
+          "zh": null,
+          "slug": "dawn-stone-chestplate"
+        },
+        {
+          "en": "Dawn Stone Leggings",
+          "zh": null,
+          "slug": "dawn-stone-leggings"
+        },
+        {
+          "en": "Dawn Stone Boots",
+          "zh": null,
+          "slug": "dawn-stone-boots"
+        },
+        {
+          "en": "Dusk Stone Axe",
+          "zh": null,
+          "slug": "dusk-stone-axe"
+        },
+        {
+          "en": "Dusk Stone Hammer",
+          "zh": null,
+          "slug": "dusk-stone-hammer"
+        },
+        {
+          "en": "Dusk Stone Hoe",
+          "zh": null,
+          "slug": "dusk-stone-hoe"
+        },
+        {
+          "en": "Dusk Stone Pickaxe",
+          "zh": null,
+          "slug": "dusk-stone-pickaxe"
+        },
+        {
+          "en": "Dusk Stone Shovel",
+          "zh": null,
+          "slug": "dusk-stone-shovel"
+        },
+        {
+          "en": "Dusk Stone Sword",
+          "zh": null,
+          "slug": "dusk-stone-sword"
+        },
+        {
+          "en": "Dusk Stone Helmet",
+          "zh": null,
+          "slug": "dusk-stone-helmet"
+        },
+        {
+          "en": "Dusk Stone Chestplate",
+          "zh": null,
+          "slug": "dusk-stone-chestplate"
+        },
+        {
+          "en": "Dusk Stone Leggings",
+          "zh": null,
+          "slug": "dusk-stone-leggings"
+        },
+        {
+          "en": "Dusk Stone Boots",
+          "zh": null,
+          "slug": "dusk-stone-boots"
+        },
+        {
+          "en": "Fire Stone Axe",
+          "zh": null,
+          "slug": "fire-stone-axe"
+        },
+        {
+          "en": "Fire Stone Hammer",
+          "zh": null,
+          "slug": "fire-stone-hammer"
+        },
+        {
+          "en": "Fire Stone Hoe",
+          "zh": null,
+          "slug": "fire-stone-hoe"
+        },
+        {
+          "en": "Fire Stone Pickaxe",
+          "zh": null,
+          "slug": "fire-stone-pickaxe"
+        },
+        {
+          "en": "Fire Stone Shovel",
+          "zh": null,
+          "slug": "fire-stone-shovel"
+        },
+        {
+          "en": "Fire Stone Sword",
+          "zh": null,
+          "slug": "fire-stone-sword"
+        },
+        {
+          "en": "Fire Stone Helmet",
+          "zh": null,
+          "slug": "fire-stone-helmet"
+        },
+        {
+          "en": "Fire Stone Chestplate",
+          "zh": null,
+          "slug": "fire-stone-chestplate"
+        },
+        {
+          "en": "Fire Stone Leggings",
+          "zh": null,
+          "slug": "fire-stone-leggings"
+        },
+        {
+          "en": "Fire Stone Boots",
+          "zh": null,
+          "slug": "fire-stone-boots"
+        },
+        {
+          "en": "Leaf Stone Axe",
+          "zh": null,
+          "slug": "leaf-stone-axe"
+        },
+        {
+          "en": "Leaf Stone Hammer",
+          "zh": null,
+          "slug": "leaf-stone-hammer"
+        },
+        {
+          "en": "Leaf Stone Hoe",
+          "zh": null,
+          "slug": "leaf-stone-hoe"
+        },
+        {
+          "en": "Leaf Stone Pickaxe",
+          "zh": null,
+          "slug": "leaf-stone-pickaxe"
+        },
+        {
+          "en": "Leaf Stone Shovel",
+          "zh": null,
+          "slug": "leaf-stone-shovel"
+        },
+        {
+          "en": "Leaf Stone Sword",
+          "zh": null,
+          "slug": "leaf-stone-sword"
+        },
+        {
+          "en": "Leaf Stone Helmet",
+          "zh": null,
+          "slug": "leaf-stone-helmet"
+        },
+        {
+          "en": "Leaf Stone Chestplate",
+          "zh": null,
+          "slug": "leaf-stone-chestplate"
+        },
+        {
+          "en": "Leaf Stone Leggings",
+          "zh": null,
+          "slug": "leaf-stone-leggings"
+        },
+        {
+          "en": "Leaf Stone Boots",
+          "zh": null,
+          "slug": "leaf-stone-boots"
+        },
+        {
+          "en": "Moon Stone Axe",
+          "zh": null,
+          "slug": "moon-stone-axe"
+        },
+        {
+          "en": "Moon Stone Hammer",
+          "zh": null,
+          "slug": "moon-stone-hammer"
+        },
+        {
+          "en": "Moon Stone Hoe",
+          "zh": null,
+          "slug": "moon-stone-hoe"
+        },
+        {
+          "en": "Moon Stone Pickaxe",
+          "zh": null,
+          "slug": "moon-stone-pickaxe"
+        },
+        {
+          "en": "Moon Stone Shovel",
+          "zh": null,
+          "slug": "moon-stone-shovel"
+        },
+        {
+          "en": "Moon Stone Sword",
+          "zh": null,
+          "slug": "moon-stone-sword"
+        },
+        {
+          "en": "Moon Stone Helmet",
+          "zh": null,
+          "slug": "moon-stone-helmet"
+        },
+        {
+          "en": "Moon Stone Chestplate",
+          "zh": null,
+          "slug": "moon-stone-chestplate"
+        },
+        {
+          "en": "Moon Stone Leggings",
+          "zh": null,
+          "slug": "moon-stone-leggings"
+        },
+        {
+          "en": "Moon Stone Boots",
+          "zh": null,
+          "slug": "moon-stone-boots"
+        },
+        {
+          "en": "Ruby Axe",
+          "zh": null,
+          "slug": "ruby-axe"
+        },
+        {
+          "en": "Ruby Hammer",
+          "zh": null,
+          "slug": "ruby-hammer"
+        },
+        {
+          "en": "Ruby Hoe",
+          "zh": null,
+          "slug": "ruby-hoe"
+        },
+        {
+          "en": "Ruby Pickaxe",
+          "zh": null,
+          "slug": "ruby-pickaxe"
+        },
+        {
+          "en": "Ruby Shovel",
+          "zh": null,
+          "slug": "ruby-shovel"
+        },
+        {
+          "en": "Ruby Sword",
+          "zh": null,
+          "slug": "ruby-sword"
+        },
+        {
+          "en": "Sapphire Axe",
+          "zh": null,
+          "slug": "sapphire-axe"
+        },
+        {
+          "en": "Sapphire Hammer",
+          "zh": null,
+          "slug": "sapphire-hammer"
+        },
+        {
+          "en": "Sapphire Hoe",
+          "zh": null,
+          "slug": "sapphire-hoe"
+        },
+        {
+          "en": "Sapphire Pickaxe",
+          "zh": null,
+          "slug": "sapphire-pickaxe"
+        },
+        {
+          "en": "Sapphire Shovel",
+          "zh": null,
+          "slug": "sapphire-shovel"
+        },
+        {
+          "en": "Sapphire Sword",
+          "zh": null,
+          "slug": "sapphire-sword"
+        },
+        {
+          "en": "Sun Stone Axe",
+          "zh": null,
+          "slug": "sun-stone-axe"
+        },
+        {
+          "en": "Sun Stone Hammer",
+          "zh": null,
+          "slug": "sun-stone-hammer"
+        },
+        {
+          "en": "Sun Stone Hoe",
+          "zh": null,
+          "slug": "sun-stone-hoe"
+        },
+        {
+          "en": "Sun Stone Pickaxe",
+          "zh": null,
+          "slug": "sun-stone-pickaxe"
+        },
+        {
+          "en": "Sun Stone Shovel",
+          "zh": null,
+          "slug": "sun-stone-shovel"
+        },
+        {
+          "en": "Sun Stone Sword",
+          "zh": null,
+          "slug": "sun-stone-sword"
+        },
+        {
+          "en": "Sun Stone Helmet",
+          "zh": null,
+          "slug": "sun-stone-helmet"
+        },
+        {
+          "en": "Sun Stone Chestplate",
+          "zh": null,
+          "slug": "sun-stone-chestplate"
+        },
+        {
+          "en": "Sun Stone Leggings",
+          "zh": null,
+          "slug": "sun-stone-leggings"
+        },
+        {
+          "en": "Sun Stone Boots",
+          "zh": null,
+          "slug": "sun-stone-boots"
+        },
+        {
+          "en": "Thunder Stone Axe",
+          "zh": null,
+          "slug": "thunder-stone-axe"
+        },
+        {
+          "en": "Thunder Stone Hammer",
+          "zh": null,
+          "slug": "thunder-stone-hammer"
+        },
+        {
+          "en": "Thunder Stone Hoe",
+          "zh": null,
+          "slug": "thunder-stone-hoe"
+        },
+        {
+          "en": "Thunder Stone Pickaxe",
+          "zh": null,
+          "slug": "thunder-stone-pickaxe"
+        },
+        {
+          "en": "Thunder Stone Shovel",
+          "zh": null,
+          "slug": "thunder-stone-shovel"
+        },
+        {
+          "en": "Thunder Stone Sword",
+          "zh": null,
+          "slug": "thunder-stone-sword"
+        },
+        {
+          "en": "Thunder Stone Helmet",
+          "zh": null,
+          "slug": "thunder-stone-helmet"
+        },
+        {
+          "en": "Thunder Stone Chestplate",
+          "zh": null,
+          "slug": "thunder-stone-chestplate"
+        },
+        {
+          "en": "Thunder Stone Leggings",
+          "zh": null,
+          "slug": "thunder-stone-leggings"
+        },
+        {
+          "en": "Thunder Stone Boots",
+          "zh": null,
+          "slug": "thunder-stone-boots"
+        },
+        {
+          "en": "Water Stone Axe",
+          "zh": null,
+          "slug": "water-stone-axe"
+        },
+        {
+          "en": "Water Stone Hammer",
+          "zh": null,
+          "slug": "water-stone-hammer"
+        },
+        {
+          "en": "Water Stone Hoe",
+          "zh": null,
+          "slug": "water-stone-hoe"
+        },
+        {
+          "en": "Water Stone Pickaxe",
+          "zh": null,
+          "slug": "water-stone-pickaxe"
+        },
+        {
+          "en": "Water Stone Shovel",
+          "zh": null,
+          "slug": "water-stone-shovel"
+        },
+        {
+          "en": "Water Stone Sword",
+          "zh": null,
+          "slug": "water-stone-sword"
+        },
+        {
+          "en": "Water Stone Helmet",
+          "zh": null,
+          "slug": "water-stone-helmet"
+        },
+        {
+          "en": "Water Stone Chestplate",
+          "zh": null,
+          "slug": "water-stone-chestplate"
+        },
+        {
+          "en": "Water Stone Leggings",
+          "zh": null,
+          "slug": "water-stone-leggings"
+        },
+        {
+          "en": "Water Stone Boots",
+          "zh": null,
+          "slug": "water-stone-boots"
+        }
+      ]
+    },
+    {
+      "name": "薄荷",
+      "icon": "🌿",
+      "items": [
+        {
+          "en": "Mint Cutting",
+          "zh": null,
+          "slug": "mint-cutting"
+        },
+        {
+          "en": "Lonely Mint",
+          "zh": null,
+          "slug": "lonely-mint"
+        },
+        {
+          "en": "Adamant Mint",
+          "zh": null,
+          "slug": "adamant-mint"
+        },
+        {
+          "en": "Naughty Mint",
+          "zh": null,
+          "slug": "naughty-mint"
+        },
+        {
+          "en": "Brave Mint",
+          "zh": null,
+          "slug": "brave-mint"
+        },
+        {
+          "en": "Bold Mint",
+          "zh": null,
+          "slug": "bold-mint"
+        },
+        {
+          "en": "Impish Mint",
+          "zh": null,
+          "slug": "impish-mint"
+        },
+        {
+          "en": "Lax Mint",
+          "zh": null,
+          "slug": "lax-mint"
+        },
+        {
+          "en": "Relaxed Mint",
+          "zh": null,
+          "slug": "relaxed-mint"
+        },
+        {
+          "en": "Modest Mint",
+          "zh": null,
+          "slug": "modest-mint"
+        },
+        {
+          "en": "Mild Mint",
+          "zh": null,
+          "slug": "mild-mint"
+        },
+        {
+          "en": "Rash Mint",
+          "zh": null,
+          "slug": "rash-mint"
+        },
+        {
+          "en": "Quiet Mint",
+          "zh": null,
+          "slug": "quiet-mint"
+        },
+        {
+          "en": "Calm Mint",
+          "zh": null,
+          "slug": "calm-mint"
+        },
+        {
+          "en": "Gentle Mint",
+          "zh": null,
+          "slug": "gentle-mint"
+        },
+        {
+          "en": "Careful Mint",
+          "zh": null,
+          "slug": "careful-mint"
+        },
+        {
+          "en": "Sassy Mint",
+          "zh": null,
+          "slug": "sassy-mint"
+        },
+        {
+          "en": "Timid Mint",
+          "zh": null,
+          "slug": "timid-mint"
+        },
+        {
+          "en": "Hasty Mint",
+          "zh": null,
+          "slug": "hasty-mint"
+        },
+        {
+          "en": "Jolly Mint",
+          "zh": null,
+          "slug": "jolly-mint"
+        },
+        {
+          "en": "Naive Mint",
+          "zh": null,
+          "slug": "naive-mint"
+        },
+        {
+          "en": "Quirky Mint",
+          "zh": null,
+          "slug": "quirky-mint"
+        },
+        {
+          "en": "Bashful Mint",
+          "zh": null,
+          "slug": "bashful-mint"
+        },
+        {
+          "en": "Serious Mint",
+          "zh": null,
+          "slug": "serious-mint"
+        },
+        {
+          "en": "Docile Mint",
+          "zh": null,
+          "slug": "docile-mint"
+        },
+        {
+          "en": "Hardy Mint",
+          "zh": null,
+          "slug": "hardy-mint"
+        }
+      ]
+    },
+    {
+      "name": "薰香",
+      "icon": "♨",
+      "items": [
+        {
+          "en": "Full Incense",
+          "zh": null,
+          "slug": "full-incense"
+        },
+        {
+          "en": "Lax Incense",
+          "zh": null,
+          "slug": "lax-incense"
+        },
+        {
+          "en": "Luck Incense",
+          "zh": null,
+          "slug": "luck-incense"
+        },
+        {
+          "en": "Odd Incense",
+          "zh": null,
+          "slug": "odd-incense"
+        },
+        {
+          "en": "Pure Incense",
+          "zh": null,
+          "slug": "pure-incense"
+        },
+        {
+          "en": "Rock Incense",
+          "zh": null,
+          "slug": "rock-incense"
+        },
+        {
+          "en": "Rose Incense",
+          "zh": null,
+          "slug": "rose-incense"
+        },
+        {
+          "en": "Sea Incense",
+          "zh": null,
+          "slug": "sea-incense"
+        },
+        {
+          "en": "Wave Incense",
+          "zh": null,
+          "slug": "wave-incense"
+        },
+        {
+          "en": "Incense Burner",
+          "zh": null,
+          "slug": "incense-burner"
+        }
+      ]
+    },
+    {
+      "name": "石板",
+      "icon": "▤",
+      "items": [
+        {
+          "en": "Draco Plate",
+          "zh": null,
+          "slug": "draco-plate"
+        },
+        {
+          "en": "Dread Plate",
+          "zh": null,
+          "slug": "dread-plate"
+        },
+        {
+          "en": "Earth Plate",
+          "zh": null,
+          "slug": "earth-plate"
+        },
+        {
+          "en": "Fist Plate",
+          "zh": null,
+          "slug": "fist-plate"
+        },
+        {
+          "en": "Flame Plate",
+          "zh": null,
+          "slug": "flame-plate"
+        },
+        {
+          "en": "Icicle Plate",
+          "zh": null,
+          "slug": "icicle-plate"
+        },
+        {
+          "en": "Insect Plate",
+          "zh": null,
+          "slug": "insect-plate"
+        },
+        {
+          "en": "Iron Plate",
+          "zh": null,
+          "slug": "iron-plate"
+        },
+        {
+          "en": "Meadow Plate",
+          "zh": null,
+          "slug": "meadow-plate"
+        },
+        {
+          "en": "Mind Plate",
+          "zh": null,
+          "slug": "mind-plate"
+        },
+        {
+          "en": "Pixie Plate",
+          "zh": null,
+          "slug": "pixie-plate"
+        },
+        {
+          "en": "Sky Plate",
+          "zh": null,
+          "slug": "sky-plate"
+        },
+        {
+          "en": "Splash Plate",
+          "zh": null,
+          "slug": "splash-plate"
+        },
+        {
+          "en": "Spooky Plate",
+          "zh": null,
+          "slug": "spooky-plate"
+        },
+        {
+          "en": "Stone Plate",
+          "zh": null,
+          "slug": "stone-plate"
+        },
+        {
+          "en": "Toxic Plate",
+          "zh": null,
+          "slug": "toxic-plate"
+        },
+        {
+          "en": "Zap Plate",
+          "zh": null,
+          "slug": "zap-plate"
+        }
+      ]
+    },
+    {
+      "name": "卡帶",
+      "icon": "▥",
+      "items": [
+        {
+          "en": "Burn Drive",
+          "zh": null,
+          "slug": "burn-drive"
+        },
+        {
+          "en": "Chill Drive",
+          "zh": null,
+          "slug": "chill-drive"
+        },
+        {
+          "en": "Douse Drive",
+          "zh": null,
+          "slug": "douse-drive"
+        },
+        {
+          "en": "Shock Drive",
+          "zh": null,
+          "slug": "shock-drive"
+        }
+      ]
+    },
+    {
+      "name": "攜帶道具",
+      "icon": "✦",
+      "items": [
+        {
+          "en": "Absorb Bulb",
+          "zh": null,
+          "slug": "absorb-bulb"
+        },
+        {
+          "en": "Adamant Orb",
+          "zh": null,
+          "slug": "adamant-orb"
+        },
+        {
+          "en": "Air Balloon",
+          "zh": null,
+          "slug": "air-balloon"
+        },
+        {
+          "en": "Amulet Coin",
+          "zh": null,
+          "slug": "amulet-coin"
+        },
+        {
+          "en": "Assault Vest",
+          "zh": null,
+          "slug": "assault-vest"
+        },
+        {
+          "en": "Berry Juice",
+          "zh": null,
+          "slug": "berry-juice"
+        },
+        {
+          "en": "Big Root",
+          "zh": null,
+          "slug": "big-root"
+        },
+        {
+          "en": "Binding Band",
+          "zh": null,
+          "slug": "binding-band"
+        },
+        {
+          "en": "Black Belt",
+          "zh": null,
+          "slug": "black-belt"
+        },
+        {
+          "en": "Black Glasses",
+          "zh": null,
+          "slug": "black-glasses"
+        },
+        {
+          "en": "Black Sludge",
+          "zh": null,
+          "slug": "black-sludge"
+        },
+        {
+          "en": "Bright Powder",
+          "zh": null,
+          "slug": "bright-powder"
+        },
+        {
+          "en": "Cell Battery",
+          "zh": null,
+          "slug": "cell-battery"
+        },
+        {
+          "en": "Charcoal",
+          "zh": null,
+          "slug": "charcoal"
+        },
+        {
+          "en": "Choice Band",
+          "zh": null,
+          "slug": "choice-band"
+        },
+        {
+          "en": "Choice Scarf",
+          "zh": null,
+          "slug": "choice-scarf"
+        },
+        {
+          "en": "Choice Specs",
+          "zh": null,
+          "slug": "choice-specs"
+        },
+        {
+          "en": "Damp Rock",
+          "zh": null,
+          "slug": "damp-rock"
+        },
+        {
+          "en": "Destiny Knot",
+          "zh": null,
+          "slug": "destiny-knot"
+        },
+        {
+          "en": "Dragon Fang",
+          "zh": null,
+          "slug": "dragon-fang"
+        },
+        {
+          "en": "Eject Button",
+          "zh": null,
+          "slug": "eject-button"
+        },
+        {
+          "en": "Eviolite",
+          "zh": null,
+          "slug": "eviolite"
+        },
+        {
+          "en": "Grassy Seed",
+          "zh": null,
+          "slug": "grassy-seed"
+        },
+        {
+          "en": "Electric Seed",
+          "zh": null,
+          "slug": "electric-seed"
+        },
+        {
+          "en": "Psychic Seed",
+          "zh": null,
+          "slug": "psychic-seed"
+        },
+        {
+          "en": "Misty Seed",
+          "zh": null,
+          "slug": "misty-seed"
+        },
+        {
+          "en": "Exp. Share",
+          "zh": null,
+          "slug": "exp-share"
+        },
+        {
+          "en": "Expert Belt",
+          "zh": null,
+          "slug": "expert-belt"
+        },
+        {
+          "en": "Flame Orb",
+          "zh": null,
+          "slug": "flame-orb"
+        },
+        {
+          "en": "Float Stone",
+          "zh": null,
+          "slug": "float-stone"
+        },
+        {
+          "en": "Focus Band",
+          "zh": null,
+          "slug": "focus-band"
+        },
+        {
+          "en": "Focus Sash",
+          "zh": null,
+          "slug": "focus-sash"
+        },
+        {
+          "en": "Grip Claw",
+          "zh": null,
+          "slug": "grip-claw"
+        },
+        {
+          "en": "Griseous Orb",
+          "zh": null,
+          "slug": "griseous-orb"
+        },
+        {
+          "en": "Hard Stone",
+          "zh": null,
+          "slug": "hard-stone"
+        },
+        {
+          "en": "Heat Rock",
+          "zh": null,
+          "slug": "heat-rock"
+        },
+        {
+          "en": "Icy Rock",
+          "zh": null,
+          "slug": "icy-rock"
+        },
+        {
+          "en": "Iron Ball",
+          "zh": null,
+          "slug": "iron-ball"
+        },
+        {
+          "en": "King's Rock",
+          "zh": null,
+          "slug": "king-s-rock"
+        },
+        {
+          "en": "Lagging Tail",
+          "zh": null,
+          "slug": "lagging-tail"
+        },
+        {
+          "en": "Leftovers",
+          "zh": null,
+          "slug": "leftovers"
+        },
+        {
+          "en": "Life Orb",
+          "zh": null,
+          "slug": "life-orb"
+        },
+        {
+          "en": "Light Ball",
+          "zh": null,
+          "slug": "light-ball"
+        },
+        {
+          "en": "Light Clay",
+          "zh": null,
+          "slug": "light-clay"
+        },
+        {
+          "en": "Lucky Egg",
+          "zh": null,
+          "slug": "lucky-egg"
+        },
+        {
+          "en": "Lucky Punch",
+          "zh": null,
+          "slug": "lucky-punch"
+        },
+        {
+          "en": "Luminous Moss",
+          "zh": null,
+          "slug": "luminous-moss"
+        },
+        {
+          "en": "Lustrous Orb",
+          "zh": null,
+          "slug": "lustrous-orb"
+        },
+        {
+          "en": "Macho Brace",
+          "zh": null,
+          "slug": "macho-brace"
+        },
+        {
+          "en": "Magnet",
+          "zh": null,
+          "slug": "magnet"
+        },
+        {
+          "en": "Mental Herb",
+          "zh": null,
+          "slug": "mental-herb"
+        },
+        {
+          "en": "Metal Powder",
+          "zh": null,
+          "slug": "metal-powder"
+        },
+        {
+          "en": "Miracle Seed",
+          "zh": null,
+          "slug": "miracle-seed"
+        },
+        {
+          "en": "Metal Coat",
+          "zh": null,
+          "slug": "metal-coat"
+        },
+        {
+          "en": "Metronome",
+          "zh": null,
+          "slug": "metronome"
+        },
+        {
+          "en": "Muscle Band",
+          "zh": null,
+          "slug": "muscle-band"
+        },
+        {
+          "en": "Mystic Water",
+          "zh": null,
+          "slug": "mystic-water"
+        },
+        {
+          "en": "Never-Melt Ice",
+          "zh": null,
+          "slug": "never-melt-ice"
+        },
+        {
+          "en": "Poison Barb",
+          "zh": null,
+          "slug": "poison-barb"
+        },
+        {
+          "en": "Power Anklet",
+          "zh": null,
+          "slug": "power-anklet"
+        },
+        {
+          "en": "Power Band",
+          "zh": null,
+          "slug": "power-band"
+        },
+        {
+          "en": "Power Belt",
+          "zh": null,
+          "slug": "power-belt"
+        },
+        {
+          "en": "Power Bracer",
+          "zh": null,
+          "slug": "power-bracer"
+        },
+        {
+          "en": "Power Lens",
+          "zh": null,
+          "slug": "power-lens"
+        },
+        {
+          "en": "Power Weight",
+          "zh": null,
+          "slug": "power-weight"
+        },
+        {
+          "en": "Quick Claw",
+          "zh": null,
+          "slug": "quick-claw"
+        },
+        {
+          "en": "Razor Claw",
+          "zh": null,
+          "slug": "razor-claw"
+        },
+        {
+          "en": "Razor Fang",
+          "zh": null,
+          "slug": "razor-fang"
+        },
+        {
+          "en": "Red Card",
+          "zh": null,
+          "slug": "red-card"
+        },
+        {
+          "en": "Ring Target",
+          "zh": null,
+          "slug": "ring-target"
+        },
+        {
+          "en": "Rocky Helmet",
+          "zh": null,
+          "slug": "rocky-helmet"
+        },
+        {
+          "en": "Safety Goggles",
+          "zh": null,
+          "slug": "safety-goggles"
+        },
+        {
+          "en": "Scope Lens",
+          "zh": null,
+          "slug": "scope-lens"
+        },
+        {
+          "en": "Sharp Beak",
+          "zh": null,
+          "slug": "sharp-beak"
+        },
+        {
+          "en": "Shed Shell",
+          "zh": null,
+          "slug": "shed-shell"
+        },
+        {
+          "en": "Shell Bell",
+          "zh": null,
+          "slug": "shell-bell"
+        },
+        {
+          "en": "Silk Scarf",
+          "zh": null,
+          "slug": "silk-scarf"
+        },
+        {
+          "en": "Silver Powder",
+          "zh": null,
+          "slug": "silver-powder"
+        },
+        {
+          "en": "Smoke Ball",
+          "zh": null,
+          "slug": "smoke-ball"
+        },
+        {
+          "en": "Smooth Rock",
+          "zh": null,
+          "slug": "smooth-rock"
+        },
+        {
+          "en": "Soft Sand",
+          "zh": null,
+          "slug": "soft-sand"
+        },
+        {
+          "en": "Soothe Bell",
+          "zh": null,
+          "slug": "soothe-bell"
+        },
+        {
+          "en": "Spell Tag",
+          "zh": null,
+          "slug": "spell-tag"
+        },
+        {
+          "en": "Sticky Barb",
+          "zh": null,
+          "slug": "sticky-barb"
+        },
+        {
+          "en": "Thick Club",
+          "zh": null,
+          "slug": "thick-club"
+        },
+        {
+          "en": "Toxic Orb",
+          "zh": null,
+          "slug": "toxic-orb"
+        },
+        {
+          "en": "Twisted Spoon",
+          "zh": null,
+          "slug": "twisted-spoon"
+        },
+        {
+          "en": "Weakness Policy",
+          "zh": null,
+          "slug": "weakness-policy"
+        },
+        {
+          "en": "White Herb",
+          "zh": null,
+          "slug": "white-herb"
+        },
+        {
+          "en": "Wide Lens",
+          "zh": null,
+          "slug": "wide-lens"
+        },
+        {
+          "en": "Wise Glasses",
+          "zh": null,
+          "slug": "wise-glasses"
+        },
+        {
+          "en": "Zoom Lens",
+          "zh": null,
+          "slug": "zoom-lens"
+        }
+      ]
+    },
+    {
+      "name": "進化道具",
+      "icon": "◇",
+      "items": [
+        {
+          "en": "Fire Stone",
+          "zh": null,
+          "slug": "fire-stone"
+        },
+        {
+          "en": "Water Stone",
+          "zh": null,
+          "slug": "water-stone"
+        },
+        {
+          "en": "Thunder Stone",
+          "zh": null,
+          "slug": "thunder-stone"
+        },
+        {
+          "en": "Leaf Stone",
+          "zh": null,
+          "slug": "leaf-stone"
+        },
+        {
+          "en": "Moon Stone",
+          "zh": null,
+          "slug": "moon-stone"
+        },
+        {
+          "en": "Sun Stone",
+          "zh": null,
+          "slug": "sun-stone"
+        },
+        {
+          "en": "Dawn Stone",
+          "zh": null,
+          "slug": "dawn-stone"
+        },
+        {
+          "en": "Dusk Stone",
+          "zh": null,
+          "slug": "dusk-stone"
+        },
+        {
+          "en": "Shiny Stone",
+          "zh": null,
+          "slug": "shiny-stone"
+        },
+        {
+          "en": "Ice Stone",
+          "zh": null,
+          "slug": "ice-stone"
+        },
+        {
+          "en": "Oval Stone",
+          "zh": null,
+          "slug": "oval-stone"
+        },
+        {
+          "en": "Dragon Scale",
+          "zh": null,
+          "slug": "dragon-scale"
+        },
+        {
+          "en": "Up-Grade",
+          "zh": null,
+          "slug": "up-grade"
+        },
+        {
+          "en": "Dubious Disc",
+          "zh": null,
+          "slug": "dubious-disc"
+        },
+        {
+          "en": "Electirizer",
+          "zh": null,
+          "slug": "electirizer"
+        },
+        {
+          "en": "Magmarizer",
+          "zh": null,
+          "slug": "magmarizer"
+        },
+        {
+          "en": "Protector",
+          "zh": null,
+          "slug": "protector"
+        },
+        {
+          "en": "Reaper Cloth",
+          "zh": null,
+          "slug": "reaper-cloth"
+        },
+        {
+          "en": "Prism Scale",
+          "zh": null,
+          "slug": "prism-scale"
+        },
+        {
+          "en": "Whipped Dream",
+          "zh": null,
+          "slug": "whipped-dream"
+        },
+        {
+          "en": "Sachet",
+          "zh": null,
+          "slug": "sachet"
+        },
+        {
+          "en": "Deep Sea Tooth",
+          "zh": null,
+          "slug": "deep-sea-tooth"
+        },
+        {
+          "en": "Deep Sea Scale",
+          "zh": null,
+          "slug": "deep-sea-scale"
+        },
+        {
+          "en": "Everstone",
+          "zh": null,
+          "slug": "everstone"
+        },
+        {
+          "en": "Sweet Apple",
+          "zh": null,
+          "slug": "sweet-apple"
+        },
+        {
+          "en": "Tart Apple",
+          "zh": null,
+          "slug": "tart-apple"
+        },
+        {
+          "en": "Cracked Pot",
+          "zh": null,
+          "slug": "cracked-pot"
+        },
+        {
+          "en": "Chipped Pot",
+          "zh": null,
+          "slug": "chipped-pot"
+        },
+        {
+          "en": "Galarica Cuff",
+          "zh": null,
+          "slug": "galarica-cuff"
+        },
+        {
+          "en": "Galarica Wreath",
+          "zh": null,
+          "slug": "galarica-wreath"
+        },
+        {
+          "en": "Black Augurite",
+          "zh": null,
+          "slug": "black-augurite"
+        },
+        {
+          "en": "Peat Block",
+          "zh": null,
+          "slug": "peat-block"
+        }
+      ]
+    },
+    {
+      "name": "藥品與強化",
+      "icon": "✚",
+      "items": [
+        {
+          "en": "Potion",
+          "zh": null,
+          "slug": "potion"
+        },
+        {
+          "en": "Super Potion",
+          "zh": null,
+          "slug": "super-potion"
+        },
+        {
+          "en": "Hyper Potion",
+          "zh": null,
+          "slug": "hyper-potion"
+        },
+        {
+          "en": "Max Potion",
+          "zh": null,
+          "slug": "max-potion"
+        },
+        {
+          "en": "Full Restore",
+          "zh": null,
+          "slug": "full-restore"
+        },
+        {
+          "en": "Antidote",
+          "zh": null,
+          "slug": "antidote"
+        },
+        {
+          "en": "Burn Heal",
+          "zh": null,
+          "slug": "burn-heal"
+        },
+        {
+          "en": "Ice Heal",
+          "zh": null,
+          "slug": "ice-heal"
+        },
+        {
+          "en": "Awakening",
+          "zh": null,
+          "slug": "awakening"
+        },
+        {
+          "en": "Paralyze Heal",
+          "zh": null,
+          "slug": "paralyze-heal"
+        },
+        {
+          "en": "Full Heal",
+          "zh": null,
+          "slug": "full-heal"
+        },
+        {
+          "en": "Revive",
+          "zh": null,
+          "slug": "revive"
+        },
+        {
+          "en": "Max Revive",
+          "zh": null,
+          "slug": "max-revive"
+        },
+        {
+          "en": "Ether",
+          "zh": null,
+          "slug": "ether"
+        },
+        {
+          "en": "Max Ether",
+          "zh": null,
+          "slug": "max-ether"
+        },
+        {
+          "en": "Elixir",
+          "zh": null,
+          "slug": "elixir"
+        },
+        {
+          "en": "Max Elixir",
+          "zh": null,
+          "slug": "max-elixir"
+        },
+        {
+          "en": "PP Up",
+          "zh": null,
+          "slug": "pp-up"
+        },
+        {
+          "en": "PP Max",
+          "zh": null,
+          "slug": "pp-max"
+        },
+        {
+          "en": "Rare Candy",
+          "zh": null,
+          "slug": "rare-candy"
+        },
+        {
+          "en": "Exp. Candy XS",
+          "zh": null,
+          "slug": "exp-candy-xs"
+        },
+        {
+          "en": "Exp. Candy S",
+          "zh": null,
+          "slug": "exp-candy-s"
+        },
+        {
+          "en": "Exp. Candy M",
+          "zh": null,
+          "slug": "exp-candy-m"
+        },
+        {
+          "en": "Exp. Candy L",
+          "zh": null,
+          "slug": "exp-candy-l"
+        },
+        {
+          "en": "Exp. Candy XL",
+          "zh": null,
+          "slug": "exp-candy-xl"
+        },
+        {
+          "en": "HP Up",
+          "zh": null,
+          "slug": "hp-up"
+        },
+        {
+          "en": "Protein",
+          "zh": null,
+          "slug": "protein"
+        },
+        {
+          "en": "Iron",
+          "zh": null,
+          "slug": "iron"
+        },
+        {
+          "en": "Calcium",
+          "zh": null,
+          "slug": "calcium"
+        },
+        {
+          "en": "Zinc",
+          "zh": null,
+          "slug": "zinc"
+        },
+        {
+          "en": "Carbos",
+          "zh": null,
+          "slug": "carbos"
+        },
+        {
+          "en": "Vitamin",
+          "zh": null,
+          "slug": "vitamin"
+        },
+        {
+          "en": "Ability Capsule",
+          "zh": null,
+          "slug": "ability-capsule"
+        },
+        {
+          "en": "Ability Patch",
+          "zh": null,
+          "slug": "ability-patch"
+        },
+        {
+          "en": "Max Mushroom",
+          "zh": null,
+          "slug": "max-mushroom"
+        }
+      ]
+    },
+    {
+      "name": "化石",
+      "icon": "◈",
+      "items": [
+        {
+          "en": "Dome Fossil",
+          "zh": null,
+          "slug": "dome-fossil"
+        },
+        {
+          "en": "Helix Fossil",
+          "zh": null,
+          "slug": "helix-fossil"
+        },
+        {
+          "en": "Old Amber",
+          "zh": null,
+          "slug": "old-amber"
+        },
+        {
+          "en": "Root Fossil",
+          "zh": null,
+          "slug": "root-fossil"
+        },
+        {
+          "en": "Claw Fossil",
+          "zh": null,
+          "slug": "claw-fossil"
+        },
+        {
+          "en": "Skull Fossil",
+          "zh": null,
+          "slug": "skull-fossil"
+        },
+        {
+          "en": "Armor Fossil",
+          "zh": null,
+          "slug": "armor-fossil"
+        },
+        {
+          "en": "Cover Fossil",
+          "zh": null,
+          "slug": "cover-fossil"
+        },
+        {
+          "en": "Plume Fossil",
+          "zh": null,
+          "slug": "plume-fossil"
+        },
+        {
+          "en": "Jaw Fossil",
+          "zh": null,
+          "slug": "jaw-fossil"
+        },
+        {
+          "en": "Sail Fossil",
+          "zh": null,
+          "slug": "sail-fossil"
+        },
+        {
+          "en": "Fossilized Bird",
+          "zh": null,
+          "slug": "fossilized-bird"
+        },
+        {
+          "en": "Fossilized Dino",
+          "zh": null,
+          "slug": "fossilized-dino"
+        },
+        {
+          "en": "Fossilized Drake",
+          "zh": null,
+          "slug": "fossilized-drake"
+        },
+        {
+          "en": "Fossilized Fish",
+          "zh": null,
+          "slug": "fossilized-fish"
+        },
+        {
+          "en": "Rare Bone",
+          "zh": null,
+          "slug": "rare-bone"
+        }
+      ]
+    },
+    {
+      "name": "超級進化石",
+      "icon": "💎",
+      "items": [
+        {
+          "en": "Abomasite",
+          "zh": null,
+          "slug": "abomasite"
+        },
+        {
+          "en": "Absolite",
+          "zh": null,
+          "slug": "absolite"
+        },
+        {
+          "en": "Aerodactylite",
+          "zh": null,
+          "slug": "aerodactylite"
+        },
+        {
+          "en": "Aggronite",
+          "zh": null,
+          "slug": "aggronite"
+        },
+        {
+          "en": "Alakazite",
+          "zh": null,
+          "slug": "alakazite"
+        },
+        {
+          "en": "Altarianite",
+          "zh": null,
+          "slug": "altarianite"
+        },
+        {
+          "en": "Ampharosite",
+          "zh": null,
+          "slug": "ampharosite"
+        },
+        {
+          "en": "Audinite",
+          "zh": null,
+          "slug": "audinite"
+        },
+        {
+          "en": "Banettite",
+          "zh": null,
+          "slug": "banettite"
+        },
+        {
+          "en": "Beedrillite",
+          "zh": null,
+          "slug": "beedrillite"
+        },
+        {
+          "en": "Blastoisinite",
+          "zh": null,
+          "slug": "blastoisinite"
+        },
+        {
+          "en": "Blazikenite",
+          "zh": null,
+          "slug": "blazikenite"
+        },
+        {
+          "en": "Cameruptite",
+          "zh": null,
+          "slug": "cameruptite"
+        },
+        {
+          "en": "Charizardite X",
+          "zh": null,
+          "slug": "charizardite-x"
+        },
+        {
+          "en": "Charizardite Y",
+          "zh": null,
+          "slug": "charizardite-y"
+        },
+        {
+          "en": "Diancite",
+          "zh": null,
+          "slug": "diancite"
+        },
+        {
+          "en": "Galladite",
+          "zh": null,
+          "slug": "galladite"
+        },
+        {
+          "en": "Garchompite",
+          "zh": null,
+          "slug": "garchompite"
+        },
+        {
+          "en": "Gardevoirite",
+          "zh": null,
+          "slug": "gardevoirite"
+        },
+        {
+          "en": "Gengarite",
+          "zh": null,
+          "slug": "gengarite"
+        },
+        {
+          "en": "Glalitite",
+          "zh": null,
+          "slug": "glalitite"
+        },
+        {
+          "en": "Gyaradosite",
+          "zh": null,
+          "slug": "gyaradosite"
+        },
+        {
+          "en": "Heracronite",
+          "zh": null,
+          "slug": "heracronite"
+        },
+        {
+          "en": "Houndoominite",
+          "zh": null,
+          "slug": "houndoominite"
+        },
+        {
+          "en": "Kangaskhanite",
+          "zh": null,
+          "slug": "kangaskhanite"
+        },
+        {
+          "en": "Latiasite",
+          "zh": null,
+          "slug": "latiasite"
+        },
+        {
+          "en": "Latiosite",
+          "zh": null,
+          "slug": "latiosite"
+        },
+        {
+          "en": "Lopunnite",
+          "zh": null,
+          "slug": "lopunnite"
+        },
+        {
+          "en": "Lucarionite",
+          "zh": null,
+          "slug": "lucarionite"
+        },
+        {
+          "en": "Manectite",
+          "zh": null,
+          "slug": "manectite"
+        },
+        {
+          "en": "Mawilite",
+          "zh": null,
+          "slug": "mawilite"
+        },
+        {
+          "en": "Medichamite",
+          "zh": null,
+          "slug": "medichamite"
+        },
+        {
+          "en": "Metagrossite",
+          "zh": null,
+          "slug": "metagrossite"
+        },
+        {
+          "en": "Mewtwonite X",
+          "zh": null,
+          "slug": "mewtwonite-x"
+        },
+        {
+          "en": "Mewtwonite Y",
+          "zh": null,
+          "slug": "mewtwonite-y"
+        },
+        {
+          "en": "Pidgeotite",
+          "zh": null,
+          "slug": "pidgeotite"
+        },
+        {
+          "en": "Pinsirite",
+          "zh": null,
+          "slug": "pinsirite"
+        },
+        {
+          "en": "Sablenite",
+          "zh": null,
+          "slug": "sablenite"
+        },
+        {
+          "en": "Salamencite",
+          "zh": null,
+          "slug": "salamencite"
+        },
+        {
+          "en": "Sceptilite",
+          "zh": null,
+          "slug": "sceptilite"
+        },
+        {
+          "en": "Scizorite",
+          "zh": null,
+          "slug": "scizorite"
+        },
+        {
+          "en": "Sharpedonite",
+          "zh": null,
+          "slug": "sharpedonite"
+        },
+        {
+          "en": "Slowbronite",
+          "zh": null,
+          "slug": "slowbronite"
+        },
+        {
+          "en": "Steelixite",
+          "zh": null,
+          "slug": "steelixite"
+        },
+        {
+          "en": "Swampertite",
+          "zh": null,
+          "slug": "swampertite"
+        },
+        {
+          "en": "Tyranitarite",
+          "zh": null,
+          "slug": "tyranitarite"
+        },
+        {
+          "en": "Venusaurite",
+          "zh": null,
+          "slug": "venusaurite"
+        }
+      ]
+    },
+    {
+      "name": "Z 純晶",
+      "icon": "✧",
+      "items": [
+        {
+          "en": "Normalium Z",
+          "zh": null,
+          "slug": "normalium-z"
+        },
+        {
+          "en": "Fightinium Z",
+          "zh": null,
+          "slug": "fightinium-z"
+        },
+        {
+          "en": "Flyinium Z",
+          "zh": null,
+          "slug": "flyinium-z"
+        },
+        {
+          "en": "Poisonium Z",
+          "zh": null,
+          "slug": "poisonium-z"
+        },
+        {
+          "en": "Groundium Z",
+          "zh": null,
+          "slug": "groundium-z"
+        },
+        {
+          "en": "Rockium Z",
+          "zh": null,
+          "slug": "rockium-z"
+        },
+        {
+          "en": "Buginium Z",
+          "zh": null,
+          "slug": "buginium-z"
+        },
+        {
+          "en": "Ghostium Z",
+          "zh": null,
+          "slug": "ghostium-z"
+        },
+        {
+          "en": "Steelium Z",
+          "zh": null,
+          "slug": "steelium-z"
+        },
+        {
+          "en": "Firium Z",
+          "zh": null,
+          "slug": "firium-z"
+        },
+        {
+          "en": "Waterium Z",
+          "zh": null,
+          "slug": "waterium-z"
+        },
+        {
+          "en": "Grassium Z",
+          "zh": null,
+          "slug": "grassium-z"
+        },
+        {
+          "en": "Electrium Z",
+          "zh": null,
+          "slug": "electrium-z"
+        },
+        {
+          "en": "Psychium Z",
+          "zh": null,
+          "slug": "psychium-z"
+        },
+        {
+          "en": "Icium Z",
+          "zh": null,
+          "slug": "icium-z"
+        },
+        {
+          "en": "Dragonium Z",
+          "zh": null,
+          "slug": "dragonium-z"
+        },
+        {
+          "en": "Darkinium Z",
+          "zh": null,
+          "slug": "darkinium-z"
+        },
+        {
+          "en": "Fairium Z",
+          "zh": null,
+          "slug": "fairium-z"
+        },
+        {
+          "en": "Pikanium Z",
+          "zh": null,
+          "slug": "pikanium-z"
+        },
+        {
+          "en": "Aloraichium Z",
+          "zh": null,
+          "slug": "aloraichium-z"
+        },
+        {
+          "en": "Eevium Z",
+          "zh": null,
+          "slug": "eevium-z"
+        },
+        {
+          "en": "Decidium Z",
+          "zh": null,
+          "slug": "decidium-z"
+        },
+        {
+          "en": "Incinium Z",
+          "zh": null,
+          "slug": "incinium-z"
+        },
+        {
+          "en": "Primarium Z",
+          "zh": null,
+          "slug": "primarium-z"
+        },
+        {
+          "en": "Snorlium Z",
+          "zh": null,
+          "slug": "snorlium-z"
+        },
+        {
+          "en": "Mewnium Z",
+          "zh": null,
+          "slug": "mewnium-z"
+        },
+        {
+          "en": "Marshadium Z",
+          "zh": null,
+          "slug": "marshadium-z"
+        },
+        {
+          "en": "Kommonium Z",
+          "zh": null,
+          "slug": "kommonium-z"
+        },
+        {
+          "en": "Lycanium Z",
+          "zh": null,
+          "slug": "lycanium-z"
+        },
+        {
+          "en": "Mimikium Z",
+          "zh": null,
+          "slug": "mimikium-z"
+        },
+        {
+          "en": "Solganium Z",
+          "zh": null,
+          "slug": "solganium-z"
+        },
+        {
+          "en": "Lunalium Z",
+          "zh": null,
+          "slug": "lunalium-z"
+        },
+        {
+          "en": "Ultranecrozium Z",
+          "zh": null,
+          "slug": "ultranecrozium-z"
+        }
+      ]
+    },
+    {
+      "name": "招式與其他",
+      "icon": "★",
+      "items": [
+        {
+          "en": "TM Case",
+          "zh": null,
+          "slug": "tm-case"
+        },
+        {
+          "en": "TR Case",
+          "zh": null,
+          "slug": "tr-case"
+        },
+        {
+          "en": "Move Relearner",
+          "zh": null,
+          "slug": "move-relearner"
+        },
+        {
+          "en": "Poké Radar",
+          "zh": null,
+          "slug": "pok-radar"
+        },
+        {
+          "en": "Apricorn Box",
+          "zh": null,
+          "slug": "apricorn-box"
+        },
+        {
+          "en": "Fossil Display",
+          "zh": null,
+          "slug": "fossil-display"
+        },
+        {
+          "en": "Orb",
+          "zh": null,
+          "slug": "orb"
+        },
+        {
+          "en": "Orb of Fiery Souls",
+          "zh": null,
+          "slug": "orb-of-fiery-souls"
+        },
+        {
+          "en": "Orb of Frozen Souls",
+          "zh": null,
+          "slug": "orb-of-frozen-souls"
+        },
+        {
+          "en": "Orb of Static Souls",
+          "zh": null,
+          "slug": "orb-of-static-souls"
+        },
+        {
+          "en": "Red Chain",
+          "zh": "紅色鎖鏈",
+          "slug": "red-chain"
+        },
+        {
+          "en": "Azure Flute",
+          "zh": null,
+          "slug": "azure-flute"
+        },
+        {
+          "en": "Gracidea",
+          "zh": null,
+          "slug": "gracidea"
+        },
+        {
+          "en": "Reveal Glass",
+          "zh": null,
+          "slug": "reveal-glass"
+        },
+        {
+          "en": "Prison Bottle",
+          "zh": null,
+          "slug": "prison-bottle"
+        },
+        {
+          "en": "DNA Splicers",
+          "zh": null,
+          "slug": "dna-splicers"
+        },
+        {
+          "en": "N-Solarizer",
+          "zh": null,
+          "slug": "n-solarizer"
+        },
+        {
+          "en": "N-Lunarizer",
+          "zh": null,
+          "slug": "n-lunarizer"
+        },
+        {
+          "en": "Rusted Sword",
+          "zh": null,
+          "slug": "rusted-sword"
+        },
+        {
+          "en": "Rusted Shield",
+          "zh": null,
+          "slug": "rusted-shield"
+        },
+        {
+          "en": "Reins of Unity",
+          "zh": null,
+          "slug": "reins-of-unity"
+        },
+        {
+          "en": "Zygarde Cube",
+          "zh": "基格爾德多面體",
+          "slug": "zygarde-cube"
+        },
+        {
+          "en": "Mega Ring",
+          "zh": "超級環",
+          "slug": "mega-ring"
+        },
+        {
+          "en": "Mega Bracelet",
+          "zh": null,
+          "slug": "mega-bracelet"
+        },
+        {
+          "en": "Mega Glasses",
+          "zh": null,
+          "slug": "mega-glasses"
+        },
+        {
+          "en": "Z-Ring",
+          "zh": null,
+          "slug": "z-ring"
+        },
+        {
+          "en": "Z-Power Ring",
+          "zh": null,
+          "slug": "z-power-ring"
+        },
+        {
+          "en": "Dynamax Band",
+          "zh": "極巨腕帶",
+          "slug": "dynamax-band"
+        },
+        {
+          "en": "Dynamax Candy",
+          "zh": null,
+          "slug": "dynamax-candy"
+        },
+        {
+          "en": "Wishing Piece",
+          "zh": "許願星塊",
+          "slug": "wishing-piece"
+        },
+        {
+          "en": "Wishing Star",
+          "zh": null,
+          "slug": "wishing-star"
+        }
+      ]
+    },
+    {
+      "name": "樹果與果球材料",
+      "icon": "🍒",
+      "items": [
+        {
+          "en": "Black Apricorn",
+          "zh": "黑球果",
+          "slug": "black-apricorn"
+        },
+        {
+          "en": "Cooked Black Apricorn",
+          "zh": null,
+          "slug": "cooked-black-apricorn"
+        },
+        {
+          "en": "Blue Apricorn",
+          "zh": "藍球果",
+          "slug": "blue-apricorn"
+        },
+        {
+          "en": "Cooked Blue Apricorn",
+          "zh": null,
+          "slug": "cooked-blue-apricorn"
+        },
+        {
+          "en": "Green Apricorn",
+          "zh": "綠球果",
+          "slug": "green-apricorn"
+        },
+        {
+          "en": "Cooked Green Apricorn",
+          "zh": null,
+          "slug": "cooked-green-apricorn"
+        },
+        {
+          "en": "Pink Apricorn",
+          "zh": "粉紅球果",
+          "slug": "pink-apricorn"
+        },
+        {
+          "en": "Cooked Pink Apricorn",
+          "zh": null,
+          "slug": "cooked-pink-apricorn"
+        },
+        {
+          "en": "Red Apricorn",
+          "zh": "紅球果",
+          "slug": "red-apricorn"
+        },
+        {
+          "en": "Cooked Red Apricorn",
+          "zh": null,
+          "slug": "cooked-red-apricorn"
+        },
+        {
+          "en": "White Apricorn",
+          "zh": "白球果",
+          "slug": "white-apricorn"
+        },
+        {
+          "en": "Cooked White Apricorn",
+          "zh": null,
+          "slug": "cooked-white-apricorn"
+        },
+        {
+          "en": "Yellow Apricorn",
+          "zh": "黃球果",
+          "slug": "yellow-apricorn"
+        },
+        {
+          "en": "Cooked Yellow Apricorn",
+          "zh": null,
+          "slug": "cooked-yellow-apricorn"
+        },
+        {
+          "en": "Aguav Berry",
+          "zh": null,
+          "slug": "aguav-berry"
+        },
+        {
+          "en": "Apicot Berry",
+          "zh": null,
+          "slug": "apicot-berry"
+        },
+        {
+          "en": "Aspear Berry",
+          "zh": null,
+          "slug": "aspear-berry"
+        },
+        {
+          "en": "Babiri Berry",
+          "zh": null,
+          "slug": "babiri-berry"
+        },
+        {
+          "en": "Belue Berry",
+          "zh": null,
+          "slug": "belue-berry"
+        },
+        {
+          "en": "Bluk Berry",
+          "zh": null,
+          "slug": "bluk-berry"
+        },
+        {
+          "en": "Charti Berry",
+          "zh": null,
+          "slug": "charti-berry"
+        },
+        {
+          "en": "Cheri Berry",
+          "zh": null,
+          "slug": "cheri-berry"
+        },
+        {
+          "en": "Chesto Berry",
+          "zh": null,
+          "slug": "chesto-berry"
+        },
+        {
+          "en": "Chilan Berry",
+          "zh": null,
+          "slug": "chilan-berry"
+        },
+        {
+          "en": "Chople Berry",
+          "zh": null,
+          "slug": "chople-berry"
+        },
+        {
+          "en": "Coba Berry",
+          "zh": null,
+          "slug": "coba-berry"
+        },
+        {
+          "en": "Colbur Berry",
+          "zh": null,
+          "slug": "colbur-berry"
+        },
+        {
+          "en": "Cornn Berry",
+          "zh": null,
+          "slug": "cornn-berry"
+        },
+        {
+          "en": "Custap Berry",
+          "zh": null,
+          "slug": "custap-berry"
+        },
+        {
+          "en": "Durin Berry",
+          "zh": null,
+          "slug": "durin-berry"
+        },
+        {
+          "en": "Enigma Berry",
+          "zh": null,
+          "slug": "enigma-berry"
+        },
+        {
+          "en": "Figy Berry",
+          "zh": null,
+          "slug": "figy-berry"
+        },
+        {
+          "en": "Ganlon Berry",
+          "zh": null,
+          "slug": "ganlon-berry"
+        },
+        {
+          "en": "Grepa Berry",
+          "zh": null,
+          "slug": "grepa-berry"
+        },
+        {
+          "en": "Haban Berry",
+          "zh": null,
+          "slug": "haban-berry"
+        },
+        {
+          "en": "Hondew Berry",
+          "zh": null,
+          "slug": "hondew-berry"
+        },
+        {
+          "en": "Iapapa Berry",
+          "zh": null,
+          "slug": "iapapa-berry"
+        },
+        {
+          "en": "Jaboca Berry",
+          "zh": null,
+          "slug": "jaboca-berry"
+        },
+        {
+          "en": "Kasib Berry",
+          "zh": null,
+          "slug": "kasib-berry"
+        },
+        {
+          "en": "Kebia Berry",
+          "zh": null,
+          "slug": "kebia-berry"
+        },
+        {
+          "en": "Kee Berry",
+          "zh": null,
+          "slug": "kee-berry"
+        },
+        {
+          "en": "Kelpsy Berry",
+          "zh": null,
+          "slug": "kelpsy-berry"
+        },
+        {
+          "en": "Lansat Berry",
+          "zh": null,
+          "slug": "lansat-berry"
+        },
+        {
+          "en": "Leppa Berry",
+          "zh": null,
+          "slug": "leppa-berry"
+        },
+        {
+          "en": "Liechi Berry",
+          "zh": null,
+          "slug": "liechi-berry"
+        },
+        {
+          "en": "Lum Berry",
+          "zh": null,
+          "slug": "lum-berry"
+        },
+        {
+          "en": "Mago Berry",
+          "zh": null,
+          "slug": "mago-berry"
+        },
+        {
+          "en": "Magost Berry",
+          "zh": null,
+          "slug": "magost-berry"
+        },
+        {
+          "en": "Maranga Berry",
+          "zh": null,
+          "slug": "maranga-berry"
+        },
+        {
+          "en": "Micle Berry",
+          "zh": null,
+          "slug": "micle-berry"
+        },
+        {
+          "en": "Nanab Berry",
+          "zh": null,
+          "slug": "nanab-berry"
+        },
+        {
+          "en": "Nomel Berry",
+          "zh": null,
+          "slug": "nomel-berry"
+        },
+        {
+          "en": "Occa Berry",
+          "zh": null,
+          "slug": "occa-berry"
+        },
+        {
+          "en": "Oran Berry",
+          "zh": null,
+          "slug": "oran-berry"
+        },
+        {
+          "en": "Pamtre Berry",
+          "zh": null,
+          "slug": "pamtre-berry"
+        },
+        {
+          "en": "Passho Berry",
+          "zh": null,
+          "slug": "passho-berry"
+        },
+        {
+          "en": "Payapa Berry",
+          "zh": null,
+          "slug": "payapa-berry"
+        },
+        {
+          "en": "Pecha Berry",
+          "zh": null,
+          "slug": "pecha-berry"
+        },
+        {
+          "en": "Persim Berry",
+          "zh": null,
+          "slug": "persim-berry"
+        },
+        {
+          "en": "Petaya Berry",
+          "zh": null,
+          "slug": "petaya-berry"
+        },
+        {
+          "en": "Pinap Berry",
+          "zh": null,
+          "slug": "pinap-berry"
+        },
+        {
+          "en": "Pomeg Berry",
+          "zh": null,
+          "slug": "pomeg-berry"
+        },
+        {
+          "en": "Qualot Berry",
+          "zh": null,
+          "slug": "qualot-berry"
+        },
+        {
+          "en": "Rabuta Berry",
+          "zh": null,
+          "slug": "rabuta-berry"
+        },
+        {
+          "en": "Rawst Berry",
+          "zh": null,
+          "slug": "rawst-berry"
+        },
+        {
+          "en": "Razz Berry",
+          "zh": null,
+          "slug": "razz-berry"
+        },
+        {
+          "en": "Rindo Berry",
+          "zh": null,
+          "slug": "rindo-berry"
+        },
+        {
+          "en": "Roseli Berry",
+          "zh": null,
+          "slug": "roseli-berry"
+        },
+        {
+          "en": "Rowap Berry",
+          "zh": null,
+          "slug": "rowap-berry"
+        },
+        {
+          "en": "Salac Berry",
+          "zh": null,
+          "slug": "salac-berry"
+        },
+        {
+          "en": "Shuca Berry",
+          "zh": null,
+          "slug": "shuca-berry"
+        },
+        {
+          "en": "Sitrus Berry",
+          "zh": null,
+          "slug": "sitrus-berry"
+        },
+        {
+          "en": "Spelon Berry",
+          "zh": null,
+          "slug": "spelon-berry"
+        },
+        {
+          "en": "Starf Berry",
+          "zh": null,
+          "slug": "starf-berry"
+        },
+        {
+          "en": "Tamato Berry",
+          "zh": null,
+          "slug": "tamato-berry"
+        },
+        {
+          "en": "Tanga Berry",
+          "zh": null,
+          "slug": "tanga-berry"
+        },
+        {
+          "en": "Touga Berry",
+          "zh": null,
+          "slug": "touga-berry"
+        },
+        {
+          "en": "Wacan Berry",
+          "zh": null,
+          "slug": "wacan-berry"
+        },
+        {
+          "en": "Watmel Berry",
+          "zh": null,
+          "slug": "watmel-berry"
+        },
+        {
+          "en": "Wiki Berry",
+          "zh": null,
+          "slug": "wiki-berry"
+        },
+        {
+          "en": "Yache Berry",
+          "zh": null,
+          "slug": "yache-berry"
+        },
+        {
+          "en": "Yago Berry",
+          "zh": null,
+          "slug": "yago-berry"
+        }
+      ]
+    },
+    {
+      "name": "屬性寶石",
+      "icon": "◆",
+      "items": [
+        {
+          "en": "Bug Gem",
+          "zh": null,
+          "slug": "bug-gem"
+        },
+        {
+          "en": "Dark Gem",
+          "zh": null,
+          "slug": "dark-gem"
+        },
+        {
+          "en": "Dragon Gem",
+          "zh": null,
+          "slug": "dragon-gem"
+        },
+        {
+          "en": "Electric Gem",
+          "zh": null,
+          "slug": "electric-gem"
+        },
+        {
+          "en": "Fairy Gem",
+          "zh": null,
+          "slug": "fairy-gem"
+        },
+        {
+          "en": "Fighting Gem",
+          "zh": null,
+          "slug": "fighting-gem"
+        },
+        {
+          "en": "Fire Gem",
+          "zh": null,
+          "slug": "fire-gem"
+        },
+        {
+          "en": "Flying Gem",
+          "zh": null,
+          "slug": "flying-gem"
+        },
+        {
+          "en": "Ghost Gem",
+          "zh": null,
+          "slug": "ghost-gem"
+        },
+        {
+          "en": "Grass Gem",
+          "zh": null,
+          "slug": "grass-gem"
+        },
+        {
+          "en": "Ground Gem",
+          "zh": null,
+          "slug": "ground-gem"
+        },
+        {
+          "en": "Ice Gem",
+          "zh": null,
+          "slug": "ice-gem"
+        },
+        {
+          "en": "Normal Gem",
+          "zh": null,
+          "slug": "normal-gem"
+        },
+        {
+          "en": "Poison Gem",
+          "zh": null,
+          "slug": "poison-gem"
+        },
+        {
+          "en": "Psychic Gem",
+          "zh": null,
+          "slug": "psychic-gem"
+        },
+        {
+          "en": "Rock Gem",
+          "zh": null,
+          "slug": "rock-gem"
+        },
+        {
+          "en": "Steel Gem",
+          "zh": null,
+          "slug": "steel-gem"
+        },
+        {
+          "en": "Water Gem",
+          "zh": null,
+          "slug": "water-gem"
+        }
+      ]
+    }
+  ]
+}
