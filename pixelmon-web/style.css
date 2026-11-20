@@ -108,3 +108,13 @@ body.light .search-input::placeholder{color:#708a94}
 body.light .timebar{background:#d3e1e7}
 body.light .pill{background:#def4ee;color:#086b60;border-color:#b1dcd0}
 body.light .toast{background:#0c776c;color:#fff}
+
+/* v0.5 image assets and catalog pagination */
+.item-icon,.item-avatar {display:flex;align-items:center;justify-content:center;overflow:hidden}
+.item-icon .item-texture{width:54px;height:54px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 5px 7px #0005)}
+.item-avatar .item-texture{width:76%;height:76%;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 6px 13px #0006)}
+.drop-item-label{display:inline-flex;align-items:center;gap:10px}
+.drop-item-label .item-texture{width:28px;height:28px;object-fit:contain;image-rendering:pixelated}
+.more-results{display:flex;justify-content:center;padding:22px}
+#catalogLoadStatus{font-weight:700}
+.result-card img{max-width:100%;object-fit:contain}
