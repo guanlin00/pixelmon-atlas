@@ -30,6 +30,17 @@ jobs:
                 for tr in trs[1:4]:
                   print('ROW',[td.get_text(' ',strip=True)[:100] for td in tr.find_all(['td','th'],recursive=False)],'IMG',[(im.get('src'),im.get('data-src')) for im in tr.find_all('img')][:2],flush=True)
               if 'id/' in url:
+                for tag in soup.find_all(['style','link']):
+                  if tag.name=='link' and 'stylesheet' in (tag.get('rel') or []):
+                    href=tag.get('href','')
+                    if not href:continue
+                    cssUrl=requests.compat.urljoin(url,href)
+                    try:
+                      cssText=requests.get(cssUrl,timeout=15).text
+                      for pat in ['.pi{','.pi {','i.pi','pixelmon_img','items.png']:
+                        at=cssText.find(pat)
+                        if at>=0:print('STYLE_MATCH',cssUrl,pat,cssText[max(0,at-130):at+420].replace('\\n',' '),flush=True)
+                    except Exception as ex:print('CSS_ERR',cssUrl,str(ex)[:90],flush=True)
                 for row in ts[0].find_all('tr')[1:4]:
                   print('RAW_ID_ROW',str(row)[:1500].replace('\\n',' '),flush=True)
                 for row in ts[0].find_all('tr'):
