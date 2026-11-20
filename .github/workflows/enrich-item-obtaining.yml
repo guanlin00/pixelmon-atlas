@@ -23,4 +23,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add pixelmon-web/pixelmon-item-index.json pixelmon-web/item-source-audit.json
-          git diff --cached --quiet || (git commit -m "data: record individual Pixelmon item acquisition references and missing-data audit" && git push)
+          git diff --cached --quiet || (git commit -m "data: record individual Pixelmon item acquisition references and missing-data audit" && git pull --rebase origin main && git push origin HEAD:main)
