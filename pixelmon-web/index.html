@@ -9,6 +9,17 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Disable the browser's automatic scroll restoration on full reloads.
+    // In-app Pokédex navigation keeps its own return-position behavior.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.addEventListener('pageshow', function (event) {
+      // Do not interfere with a back/forward cache restore.
+      if (event.persisted) return;
+      window.scrollTo(0, 0);
+      requestAnimationFrame(function () { window.scrollTo(0, 0); });
+    });
+  </script>
 </head>
 <body>
   <div class="app-shell">
