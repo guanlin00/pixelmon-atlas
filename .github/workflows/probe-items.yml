@@ -15,6 +15,8 @@ jobs:
       - run: |
           python - <<'PY'
           import requests
+          for spriteUrl in ['https://pixelmon.site/images/pi.png','https://pixelmon.site/recipes-img/i001.png']:
+            r=requests.get(spriteUrl,timeout=25);print('ICON_CHECK',spriteUrl,r.status_code,len(r.content),r.headers.get('content-type'),r.content[:8].hex(),flush=True)
           from bs4 import BeautifulSoup
           for url in ['https://pixelmon.site/id/','https://pixelmon.site/recipes/','https://pixelmon.site/master-ball/','https://pixelmon.site/healer/']:
             try:
