@@ -51,52 +51,53 @@ function localizeWikiItems(){
  }
  return changed;
 }
-function drawItemDirectory(){const root=document.querySelector('#itemResults');if(!root||document.getElementById('atlasItemDirectory'))return;const section=make('section','atlas-item-directory');section.id='atlasItemDirectory';section.innerHTML='<div class="atlas-section-title"><h3>更多寶可夢系列道具</h3><p>顯示 PokéAPI 的官方繁體中文名稱；部分道具沒有公開圖示，會顯示替代圖案。這份清單不代表 Pixelmon 全部已實裝。</p></div><input id="atlasExtraItemQuery" type="search" placeholder="搜尋中文或英文道具，例如：大師球、master-ball"><div id="atlasItemStatus" class="atlas-help">正在載入道具索引…</div><div id="atlasExtraItems" class="atlas-extra-items"></div>';root.insertAdjacentElement('afterend',section);if(!itemList&&!itemBusy)loadItems();else updateItems()}
+// Merge PokéAPI's searchable item index into the same clickable catalogue as Wiki drops.
+function drawItemDirectory(){if(!itemList&&!itemBusy)loadItems()}
 async function loadItems(){
- itemBusy=true;
+ if(itemBusy)return;itemBusy=true;
  try{
-  const [r,names]=await Promise.all([fetch('https://pokeapi.co/api/v2/item?limit=2500'),fetch('item-zh.json',{cache:'force-cache'})]);
-  if(!r.ok)throw Error('Item index HTTP '+r.status);
-  if(!names.ok)throw Error('Translations HTTP '+names.status);
-  const [data,zh]=await Promise.all([r.json(),names.json()]);
-  itemList=data.results||[];atlasItemZH=zh;
-  const changed=localizeWikiItems();
-  // Main card search and Pokémon drop labels are refreshed only after translation loads.
-  if(changed&&route()==='items'){
-   const mainQuery=document.getElementById('itemSearch')?.value||'';
-   const root=document.getElementById('itemResults');
-   if(root&&typeof itemCard==='function')root.innerHTML=ITEMS.filter(i=>(i.zh+' '+i.en).toLowerCase().includes(mainQuery.toLowerCase())).map(itemCard).join('');
+  const [itemsRes,zhRes]=await Promise.all([
+   fetch('https://pokeapi.co/api/v2/item?limit=2500'),
+   fetch('item-zh.json',{cache:'force-cache'})
+  ]);
+  if(!itemsRes.ok||!zhRes.ok)throw Error('Item catalogue request failed');
+  const [data,names]=await Promise.all([itemsRes.json(),zhRes.json()]);
+  itemList=data.results||[];atlasItemZH=names;
+  localizeWikiItems();
+  let added=0;
+  for(const item of itemList){
+   const slug=item.name;
+   const display=atlasItemName(slug);
+   let existing=ITEMS.find(i=>i.searchSlug===slug||atlasItemSlug(i.en)===slug);
+   if(existing){
+    existing.searchSlug=slug;
+    if(display&&(existing.zh===existing.en||existing.zh===slug||!existing.zh))existing.zh=display;
+    if(!existing.texture&&!existing.pokeSprite)existing.pokeSprite='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+encodeURIComponent(slug)+'.png';
+    continue;
+   }
+   ITEMS.push({
+    id:'poke:'+slug,searchSlug:slug,
+    zh:display||slug.replaceAll('-',' '),
+    en:slug.replaceAll('-',' '),
+    icon:'◇',kind:'寶可夢系列道具',
+    desc:'已收錄道具名稱與圖示；Pixelmon 取得方法與掉落來源尚待官方 Wiki 核對。',
+    pokeSprite:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+encodeURIComponent(slug)+'.png'
+   });
+   added++;
   }
-  updateItems();
+  // PokeAPI provides an item *index*, not Pixelmon spawn/drop assertions.
+  if(route()==='items'){
+   const wanted=decodeURIComponent(location.hash.slice('#items/'.length));
+   if(location.hash.startsWith('#items/')&&ITEMS.some(i=>i.id===wanted))window.render?.();
+   else if(document.getElementById('itemResults')&&typeof atlasRefreshItemList==='function')atlasRefreshItemList();
+  }
+  console.info('Item catalogue merged',itemList.length,'PokéAPI entries;',added,'new item cards');
  }catch(e){
-  const status=document.getElementById('atlasItemStatus');
-  if(status)status.textContent='道具索引載入失敗，原有道具仍可查詢。';
-  console.warn('Item directory:',e);
+  console.warn('Item catalogue unavailable; existing Wiki items remain searchable.',e);
  }finally{itemBusy=false}
 }
-function updateItems(){
- const target=document.getElementById('atlasExtraItems'),status=document.getElementById('atlasItemStatus');
- if(!target||!status||!itemList)return;
- const q=(document.getElementById('atlasExtraItemQuery')?.value||'').trim().toLowerCase();
- const found=itemList.filter(item=>{const name=atlasItemName(item.name);return (item.name+' '+name).toLowerCase().includes(q)});
- status.textContent='已收錄 '+itemList.length+' 種寶可夢系列道具 · 符合 '+found.length+' 種（顯示前 100 種）';
- target.replaceChildren();
- for(const item of found.slice(0,100)){
-  const card=make('div','atlas-extra-item');
-  card.title=atlasItemName(item.name)||item.name.replaceAll('-',' ');
-  const frame=make('span','atlas-item-pic');
-  const img=make('img');
-  img.loading='lazy';img.alt=card.title;
-  img.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+encodeURIComponent(item.name)+'.png';
-  const fallback=make('span','atlas-item-fallback','◇');fallback.setAttribute('aria-label','暫無官方圖片');
-  img.onerror=()=>{img.remove();fallback.style.display='grid'};
-  frame.append(img,fallback);
-  const labels=make('span','atlas-item-labels');
-  labels.append(make('strong','',atlasItemName(item.name)||item.name.replaceAll('-',' ')),make('small','',item.name.replaceAll('-',' ')));
-  card.append(frame,labels);target.append(card);
- }
-}
-document.addEventListener('input',e=>{if(e.target.id==='atlasExtraItemQuery')updateItems()});
+function updateItems(){if(typeof atlasRefreshItemList==='function')atlasRefreshItemList()}
+
 document.addEventListener('click',e=>{const genButton=e.target.closest('[data-generation]');if(genButton){generation=+genButton.dataset.generation;window.render?.();requestAnimationFrame(()=>{const target=document.querySelector('#results .results-head')||document.getElementById('results');if(target){const top=Math.max(0,window.scrollY+target.getBoundingClientRect().top-88);window.scrollTo({top,behavior:'instant'})}else window.scrollTo({top:0,behavior:'instant'})});return}const form=e.target.closest('[data-form-index]');if(form){showForm(+form.dataset.formIndex);return}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('atlasFormModal')?.close?.()}});
 const baseMatches=window.matches;if(typeof baseMatches==='function')window.matches=function(p){return (generation===0||(p.id>=GENERATIONS[generation][1]&&p.id<=GENERATIONS[generation][2]))&&baseMatches(p)};
