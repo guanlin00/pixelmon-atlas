@@ -54,24 +54,65 @@ function localizeWikiItems(){
 // Merge PokéAPI's searchable item index into the same clickable catalogue as Wiki drops.
 // Only catalogue items that have an actual site entry: existing Minecraft materials
 // and Pixelmon Wiki drop references. PokeAPI's full item index is not a Pixelmon item list.
-function drawItemDirectory(){
- if(!atlasItemZH&&!itemBusy)loadItems();
- else if(atlasItemZH){
-  localizeWikiItems();
-  if(typeof atlasRefreshItemList==='function')atlasRefreshItemList();
- }
+// Source: Pixelmon Wiki's own category index, not the complete PokéAPI catalogue.
+let atlasCatalogInstalled=false;
+const atlasCatalogSlug=txt=>String(txt).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+function atlasInstallCatalog(data){
+ if(atlasCatalogInstalled||!data||!Array.isArray(data.categories))return 0;
+ const bySlug=new Map();
+ for(const it of ITEMS)bySlug.set(atlasCatalogSlug(it.en),it);
+ const categories=[];
+ let added=0;
+ data.categories.forEach((category,order)=>{
+  categories.push(category.name);
+  for(const entry of category.items||[]){
+   const slug=entry.slug;
+   let found=bySlug.get(slug);
+   const translated=(atlasItemZH&&atlasItemZH[slug])||entry.zh||atlasVanillaZH[slug]||'';
+   if(found){
+    // Preserve the item-specific Wiki drop records and material texture.
+    if(!found.pixelmonCategory)found.pixelmonCategory=category.name;
+    found.pixelmonCategoryOrder=order;
+    if(translated&&(found.zh===found.en||found.zh===slug||!found.zh))found.zh=translated;
+    if(!found.pokeSprite&&!found.texture&&atlasItemZH?.[slug])found.pokeSprite='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+encodeURIComponent(slug)+'.png';
+    continue;
+   }
+   found={
+    id:'pixelmon:'+slug,searchSlug:slug,zh:translated||entry.en,
+    en:entry.en,kind:category.name,pixelmonCategory:category.name,pixelmonCategoryOrder:order,
+    icon:category.icon||'◇',
+    desc:'Pixelmon 官方 Wiki 道具清單收錄。用途、合成配方與取得方式請依個別資料來源查證。',
+    pokeSprite:atlasItemZH?.[slug]?'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+encodeURIComponent(slug)+'.png':null,
+    wikiSource:'https://pixelmonmod.com/wiki/Items/en',
+    sourceStatus:'官方 Wiki 清單收錄；尚未核對個別取得方式'
+   };
+   ITEMS.push(found);bySlug.set(slug,found);added++;
+  }
+ });
+ window.atlasItemCategoryNames=categories;
+ atlasCatalogInstalled=true;
+ return added;
 }
+function drawItemDirectory(){if(!atlasCatalogInstalled&&!itemBusy)loadItems()}
 async function loadItems(){
- if(itemBusy)return;
- itemBusy=true;
+ if(itemBusy)return;itemBusy=true;
  try{
-  const r=await fetch('item-zh.json',{cache:'force-cache'});
-  if(!r.ok)throw Error('Translation list HTTP '+r.status);
-  atlasItemZH=await r.json();
+  const [namesRes,catalogRes]=await Promise.all([
+   fetch('item-zh.json',{cache:'force-cache'}),
+   fetch('pixelmon-item-categories.json',{cache:'no-store'})
+  ]);
+  if(!catalogRes.ok)throw Error('Pixelmon Wiki catalogue HTTP '+catalogRes.status);
+  if(namesRes.ok)atlasItemZH=await namesRes.json();
   localizeWikiItems();
-  if(route()==='items'&&typeof atlasRefreshItemList==='function')atlasRefreshItemList();
+  const source=await catalogRes.json();
+  const added=atlasInstallCatalog(source);
+  if(route()==='items'&&typeof atlasRefreshItemList==='function'){
+   if(location.hash==='#items'&&typeof window.render==='function')window.render();
+   else atlasRefreshItemList();
+  }
+  console.info('Pixelmon Wiki categories:',source.categories.length,'new catalog items:',added);
  }catch(e){
-  console.warn('Traditional Chinese item names unavailable; existing items remain accessible.',e);
+  console.warn('Pixelmon category index not loaded; original items still available.',e);
  }finally{itemBusy=false}
 }
 function updateItems(){if(typeof atlasRefreshItemList==='function')atlasRefreshItemList()}
