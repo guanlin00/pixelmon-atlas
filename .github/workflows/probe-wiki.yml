@@ -1,0 +1,30 @@
+name: Probe Pixelmon Wiki data sources
+on:
+  push:
+    paths:
+      - .github/workflows/probe-wiki.yml
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          python - <<'PY'
+          import requests
+          urls=[
+            'https://pixelmonmod.com/wiki/Bulbasaur',
+            'https://r.jina.ai/https://pixelmonmod.com/wiki/Bulbasaur',
+            'https://r.jina.ai/http://pixelmonmod.com/wiki/Bulbasaur',
+            'https://pixelmonmod.com/wiki/Generation_I_Spawning',
+            'https://r.jina.ai/https://pixelmonmod.com/wiki/Drops',
+            'https://pixelmonmod.com/api.php?action=parse&page=Bulbasaur&prop=wikitext&format=json',
+          ]
+          for u in urls:
+            try:
+              r=requests.get(u,timeout=20,headers={'User-Agent':'Mozilla/5.0'})
+              print(r.status_code,len(r.content),r.url,r.text[:100].replace('\n',' '),flush=True)
+            except Exception as e:print('ERROR',u,str(e)[:140],flush=True)
+          PY
