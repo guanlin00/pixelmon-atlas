@@ -52,52 +52,29 @@ function localizeWikiItems(){
  return changed;
 }
 // Merge PokéAPI's searchable item index into the same clickable catalogue as Wiki drops.
-function drawItemDirectory(){if(!itemList&&!itemBusy)loadItems()}
-async function loadItems(){
- if(itemBusy)return;itemBusy=true;
- try{
-  const [itemsRes,zhRes]=await Promise.all([
-   fetch('https://pokeapi.co/api/v2/item?limit=2500'),
-   fetch('item-zh.json',{cache:'force-cache'})
-  ]);
-  if(!itemsRes.ok||!zhRes.ok)throw Error('Item catalogue request failed');
-  const [data,names]=await Promise.all([itemsRes.json(),zhRes.json()]);
-  itemList=data.results||[];atlasItemZH=names;
+// Only catalogue items that have an actual site entry: existing Minecraft materials
+// and Pixelmon Wiki drop references. PokeAPI's full item index is not a Pixelmon item list.
+function drawItemDirectory(){
+ if(!atlasItemZH&&!itemBusy)loadItems();
+ else if(atlasItemZH){
   localizeWikiItems();
-  let added=0;
-  for(const item of itemList){
-   const slug=item.name;
-   const display=atlasItemName(slug);
-   let existing=ITEMS.find(i=>i.searchSlug===slug||atlasItemSlug(i.en)===slug);
-   if(existing){
-    existing.searchSlug=slug;
-    if(display&&(existing.zh===existing.en||existing.zh===slug||!existing.zh))existing.zh=display;
-    if(!existing.texture&&!existing.pokeSprite)existing.pokeSprite='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+encodeURIComponent(slug)+'.png';
-    continue;
-   }
-   ITEMS.push({
-    id:'poke:'+slug,searchSlug:slug,
-    zh:display||slug.replaceAll('-',' '),
-    en:slug.replaceAll('-',' '),
-    icon:'◇',kind:'寶可夢系列道具',
-    desc:'已收錄道具名稱與圖示；Pixelmon 取得方法與掉落來源尚待官方 Wiki 核對。',
-    pokeSprite:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/'+encodeURIComponent(slug)+'.png'
-   });
-   added++;
-  }
-  // PokeAPI provides an item *index*, not Pixelmon spawn/drop assertions.
-  if(route()==='items'){
-   const wanted=decodeURIComponent(location.hash.slice('#items/'.length));
-   if(location.hash.startsWith('#items/')&&ITEMS.some(i=>i.id===wanted))window.render?.();
-   else if(document.getElementById('itemResults')&&typeof atlasRefreshItemList==='function')atlasRefreshItemList();
-  }
-  console.info('Item catalogue merged',itemList.length,'PokéAPI entries;',added,'new item cards');
+  if(typeof atlasRefreshItemList==='function')atlasRefreshItemList();
+ }
+}
+async function loadItems(){
+ if(itemBusy)return;
+ itemBusy=true;
+ try{
+  const r=await fetch('item-zh.json',{cache:'force-cache'});
+  if(!r.ok)throw Error('Translation list HTTP '+r.status);
+  atlasItemZH=await r.json();
+  localizeWikiItems();
+  if(route()==='items'&&typeof atlasRefreshItemList==='function')atlasRefreshItemList();
  }catch(e){
-  console.warn('Item catalogue unavailable; existing Wiki items remain searchable.',e);
+  console.warn('Traditional Chinese item names unavailable; existing items remain accessible.',e);
  }finally{itemBusy=false}
 }
 function updateItems(){if(typeof atlasRefreshItemList==='function')atlasRefreshItemList()}
-
 document.addEventListener('click',e=>{const genButton=e.target.closest('[data-generation]');if(genButton){generation=+genButton.dataset.generation;window.render?.();requestAnimationFrame(()=>{const target=document.querySelector('#results .results-head')||document.getElementById('results');if(target){const top=Math.max(0,window.scrollY+target.getBoundingClientRect().top-88);window.scrollTo({top,behavior:'instant'})}else window.scrollTo({top:0,behavior:'instant'})});return}const form=e.target.closest('[data-form-index]');if(form){showForm(+form.dataset.formIndex);return}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('atlasFormModal')?.close?.()}});
 const baseMatches=window.matches;if(typeof baseMatches==='function')window.matches=function(p){return (generation===0||(p.id>=GENERATIONS[generation][1]&&p.id<=GENERATIONS[generation][2]))&&baseMatches(p)};
