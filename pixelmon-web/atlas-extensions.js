@@ -28,7 +28,7 @@
  }
  function nameForm(id,display){const z=String(id).toLowerCase();const labels=[['-alola','阿羅拉形態'],['-galar','伽勒爾形態'],['-hisui','洗翠形態'],['-paldea','帕底亞形態'],['-mega-x','超級進化 X'],['-mega-y','超級進化 Y'],['-mega','超級進化'],['-gmax','超極巨化'],['-ash','小智／牽絆變身'],['-origin','起源形態'],['-therian','靈獸形態']];for(const [ending,zh] of labels)if(z.endsWith(ending))return zh;return display||z.replaceAll('-',' ')}
  function card(name,english,image,caption,detail,source,verified){const article=el('article','atlas-form-card');const picture=el('div','atlas-form-picture');if(image){const img=document.createElement('img');img.loading='lazy';img.alt=name;img.src=image;img.onerror=()=>{picture.textContent='圖片尚未提供'};picture.append(img)}else picture.append(el('span','atlas-no-image','尚無已核對圖片'));
- article.append(picture,el('strong','',name),el('small','',english));const badge=el('span','atlas-form-kind',caption);article.append(badge);if(detail)article.append(el('p','atlas-form-desc',detail));if(source){const a=el('a','atlas-form-source','查看來源 ↗');a.href=source;a.target='_blank';a.rel='noopener noreferrer';article.append(a)}return article}
+ article.append(picture,el('strong','',name),el('small','',english));const badge=el('span','atlas-form-kind',caption);article.append(badge);if(detail)article.append(el('p','atlas-form-desc',detail));return article}
  async function loadForms(id,panel){const box=panel.querySelector('#atlasFormGrid');if(!box)return;
   try{
    let forms=formCache.get(id);if(!forms){const resp=await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`);if(!resp.ok)throw Error(resp.status);const data=await resp.json();forms=(data.varieties||[]).map(x=>({name:x.pokemon.name,isDefault:x.is_default}));formCache.set(id,forms)}
