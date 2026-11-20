@@ -29,6 +29,17 @@ jobs:
                 print('TABLE',t.get('class'),len(trs),str(trs[0])[:480] if trs else '',flush=True)
                 for tr in trs[1:4]:
                   print('ROW',[td.get_text(' ',strip=True)[:100] for td in tr.find_all(['td','th'],recursive=False)],'IMG',[(im.get('src'),im.get('data-src')) for im in tr.find_all('img')][:2],flush=True)
+              if 'id/' in url:
+                for row in ts[0].find_all('tr')[1:4]:
+                  print('RAW_ID_ROW',str(row)[:1500].replace('\\n',' '),flush=True)
+                for row in ts[0].find_all('tr'):
+                  if 'TM01' in row.get_text(' ',strip=True) or 'TR42' in row.get_text(' ',strip=True) or 'Galarian TM' in row.get_text(' ',strip=True):
+                    print('RAW_TM_ROW',str(row)[:1600].replace('\\n',' '),flush=True)
+                    break
+              if 'master-ball/' in url:
+                for h in soup.find_all(['h2','h3']):
+                  if h.get_text(' ',strip=True)=='Obtaining':
+                    n=h.find_next_sibling();print('OBTAIN',str(n)[:2000] if n else '',flush=True)
               for h in soup.find_all(['h2','h3'])[:14]:
                 print('HEADING',h.get_text(' ',strip=True)[:140],flush=True)
             except Exception as ex:
