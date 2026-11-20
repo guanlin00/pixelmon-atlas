@@ -1,28 +1,524 @@
 {
   "metadata": {
-    "source": "https://pixelmonmod.com/wiki/Bulbasaur",
-    "sourceType": "Pixelmon Wiki reference; NOT confirmed in 9.4.2 JAR",
+    "source": "https://pixelmonmod.com/wiki/",
+    "sourceType": "Official Pixelmon Wiki reference (not independently validated against Pixelmon 9.4.2 JAR)",
     "targetVersion": "9.4.2",
     "updated": "2026-11-20",
-    "speciesCount": 1
+    "speciesCount": 6,
+    "batch": "manual-001",
+    "notes": "Default forms only in spawn arrays. Special forms listed separately; exact in-game spawn probabilities not derivable from rarity labels.",
+    "itemCount": 10
   },
   "pokemon": {
     "1": {
+      "source": "https://pixelmonmod.com/wiki/Bulbasaur",
       "spawn": [
-        {"biome":"Birches","mod":"—","time":"Morning","location":"Land","condition":"—","rarity":"Ultra Rare"},
-        {"biome":"Forests","mod":"—","time":"Morning","location":"Land","condition":"—","rarity":"Ultra Rare"},
-        {"biome":"Ultra Forest","mod":"PM","time":"Morning","location":"Land","condition":"—","rarity":"Ultra Rare"},
-        {"biome":"Crag Gardens","mod":"BYG","time":"Morning","location":"Land","condition":"—","rarity":"Ultra Rare"}
+        {
+          "biome": "Birches",
+          "mod": "—",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Forests",
+          "mod": "—",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Ultra Forest",
+          "mod": "PM",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Crag Gardens",
+          "mod": "BYG",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        }
       ],
       "drops": [
-        {"item":"Vines","chance":"100%","quantity":"1-2"},
-        {"item":"Twisting Vines","chance":"10%","quantity":"1"}
+        {
+          "item": "Vines",
+          "chance": "100%",
+          "quantity": "1-2"
+        },
+        {
+          "item": "Twisting Vines",
+          "chance": "10%",
+          "quantity": "1"
+        }
+      ]
+    },
+    "2": {
+      "source": "https://pixelmonmod.com/wiki/Ivysaur",
+      "spawn": [
+        {
+          "biome": "Birches",
+          "mod": "—",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Forests",
+          "mod": "—",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Ultra Forest",
+          "mod": "PM",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Crag Gardens",
+          "mod": "BYG",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        }
       ],
-      "source":"https://pixelmonmod.com/wiki/Bulbasaur"
+      "drops": [
+        {
+          "item": "Vines",
+          "chance": "100%",
+          "quantity": "2-3"
+        },
+        {
+          "item": "Twisting Vines",
+          "chance": "50%",
+          "quantity": "1"
+        },
+        {
+          "item": "Grass Gem",
+          "chance": "10%",
+          "quantity": "1"
+        }
+      ],
+      "alternateForms": {
+        "Halloween Ivysaur": {
+          "spawn": [
+            {
+              "biome": "Forest (Forge)",
+              "mod": "—",
+              "time": "Night",
+              "location": "Land",
+              "condition": "Graveyard",
+              "rarity": "Ultra Rare"
+            }
+          ]
+        }
+      }
+    },
+    "3": {
+      "source": "https://pixelmonmod.com/wiki/Venusaur",
+      "spawn": [
+        {
+          "biome": "Birches",
+          "mod": "—",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Forests",
+          "mod": "—",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Ultra Forest",
+          "mod": "PM",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Crag Gardens",
+          "mod": "BYG",
+          "time": "Morning",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        }
+      ],
+      "drops": [
+        {
+          "item": "Vines",
+          "chance": "100%",
+          "quantity": "3-4"
+        },
+        {
+          "item": "Twisting Vines",
+          "chance": "50%",
+          "quantity": "1-2"
+        },
+        {
+          "item": "Grass Gem",
+          "chance": "30%",
+          "quantity": "1"
+        },
+        {
+          "item": "Big Root",
+          "chance": "10%",
+          "quantity": "1-2"
+        }
+      ],
+      "alternateForms": {
+        "Mega Venusaur": {
+          "spawn": [
+            {
+              "biome": "Birches",
+              "mod": "—",
+              "time": "Any",
+              "location": "Land",
+              "condition": "—",
+              "rarity": "Ultra Rare"
+            },
+            {
+              "biome": "Forests",
+              "mod": "—",
+              "time": "Any",
+              "location": "Land",
+              "condition": "—",
+              "rarity": "Ultra Rare"
+            },
+            {
+              "biome": "Crag Gardens",
+              "mod": "BYG",
+              "time": "Any",
+              "location": "Land",
+              "condition": "—",
+              "rarity": "Ultra Rare"
+            }
+          ]
+        }
+      }
+    },
+    "4": {
+      "source": "https://pixelmonmod.com/wiki/Charmander",
+      "spawn": [
+        {
+          "biome": "Mountainous",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "Clear Weather",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Volcanic",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "Clear Weather",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Eroded Badlands",
+          "mod": "MC",
+          "time": "Day",
+          "location": "Land",
+          "condition": "Clear Weather",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Ultra Crater",
+          "mod": "PM",
+          "time": "Day",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        }
+      ],
+      "drops": [
+        {
+          "item": "Blaze Powder",
+          "chance": "100%",
+          "quantity": "1-2"
+        },
+        {
+          "item": "Charcoal",
+          "chance": "10%",
+          "quantity": "1"
+        }
+      ]
+    },
+    "5": {
+      "source": "https://pixelmonmod.com/wiki/Charmeleon",
+      "spawn": [
+        {
+          "biome": "Mountainous",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "Clear Weather",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Volcanic",
+          "mod": "—",
+          "time": "Day",
+          "location": "Land",
+          "condition": "Clear Weather",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Eroded Badlands",
+          "mod": "MC",
+          "time": "Day",
+          "location": "Land",
+          "condition": "Clear Weather",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Ultra Crater",
+          "mod": "PM",
+          "time": "Day",
+          "location": "Land",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        }
+      ],
+      "drops": [
+        {
+          "item": "Blaze Powder",
+          "chance": "100%",
+          "quantity": "2-3"
+        },
+        {
+          "item": "Blaze Rod",
+          "chance": "50%",
+          "quantity": "1"
+        },
+        {
+          "item": "Fire Gem",
+          "chance": "10%",
+          "quantity": "1"
+        }
+      ]
+    },
+    "6": {
+      "source": "https://pixelmonmod.com/wiki/Charizard",
+      "spawn": [
+        {
+          "biome": "Mountainous",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air",
+          "condition": "Clear Weather",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Volcanic",
+          "mod": "—",
+          "time": "Day",
+          "location": "Air",
+          "condition": "Clear Weather",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Eroded Badlands",
+          "mod": "MC",
+          "time": "Day",
+          "location": "Air",
+          "condition": "Clear Weather",
+          "rarity": "Ultra Rare"
+        },
+        {
+          "biome": "Ultra Crater",
+          "mod": "PM",
+          "time": "Morning",
+          "location": "Air",
+          "condition": "—",
+          "rarity": "Ultra Rare"
+        }
+      ],
+      "drops": [
+        {
+          "item": "Blaze Rod",
+          "chance": "100%",
+          "quantity": "3-4"
+        },
+        {
+          "item": "Magma Cream",
+          "chance": "50%",
+          "quantity": "1-2"
+        },
+        {
+          "item": "Fire Gem",
+          "chance": "30%",
+          "quantity": "1"
+        },
+        {
+          "item": "Fire Stone Shard",
+          "chance": "10%",
+          "quantity": "1-2"
+        }
+      ],
+      "alternateForms": {
+        "Mega Charizard X & Y": {
+          "spawn": [
+            {
+              "biome": "Mountainous",
+              "mod": "—",
+              "time": "Any",
+              "location": "Air",
+              "condition": "—",
+              "rarity": "Ultra Rare"
+            },
+            {
+              "biome": "Volcanic",
+              "mod": "—",
+              "time": "Any",
+              "location": "Air",
+              "condition": "—",
+              "rarity": "Ultra Rare"
+            },
+            {
+              "biome": "Eroded Badlands",
+              "mod": "MC",
+              "time": "Any",
+              "location": "Air",
+              "condition": "—",
+              "rarity": "Ultra Rare"
+            }
+          ]
+        }
+      }
     }
   },
   "items": {
-    "Vines": [{"pokemonId":1,"chance":"100%","quantity":"1-2"}],
-    "Twisting Vines": [{"pokemonId":1,"chance":"10%","quantity":"1"}]
+    "Vines": [
+      {
+        "pokemonId": 1,
+        "chance": "100%",
+        "quantity": "1-2"
+      },
+      {
+        "pokemonId": 2,
+        "chance": "100%",
+        "quantity": "2-3"
+      },
+      {
+        "pokemonId": 3,
+        "chance": "100%",
+        "quantity": "3-4"
+      }
+    ],
+    "Twisting Vines": [
+      {
+        "pokemonId": 1,
+        "chance": "10%",
+        "quantity": "1"
+      },
+      {
+        "pokemonId": 2,
+        "chance": "50%",
+        "quantity": "1"
+      },
+      {
+        "pokemonId": 3,
+        "chance": "50%",
+        "quantity": "1-2"
+      }
+    ],
+    "Grass Gem": [
+      {
+        "pokemonId": 2,
+        "chance": "10%",
+        "quantity": "1"
+      },
+      {
+        "pokemonId": 3,
+        "chance": "30%",
+        "quantity": "1"
+      }
+    ],
+    "Big Root": [
+      {
+        "pokemonId": 3,
+        "chance": "10%",
+        "quantity": "1-2"
+      }
+    ],
+    "Blaze Powder": [
+      {
+        "pokemonId": 4,
+        "chance": "100%",
+        "quantity": "1-2"
+      },
+      {
+        "pokemonId": 5,
+        "chance": "100%",
+        "quantity": "2-3"
+      }
+    ],
+    "Charcoal": [
+      {
+        "pokemonId": 4,
+        "chance": "10%",
+        "quantity": "1"
+      }
+    ],
+    "Blaze Rod": [
+      {
+        "pokemonId": 5,
+        "chance": "50%",
+        "quantity": "1"
+      },
+      {
+        "pokemonId": 6,
+        "chance": "100%",
+        "quantity": "3-4"
+      }
+    ],
+    "Fire Gem": [
+      {
+        "pokemonId": 5,
+        "chance": "10%",
+        "quantity": "1"
+      },
+      {
+        "pokemonId": 6,
+        "chance": "30%",
+        "quantity": "1"
+      }
+    ],
+    "Magma Cream": [
+      {
+        "pokemonId": 6,
+        "chance": "50%",
+        "quantity": "1-2"
+      }
+    ],
+    "Fire Stone Shard": [
+      {
+        "pokemonId": 6,
+        "chance": "10%",
+        "quantity": "1-2"
+      }
+    ]
   }
 }
