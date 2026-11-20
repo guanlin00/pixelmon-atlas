@@ -130,6 +130,8 @@ function atlasMergeRegistry(data){
   dest.pixelmonMethodSource=record.methodSource||record.source||'';
   dest.pixelmonMethodStatus=record.methodStatus||'尚未核實';
   dest.pixelmonRecipe=record.recipe||null;
+  dest.pixelmonIndividualMethods=record.individualMethods||[];
+  dest.pixelmonCreativeCommand=record.creativeCommand||'';
   dest.pixelmonDetailSource=record.source||record.idListSource;
   if(!dest.zh||dest.zh===dest.en)dest.zh=(atlasItemZH&&atlasItemZH[slug])||dest.zh||dest.en;
  }
