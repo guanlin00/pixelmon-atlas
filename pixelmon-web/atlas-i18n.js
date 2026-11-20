@@ -30,14 +30,14 @@
   'Ultra Space':'究極空間','Ultra Plant':'究極植物','Ultra Forest':'究極森林',
   'Lush Red Desert':'繁茂紅沙漠','Lush Desert':'繁茂沙漠','Mojave Desert':'莫哈維沙漠',
   'DesertHills':'沙漠丘陵','Roofed Forest':'黑森林','Mega Taiga':'巨木針葉林',
-  'Extreme Hills':'高山','Mesa':'惡地','Any':'不限','None':'無限制'
+  'Extreme Hills':'高山','Mesa':'惡地','Snowy Slopes':'積雪山坡','Windswept Gravelly Hills':'風襲礫石丘陵','Windswept Savanna':'風襲莽原','Savanna Plateau':'莽原高地','Savanna':'莽原','Deep Cold Ocean':'寒冷深海','Deep Lukewarm Ocean':'溫暖深海','Snowy Beach':'積雪海灘','Lakes':'湖泊類','Plains (Category)':'平原類','Ice Spikes':'冰刺平原','Windswept Forest':'風襲森林','Deep Warm Ocean':'溫暖深海','Any':'不限','None':'無限制'
  };
  const place = {
   'Land':'陸地','Air':'空中','Water':'水中','Underground':'地下','Tree Top':'樹頂',
   'Tree Tops':'樹頂','Surface Water':'水面','Water Surface':'水面','Seafloor':'海床',
   'Underwater':'水下','Lava':'熔岩中','Fishing':'釣魚','Forage':'野外採集',
   'Sweet Scent':'甜甜香氣','Headbutt':'撞樹','Rock Smash':'碎岩','Rock smash':'碎岩',
-  'Cave':'洞窟','Caves':'洞窟','Manmade':'人造區域','Treetop':'樹冠','Any':'不限'
+  'Indoors':'室內','Lava Floor':'熔岩表面','Underground Water':'地下水域','Cave':'洞窟','Caves':'洞窟','Manmade':'人造區域','Treetop':'樹冠','Any':'不限'
  };
  const rarity = {
   'Common':'常見','Uncommon':'不常見','Rare':'稀有','Ultra Rare':'極稀有',
