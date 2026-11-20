@@ -1,0 +1,26 @@
+name: Import sourced Pixelmon item registry and recipes
+on:
+  push:
+    paths:
+      - .github/workflows/import-items.yml
+      - pixelmon-web/tools/import_item_registry.py
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install requests beautifulsoup4
+      - name: Import item IDs and recipe references
+        run: python pixelmon-web/tools/import_item_registry.py
+      - name: Commit only validated records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pixelmon-web/pixelmon-item-index.json
+          git diff --cached --quiet || (git commit -m "data: import full Pixelmon item ID index and illustrated recipe references" && git push)
