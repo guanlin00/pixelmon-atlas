@@ -1,0 +1,137 @@
+{
+  "total": 2699,
+  "accessible": 2674,
+  "withAcquisitionDetails": 468,
+  "failures": [
+    {
+      "name": "Basement Key Brass",
+      "error": "Wrong article: Basement Key"
+    },
+    {
+      "name": "Basement Key Siver",
+      "error": "Wrong article: Basement Key"
+    },
+    {
+      "name": "Card Key Orange",
+      "error": "Wrong article: Card Key"
+    },
+    {
+      "name": "Card Key Red",
+      "error": "Wrong article: Card Key"
+    },
+    {
+      "name": "Fairy Badge Galar",
+      "error": "Wrong article: Fairy Badge"
+    },
+    {
+      "name": "G?e Bolg",
+      "error": "Wrong article: Gae Bolg"
+    },
+    {
+      "name": "Covered Fossil 0",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 1",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 2",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 3",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 4",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 5",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 6",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 7",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 8",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 9",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 10",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 11",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 12",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 13",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Covered Fossil 14",
+      "error": "Wrong article: Covered Fossil"
+    },
+    {
+      "name": "Galarian TM36: Whirlpool",
+      "error": "Wrong article: Galarian TM36: Whirpool"
+    },
+    {
+      "name": "Galarian TM62: Speed Swap",
+      "error": "Wrong article: Galarian TM62: Spped Swap"
+    },
+    {
+      "name": "Johto TM9: Psych Up",
+      "error": "Wrong article: Johto TM9: Psysh Up"
+    },
+    {
+      "name": "В§bWaterdude's Wishing Piece",
+      "error": "Wrong article: Waterdude’s Wishing Piece"
+    }
+  ],
+  "mostCommonMethods": [
+    [
+      "Pokemon Drops",
+      301
+    ],
+    [
+      "Pokechests Drops",
+      254
+    ],
+    [
+      "Raid Drops",
+      76
+    ],
+    [
+      "Infuser",
+      40
+    ],
+    [
+      "Furnace",
+      29
+    ],
+    [
+      "Blast Furnace",
+      19
+    ],
+    [
+      "Stonecutter",
+      3
+    ]
+  ]
+}
