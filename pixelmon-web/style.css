@@ -127,3 +127,25 @@ body.light .toast{background:#0c776c;color:#fff}
 
 /* One-line biome preview; full environment list remains in the card tooltip/detail. */
 .catalog .result-card .card-foot{display:block;box-sizing:border-box;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;max-width:100%;max-height:none;min-height:0;-webkit-line-clamp:unset;line-clamp:unset;overflow-wrap:normal;word-break:normal}
+
+/* Shiny index and side-by-side artwork; regular sprites are never used as shiny fallbacks. */
+.shiny-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,280px);gap:14px;padding:18px;margin-bottom:18px}
+.shiny-controls label{font-size:12px;color:var(--muted);font-weight:700;display:flex;flex-direction:column;gap:8px;min-width:0}
+.shiny-controls input,.shiny-controls select{width:100%;min-width:0;height:44px}
+.shiny-count,.shiny-note{color:var(--muted);font-size:12px;line-height:1.8}
+.shiny-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.shiny-card{display:flex;flex-direction:column;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px;gap:5px;transition:border-color .2s,transform .2s}
+.shiny-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.shiny-card strong{font-size:15px}.shiny-card small{color:var(--muted);font-size:11px}
+.shiny-img{height:158px;width:100%;min-width:0;display:grid;place-items:center;position:relative;background:var(--surface2);border-radius:11px;overflow:hidden}
+.shiny-img img{width:100%;height:100%;object-fit:contain;max-width:96%;max-height:96%}
+.shiny-unavailable{font-size:12px;padding:12px;text-align:center;color:var(--danger);font-weight:700}
+.shiny-unavailable[hidden],.shiny-img img[hidden]{display:none!important}
+.shiny-load-more{display:block;margin:22px auto}
+.shiny-detail{margin:20px 0 0;padding:20px 0;border-top:1px solid var(--border)}
+.shiny-detail h3{font-size:18px;margin:0 0 14px}
+.shiny-comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.shiny-variant{background:var(--surface2);border:1px solid var(--border);border-radius:12px;display:flex;flex-direction:column;align-items:center;padding:13px;gap:9px;min-width:0}
+.shiny-variant .shiny-img{height:175px;background:var(--surface)}
+.shiny-variant strong{font-size:13px}
+@media(max-width:680px){.shiny-controls{grid-template-columns:minmax(0,1fr)}.shiny-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.shiny-img{height:132px}.shiny-variant .shiny-img{height:135px}}
