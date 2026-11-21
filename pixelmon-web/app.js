@@ -102,7 +102,7 @@ if(Array.isArray(ATLAS_NATIONAL_DEX)&&ATLAS_NATIONAL_DEX.length===1025){
   const old=previous.get(id);
   return {id,zh,en,types,class:category,rules:[],drops:old?.verifiedDrops?.map(d=>d.item)||[],
    verifiedDrops:old?.verifiedDrops||[],evolvesFrom:evolvesFrom||null,
-   evolve:'進化條件請參考資料來源核對 Pixelmon 版本',
+   evolve:'詳情請查看進化資訊分頁',
    sourceUrl:'https://pokeapi.co/api/v2/pokemon-species/'+id+'/'};
  });
  POKEMON.splice(0,POKEMON.length,...all);
@@ -197,8 +197,8 @@ function evolutionTree(p){
  const index=new Map(POKEMON.map(x=>[x.id,x]));let first=p,seen=new Set();
  while(first.evolvesFrom&&index.has(first.evolvesFrom)&&!seen.has(first.id)){seen.add(first.id);first=index.get(first.evolvesFrom)}
  const children=new Map();for(const s of POKEMON){if(!s.evolvesFrom)continue;let list=children.get(s.evolvesFrom)||[];list.push(s);children.set(s.evolvesFrom,list)}
- function node(s,depth){if(depth>8)return '';const list=children.get(s.id)||[];return `<div class="evo-node"><a href="#pokemon/${s.id}" class="evo-pokemon ${s.id===p.id?'current':''}"><div class="evo-image">${sprite(s.id)}</div><strong>${esc(s.zh)}</strong><small>${esc(s.en)} · #${String(s.id).padStart(4,'0')}</small></a>${list.length?`<div class="evo-branches">${list.map(next=>`<div class="evo-path"><div class="evo-connector">↓<span>${esc(window.AtlasEvolution?.label(next.id)||EVO_CONDITIONS[next.id]||'進化條件待核對')}</span></div>${node(next,depth+1)}</div>`).join('')}</div>`:''}</div>`}
- return `<div class="evolution-panel"><h3>進化鏈</h3><p class="guide">點擊任何階段的圖片或名稱，即可進入該寶可夢的圖鑑頁。</p><div class="evolution-chart">${node(first,0)}</div><p class="atlas-evo-more"><a class="btn quiet" href="#evolution">↗　進化條件</a></p><p class="source-footnote">親緣關係來自 PokéAPI；目前僅部分進化條件經 Pixelmon Wiki 核對。特殊地區形態可能需要獨立進化規則。</p></div>`
+ function node(s,depth){if(depth>8)return '';const list=children.get(s.id)||[];return `<div class="evo-node"><a href="#pokemon/${s.id}" class="evo-pokemon ${s.id===p.id?'current':''}"><div class="evo-image">${sprite(s.id)}</div><strong>${esc(s.zh)}</strong><small>${esc(s.en)} · #${String(s.id).padStart(4,'0')}</small></a>${list.length?`<div class="evo-branches">${list.map(next=>`<div class="evo-path"><div class="evo-connector">↓<span>${esc(window.AtlasEvolution?.label(next.id)||EVO_CONDITIONS[next.id]||'未收錄此形態的獨立進化條件')}</span></div>${node(next,depth+1)}</div>`).join('')}</div>`:''}</div>`}
+ return `<div class="evolution-panel"><h3>進化鏈</h3><p class="guide">點擊任何階段的圖片或名稱，即可進入該寶可夢的圖鑑頁。</p><div class="evolution-chart">${node(first,0)}</div><p class="atlas-evo-more"><a class="btn quiet" href="#evolution">↗　進化條件</a></p><p class="source-footnote">進化親緣關係來自 PokéAPI；已補充官方 Wiki 的特殊進化及地區形態差異。各條件的實際來源及適用範圍可在「進化條件」頁面查看。</p></div>`
 }
 // Explicitly separate historic MC百科 8.4.2 rules from the current species reference.
 function legendaryMCModSpawn(p){
