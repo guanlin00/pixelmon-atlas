@@ -8,6 +8,6 @@ const OFFICIAL_SPAWNS={
   330:[['沙漠丘陵（Desert Hills）','Dawn,Dusk','Air','Ultra Rare'],['究極沙漠（Ultra Desert）','Day','Air','Ultra Rare'],['茂盛紅沙漠（Lush Red Desert）','Dawn,Dusk','Air','Ultra Rare'],['莫哈韋沙漠（Mojave Desert）','Dawn,Dusk','Air','Ultra Rare'],['茂盛沙漠（Lush Desert）','Dawn,Dusk','Air','Ultra Rare']]
 };
 const OFFICIAL_SPAWN_URLS={16:'Pidgey',27:'Sandshrew',63:'Abra',328:'Trapinch',329:'Vibrava',330:'Flygon'};
-function addVerifiedSpawns(){for(const p of POKEMON){const entries=OFFICIAL_SPAWNS[p.id];if(!entries)continue;p.rules=entries.map(([biome,time,location,rarity])=>({biome,times:time.split(','),location,rarity,verified:true,source:'https://pixelmonmod.com/wiki/'+OFFICIAL_SPAWN_URLS[p.id]}));}}
+function addVerifiedSpawns(){for(const p of POKEMON){const entries=OFFICIAL_SPAWNS[p.id];if(!entries||p.rules?.length)continue;p.rules=entries.map(([biome,time,location,rarity])=>({biome,times:time.split(','),location,rarity,verified:true,source:'https://pixelmonmod.com/wiki/'+OFFICIAL_SPAWN_URLS[p.id]}));}}
 
 addVerifiedSpawns();
