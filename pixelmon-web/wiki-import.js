@@ -10,7 +10,7 @@ function importWikiReference(data){
  const items=data.items||{};
  const existingBiomes=new Set(BIOMES.map(b=>b[0]));
  const importedBiomes=[...new Set(Object.values(data.pokemon).flatMap(p=>(p.spawn||[]).map(r=>r.biome)))];
- const newBiomes=importedBiomes.filter(b=>b&&!existingBiomes.has(b)).map(b=>[b,WIKI_BIOME_ZH[b]||b,b]);
+ const newBiomes=importedBiomes.filter(b=>b&&!existingBiomes.has(b)).map(b=>[b,window.atlasBiomeLabels?.translate(b)||WIKI_BIOME_ZH[b]||b,b]);
  if(newBiomes.length){BIOME_GROUPS.push({name:'Pixelmon Wiki 生成分類／生態域',items:newBiomes});BIOMES.push(...newBiomes)}
  for(const [id,record] of Object.entries(data.pokemon)){
   const p=POKEMON.find(x=>x.id===Number(id));if(!p)continue;
