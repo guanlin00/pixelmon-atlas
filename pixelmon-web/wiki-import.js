@@ -17,7 +17,7 @@ function importWikiReference(data){
   const rules=(record.spawn||[]).map(x=>({biome:x.biome,times:String(x.time||'Any').split(/[,/]|\s+or\s+/i).map(t=>t.trim()).filter(Boolean),location:x.location||'—',rarity:x.rarity||'—',mod:x.mod||'—',condition:x.condition||'—',verified:true,source:record.source||'https://pixelmonmod.com/wiki/'+encodeURIComponent(p.en),sourceType:'wiki'}));
   if(rules.length)p.rules=rules;
   const drops=(record.drops||[]).map(d=>({item:wikiItemId(d.item),chance:String(d.chance||'—'),quantity:String(d.quantity||'—'),source:record.source,sourceType:'wiki'}));
-  if(drops.length){p.verifiedDrops=drops;p.drops=drops.map(d=>d.item)}
+  if(drops.length||record.verification?.sourceStatus?.includes('original Pixelmon 9.4.2')){p.verifiedDrops=drops;p.drops=drops.map(d=>d.item)}
   if(record.formDrops&&typeof record.formDrops==='object'){
    p.formDrops=Object.entries(record.formDrops).map(([form,rows])=>({
       form,drops:(rows||[]).map(d=>({item:wikiItemId(d.item),
