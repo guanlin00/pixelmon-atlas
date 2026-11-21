@@ -114,7 +114,7 @@ if(Array.isArray(ATLAS_SPAWN_RULES)){
  for(const [id,entries] of ATLAS_SPAWN_RULES){
   const p=speciesById.get(id);if(!p)continue;
   p.rules=entries.map(([biome,time,location,rarity,condition,mod])=>({
-   biome,times:String(time).split(/[,/]|\\s+or\\s+/i).map(t=>t.trim()).filter(Boolean),
+   biome,times:String(time).split(/[,/]|\s+or\s+/i).map(t=>t.trim()).filter(Boolean),
    location,rarity,condition,mod,verified:true,
    source:'https://pixelmonmod.com/wiki/'+encodeURIComponent(p.en),
    sourceType:'official-mod'
