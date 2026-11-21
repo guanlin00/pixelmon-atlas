@@ -82,6 +82,8 @@
  // namespaced tags. Match the identifier first and show a single readable name.
  // Keep the complete original in the cell tooltip rather than repeating it inline.
  function translateSpawnBiome(raw){
+  if(window.atlasBiomeLabels)return window.atlasBiomeLabels.translate(raw);
+
   const t=normalized(raw);if(blank.has(t))return '未指定生態域';
   // app.js already converts some English biome identifiers into Traditional Chinese.
   // Do not treat those labels as untranslated English or translate them twice.
