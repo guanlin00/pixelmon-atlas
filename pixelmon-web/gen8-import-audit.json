@@ -7,12 +7,12 @@
     "dexEnd": 905,
     "requested": 96,
     "updated": "2026-11-21",
-    "notes": "Imported only records with matching National Dex ID and an actual Drops table; missing pages explicitly audited. No version compatibility claim.",
-    "imported": 92,
-    "missing": 4,
-    "withSpawns": 87,
+    "notes": "Records require matching National Dex ID and at least one of: actual Spawn section or Drops table. Missing sections remain explicitly unverified, not zero. Data from third-party mirror, no version compatibility claim.",
+    "imported": 94,
+    "missing": 2,
+    "withSpawns": 89,
     "withDrops": 92,
-    "spawnRows": 453,
+    "spawnRows": 461,
     "dropRows": 288
   },
   "records": [
@@ -208,20 +208,20 @@
     {
       "id": 831,
       "slug": "wooloo",
-      "status": "unavailable",
-      "spawnRules": 0,
+      "status": "imported",
+      "spawnRules": 4,
       "drops": 0,
-      "source": null,
-      "error": "wooloo: missing drop table"
+      "source": "https://pixelmon.site/wooloo/",
+      "error": null
     },
     {
       "id": 832,
       "slug": "dubwool",
-      "status": "unavailable",
-      "spawnRules": 0,
+      "status": "imported",
+      "spawnRules": 4,
       "drops": 0,
-      "source": null,
-      "error": "dubwool: missing drop table"
+      "source": "https://pixelmon.site/dubwool/",
+      "error": null
     },
     {
       "id": 833,
@@ -518,7 +518,7 @@
       "spawnRules": 0,
       "drops": 0,
       "source": null,
-      "error": "sirfetchd: missing drop table; sirfetch-d: missing drop table"
+      "error": "sirfetchd: neither usable spawn nor drop table; sirfetch-d: neither usable spawn nor drop table"
     },
     {
       "id": 866,
@@ -527,7 +527,7 @@
       "spawnRules": 0,
       "drops": 0,
       "source": null,
-      "error": "mr-rime: missing drop table; mrrime: missing drop table"
+      "error": "mr-rime: neither usable spawn nor drop table; mrrime: neither usable spawn nor drop table"
     },
     {
       "id": 867,
@@ -883,24 +883,14 @@
   ],
   "missing": [
     {
-      "id": 831,
-      "slug": "wooloo",
-      "reason": "wooloo: missing drop table"
-    },
-    {
-      "id": 832,
-      "slug": "dubwool",
-      "reason": "dubwool: missing drop table"
-    },
-    {
       "id": 865,
       "slug": "sirfetchd",
-      "reason": "sirfetchd: missing drop table; sirfetch-d: missing drop table"
+      "reason": "sirfetchd: neither usable spawn nor drop table; sirfetch-d: neither usable spawn nor drop table"
     },
     {
       "id": 866,
       "slug": "mr-rime",
-      "reason": "mr-rime: missing drop table; mrrime: missing drop table"
+      "reason": "mr-rime: neither usable spawn nor drop table; mrrime: neither usable spawn nor drop table"
     }
   ]
 }
