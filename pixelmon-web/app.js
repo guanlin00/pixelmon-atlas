@@ -2,10 +2,8 @@
 // All creature spawn rules and item associations below are illustrative demo data,
 // NOT verified Pixelmon facts. Replace with version-specific imported records.
 const TYPES=[['normal','一般','#A8A77A'],['fire','火','#EE8130'],['water','水','#6390F0'],['electric','電','#F7D02C'],['grass','草','#7AC74C'],['ice','冰','#96D9D6'],['fighting','格鬥','#C22E28'],['poison','毒','#A33EA1'],['ground','地面','#E2BF65'],['flying','飛行','#A98FF3'],['psychic','超能力','#F95587'],['bug','蟲','#A6B91A'],['rock','岩石','#B6A136'],['ghost','幽靈','#735797'],['dragon','龍','#6F35FC'],['dark','惡','#705746'],['steel','鋼','#B7B7CE'],['fairy','妖精','#D685AD']];
-const BIOME_GROUPS=[{name:'森林與叢林',items:[['forest','森林','Forest'],['flower_forest','繁花森林','Flower Forest'],['birch_forest','樺木森林','Birch Forest'],['old_growth_pine_taiga','原始松木針葉林','Old Growth Pine Taiga'],['taiga','針葉林','Taiga'],['dark_forest','黑森林','Dark Forest'],['jungle','叢林','Jungle']]},{name:'平原與乾燥地帶',items:[['plains','平原','Plains'],['sunflower_plains','向日葵平原','Sunflower Plains'],['desert','沙漠','Desert'],['savanna','莽原','Savanna'],['badlands','惡地','Badlands'],['meadow','草甸','Meadow']]},{name:'水域與寒帶',items:[['swamp','沼澤','Swamp'],['river','河流','River'],['beach','海灘','Beach'],['ocean','海洋','Ocean'],['deep_ocean','深海','Deep Ocean'],['snowy_plains','雪原','Snowy Plains'],['frozen_ocean','冰凍海洋','Frozen Ocean']]},{name:'其他維度',items:[['end_highlands','終界高地','End Highlands'],['end_barrens','終界荒地','End Barrens'],['nether_wastes','地獄荒原','Nether Wastes'],['crimson_forest','緋紅森林','Crimson Forest']]}];
-const BIOMES=BIOME_GROUPS.flatMap(g=>g.items);
-BIOME_GROUPS.unshift({name:'Pixelmon 官方生態域分類（非單一地形）',items:[['分類：森林（Forests）','森林類別','Forests'],['分類：平原（Plains）','平原類別','Plains'],['分類：針葉林（Taigas）','針葉林類別','Taigas'],['分類：乾燥地帶（Arid）','乾燥地帶類別','Arid'],['分類：惡地（Mesas）','惡地類別','Mesas'],['分類：終界（End）','終界類別','End']]});
-BIOMES.unshift(...BIOME_GROUPS[0].items);
+const BIOME_GROUPS=[];
+const BIOMES=[];
 // All 158 biome IDs from bundled Pixelmon 9.4.2 spawn files are available
 // immediately in the filter instead of appearing after each generation fetch.
 if(window.atlasBiomeLabels?.dictionary){
