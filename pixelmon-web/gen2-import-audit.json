@@ -7,12 +7,12 @@
     "dexEnd": 251,
     "requested": 100,
     "updated": "2026-11-21",
-    "notes": "Imported only records with matching National Dex ID and an actual Drops table; missing pages explicitly audited. No version compatibility claim.",
-    "imported": 98,
-    "missing": 2,
-    "withSpawns": 89,
+    "notes": "Records require matching National Dex ID and at least one of: actual Spawn section or Drops table. Missing sections remain explicitly unverified, not zero. Data from third-party mirror, no version compatibility claim.",
+    "imported": 100,
+    "missing": 0,
+    "withSpawns": 91,
     "withDrops": 98,
-    "spawnRows": 480,
+    "spawnRows": 496,
     "dropRows": 307
   },
   "records": [
@@ -262,11 +262,11 @@
     {
       "id": 179,
       "slug": "mareep",
-      "status": "unavailable",
-      "spawnRules": 0,
+      "status": "imported",
+      "spawnRules": 4,
       "drops": 0,
-      "source": null,
-      "error": "mareep: missing drop table"
+      "source": "https://pixelmon.site/mareep/",
+      "error": null
     },
     {
       "id": 180,
@@ -460,11 +460,11 @@
     {
       "id": 201,
       "slug": "unown",
-      "status": "unavailable",
-      "spawnRules": 0,
+      "status": "imported",
+      "spawnRules": 12,
       "drops": 0,
-      "source": null,
-      "error": "unown: missing drop table"
+      "source": "https://pixelmon.site/unown/",
+      "error": null
     },
     {
       "id": 202,
@@ -917,16 +917,5 @@
       "error": null
     }
   ],
-  "missing": [
-    {
-      "id": 179,
-      "slug": "mareep",
-      "reason": "mareep: missing drop table"
-    },
-    {
-      "id": 201,
-      "slug": "unown",
-      "reason": "unown: missing drop table"
-    }
-  ]
+  "missing": []
 }
