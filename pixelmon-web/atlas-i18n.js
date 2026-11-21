@@ -82,15 +82,15 @@
  // Keep the complete original in the cell tooltip rather than repeating it inline.
  function translateSpawnBiome(raw){
   const t=normalized(raw);if(blank.has(t))return '未指定生態域';
-  const tags=[...t.matchAll(/#pixelmon:spawning\\/([a-z0-9_]+)/gi)];
+  const tags=[...t.matchAll(/#pixelmon:spawning\/([a-z0-9_]+)/gi)];
   const known={forests:'Forests',birches:'Birches',plains:'Plains',taigas:'Taigas',mesas:'Mesas',arid:'Arid',swamps:'Swamps',jungles:'Jungles',savannas:'Savannas',oceans:'Oceans',rivers:'Rivers',beaches:'Beaches',hills:'Hills',mountains:'Mountains',cold:'Cold',freezing:'Freezing',snowy:'Snowy',evil:'Evil'};
   if(tags.length){
-   const id=tags[0][1].toLowerCase(),name=known[id]||id.replace(/_/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase());
+   const id=tags[0][1].toLowerCase(),name=known[id]||id.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
    return (biome[name]||'生成分類')+'（'+name+'）';
   }
-  const ns=[...t.matchAll(/(?:^|[\\s（(·])([a-z][a-z0-9_]*):([a-z0-9_\\/.-]+)/gi)];
+  const ns=[...t.matchAll(/(?:^|[\s（(·])([a-z][a-z0-9_]*):([a-z0-9_\/.-]+)/gi)];
   if(ns.length){
-   const [,mod,id]=ns[0],name=id.split('/').pop().replace(/_/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase());
+   const [,mod,id]=ns[0],name=id.split('/').pop().replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
    const modName=({byg:'BYG',biomeswevegone:'Biomes We’ve Gone',pixelmon:'Pixelmon',minecraft:'Minecraft'})[mod.toLowerCase()]||mod;
    return (biome[name]||name)+'（'+modName+'）';
   }
