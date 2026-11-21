@@ -7,7 +7,7 @@
     "dexEnd": 721,
     "requested": 72,
     "updated": "2026-11-21",
-    "notes": "Imported only records with matching National Dex ID and an actual Drops table; missing pages explicitly audited. No version compatibility claim.",
+    "notes": "Records require matching National Dex ID and at least one of: actual Spawn section or Drops table. Missing sections remain explicitly unverified, not zero. Data from third-party mirror, no version compatibility claim.",
     "imported": 69,
     "missing": 3,
     "withSpawns": 65,
@@ -194,7 +194,7 @@
       "spawnRules": 0,
       "drops": 0,
       "source": null,
-      "error": "flabebe: missing drop table"
+      "error": "flabebe: neither usable spawn nor drop table"
     },
     {
       "id": 670,
@@ -203,7 +203,7 @@
       "spawnRules": 0,
       "drops": 0,
       "source": null,
-      "error": "floette: missing drop table"
+      "error": "floette: neither usable spawn nor drop table"
     },
     {
       "id": 671,
@@ -212,7 +212,7 @@
       "spawnRules": 0,
       "drops": 0,
       "source": null,
-      "error": "florges: missing drop table"
+      "error": "florges: neither usable spawn nor drop table"
     },
     {
       "id": 672,
@@ -669,17 +669,17 @@
     {
       "id": 669,
       "slug": "flabebe",
-      "reason": "flabebe: missing drop table"
+      "reason": "flabebe: neither usable spawn nor drop table"
     },
     {
       "id": 670,
       "slug": "floette",
-      "reason": "floette: missing drop table"
+      "reason": "floette: neither usable spawn nor drop table"
     },
     {
       "id": 671,
       "slug": "florges",
-      "reason": "florges: missing drop table"
+      "reason": "florges: neither usable spawn nor drop table"
     }
   ]
 }
