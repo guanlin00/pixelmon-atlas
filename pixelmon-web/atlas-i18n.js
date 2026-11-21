@@ -77,6 +77,28 @@
   logMissing.add(t);
   return `待翻譯（${t}）`;
  }
+ // Wiki/datapack biome cells may contain both a friendly label and one or more
+ // namespaced tags. Match the identifier first and show a single readable name.
+ // Keep the complete original in the cell tooltip rather than repeating it inline.
+ function translateSpawnBiome(raw){
+  const t=normalized(raw);if(blank.has(t))return '未指定生態域';
+  const tags=[...t.matchAll(/#pixelmon:spawning\\/([a-z0-9_]+)/gi)];
+  const known={forests:'Forests',birches:'Birches',plains:'Plains',taigas:'Taigas',mesas:'Mesas',arid:'Arid',swamps:'Swamps',jungles:'Jungles',savannas:'Savannas',oceans:'Oceans',rivers:'Rivers',beaches:'Beaches',hills:'Hills',mountains:'Mountains',cold:'Cold',freezing:'Freezing',snowy:'Snowy',evil:'Evil'};
+  if(tags.length){
+   const id=tags[0][1].toLowerCase(),name=known[id]||id.replace(/_/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase());
+   return (biome[name]||'生成分類')+'（'+name+'）';
+  }
+  const ns=[...t.matchAll(/(?:^|[\\s（(·])([a-z][a-z0-9_]*):([a-z0-9_\\/.-]+)/gi)];
+  if(ns.length){
+   const [,mod,id]=ns[0],name=id.split('/').pop().replace(/_/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase());
+   const modName=({byg:'BYG',biomeswevegone:'Biomes We’ve Gone',pixelmon:'Pixelmon',minecraft:'Minecraft'})[mod.toLowerCase()]||mod;
+   return (biome[name]||name)+'（'+modName+'）';
+  }
+  // Some Wiki exports already embed an English label and tag as parenthesized text.
+  const key=Object.keys(biome).find(k=>t===k||t.startsWith(k+' (')||t.startsWith(k+'（'));
+  if(key)return biome[key]+'（'+key+'）';
+  return translatePhrase(t,biome);
+ }
  function translateCondition(raw){const t=normalized(raw);if(blank.has(t))return '無特殊條件';
   if(conditions[t])return `${conditions[t]}（${t}）`;
   if(/[,;/]|\s+and\s+|\s+or\s+/i.test(t)){
@@ -87,13 +109,14 @@
   if(/[\u3400-\u9fff]/.test(t))return t;
   logMissing.add(t);return `待翻譯（${t}）`;
  }
- const converters=[v=>translatePhrase(v,biome),null,null,v=>translatePhrase(v,place,{compound:true}),translateCondition,v=>translatePhrase(v,rarity)];
+ const converters=[translateSpawnBiome,null,null,v=>translatePhrase(v,place,{compound:true}),translateCondition,v=>translatePhrase(v,rarity)];
  let scheduled=false;
  function apply(){scheduled=false;
   document.querySelectorAll('.spawn-table tbody tr').forEach(row=>{
    const cells=row.querySelectorAll('td');if(cells.length<6)return;
    for(let i of [0,3,4,5]){
     const cell=cells[i];if(cell.dataset.atlasOriginal===undefined)cell.dataset.atlasOriginal=normalized(cell.textContent);
+    if(i===0)cell.title=cell.dataset.atlasOriginal;
     const val=converters[i](cell.dataset.atlasOriginal);
     if(cell.textContent!==val)cell.textContent=val;
    }
