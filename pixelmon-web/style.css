@@ -165,3 +165,13 @@ body.light .toast{background:#0c776c;color:#fff}
 .result-card .sprite img:not(.art-loaded){opacity:0}
 .result-card .sprite img.art-loaded{opacity:1}
 @media(prefers-reduced-motion:reduce){.dex-loading-bar,.result-card .sprite:not(:has(img.art-loaded)){animation:none}}
+
+/* Full 1025-entry lists: keep every card in the DOM while the browser skips
+   layout/painting for far-off cards. Artwork continues to download lazily. */
+.catalog .cards > .result-card,.shiny-grid > .shiny-card{
+ content-visibility:auto;
+ contain-intrinsic-size:auto 320px;
+}
+@media(max-width:680px){
+ .catalog .cards > .result-card,.shiny-grid > .shiny-card{contain-intrinsic-size:auto 270px}
+}
