@@ -111,17 +111,50 @@
   if(key)return biome[key]+'（'+key+'）';
   return translatePhrase(t,biome);
  }
+
+ const researchNames={
+  'pixelmon:pokemon/legendary/galarian_articuno':'伽勒爾急凍鳥',
+  'pixelmon:pokemon/legendary/galarian_zapdos':'伽勒爾閃電鳥',
+  'pixelmon:pokemon/legendary/galarian_moltres':'伽勒爾火焰鳥',
+  'pixelmon:pokemon/bloodmoon_ursaluna':'赫月月月熊',
+  'pixelmon:pokemon/legendary/ogerpon':'厄鬼椪'
+ };
+ const structureNames={
+  'pixelmon:misc/graveyard':'墓園',
+  'pixelmon:misc/pumpkin_house':'南瓜屋',
+  'pixelmon:misc/haunted_tower':'鬧鬼之塔',
+  'pixelmon:temples/land_chalice':'大地聖杯',
+  'pixelmon:temples/water_chalice':'水之聖杯',
+  'pixelmon:temples/spear_pillar':'槍之柱',
+  'minecraft:mansion':'林地府邸',
+  'minecraft:jungle_pyramid':'叢林神殿',
+  'minecraft:stronghold':'要塞',
+  'minecraft:ancient_city':'遠古城市',
+  'minecraft:desert_pyramid':'沙漠神殿',
+  'minecraft:ruined_portal':'廢棄傳送門',
+  'pixelmon:way_point/badlands':'惡地路標',
+  'pixelmon:way_point/desert':'沙漠路標',
+  'pixelmon:way_point/ice':'冰原路標',
+  'pixelmon:way_point/jungle':'叢林路標',
+  'pixelmon:way_point/mountain':'山地路標',
+  'pixelmon:way_point/mushroom':'蘑菇地路標',
+  'pixelmon:way_point/plains':'平原路標',
+  'pixelmon:way_point/savanna':'莽原路標'
+ };
  function translateSpawnSpec(input){
-  const tokenMap={form:{battle_bond:'牽絆變身',ash:'小智形態'},palette:{alter:'Alter 特殊外觀'},gender:{male:'雄性',female:'雌性',genderless:'無性別'}};
+  const tokenMap={form:{battle_bond:'牽絆變身',galarian:'伽勒爾形態',alolan:'阿羅拉形態',hisuian:'洗翠形態',paldean:'帕底亞形態',ash:'小智形態'},palette:{alter:'Alter 特殊外觀'},gender:{male:'雄性',female:'雌性',genderless:'無性別'}};
   const statNames={ivhp:'HP',ivatk:'攻擊',ivdef:'防禦',ivspatk:'特攻',ivspdef:'特防',ivspd:'速度'};
-  const pairs=[...input.matchAll(/([a-z][a-z0-9_]*):([^\s]+)/gi)];
+  const pairs=[...String(input).matchAll(/([a-z][a-z0-9_]*):([^\s；]+)/gi)];
   const parts=[],ivs=[],unknown=[];
   for(const [,name,value] of pairs){
    const k=name.toLowerCase(),v=value.replace(/[,;]+$/,'');
-   if(k==='species'){parts.push('寶可夢：'+v);continue}
+   if(k==='species'){parts.push('寶可夢：'+({Articuno:'急凍鳥',Zapdos:'閃電鳥',Moltres:'火焰鳥'}[v]||v));continue}
    if(k==='form'){parts.push('形態：'+(tokenMap.form[v]||v.replaceAll('_',' ')));continue}
    if(k==='palette'){parts.push('外觀：'+(tokenMap.palette[v]||v.replaceAll('_',' ')));continue}
    if(k==='gender'){parts.push('性別：'+(tokenMap.gender[v]||v));continue}
+   if(k==='level'){parts.push('等級：'+v);continue}
+   if(k==='boss'){parts.push('頭目：'+v);continue}
+   if(k==='status'){parts.push('狀態條件：'+v);continue}
    if(statNames[k]){ivs.push(statNames[k]+' '+v);continue}
    unknown.push(name+':'+v);
   }
@@ -129,24 +162,29 @@
   if(unknown.length)parts.push('其他規格：'+unknown.join('、'));
   return parts.length?parts.join('；'):input;
  }
+ function translateSpawnList(kind,body){
+  let ids;
+  try{ids=JSON.parse(body)}catch{ids=body.match(/["']([^"']+)["']/g)?.map(x=>x.slice(1,-1))||[]}
+  if(!Array.isArray(ids)||!ids.length)return kind==='Researches'?'需完成研究任務（細節待核對）':'需符合指定結構（細節待核對）';
+  const dict=kind==='Researches'?researchNames:structureNames;
+  const labels=ids.map(id=>dict[id]||id);
+  return (kind==='Researches'?'需要完成研究任務：':'生成結構：')+labels.join('、');
+ }
  function translateCondition(raw){
-  const t=normalized(raw);if(blank.has(t))return '無特殊條件';
-  if(conditions[t])return `${conditions[t]}（${t}）`;
-  // The datapack mixes a readable level range with compact species/form/palette/IV specs.
-  // Convert the latter to labels without changing numerical values or dropping conditions.
-  if(t.includes('形態／規格：')){
-   const [before,...rest]=t.split('形態／規格：');
-   const prefix=before.replace(/[；;\s]+$/,'');
-   const spec=translateSpawnSpec(rest.join('形態／規格：'));
-   return [prefix,spec].filter(Boolean).join('；');
-  }
-  if(/[,;/]|\s+and\s+|\s+or\s+/i.test(t)){
-   const sep=t.match(/\s+and\s+/i)?/\s+and\s+/i:t.match(/\s+or\s+/i)?/\s+or\s+/i:/\s*[,;/]\s*/;
-   const join=t.match(/\s+and\s+/i)?' 且 ':t.match(/\s+or\s+/i)?' 或 ':'、';
-   return t.split(sep).map(x=>translateCondition(x)).join(join);
-  }
-  if(/[\u3400-\u9fff]/.test(t))return t;
-  logMissing.add(t);return `待翻譯（${t}）`;
+  const t=normalized(raw);
+  if(blank.has(t))return '無特殊條件';
+  if(conditions[t])return conditions[t]+'（'+t+'）';
+  const parts=t.split(/\s*；\s*/).filter(Boolean).map(part=>{
+   const tagged=part.match(/^(Researches|Structures):\s*(\[[\s\S]*\])$/i);
+   if(tagged)return translateSpawnList(tagged[1].toLowerCase()==='researches'?'Researches':'Structures',tagged[2]);
+   if(part.startsWith('形態／規格：'))return translateSpawnSpec(part.slice('形態／規格：'.length));
+   if(/^(?:Level|等級)：/i.test(part))return part;
+   if(/^[\u3400-\u9fff]/.test(part))return part;
+   if(conditions[part])return conditions[part]+'（'+part+'）';
+   logMissing.add(part);
+   return '條件待核對：'+part;
+  });
+  return parts.join('；');
  }
  const converters=[translateSpawnBiome,null,null,v=>translatePhrase(v,place,{compound:true}),translateCondition,v=>translatePhrase(v,rarity)];
  let scheduled=false;
