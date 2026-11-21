@@ -28,7 +28,10 @@ function importWikiReference(data){
  }
  for(const [en,refs] of Object.entries(items)){
   let i=ITEMS.find(x=>x.id===wikiItemId(en));
-  if(!i){i={id:wikiItemId(en),zh:WIKI_ITEM_ZH[en]||en,en,icon:'◇',texture:WIKI_ITEM_TEXTURES[en]||null,kind:'Pixelmon Wiki 掉落物',desc:'Pixelmon 掉落物資料；實際來源可能是官方 9.4.2 遊戲檔或第三方圖鑑，請查看寶可夢條目。'};ITEMS.push(i)}
+  const gameId=refs.find(x=>x.gameItemId)?.gameItemId;
+  const translated=window.atlasDropZH?.byGameId?.[gameId]||window.atlasDropZH?.byEnglish?.[en]||WIKI_ITEM_ZH[en]||en;
+  if(!i){i={id:wikiItemId(en),zh:translated,en,icon:'◇',texture:WIKI_ITEM_TEXTURES[en]||null,kind:'Pixelmon 掉落物',desc:'Pixelmon 掉落物資料；請查看寶可夢條目與官方版本來源。'};ITEMS.push(i)}
+  else if(i.zh===en||!i.zh)i.zh=translated;
   const newRefs=refs.filter(x=>POKEMON.some(p=>p.id===Number(x.pokemonId))).map(x=>({...x,pokemonId:Number(x.pokemonId)}));
   const merged=[...(i.wikiDrops||[]),...newRefs];
   i.wikiDrops=[...new Map(merged.map(x=>[x.pokemonId+'|'+(x.form||'base')+'|'+x.chance+'|'+x.quantity,x])).values()];
@@ -37,6 +40,10 @@ function importWikiReference(data){
  window.wikiLoaded=true;
 }
 async function loadWikiReference(){
+ try{
+  const res=await fetch('official-drop-zh.json',{cache:'force-cache'});
+  if(res.ok)window.atlasDropZH=await res.json();
+ }catch(error){console.warn('Optional item translations unavailable:',error)}
  // Prefer Pixelmon's actual 9.4.2 datapack; use the third-party Wiki
  // mirror only for generations without a valid official-file extraction.
  const imported=[];const unavailable=[];
