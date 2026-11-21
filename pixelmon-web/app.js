@@ -109,6 +109,18 @@ if(Array.isArray(ATLAS_NATIONAL_DEX)&&ATLAS_NATIONAL_DEX.length===1025){
  });
  POKEMON.splice(0,POKEMON.length,...all);
 }
+if(Array.isArray(ATLAS_SPAWN_RULES)){
+ const speciesById=new Map(POKEMON.map(p=>[p.id,p]));
+ for(const [id,entries] of ATLAS_SPAWN_RULES){
+  const p=speciesById.get(id);if(!p)continue;
+  p.rules=entries.map(([biome,time,location,rarity,condition,mod])=>({
+   biome,times:String(time).split(/[,/]|\\s+or\\s+/i).map(t=>t.trim()).filter(Boolean),
+   location,rarity,condition,mod,verified:true,
+   source:'https://pixelmonmod.com/wiki/'+encodeURIComponent(p.en),
+   sourceType:'official-mod'
+  }));
+ }
+}
 const initial={types:[],biomes:[],typeLogic:'or',biomeLogic:'or',time:'all',category:'all',query:'',biomeQuery:'',sort:'dex'};
 let visibleLimit=1025; window.nationalDexImported=POKEMON.length===1025; window.catalogFailed=!window.nationalDexImported; window.catalogStatus=window.nationalDexImported?'全國圖鑑 1025 隻已內建':'圖鑑資料檔缺失';
 let filters={...initial}, currentTab='spawn',selectedCreature=null,selectedItem=null,toastTimer;
