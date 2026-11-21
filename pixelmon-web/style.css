@@ -211,3 +211,38 @@ body.light .toast{background:#0c776c;color:#fff}
 body.light .atlas-favorite-btn{background:#fff;color:#68858c;border-color:#c8d7dd}
 body.light .atlas-favorite-btn.is-favorite{color:#b68300;background:#fff9e5;border-color:#dab54b}
 @media(max-width:640px){.atlas-favorite-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.atlas-favorite-btn{top:7px;right:7px}}
+
+/* Evolution and moves reference pages */
+.atlas-evo-search{padding:16px;margin-bottom:16px;display:grid;gap:14px}
+.atlas-evo-search .search-input{width:100%}
+.atlas-evo-category{display:flex;flex-wrap:wrap;gap:8px}
+.atlas-evo-category .chip{border-radius:9px;padding:8px 12px;border:1px solid var(--border);color:var(--text);background:var(--surface2)}
+.atlas-evo-category .chip.active{color:#092a27;background:var(--accent);border-color:var(--accent)}
+.atlas-evo-count{font-size:13px;margin:12px 0}
+.atlas-evo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+.atlas-evo-tile{border:1px solid var(--border);border-radius:14px;padding:13px;background:var(--surface);display:flex;flex-direction:column;gap:9px;min-width:0}
+.atlas-evo-pair{display:grid;grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr);gap:4px;align-items:center}
+.atlas-evo-pair a{display:flex;flex-direction:column;align-items:center;min-width:0;gap:3px;text-align:center;font-size:12px;font-weight:700}
+.atlas-evo-pair img{width:72px;height:72px;object-fit:contain;max-width:100%}
+.atlas-evo-arrow{color:var(--accent);font-weight:800;text-align:center}
+.atlas-evo-tile>strong{font-size:13px;line-height:1.55;overflow-wrap:anywhere}
+.atlas-evo-tile>small{color:var(--muted);font-size:11px;line-height:1.5}
+.atlas-evo-more{margin:18px 0 0}
+.atlas-info-notice{font-size:12px;color:var(--muted);margin:18px 0;line-height:1.8}
+.atlas-info-notice a{color:var(--accent);text-decoration:underline}
+.atlas-move-filters{display:grid;grid-template-columns:minmax(200px,2fr) repeat(2,minmax(120px,1fr));gap:12px;padding:16px}
+.atlas-move-filters label{display:grid;gap:6px;font-size:12px;color:var(--muted);font-weight:700;min-width:0}
+.atlas-move-filters .search-input,.atlas-move-filters .select{width:100%;min-width:0}
+.atlas-move-scroll{max-width:100%;overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.atlas-move-table{border-collapse:collapse;width:100%;min-width:540px;font-size:13px}
+.atlas-move-table th,.atlas-move-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+.atlas-move-table th{position:sticky;top:0;background:var(--surface2);color:var(--muted);font-size:12px}
+.atlas-move-table td:first-child strong,.atlas-move-table td:first-child small{display:block}
+.atlas-move-table td:first-child small{color:var(--muted);margin-top:3px}
+.atlas-move-type{border:1px solid var(--border);background:var(--surface2);padding:3px 9px;border-radius:7px;font-weight:700}
+.atlas-move-detail{padding:24px}.atlas-move-detail h1{margin-bottom:2px}.atlas-move-detail>p{color:var(--muted)}
+.atlas-move-facts{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}
+.atlas-move-facts span{border:1px solid var(--border);background:var(--surface2);border-radius:9px;padding:9px 13px}
+.atlas-move-links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.atlas-pokemon-moves>p{color:var(--muted);line-height:1.8}
+@media(max-width:650px){.atlas-move-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-move-filters label:first-child{grid-column:1/-1}.atlas-evo-pair img{width:64px;height:64px}}
