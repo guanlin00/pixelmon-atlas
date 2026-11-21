@@ -55,5 +55,5 @@
  window.addEventListener('hashchange',()=>{
   if(location.hash.split('/')[0]==='#shiny'){window.render();window.scrollTo({top:0,behavior:'instant'})}
  });
- if(location.hash.split('/')[0]==='#shiny')window.render();
+ if(location.hash.split('/')[0]==='#shiny'||location.hash.split('/')[0]==='#pokemon')window.render();
 })();
