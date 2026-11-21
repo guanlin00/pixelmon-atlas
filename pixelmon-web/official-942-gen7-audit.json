@@ -1,0 +1,725 @@
+{
+  "metadata": {
+    "source": "https://modrinth.com/mod/pixelmon/version/9.4.2",
+    "sourceType": "Original Pixelmon 9.4.2 mod JAR datapack",
+    "jarSha256": "f408fee7d2d4d2092d8b461c5d1530590b42adcea9bc380b3ec66a6ce2a1aeaf",
+    "gameVersion": "9.4.2",
+    "generation": 7,
+    "dexStart": 722,
+    "dexEnd": 809,
+    "notes": "Derived factual spawn rules and drop chances from packaged official version 9.4.2 JSON. Spawn biome tags and special form spec are preserved; rarity values are weights, not percentages. Empty spawns do not mean unobtainable. Customized servers/datapacks may differ.",
+    "requested": 88,
+    "imported": 88,
+    "withSpawns": 81,
+    "withDrops": 85,
+    "withDropEntries": 85,
+    "spawnRows": 604,
+    "dropRows": 265
+  },
+  "records": [
+    {
+      "id": 722,
+      "name": "Rowlet",
+      "status": "official JAR imported",
+      "spawnRows": 11,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 723,
+      "name": "Dartrix",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 724,
+      "name": "Decidueye",
+      "status": "official JAR imported",
+      "spawnRows": 7,
+      "dropRows": 0,
+      "dropEntryPresent": false
+    },
+    {
+      "id": 725,
+      "name": "Litten",
+      "status": "official JAR imported",
+      "spawnRows": 8,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 726,
+      "name": "Torracat",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 727,
+      "name": "Incineroar",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 728,
+      "name": "Popplio",
+      "status": "official JAR imported",
+      "spawnRows": 7,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 729,
+      "name": "Brionne",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 730,
+      "name": "Primarina",
+      "status": "official JAR imported",
+      "spawnRows": 5,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 731,
+      "name": "Pikipek",
+      "status": "official JAR imported",
+      "spawnRows": 11,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 732,
+      "name": "Trumbeak",
+      "status": "official JAR imported",
+      "spawnRows": 11,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 733,
+      "name": "Toucannon",
+      "status": "official JAR imported",
+      "spawnRows": 5,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 734,
+      "name": "Yungoos",
+      "status": "official JAR imported",
+      "spawnRows": 5,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 735,
+      "name": "Gumshoos",
+      "status": "official JAR imported",
+      "spawnRows": 3,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 736,
+      "name": "Grubbin",
+      "status": "official JAR imported",
+      "spawnRows": 16,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 737,
+      "name": "Charjabug",
+      "status": "official JAR imported",
+      "spawnRows": 12,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 738,
+      "name": "Vikavolt",
+      "status": "official JAR imported",
+      "spawnRows": 13,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 739,
+      "name": "Crabrawler",
+      "status": "official JAR imported",
+      "spawnRows": 8,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 740,
+      "name": "Crabominable",
+      "status": "official JAR imported",
+      "spawnRows": 4,
+      "dropRows": 5,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 741,
+      "name": "Oricorio",
+      "status": "official JAR imported",
+      "spawnRows": 16,
+      "dropRows": 0,
+      "dropEntryPresent": false
+    },
+    {
+      "id": 742,
+      "name": "Cutiefly",
+      "status": "official JAR imported",
+      "spawnRows": 4,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 743,
+      "name": "Ribombee",
+      "status": "official JAR imported",
+      "spawnRows": 3,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 744,
+      "name": "Rockruff",
+      "status": "official JAR imported",
+      "spawnRows": 13,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 745,
+      "name": "Lycanroc",
+      "status": "official JAR imported",
+      "spawnRows": 30,
+      "dropRows": 0,
+      "dropEntryPresent": false
+    },
+    {
+      "id": 746,
+      "name": "Wishiwashi",
+      "status": "official JAR imported",
+      "spawnRows": 7,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 747,
+      "name": "Mareanie",
+      "status": "official JAR imported",
+      "spawnRows": 17,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 748,
+      "name": "Toxapex",
+      "status": "official JAR imported",
+      "spawnRows": 11,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 749,
+      "name": "Mudbray",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 750,
+      "name": "Mudsdale",
+      "status": "official JAR imported",
+      "spawnRows": 4,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 751,
+      "name": "Dewpider",
+      "status": "official JAR imported",
+      "spawnRows": 13,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 752,
+      "name": "Araquanid",
+      "status": "official JAR imported",
+      "spawnRows": 15,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 753,
+      "name": "Fomantis",
+      "status": "official JAR imported",
+      "spawnRows": 3,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 754,
+      "name": "Lurantis",
+      "status": "official JAR imported",
+      "spawnRows": 3,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 755,
+      "name": "Morelull",
+      "status": "official JAR imported",
+      "spawnRows": 18,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 756,
+      "name": "Shiinotic",
+      "status": "official JAR imported",
+      "spawnRows": 12,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 757,
+      "name": "Salandit",
+      "status": "official JAR imported",
+      "spawnRows": 29,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 758,
+      "name": "Salazzle",
+      "status": "official JAR imported",
+      "spawnRows": 19,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 759,
+      "name": "Stufful",
+      "status": "official JAR imported",
+      "spawnRows": 7,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 760,
+      "name": "Bewear",
+      "status": "official JAR imported",
+      "spawnRows": 4,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 761,
+      "name": "Bounsweet",
+      "status": "official JAR imported",
+      "spawnRows": 10,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 762,
+      "name": "Steenee",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 763,
+      "name": "Tsareena",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 764,
+      "name": "Comfey",
+      "status": "official JAR imported",
+      "spawnRows": 3,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 765,
+      "name": "Oranguru",
+      "status": "official JAR imported",
+      "spawnRows": 8,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 766,
+      "name": "Passimian",
+      "status": "official JAR imported",
+      "spawnRows": 8,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 767,
+      "name": "Wimpod",
+      "status": "official JAR imported",
+      "spawnRows": 11,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 768,
+      "name": "Golisopod",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 769,
+      "name": "Sandygast",
+      "status": "official JAR imported",
+      "spawnRows": 3,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 770,
+      "name": "Palossand",
+      "status": "official JAR imported",
+      "spawnRows": 2,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 771,
+      "name": "Pyukumuku",
+      "status": "official JAR imported",
+      "spawnRows": 15,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 772,
+      "name": "TypeNull",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 773,
+      "name": "Silvally",
+      "status": "official JAR imported",
+      "spawnRows": 0,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 774,
+      "name": "Minior",
+      "status": "official JAR imported",
+      "spawnRows": 51,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 775,
+      "name": "Komala",
+      "status": "official JAR imported",
+      "spawnRows": 5,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 776,
+      "name": "Turtonator",
+      "status": "official JAR imported",
+      "spawnRows": 14,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 777,
+      "name": "Togedemaru",
+      "status": "official JAR imported",
+      "spawnRows": 10,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 778,
+      "name": "Mimikyu",
+      "status": "official JAR imported",
+      "spawnRows": 10,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 779,
+      "name": "Bruxish",
+      "status": "official JAR imported",
+      "spawnRows": 10,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 780,
+      "name": "Drampa",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 781,
+      "name": "Dhelmise",
+      "status": "official JAR imported",
+      "spawnRows": 6,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 782,
+      "name": "Jangmo-o",
+      "status": "official JAR imported",
+      "spawnRows": 3,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 783,
+      "name": "Hakamo-o",
+      "status": "official JAR imported",
+      "spawnRows": 2,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 784,
+      "name": "Kommo-o",
+      "status": "official JAR imported",
+      "spawnRows": 2,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 785,
+      "name": "TapuKoko",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 786,
+      "name": "TapuLele",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 787,
+      "name": "TapuBulu",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 788,
+      "name": "TapuFini",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 789,
+      "name": "Cosmog",
+      "status": "official JAR imported",
+      "spawnRows": 2,
+      "dropRows": 1,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 790,
+      "name": "Cosmoem",
+      "status": "official JAR imported",
+      "spawnRows": 0,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 791,
+      "name": "Solgaleo",
+      "status": "official JAR imported",
+      "spawnRows": 0,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 792,
+      "name": "Lunala",
+      "status": "official JAR imported",
+      "spawnRows": 0,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 793,
+      "name": "Nihilego",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 794,
+      "name": "Buzzwole",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 795,
+      "name": "Pheromosa",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 796,
+      "name": "Xurkitree",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 797,
+      "name": "Celesteela",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 798,
+      "name": "Kartana",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 799,
+      "name": "Guzzlord",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 800,
+      "name": "Necrozma",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 801,
+      "name": "Magearna",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 802,
+      "name": "Marshadow",
+      "status": "official JAR imported",
+      "spawnRows": 2,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 803,
+      "name": "Poipole",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 804,
+      "name": "Naganadel",
+      "status": "official JAR imported",
+      "spawnRows": 0,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 805,
+      "name": "Stakataka",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 806,
+      "name": "Blacephalon",
+      "status": "official JAR imported",
+      "spawnRows": 1,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 807,
+      "name": "Zeraora",
+      "status": "official JAR imported",
+      "spawnRows": 2,
+      "dropRows": 3,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 808,
+      "name": "Meltan",
+      "status": "official JAR imported",
+      "spawnRows": 0,
+      "dropRows": 2,
+      "dropEntryPresent": true
+    },
+    {
+      "id": 809,
+      "name": "Melmetal",
+      "status": "official JAR imported",
+      "spawnRows": 0,
+      "dropRows": 4,
+      "dropEntryPresent": true
+    }
+  ]
+}
