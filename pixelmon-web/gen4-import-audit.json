@@ -7,7 +7,7 @@
     "dexEnd": 493,
     "requested": 107,
     "updated": "2026-11-21",
-    "notes": "Imported only records with matching National Dex ID and an actual Drops table; missing pages explicitly audited. No version compatibility claim.",
+    "notes": "Records require matching National Dex ID and at least one of: actual Spawn section or Drops table. Missing sections remain explicitly unverified, not zero. Data from third-party mirror, no version compatibility claim.",
     "imported": 106,
     "missing": 1,
     "withSpawns": 94,
@@ -491,7 +491,7 @@
       "spawnRules": 0,
       "drops": 0,
       "source": null,
-      "error": "mime-jr: missing drop table; mimejr: missing drop table"
+      "error": "mime-jr: neither usable spawn nor drop table; mimejr: neither usable spawn nor drop table"
     },
     {
       "id": 440,
@@ -984,7 +984,7 @@
     {
       "id": 439,
       "slug": "mime-jr",
-      "reason": "mime-jr: missing drop table; mimejr: missing drop table"
+      "reason": "mime-jr: neither usable spawn nor drop table; mimejr: neither usable spawn nor drop table"
     }
   ]
 }
