@@ -220,6 +220,8 @@ async function loadItems(){
   let minecraftCount=0;
   if(minecraftRes.ok)minecraftCount=atlasMergeMinecraft(await minecraftRes.json());
   else console.warn('Minecraft vanilla item index unavailable');
+  // Enrich selected items from verified individual official Wiki pages after all catalog merges.
+  const reviewedCount=window.atlasApplyReviewedItemMethods?.(ITEMS)||0;
   if(route()==='items'&&typeof atlasRefreshItemList==='function'){
    if(location.hash==='#items'&&typeof window.render==='function')window.render();
    else atlasRefreshItemList();
@@ -227,7 +229,7 @@ async function loadItems(){
    // Also refresh drop names and textures on Pokémon pages after the vanilla index arrives.
    window.render();
   }
-  console.info('Pixelmon Wiki categories:',source.categories.length,'new Wiki cards:',added,'new ID-index cards:',registryCount,'new Minecraft cards:',minecraftCount);
+  console.info('Pixelmon Wiki categories:',source.categories.length,'new Wiki cards:',added,'new ID-index cards:',registryCount,'new Minecraft cards:',minecraftCount,'official method references:',reviewedCount);
  }catch(e){
   console.warn('Pixelmon category index not loaded; original items still available.',e);
  }finally{itemBusy=false}
