@@ -1,0 +1,1702 @@
+{
+  "metadata": {
+    "source": "https://pixelmon.site/",
+    "sourceType": "THIRD-PARTY Pixelmon reference, not official Pixelmon Wiki",
+    "generation": 9,
+    "dexStart": 906,
+    "dexEnd": 1025,
+    "requested": 120,
+    "updated": "2026-11-21",
+    "notes": "Imported only records with matching National Dex ID and an actual Drops table; missing pages explicitly audited. No version compatibility claim.",
+    "imported": 0,
+    "missing": 120,
+    "withSpawns": 0,
+    "withDrops": 0,
+    "spawnRows": 0,
+    "dropRows": 0
+  },
+  "records": [
+    {
+      "id": 906,
+      "slug": "sprigatito",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "sprigatito: missing drop table"
+    },
+    {
+      "id": 907,
+      "slug": "floragato",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "floragato: missing drop table"
+    },
+    {
+      "id": 908,
+      "slug": "meowscarada",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "meowscarada: missing drop table"
+    },
+    {
+      "id": 909,
+      "slug": "fuecoco",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "fuecoco: missing drop table"
+    },
+    {
+      "id": 910,
+      "slug": "crocalor",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "crocalor: missing drop table"
+    },
+    {
+      "id": 911,
+      "slug": "skeledirge",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "skeledirge: missing drop table"
+    },
+    {
+      "id": 912,
+      "slug": "quaxly",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "quaxly: missing drop table"
+    },
+    {
+      "id": 913,
+      "slug": "quaxwell",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "quaxwell: missing drop table"
+    },
+    {
+      "id": 914,
+      "slug": "quaquaval",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "quaquaval: missing drop table"
+    },
+    {
+      "id": 915,
+      "slug": "lechonk",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "lechonk: missing drop table"
+    },
+    {
+      "id": 916,
+      "slug": "oinkologne",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "oinkologne: missing drop table"
+    },
+    {
+      "id": 917,
+      "slug": "tarountula",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "tarountula: missing drop table"
+    },
+    {
+      "id": 918,
+      "slug": "spidops",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "spidops: missing drop table"
+    },
+    {
+      "id": 919,
+      "slug": "nymble",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "nymble: missing drop table"
+    },
+    {
+      "id": 920,
+      "slug": "lokix",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "lokix: missing drop table"
+    },
+    {
+      "id": 921,
+      "slug": "pawmi",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "pawmi: missing drop table"
+    },
+    {
+      "id": 922,
+      "slug": "pawmo",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "pawmo: missing drop table"
+    },
+    {
+      "id": 923,
+      "slug": "pawmot",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "pawmot: missing drop table"
+    },
+    {
+      "id": 924,
+      "slug": "tandemaus",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "tandemaus: missing drop table"
+    },
+    {
+      "id": 925,
+      "slug": "maushold",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "maushold: missing drop table"
+    },
+    {
+      "id": 926,
+      "slug": "fidough",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "fidough: missing drop table"
+    },
+    {
+      "id": 927,
+      "slug": "dachsbun",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "dachsbun: missing drop table"
+    },
+    {
+      "id": 928,
+      "slug": "smoliv",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "smoliv: missing drop table"
+    },
+    {
+      "id": 929,
+      "slug": "dolliv",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "dolliv: missing drop table"
+    },
+    {
+      "id": 930,
+      "slug": "arboliva",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "arboliva: missing drop table"
+    },
+    {
+      "id": 931,
+      "slug": "squawkabilly",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "squawkabilly: missing drop table"
+    },
+    {
+      "id": 932,
+      "slug": "nacli",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "nacli: missing drop table"
+    },
+    {
+      "id": 933,
+      "slug": "naclstack",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "naclstack: missing drop table"
+    },
+    {
+      "id": 934,
+      "slug": "garganacl",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "garganacl: missing drop table"
+    },
+    {
+      "id": 935,
+      "slug": "charcadet",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "charcadet: missing drop table"
+    },
+    {
+      "id": 936,
+      "slug": "armarouge",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "armarouge: missing drop table"
+    },
+    {
+      "id": 937,
+      "slug": "ceruledge",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "ceruledge: missing drop table"
+    },
+    {
+      "id": 938,
+      "slug": "tadbulb",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "tadbulb: missing drop table"
+    },
+    {
+      "id": 939,
+      "slug": "bellibolt",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "bellibolt: missing drop table"
+    },
+    {
+      "id": 940,
+      "slug": "wattrel",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "wattrel: missing drop table"
+    },
+    {
+      "id": 941,
+      "slug": "kilowattrel",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "kilowattrel: missing drop table"
+    },
+    {
+      "id": 942,
+      "slug": "maschiff",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "maschiff: missing drop table"
+    },
+    {
+      "id": 943,
+      "slug": "mabosstiff",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "mabosstiff: missing drop table"
+    },
+    {
+      "id": 944,
+      "slug": "shroodle",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "shroodle: missing drop table"
+    },
+    {
+      "id": 945,
+      "slug": "grafaiai",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "grafaiai: missing drop table"
+    },
+    {
+      "id": 946,
+      "slug": "bramblin",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "bramblin: missing drop table"
+    },
+    {
+      "id": 947,
+      "slug": "brambleghast",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "brambleghast: missing drop table"
+    },
+    {
+      "id": 948,
+      "slug": "toedscool",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "toedscool: missing drop table"
+    },
+    {
+      "id": 949,
+      "slug": "toedscruel",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "toedscruel: missing drop table"
+    },
+    {
+      "id": 950,
+      "slug": "klawf",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "klawf: missing drop table"
+    },
+    {
+      "id": 951,
+      "slug": "capsakid",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "capsakid: missing drop table"
+    },
+    {
+      "id": 952,
+      "slug": "scovillain",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "scovillain: missing drop table"
+    },
+    {
+      "id": 953,
+      "slug": "rellor",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "rellor: missing drop table"
+    },
+    {
+      "id": 954,
+      "slug": "rabsca",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "rabsca: missing drop table"
+    },
+    {
+      "id": 955,
+      "slug": "flittle",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "flittle: missing drop table"
+    },
+    {
+      "id": 956,
+      "slug": "espathra",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "espathra: missing drop table"
+    },
+    {
+      "id": 957,
+      "slug": "tinkatink",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "tinkatink: missing drop table"
+    },
+    {
+      "id": 958,
+      "slug": "tinkatuff",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "tinkatuff: missing drop table"
+    },
+    {
+      "id": 959,
+      "slug": "tinkaton",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "tinkaton: missing drop table"
+    },
+    {
+      "id": 960,
+      "slug": "wiglett",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "wiglett: missing drop table"
+    },
+    {
+      "id": 961,
+      "slug": "wugtrio",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "wugtrio: missing drop table"
+    },
+    {
+      "id": 962,
+      "slug": "bombirdier",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "bombirdier: missing drop table"
+    },
+    {
+      "id": 963,
+      "slug": "finizen",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "finizen: missing drop table"
+    },
+    {
+      "id": 964,
+      "slug": "palafin",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "palafin: missing drop table"
+    },
+    {
+      "id": 965,
+      "slug": "varoom",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "varoom: missing drop table"
+    },
+    {
+      "id": 966,
+      "slug": "revavroom",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "revavroom: missing drop table"
+    },
+    {
+      "id": 967,
+      "slug": "cyclizar",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "cyclizar: missing drop table"
+    },
+    {
+      "id": 968,
+      "slug": "orthworm",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "orthworm: missing drop table"
+    },
+    {
+      "id": 969,
+      "slug": "glimmet",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "glimmet: missing drop table"
+    },
+    {
+      "id": 970,
+      "slug": "glimmora",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "glimmora: missing drop table"
+    },
+    {
+      "id": 971,
+      "slug": "greavard",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "greavard: missing drop table"
+    },
+    {
+      "id": 972,
+      "slug": "houndstone",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "houndstone: missing drop table"
+    },
+    {
+      "id": 973,
+      "slug": "flamigo",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "flamigo: missing drop table"
+    },
+    {
+      "id": 974,
+      "slug": "cetoddle",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "cetoddle: missing drop table"
+    },
+    {
+      "id": 975,
+      "slug": "cetitan",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "cetitan: missing drop table"
+    },
+    {
+      "id": 976,
+      "slug": "veluza",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "veluza: missing drop table"
+    },
+    {
+      "id": 977,
+      "slug": "dondozo",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "dondozo: missing drop table"
+    },
+    {
+      "id": 978,
+      "slug": "tatsugiri",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "tatsugiri: missing drop table"
+    },
+    {
+      "id": 979,
+      "slug": "annihilape",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "annihilape: missing drop table"
+    },
+    {
+      "id": 980,
+      "slug": "clodsire",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "clodsire: missing drop table"
+    },
+    {
+      "id": 981,
+      "slug": "farigiraf",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "farigiraf: missing drop table"
+    },
+    {
+      "id": 982,
+      "slug": "dudunsparce",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "dudunsparce: missing drop table"
+    },
+    {
+      "id": 983,
+      "slug": "kingambit",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "kingambit: missing drop table"
+    },
+    {
+      "id": 984,
+      "slug": "great-tusk",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "great-tusk: missing drop table"
+    },
+    {
+      "id": 985,
+      "slug": "scream-tail",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "scream-tail: missing drop table"
+    },
+    {
+      "id": 986,
+      "slug": "brute-bonnet",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "brute-bonnet: missing drop table"
+    },
+    {
+      "id": 987,
+      "slug": "flutter-mane",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "flutter-mane: missing drop table"
+    },
+    {
+      "id": 988,
+      "slug": "slither-wing",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "slither-wing: missing drop table"
+    },
+    {
+      "id": 989,
+      "slug": "sandy-shocks",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "sandy-shocks: missing drop table"
+    },
+    {
+      "id": 990,
+      "slug": "iron-treads",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-treads: missing drop table"
+    },
+    {
+      "id": 991,
+      "slug": "iron-bundle",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-bundle: missing drop table"
+    },
+    {
+      "id": 992,
+      "slug": "iron-hands",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-hands: missing drop table"
+    },
+    {
+      "id": 993,
+      "slug": "iron-jugulis",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-jugulis: missing drop table"
+    },
+    {
+      "id": 994,
+      "slug": "iron-moth",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-moth: missing drop table"
+    },
+    {
+      "id": 995,
+      "slug": "iron-thorns",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-thorns: missing drop table"
+    },
+    {
+      "id": 996,
+      "slug": "frigibax",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "frigibax: missing drop table"
+    },
+    {
+      "id": 997,
+      "slug": "arctibax",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "arctibax: missing drop table"
+    },
+    {
+      "id": 998,
+      "slug": "baxcalibur",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "baxcalibur: missing drop table"
+    },
+    {
+      "id": 999,
+      "slug": "gimmighoul",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "gimmighoul: missing drop table"
+    },
+    {
+      "id": 1000,
+      "slug": "gholdengo",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "gholdengo: missing drop table"
+    },
+    {
+      "id": 1001,
+      "slug": "wo-chien",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "wo-chien: missing drop table; wochien: HTTP 404"
+    },
+    {
+      "id": 1002,
+      "slug": "chien-pao",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "chien-pao: missing drop table; chienpao: HTTP 404"
+    },
+    {
+      "id": 1003,
+      "slug": "ting-lu",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "ting-lu: missing drop table; tinglu: HTTP 404"
+    },
+    {
+      "id": 1004,
+      "slug": "chi-yu",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "chi-yu: missing drop table; chiyu: HTTP 404"
+    },
+    {
+      "id": 1005,
+      "slug": "roaring-moon",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "roaring-moon: missing drop table"
+    },
+    {
+      "id": 1006,
+      "slug": "iron-valiant",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-valiant: missing drop table"
+    },
+    {
+      "id": 1007,
+      "slug": "koraidon",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "koraidon: missing drop table"
+    },
+    {
+      "id": 1008,
+      "slug": "miraidon",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "miraidon: missing drop table"
+    },
+    {
+      "id": 1009,
+      "slug": "walking-wake",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "walking-wake: missing drop table"
+    },
+    {
+      "id": 1010,
+      "slug": "iron-leaves",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-leaves: missing drop table"
+    },
+    {
+      "id": 1011,
+      "slug": "dipplin",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "dipplin: missing drop table"
+    },
+    {
+      "id": 1012,
+      "slug": "poltchageist",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "poltchageist: missing drop table"
+    },
+    {
+      "id": 1013,
+      "slug": "sinistcha",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "sinistcha: missing drop table"
+    },
+    {
+      "id": 1014,
+      "slug": "okidogi",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "okidogi: missing drop table"
+    },
+    {
+      "id": 1015,
+      "slug": "munkidori",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "munkidori: missing drop table"
+    },
+    {
+      "id": 1016,
+      "slug": "fezandipiti",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "fezandipiti: missing drop table"
+    },
+    {
+      "id": 1017,
+      "slug": "ogerpon",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "ogerpon: missing drop table"
+    },
+    {
+      "id": 1018,
+      "slug": "archaludon",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "archaludon: missing drop table"
+    },
+    {
+      "id": 1019,
+      "slug": "hydrapple",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "hydrapple: missing drop table"
+    },
+    {
+      "id": 1020,
+      "slug": "gouging-fire",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "gouging-fire: missing drop table"
+    },
+    {
+      "id": 1021,
+      "slug": "raging-bolt",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "raging-bolt: missing drop table"
+    },
+    {
+      "id": 1022,
+      "slug": "iron-boulder",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-boulder: missing drop table"
+    },
+    {
+      "id": 1023,
+      "slug": "iron-crown",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "iron-crown: missing drop table"
+    },
+    {
+      "id": 1024,
+      "slug": "terapagos",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "terapagos: missing drop table"
+    },
+    {
+      "id": 1025,
+      "slug": "pecharunt",
+      "status": "unavailable",
+      "spawnRules": 0,
+      "drops": 0,
+      "source": null,
+      "error": "pecharunt: missing drop table"
+    }
+  ],
+  "missing": [
+    {
+      "id": 906,
+      "slug": "sprigatito",
+      "reason": "sprigatito: missing drop table"
+    },
+    {
+      "id": 907,
+      "slug": "floragato",
+      "reason": "floragato: missing drop table"
+    },
+    {
+      "id": 908,
+      "slug": "meowscarada",
+      "reason": "meowscarada: missing drop table"
+    },
+    {
+      "id": 909,
+      "slug": "fuecoco",
+      "reason": "fuecoco: missing drop table"
+    },
+    {
+      "id": 910,
+      "slug": "crocalor",
+      "reason": "crocalor: missing drop table"
+    },
+    {
+      "id": 911,
+      "slug": "skeledirge",
+      "reason": "skeledirge: missing drop table"
+    },
+    {
+      "id": 912,
+      "slug": "quaxly",
+      "reason": "quaxly: missing drop table"
+    },
+    {
+      "id": 913,
+      "slug": "quaxwell",
+      "reason": "quaxwell: missing drop table"
+    },
+    {
+      "id": 914,
+      "slug": "quaquaval",
+      "reason": "quaquaval: missing drop table"
+    },
+    {
+      "id": 915,
+      "slug": "lechonk",
+      "reason": "lechonk: missing drop table"
+    },
+    {
+      "id": 916,
+      "slug": "oinkologne",
+      "reason": "oinkologne: missing drop table"
+    },
+    {
+      "id": 917,
+      "slug": "tarountula",
+      "reason": "tarountula: missing drop table"
+    },
+    {
+      "id": 918,
+      "slug": "spidops",
+      "reason": "spidops: missing drop table"
+    },
+    {
+      "id": 919,
+      "slug": "nymble",
+      "reason": "nymble: missing drop table"
+    },
+    {
+      "id": 920,
+      "slug": "lokix",
+      "reason": "lokix: missing drop table"
+    },
+    {
+      "id": 921,
+      "slug": "pawmi",
+      "reason": "pawmi: missing drop table"
+    },
+    {
+      "id": 922,
+      "slug": "pawmo",
+      "reason": "pawmo: missing drop table"
+    },
+    {
+      "id": 923,
+      "slug": "pawmot",
+      "reason": "pawmot: missing drop table"
+    },
+    {
+      "id": 924,
+      "slug": "tandemaus",
+      "reason": "tandemaus: missing drop table"
+    },
+    {
+      "id": 925,
+      "slug": "maushold",
+      "reason": "maushold: missing drop table"
+    },
+    {
+      "id": 926,
+      "slug": "fidough",
+      "reason": "fidough: missing drop table"
+    },
+    {
+      "id": 927,
+      "slug": "dachsbun",
+      "reason": "dachsbun: missing drop table"
+    },
+    {
+      "id": 928,
+      "slug": "smoliv",
+      "reason": "smoliv: missing drop table"
+    },
+    {
+      "id": 929,
+      "slug": "dolliv",
+      "reason": "dolliv: missing drop table"
+    },
+    {
+      "id": 930,
+      "slug": "arboliva",
+      "reason": "arboliva: missing drop table"
+    },
+    {
+      "id": 931,
+      "slug": "squawkabilly",
+      "reason": "squawkabilly: missing drop table"
+    },
+    {
+      "id": 932,
+      "slug": "nacli",
+      "reason": "nacli: missing drop table"
+    },
+    {
+      "id": 933,
+      "slug": "naclstack",
+      "reason": "naclstack: missing drop table"
+    },
+    {
+      "id": 934,
+      "slug": "garganacl",
+      "reason": "garganacl: missing drop table"
+    },
+    {
+      "id": 935,
+      "slug": "charcadet",
+      "reason": "charcadet: missing drop table"
+    },
+    {
+      "id": 936,
+      "slug": "armarouge",
+      "reason": "armarouge: missing drop table"
+    },
+    {
+      "id": 937,
+      "slug": "ceruledge",
+      "reason": "ceruledge: missing drop table"
+    },
+    {
+      "id": 938,
+      "slug": "tadbulb",
+      "reason": "tadbulb: missing drop table"
+    },
+    {
+      "id": 939,
+      "slug": "bellibolt",
+      "reason": "bellibolt: missing drop table"
+    },
+    {
+      "id": 940,
+      "slug": "wattrel",
+      "reason": "wattrel: missing drop table"
+    },
+    {
+      "id": 941,
+      "slug": "kilowattrel",
+      "reason": "kilowattrel: missing drop table"
+    },
+    {
+      "id": 942,
+      "slug": "maschiff",
+      "reason": "maschiff: missing drop table"
+    },
+    {
+      "id": 943,
+      "slug": "mabosstiff",
+      "reason": "mabosstiff: missing drop table"
+    },
+    {
+      "id": 944,
+      "slug": "shroodle",
+      "reason": "shroodle: missing drop table"
+    },
+    {
+      "id": 945,
+      "slug": "grafaiai",
+      "reason": "grafaiai: missing drop table"
+    },
+    {
+      "id": 946,
+      "slug": "bramblin",
+      "reason": "bramblin: missing drop table"
+    },
+    {
+      "id": 947,
+      "slug": "brambleghast",
+      "reason": "brambleghast: missing drop table"
+    },
+    {
+      "id": 948,
+      "slug": "toedscool",
+      "reason": "toedscool: missing drop table"
+    },
+    {
+      "id": 949,
+      "slug": "toedscruel",
+      "reason": "toedscruel: missing drop table"
+    },
+    {
+      "id": 950,
+      "slug": "klawf",
+      "reason": "klawf: missing drop table"
+    },
+    {
+      "id": 951,
+      "slug": "capsakid",
+      "reason": "capsakid: missing drop table"
+    },
+    {
+      "id": 952,
+      "slug": "scovillain",
+      "reason": "scovillain: missing drop table"
+    },
+    {
+      "id": 953,
+      "slug": "rellor",
+      "reason": "rellor: missing drop table"
+    },
+    {
+      "id": 954,
+      "slug": "rabsca",
+      "reason": "rabsca: missing drop table"
+    },
+    {
+      "id": 955,
+      "slug": "flittle",
+      "reason": "flittle: missing drop table"
+    },
+    {
+      "id": 956,
+      "slug": "espathra",
+      "reason": "espathra: missing drop table"
+    },
+    {
+      "id": 957,
+      "slug": "tinkatink",
+      "reason": "tinkatink: missing drop table"
+    },
+    {
+      "id": 958,
+      "slug": "tinkatuff",
+      "reason": "tinkatuff: missing drop table"
+    },
+    {
+      "id": 959,
+      "slug": "tinkaton",
+      "reason": "tinkaton: missing drop table"
+    },
+    {
+      "id": 960,
+      "slug": "wiglett",
+      "reason": "wiglett: missing drop table"
+    },
+    {
+      "id": 961,
+      "slug": "wugtrio",
+      "reason": "wugtrio: missing drop table"
+    },
+    {
+      "id": 962,
+      "slug": "bombirdier",
+      "reason": "bombirdier: missing drop table"
+    },
+    {
+      "id": 963,
+      "slug": "finizen",
+      "reason": "finizen: missing drop table"
+    },
+    {
+      "id": 964,
+      "slug": "palafin",
+      "reason": "palafin: missing drop table"
+    },
+    {
+      "id": 965,
+      "slug": "varoom",
+      "reason": "varoom: missing drop table"
+    },
+    {
+      "id": 966,
+      "slug": "revavroom",
+      "reason": "revavroom: missing drop table"
+    },
+    {
+      "id": 967,
+      "slug": "cyclizar",
+      "reason": "cyclizar: missing drop table"
+    },
+    {
+      "id": 968,
+      "slug": "orthworm",
+      "reason": "orthworm: missing drop table"
+    },
+    {
+      "id": 969,
+      "slug": "glimmet",
+      "reason": "glimmet: missing drop table"
+    },
+    {
+      "id": 970,
+      "slug": "glimmora",
+      "reason": "glimmora: missing drop table"
+    },
+    {
+      "id": 971,
+      "slug": "greavard",
+      "reason": "greavard: missing drop table"
+    },
+    {
+      "id": 972,
+      "slug": "houndstone",
+      "reason": "houndstone: missing drop table"
+    },
+    {
+      "id": 973,
+      "slug": "flamigo",
+      "reason": "flamigo: missing drop table"
+    },
+    {
+      "id": 974,
+      "slug": "cetoddle",
+      "reason": "cetoddle: missing drop table"
+    },
+    {
+      "id": 975,
+      "slug": "cetitan",
+      "reason": "cetitan: missing drop table"
+    },
+    {
+      "id": 976,
+      "slug": "veluza",
+      "reason": "veluza: missing drop table"
+    },
+    {
+      "id": 977,
+      "slug": "dondozo",
+      "reason": "dondozo: missing drop table"
+    },
+    {
+      "id": 978,
+      "slug": "tatsugiri",
+      "reason": "tatsugiri: missing drop table"
+    },
+    {
+      "id": 979,
+      "slug": "annihilape",
+      "reason": "annihilape: missing drop table"
+    },
+    {
+      "id": 980,
+      "slug": "clodsire",
+      "reason": "clodsire: missing drop table"
+    },
+    {
+      "id": 981,
+      "slug": "farigiraf",
+      "reason": "farigiraf: missing drop table"
+    },
+    {
+      "id": 982,
+      "slug": "dudunsparce",
+      "reason": "dudunsparce: missing drop table"
+    },
+    {
+      "id": 983,
+      "slug": "kingambit",
+      "reason": "kingambit: missing drop table"
+    },
+    {
+      "id": 984,
+      "slug": "great-tusk",
+      "reason": "great-tusk: missing drop table"
+    },
+    {
+      "id": 985,
+      "slug": "scream-tail",
+      "reason": "scream-tail: missing drop table"
+    },
+    {
+      "id": 986,
+      "slug": "brute-bonnet",
+      "reason": "brute-bonnet: missing drop table"
+    },
+    {
+      "id": 987,
+      "slug": "flutter-mane",
+      "reason": "flutter-mane: missing drop table"
+    },
+    {
+      "id": 988,
+      "slug": "slither-wing",
+      "reason": "slither-wing: missing drop table"
+    },
+    {
+      "id": 989,
+      "slug": "sandy-shocks",
+      "reason": "sandy-shocks: missing drop table"
+    },
+    {
+      "id": 990,
+      "slug": "iron-treads",
+      "reason": "iron-treads: missing drop table"
+    },
+    {
+      "id": 991,
+      "slug": "iron-bundle",
+      "reason": "iron-bundle: missing drop table"
+    },
+    {
+      "id": 992,
+      "slug": "iron-hands",
+      "reason": "iron-hands: missing drop table"
+    },
+    {
+      "id": 993,
+      "slug": "iron-jugulis",
+      "reason": "iron-jugulis: missing drop table"
+    },
+    {
+      "id": 994,
+      "slug": "iron-moth",
+      "reason": "iron-moth: missing drop table"
+    },
+    {
+      "id": 995,
+      "slug": "iron-thorns",
+      "reason": "iron-thorns: missing drop table"
+    },
+    {
+      "id": 996,
+      "slug": "frigibax",
+      "reason": "frigibax: missing drop table"
+    },
+    {
+      "id": 997,
+      "slug": "arctibax",
+      "reason": "arctibax: missing drop table"
+    },
+    {
+      "id": 998,
+      "slug": "baxcalibur",
+      "reason": "baxcalibur: missing drop table"
+    },
+    {
+      "id": 999,
+      "slug": "gimmighoul",
+      "reason": "gimmighoul: missing drop table"
+    },
+    {
+      "id": 1000,
+      "slug": "gholdengo",
+      "reason": "gholdengo: missing drop table"
+    },
+    {
+      "id": 1001,
+      "slug": "wo-chien",
+      "reason": "wo-chien: missing drop table; wochien: HTTP 404"
+    },
+    {
+      "id": 1002,
+      "slug": "chien-pao",
+      "reason": "chien-pao: missing drop table; chienpao: HTTP 404"
+    },
+    {
+      "id": 1003,
+      "slug": "ting-lu",
+      "reason": "ting-lu: missing drop table; tinglu: HTTP 404"
+    },
+    {
+      "id": 1004,
+      "slug": "chi-yu",
+      "reason": "chi-yu: missing drop table; chiyu: HTTP 404"
+    },
+    {
+      "id": 1005,
+      "slug": "roaring-moon",
+      "reason": "roaring-moon: missing drop table"
+    },
+    {
+      "id": 1006,
+      "slug": "iron-valiant",
+      "reason": "iron-valiant: missing drop table"
+    },
+    {
+      "id": 1007,
+      "slug": "koraidon",
+      "reason": "koraidon: missing drop table"
+    },
+    {
+      "id": 1008,
+      "slug": "miraidon",
+      "reason": "miraidon: missing drop table"
+    },
+    {
+      "id": 1009,
+      "slug": "walking-wake",
+      "reason": "walking-wake: missing drop table"
+    },
+    {
+      "id": 1010,
+      "slug": "iron-leaves",
+      "reason": "iron-leaves: missing drop table"
+    },
+    {
+      "id": 1011,
+      "slug": "dipplin",
+      "reason": "dipplin: missing drop table"
+    },
+    {
+      "id": 1012,
+      "slug": "poltchageist",
+      "reason": "poltchageist: missing drop table"
+    },
+    {
+      "id": 1013,
+      "slug": "sinistcha",
+      "reason": "sinistcha: missing drop table"
+    },
+    {
+      "id": 1014,
+      "slug": "okidogi",
+      "reason": "okidogi: missing drop table"
+    },
+    {
+      "id": 1015,
+      "slug": "munkidori",
+      "reason": "munkidori: missing drop table"
+    },
+    {
+      "id": 1016,
+      "slug": "fezandipiti",
+      "reason": "fezandipiti: missing drop table"
+    },
+    {
+      "id": 1017,
+      "slug": "ogerpon",
+      "reason": "ogerpon: missing drop table"
+    },
+    {
+      "id": 1018,
+      "slug": "archaludon",
+      "reason": "archaludon: missing drop table"
+    },
+    {
+      "id": 1019,
+      "slug": "hydrapple",
+      "reason": "hydrapple: missing drop table"
+    },
+    {
+      "id": 1020,
+      "slug": "gouging-fire",
+      "reason": "gouging-fire: missing drop table"
+    },
+    {
+      "id": 1021,
+      "slug": "raging-bolt",
+      "reason": "raging-bolt: missing drop table"
+    },
+    {
+      "id": 1022,
+      "slug": "iron-boulder",
+      "reason": "iron-boulder: missing drop table"
+    },
+    {
+      "id": 1023,
+      "slug": "iron-crown",
+      "reason": "iron-crown: missing drop table"
+    },
+    {
+      "id": 1024,
+      "slug": "terapagos",
+      "reason": "terapagos: missing drop table"
+    },
+    {
+      "id": 1025,
+      "slug": "pecharunt",
+      "reason": "pecharunt: missing drop table"
+    }
+  ]
+}
