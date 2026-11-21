@@ -175,3 +175,18 @@ body.light .toast{background:#0c776c;color:#fff}
 @media(max-width:680px){
  .catalog .cards > .result-card,.shiny-grid > .shiny-card{contain-intrinsic-size:auto 270px}
 }
+
+/* EV training Pokédex: all results remain searchable without additional pagination. */
+.ev-controls{display:grid;grid-template-columns:minmax(220px,1.7fr) repeat(3,minmax(135px,1fr));gap:13px;padding:18px;margin-bottom:18px}
+.ev-controls label{display:flex;flex-direction:column;gap:7px;font-size:12px;font-weight:700;color:var(--muted);min-width:0}
+.ev-controls input,.ev-controls select{height:43px;width:100%;min-width:0}
+.ev-count,.ev-note{font-size:12px;color:var(--muted);line-height:1.7}.ev-count{margin:10px 0 14px}
+.ev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px}
+.ev-card{border:1px solid var(--border);border-radius:13px;display:flex;align-items:center;min-width:0;padding:10px;gap:10px;background:var(--surface);content-visibility:auto;contain-intrinsic-size:auto 117px}
+.ev-card:hover{border-color:var(--accent)}.ev-card-art{width:88px;height:88px;display:grid;place-items:center;flex:0 0 88px;border-radius:9px;background:var(--surface2);overflow:hidden}
+.ev-card-art img{max-width:95%;max-height:95%;object-fit:contain;image-rendering:auto}
+.ev-card-body{display:flex;flex-direction:column;gap:3px;min-width:0}.ev-card-body>strong{font-size:15px}.ev-card-body>small{font-size:11px;color:var(--muted)}
+.ev-rewards{display:inline-flex;flex-wrap:wrap;gap:5px;margin-top:5px;max-width:100%}.ev-reward{display:inline-flex;align-items:center;border:1px solid var(--border);background:var(--surface3);color:var(--text);border-radius:6px;padding:3px 7px;font-size:12px;white-space:nowrap;font-weight:700}
+.ev-detail{padding:12px 0}.ev-detail h3{margin:0 0 12px}.ev-detail .ev-reward{font-size:16px;padding:8px 14px}.ev-note{margin:14px 0}.ev-note a{text-decoration:underline;color:var(--accent)}
+@media(max-width:850px){.ev-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.ev-controls label:first-child{grid-column:1/-1}}
+@media(max-width:520px){.ev-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ev-card{display:flex;flex-direction:column;align-items:stretch;padding:9px}.ev-card-art{width:100%;height:105px;flex-basis:auto}.ev-controls{gap:9px}.ev-card-body{overflow-wrap:anywhere}}
