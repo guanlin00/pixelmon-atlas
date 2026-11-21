@@ -81,7 +81,33 @@ let visibleLimit=60; window.nationalDexImported=false; window.catalogStatus='準
 let filters={...initial}, currentTab='spawn',selectedCreature=null,selectedItem=null,toastTimer;
 const app=document.querySelector('#app');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const biName=id=>{const b=BIOMES.find(x=>x[0]===id);return b?`${b[1]}（${b[2]}）`:id};
+// Compact biome labels for cards and active filters. Keep raw tags in the underlying
+// spawn rules; those IDs are needed for matching and source verification.
+const BIOME_CARD_LABELS={forests:'森林類',birches:'樺木林類',plains:'平原類',taigas:'針葉林類',arid:'乾燥地帶類',mesas:'惡地類',swamps:'沼澤類',jungles:'叢林類',savannas:'莽原類',oceans:'海洋類',rivers:'河流類',beaches:'海灘類',hills:'丘陵類',mountains:'山岳類',mountainous:'山岳地帶',cold:'寒冷地帶',freezing:'冰凍地帶',snowy:'積雪地帶',evil:'陰暗地帶',end:'終界類',ultra_forest:'究極森林',crag_gardens:'岩壁花園'};
+function biName(raw){
+ const id=String(raw||'').trim();
+ const tag=id.match(/#pixelmon:spawning\\/([a-z0-9_]+)/i);
+ if(tag){const key=tag[1].toLowerCase();return BIOME_CARD_LABELS[key]||key.replaceAll('_',' ')}
+ const mod=id.match(/(?:^|[\\s（(·])([a-z][a-z0-9_]*):([a-z0-9_\\/.-]+)/i);
+ if(mod){
+  const key=mod[2].split('/').pop().toLowerCase();
+  const label=BIOME_CARD_LABELS[key];
+  if(label)return label;
+  const en=key.replace(/_/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase());
+  return en+'（'+(mod[1]==='minecraft'?'Minecraft':mod[1])+ '）';
+ }
+ const known=Object.keys(BIOME_CARD_LABELS).find(k=>k.replace(/_/g,' ').toLowerCase()===id.toLowerCase());
+ if(known)return BIOME_CARD_LABELS[known];
+ const exact=BIOMES.find(x=>x[0]===id);
+ if(exact)return exact[1];
+ const english=id.match(/^([A-Za-z][A-Za-z ]+?)(?:\\s*[（(]|$)/);
+ if(english){const key=english[1].trim().toLowerCase().replaceAll(' ','_');if(BIOME_CARD_LABELS[key])return BIOME_CARD_LABELS[key]}
+ return id.length>35?id.slice(0,32)+'…':id;
+}
+function cardBiomeSummary(p){
+ const labels=[...new Set(relevantBiomes(p).map(biName).filter(Boolean))];
+ return labels.length?'⌖ '+labels.slice(0,2).join('、')+(labels.length>2?' 等':''):'生成資料待匯入';
+}
 const typeName=id=>TYPES.find(t=>t[0]===id)?.[1]||id;
 const typeTags=types=>`<div class="type-tags">${types.map(t=>{const info=TYPES.find(x=>x[0]===t);return `<span class="type-tag" style="background:${info?.[2]||'#aaa'}">${typeName(t)}</span>`}).join('')}</div>`;
 const sprite=id=>`<img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png" alt="第 ${id} 號寶可夢圖片" onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png'}else{this.onerror=null;this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<span class=placeholder aria-label=圖片暫不可用>◈</span>')}">`;
@@ -96,7 +122,7 @@ function filterPanel(){const t=TIMES.find(x=>x.id===filters.time);return `<aside
 function renderBiomeChecks(){const q=filters.biomeQuery.trim().toLowerCase();let result=BIOME_GROUPS.map(g=>{const items=g.items.filter(x=>`${x[1]} ${x[2]} ${x[0]}`.toLowerCase().includes(q));return items.length?`<div class="group-label">${g.name}</div>${items.map(([id,zh,en])=>`<label class="checkline"><input type="checkbox" data-biome="${id}" ${filters.biomes.includes(id)?'checked':''}><span>${zh}（${en}）</span></label>`).join('')}`:''}).join('');return result||'<div class="time-info">沒有符合名稱的生態域。</div>'}
 function matches(p){if(filters.category!=='all'&&p.class!==filters.category)return false;if(filters.query.trim()&&!`${p.zh} ${p.en} ${p.id}`.toLowerCase().includes(filters.query.trim().toLowerCase()))return false;if(filters.types.length){const hits=filters.types.filter(t=>p.types.includes(t)).length;if(filters.typeLogic==='or'&&hits===0)return false;if(filters.typeLogic==='and'&&hits!==filters.types.length)return false;}if(filters.biomes.length||filters.time!=='all'){const validRules=p.rules.filter(r=>filters.time==='all'||r.times.includes(filters.time)||r.times.includes('Any'));if(!validRules.length)return false;if(filters.biomes.length){const hits=filters.biomes.filter(b=>validRules.some(r=>r.biome===b)).length;if(filters.biomeLogic==='or'&&hits===0)return false;if(filters.biomeLogic==='and'&&hits!==filters.biomes.length)return false;}}return true}
 function relevantBiomes(p){const rules=p.rules.filter(r=>filters.time==='all'||r.times.includes(filters.time)||r.times.includes('Any'));return [...new Set(rules.filter(r=>!filters.biomes.length||filters.biomes.includes(r.biome)).map(r=>r.biome))]}
-function card(p){return `<article class="result-card" role="link" tabindex="0" data-pokemon="${p.id}"><div class="sprite">${sprite(p.id)}</div><div class="dexno">#${String(p.id).padStart(4,'0')}</div><div class="card-name">${p.zh}</div><div class="english-name">${p.en}</div>${typeTags(p.types)}<div class="card-foot">${p.class!=='normal'?'★ '+(p.class==='legendary'?'傳說寶可夢':'幻之寶可夢'):relevantBiomes(p).length?`⌖ ${relevantBiomes(p).slice(0,2).map(biName).join('、')}`:'生成資料待匯入'}</div></article>`}
+function card(p){return `<article class="result-card" role="link" tabindex="0" data-pokemon="${p.id}"><div class="sprite">${sprite(p.id)}</div><div class="dexno">#${String(p.id).padStart(4,'0')}</div><div class="card-name">${p.zh}</div><div class="english-name">${p.en}</div>${typeTags(p.types)}<div class="card-foot">${p.class!=='normal'?'★ '+(p.class==='legendary'?'傳說寶可夢':'幻之寶可夢'):cardBiomeSummary(p)}</div></article>`}
 function activeFilterTags(){const tags=[...(filters.types.length?filters.types.map(typeName):['全部屬性']),...(filters.biomes.length?filters.biomes.map(biName):['全部生態域']),timeLabel(filters.time),({all:'全部分類',normal:'一般寶可夢',legendary:'傳說寶可夢',mythical:'幻之寶可夢'}[filters.category])];return tags.map(t=>`<span class="pill">${esc(t)}</span>`).join('')}
 function resultsArea(){let hits=POKEMON.filter(matches);if(filters.sort==='name')hits.sort((a,b)=>a.zh.localeCompare(b.zh,'zh-Hant'));else if(filters.sort==='reverse')hits.sort((a,b)=>b.id-a.id);else hits.sort((a,b)=>a.id-b.id);return `<div class="results-head"><div><strong>搜尋結果 <span style="color:var(--accent)">${hits.length}</span></strong><br><small>搜尋與篩選可同時使用</small></div><div class="results-tools"><select id="sortSelect" class="select"><option value="dex" ${filters.sort==='dex'?'selected':''}>圖鑑編號 ↑</option><option value="reverse" ${filters.sort==='reverse'?'selected':''}>圖鑑編號 ↓</option><option value="name" ${filters.sort==='name'?'selected':''}>中文名稱</option></select></div></div><div class="active-filters">${activeFilterTags()}</div><div class="cards">${hits.length?hits.map(card).join(''):`<div class="empty"><div class="big">⌕</div><h3>找不到符合條件的已收錄寶可夢</h3><p>可以減少選取條件，或重設搜尋。如果有選生態域或生成時間，目前尚未匯入對應規則，請先清除這兩項以瀏覽全國圖鑑。</p><button class="btn primary" data-action="reset">重設篩選</button></div>`}</div>` }
 function renderPokedex(){return `<section class="page-heading"><div><div class="eyebrow">Explore / Pokédex</div><h1>寶可夢圖鑑</h1><p>透過屬性、生態域、生成時間及分類，找到你想尋找的寶可夢。</p></div></section>${banner()}<div class="catalog">${filterPanel()}<section><div style="margin-bottom:15px"><input class="search-input" id="pokemonQuery" value="${esc(filters.query)}" placeholder="⌕　搜尋寶可夢中文名／英文名／圖鑑編號..."></div><div id="results">${resultsArea()}</div></section></div>`}
