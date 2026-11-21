@@ -12,6 +12,7 @@
  const byId=new Map(catalog.map(row=>[row[0],row]));
  const paldeaTMByMove=new Map((typeof ATLAS_PALDEA_TMS!=='undefined'?ATLAS_PALDEA_TMS:[]).map(([tm,id])=>[id,'TM'+String(tm).padStart(3,'0')]));
  const paldeaTM=m=>paldeaTMByMove.get(m[0])||'—';
+ const paldeaTMDisplay=m=>{const tm=paldeaTM(m);return tm==='—'?'—':'<span class="atlas-tm-code"><span>TM</span><span>'+esc(tm.slice(2))+'</span></span>';};
  const entries=()=>catalog.filter(m=>{
   const q=state.query.trim().toLowerCase();
   return (!q||m[1].toLowerCase().includes(q)||m[2].toLowerCase().includes(q)||String(m[0])===q||paldeaTM(m).toLowerCase().replace(/\s+/g,'')===q.replace(/\s+/g,'')||paldeaTM(m).toLowerCase().replace(/\s+/g,'')==='tm'+q.replace(/^tm/i,'').trim().padStart(3,'0')||('帕底亞'+paldeaTM(m)).toLowerCase().replace(/\s+/g,'')===q.replace(/\s+/g,''))&&
@@ -22,7 +23,7 @@
   return '<tr><td><strong>'+esc(m[1])+'</strong><small>'+esc(m[2])+'</small></td>'+
   '<td><span class="atlas-move-type atlas-move-'+m[3]+'">'+(names[m[3]]||m[3])+'</span></td>'+
   '<td>'+(categories[m[4]]||'—')+'</td><td>'+value(m[5])+'</td><td>'+value(m[6])+'</td><td>'+value(m[7])+'</td>'+
-  '<td>'+paldeaTM(m)+'</td><td><a class="inline-link" href="#moves/'+m[0]+'">詳情</a></td></tr>';
+  '<td>'+paldeaTMDisplay(m)+'</td><td><a class="inline-link" href="#moves/'+m[0]+'">詳情</a></td></tr>';
  }
  function result(){
   const list=entries();
@@ -49,7 +50,7 @@
   '<div class="atlas-move-facts"><span>屬性：'+(names[m[3]]||'—')+'</span><span>分類：'+(categories[m[4]]||'—')+
   '</span><span>威力：'+value(m[5])+'</span><span>命中率：'+value(m[6])+'</span><span>PP：'+value(m[7])+
   '</span><span>優先度：'+value(m[8])+'</span></div>'+
-  '<h3>帕底亞招式學習器</h3><p>'+(paldeaTM(m)==='—'?'本招式沒有帕底亞 TM 編號。':'帕底亞 '+paldeaTM(m)+'（以 Pixelmon Wiki 列出的 Paldea-TM 為準）。')+'</p><h3>招式學習條件</h3><p>此招式的 Pixelmon 學習寶可夢清單尚未核實，暫不標示哪些寶可夢能學。請依官方 Wiki 核對不同版本與招式機／招式教學資料。</p>'+
+  '<h3>帕底亞招式學習器</h3><p>'+(paldeaTM(m)==='—'?'本招式沒有帕底亞 TM 編號。':'帕底亞 '+paldeaTMDisplay(m)+'（以 Pixelmon Wiki 列出的 Paldea-TM 為準）。')+'</p><h3>招式學習條件</h3><p>此招式的 Pixelmon 學習寶可夢清單尚未核實，暫不標示哪些寶可夢能學。請依官方 Wiki 核對不同版本與招式機／招式教學資料。</p>'+
   '<a class="inline-link" href="https://pixelmonmod.com/wiki/Category:Moves" target="_blank" rel="noopener noreferrer">查看 Pixelmon 官方招式資料 ↗</a></section>';
  }
  function pokemon(p){
