@@ -26,6 +26,10 @@
    return name+(includeEnglish?'（'+english+'）':includeMod?'（'+(sourceNames[parsed.namespace]||parsed.namespace)+(parsed.tag?' 生成分類':'')+'）':'');
   }
   if(alias[raw])return alias[raw];
+  // Earlier UI builds sometimes emitted "待翻譯（freezing mountains）".
+  // Unwrap once, then translate the underlying identifier or English alias.
+  const prior=raw.match(/^(?:待翻譯|生成分類|模組生態域)[（(]([^)）]+)[)）]$/);
+  if(prior)return translate(prior[1],{includeEnglish,includeMod});
   // Handle previously double-translated labels without losing the biome identity.
   const unwrapped=raw.replace(/^待翻譯[（(]/,'').replace(/[）)]$/,'').trim();
   if(unwrapped!==raw&&alias[unwrapped])return alias[unwrapped];
