@@ -26,4 +26,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add pixelmon-web/official-942-gen*.json pixelmon-web/official-942-progress.json
-          git diff --cached --quiet || (git commit -m "data: import official 9.4.2 generation 1-9 spawn/drop definitions with audit" && git pull --rebase origin main && git push origin HEAD:main)
+          if ! git diff --cached --quiet; then
+            git commit -m "data: import official 9.4.2 generation 1-9 spawn/drop definitions with audit"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                echo "Successfully published official 9.4.2 reference data"
+                break
+              fi
+              if [ "$attempt" -eq 5 ]; then exit 1; fi
+              sleep 3
+            done
+          fi
