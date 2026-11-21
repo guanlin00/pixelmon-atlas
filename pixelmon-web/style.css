@@ -190,3 +190,6 @@ body.light .toast{background:#0c776c;color:#fff}
 .ev-detail{padding:12px 0}.ev-detail h3{margin:0 0 12px}.ev-detail .ev-reward{font-size:16px;padding:8px 14px}.ev-note{margin:14px 0}.ev-note a{text-decoration:underline;color:var(--accent)}
 @media(max-width:850px){.ev-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.ev-controls label:first-child{grid-column:1/-1}}
 @media(max-width:520px){.ev-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ev-card{display:flex;flex-direction:column;align-items:stretch;padding:9px}.ev-card-art{width:100%;height:105px;flex-basis:auto}.ev-controls{gap:9px}.ev-card-body{overflow-wrap:anywhere}}
+
+/* Clearly distinguish independently reviewed acquisition notes from incomplete index entries. */
+.atlas-item-evidence{border:1px solid var(--border);background:var(--surface2);padding:11px 14px;border-radius:10px;font-size:12px;line-height:1.6;color:var(--muted);margin:12px 0}
