@@ -1,0 +1,38 @@
+name: Import all remaining Pixelmon generations sequentially
+on:
+  push:
+    paths:
+      - .github/workflows/import-all-generations.yml
+      - pixelmon-web/tools/import_all_generations.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pixelmon-all-generation-import
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install requests beautifulsoup4
+      - name: Sequentially import every generation and commit each verified batch
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for gen in 2 3 4 5 6 7 8 9; do
+            echo "::group::Generation $gen"
+            python pixelmon-web/tools/import_all_generations.py "$gen"
+            git add "pixelmon-web/wiki-reference-gen${gen}.json" "pixelmon-web/gen${gen}-import-audit.json"
+            if ! git diff --cached --quiet; then
+              git commit -m "data: import Generation $gen Pixelmon spawn/drop references with audit"
+              git pull --rebase origin main
+              git push origin HEAD:main
+            fi
+            echo "::endgroup::"
+          done
