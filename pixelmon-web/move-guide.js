@@ -14,7 +14,7 @@
  const paldeaTM=m=>paldeaTMByMove.get(m[0])||'—';
  const entries=()=>catalog.filter(m=>{
   const q=state.query.trim().toLowerCase();
-  return (!q||m[1].toLowerCase().includes(q)||m[2].toLowerCase().includes(q)||String(m[0])===q||paldeaTM(m).toLowerCase()===q||paldeaTM(m).toLowerCase()==='tm'+q.replace(/^tm/i,'').padStart(3,'0')||('帕底亞'+paldeaTM(m)).toLowerCase()===q)&&
+  return (!q||m[1].toLowerCase().includes(q)||m[2].toLowerCase().includes(q)||String(m[0])===q||paldeaTM(m).toLowerCase().replace(/\s+/g,'')===q.replace(/\s+/g,'')||paldeaTM(m).toLowerCase().replace(/\s+/g,'')==='tm'+q.replace(/^tm/i,'').trim().padStart(3,'0')||('帕底亞'+paldeaTM(m)).toLowerCase().replace(/\s+/g,'')===q.replace(/\s+/g,''))&&
    (state.type==='all'||m[3]===state.type)&&(state.category==='all'||String(m[4])===state.category);
  });
  const value=n=>n==null?'—':n;
@@ -36,7 +36,7 @@
  function render(){
   return '<section class="page-heading"><div><div class="eyebrow">Move Encyclopedia</div><h1>招式學習圖鑑</h1>'+
   '<p>搜尋招式中文／英文名稱或帕底亞 TM 編號，並查看屬性、分類、威力、命中與 PP。各寶可夢的 Pixelmon 學習條件將以 Wiki 為準。</p></div></section>'+
-  '<div class="panel atlas-move-filters"><label>搜尋招式<input id="move-query" class="search-input" type="search" placeholder="例：冰凍光束 / Ice Beam / TM135" value="'+esc(state.query)+'"></label>'+
+  '<div class="panel atlas-move-filters"><label>搜尋招式<input id="move-query" class="search-input" type="search" placeholder="例：冰凍光束 / Ice Beam / TM 135" value="'+esc(state.query)+'"></label>'+
   '<label>屬性<select class="select" id="move-type">'+options([['all','所有屬性'],...types.map(t=>[t,names[t]])],state.type)+'</select></label>'+
   '<label>分類<select class="select" id="move-category">'+options([['all','全部分類'],...Object.entries(categories)],state.category)+'</select></label></div>'+
   '<div id="move-results">'+result()+'</div>'+
