@@ -1,0 +1,23 @@
+name: Probe official Pixelmon 9.4.2 datapack metadata
+on:
+  push:
+    paths:
+      - .github/workflows/probe-pixelmon-jar.yml
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python - <<'PY'
+          import json,urllib.request
+          for url in ['https://api.modrinth.com/v2/version/l63weWf0','https://api.modrinth.com/v2/version/9.4.2']:
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'PixelmonAtlas/1.0 (personal research)'})
+              with urllib.request.urlopen(req,timeout=25) as r:data=json.load(r)
+              print('VERSION',url,'version_number',data.get('version_number'))
+              for item in data.get('files',[]):
+                print('FILE',item.get('filename'),'SIZE_BYTES',item.get('size'),'URL',item.get('url'))
+            except Exception as e:print('PROBE_ERROR',url,str(e)[:300])
+          PY
