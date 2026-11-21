@@ -7,7 +7,7 @@
     "dexEnd": 386,
     "requested": 135,
     "updated": "2026-11-21",
-    "notes": "Imported only records with matching National Dex ID and an actual Drops table; missing pages explicitly audited. No version compatibility claim.",
+    "notes": "Records require matching National Dex ID and at least one of: actual Spawn section or Drops table. Missing sections remain explicitly unverified, not zero. Data from third-party mirror, no version compatibility claim.",
     "imported": 135,
     "missing": 0,
     "withSpawns": 134,
