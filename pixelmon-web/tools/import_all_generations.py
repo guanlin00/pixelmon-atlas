@@ -71,8 +71,10 @@ def read_one(pair):
                 continue
             spawns,blocks=extract_spawn(soup)
             drops,has_drops=extract_drops(soup)
-            if not has_drops:
-                errors.append(candidate+': missing drop table')
+            # Some newer Pokémon pages expose a Spawn section but no Drops table.
+            # Keep the source-backed spawn rows, and explicitly flag missing drops.
+            if not has_drops and not spawns:
+                errors.append(candidate+': neither usable spawn nor drop table')
                 continue
             if blocks and not spawns:
                 errors.append(candidate+': failed to parse spawn sections')
@@ -82,8 +84,8 @@ def read_one(pair):
                 'spawn':spawns,'drops':drops,
                 'verification':{
                     'sourceStatus':'Imported from third-party pixelmon.site mirror. NOT verified against official Pixelmon Wiki or current Pixelmon version.',
-                    'form':'default','spawnSectionPresent':bool(blocks),'dropsSectionPresent':True,
-                    'notes':'Spawn rarity is a source weight, not a percent. No Spawn section does not prove this species is unobtainable.'
+                    'form':'default','spawnSectionPresent':bool(blocks),'dropsSectionPresent':has_drops,
+                    'notes':'Spawn rarity is a source weight, not a percent. No Spawn section does not prove this species is unobtainable. Empty drops with dropsSectionPresent=false means no verified drop data; NOT a claim of zero drops.'
                 }
             }
             return i,slug,record,None
@@ -102,7 +104,7 @@ def main(generation):
       'source':'https://pixelmon.site/','sourceType':'THIRD-PARTY Pixelmon reference, not official Pixelmon Wiki',
       'generation':generation,'dexStart':lo,'dexEnd':hi,'requested':len(selection),
       'updated':dt.date.today().isoformat(),
-      'notes':'Imported only records with matching National Dex ID and an actual Drops table; missing pages explicitly audited. No version compatibility claim.'
+      'notes':'Records require matching National Dex ID and at least one of: actual Spawn section or Drops table. Missing sections remain explicitly unverified, not zero. Data from third-party mirror, no version compatibility claim.'
     },'pokemon':{},'items':{}}
     failures=[]
     audit=[]
