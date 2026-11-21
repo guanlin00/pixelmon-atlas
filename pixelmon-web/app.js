@@ -86,21 +86,21 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const BIOME_CARD_LABELS={forests:'森林類',birches:'樺木林類',plains:'平原類',taigas:'針葉林類',arid:'乾燥地帶類',mesas:'惡地類',swamps:'沼澤類',jungles:'叢林類',savannas:'莽原類',oceans:'海洋類',rivers:'河流類',beaches:'海灘類',hills:'丘陵類',mountains:'山岳類',mountainous:'山岳地帶',cold:'寒冷地帶',freezing:'冰凍地帶',snowy:'積雪地帶',evil:'陰暗地帶',end:'終界類',ultra_forest:'究極森林',crag_gardens:'岩壁花園'};
 function biName(raw){
  const id=String(raw||'').trim();
- const tag=id.match(/#pixelmon:spawning\\/([a-z0-9_]+)/i);
+ const tag=id.match(/#pixelmon:spawning\/([a-z0-9_]+)/i);
  if(tag){const key=tag[1].toLowerCase();return BIOME_CARD_LABELS[key]||key.replaceAll('_',' ')}
- const mod=id.match(/(?:^|[\\s（(·])([a-z][a-z0-9_]*):([a-z0-9_\\/.-]+)/i);
+ const mod=id.match(/(?:^|[\s（(·])([a-z][a-z0-9_]*):([a-z0-9_\/.-]+)/i);
  if(mod){
   const key=mod[2].split('/').pop().toLowerCase();
   const label=BIOME_CARD_LABELS[key];
   if(label)return label;
-  const en=key.replace(/_/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase());
+  const en=key.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
   return en+'（'+(mod[1]==='minecraft'?'Minecraft':mod[1])+ '）';
  }
  const known=Object.keys(BIOME_CARD_LABELS).find(k=>k.replace(/_/g,' ').toLowerCase()===id.toLowerCase());
  if(known)return BIOME_CARD_LABELS[known];
  const exact=BIOMES.find(x=>x[0]===id);
  if(exact)return exact[1];
- const english=id.match(/^([A-Za-z][A-Za-z ]+?)(?:\\s*[（(]|$)/);
+ const english=id.match(/^([A-Za-z][A-Za-z ]+?)(?:\s*[（(]|$)/);
  if(english){const key=english[1].trim().toLowerCase().replaceAll(' ','_');if(BIOME_CARD_LABELS[key])return BIOME_CARD_LABELS[key]}
  return id.length>35?id.slice(0,32)+'…':id;
 }
