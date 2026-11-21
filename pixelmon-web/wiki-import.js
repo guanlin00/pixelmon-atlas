@@ -18,15 +18,22 @@ function importWikiReference(data){
   if(rules.length)p.rules=rules;
   const drops=(record.drops||[]).map(d=>({item:wikiItemId(d.item),chance:String(d.chance||'—'),quantity:String(d.quantity||'—'),source:record.source,sourceType:'wiki'}));
   if(drops.length){p.verifiedDrops=drops;p.drops=drops.map(d=>d.item)}
+  if(record.formDrops&&typeof record.formDrops==='object'){
+   p.formDrops=Object.entries(record.formDrops).map(([form,rows])=>({
+      form,drops:(rows||[]).map(d=>({item:wikiItemId(d.item),
+          chance:String(d.chance||'—'),quantity:String(d.quantity||'—'),
+          gameItemId:d.gameItemId||null,source:record.source,sourceType:'official-mod'}))
+   }));
+  }
  }
  for(const [en,refs] of Object.entries(items)){
   let i=ITEMS.find(x=>x.id===wikiItemId(en));
   if(!i){i={id:wikiItemId(en),zh:WIKI_ITEM_ZH[en]||en,en,icon:'◇',texture:WIKI_ITEM_TEXTURES[en]||null,kind:'Pixelmon Wiki 掉落物',desc:'Pixelmon 掉落物資料；實際來源可能是官方 9.4.2 遊戲檔或第三方圖鑑，請查看寶可夢條目。'};ITEMS.push(i)}
   const newRefs=refs.filter(x=>POKEMON.some(p=>p.id===Number(x.pokemonId))).map(x=>({...x,pokemonId:Number(x.pokemonId)}));
   const merged=[...(i.wikiDrops||[]),...newRefs];
-  i.wikiDrops=[...new Map(merged.map(x=>[x.pokemonId+'|'+x.chance+'|'+x.quantity,x])).values()];
+  i.wikiDrops=[...new Map(merged.map(x=>[x.pokemonId+'|'+(x.form||'base')+'|'+x.chance+'|'+x.quantity,x])).values()];
  }
- for(const i of ITEMS){for(const d of i.wikiDrops||[]){const p=POKEMON.find(x=>x.id===d.pokemonId);if(!p)continue;p.verifiedDrops=p.verifiedDrops||[];if(!p.verifiedDrops.some(x=>x.item===i.id&&String(x.chance)===String(d.chance)&&String(x.quantity)===String(d.quantity))){p.verifiedDrops.push({item:i.id,chance:d.chance,quantity:d.quantity,source:window.wikiDataset?.pokemon?.[String(d.pokemonId)]?.source||'https://pixelmonmod.com/wiki/Drops',sourceType:'wiki'})}}}
+ for(const i of ITEMS){for(const d of i.wikiDrops||[]){const p=POKEMON.find(x=>x.id===d.pokemonId);if(!p)continue;p.verifiedDrops=p.verifiedDrops||[];if(d.form)continue;if(!p.verifiedDrops.some(x=>x.item===i.id&&String(x.chance)===String(d.chance)&&String(x.quantity)===String(d.quantity))){p.verifiedDrops.push({item:i.id,chance:d.chance,quantity:d.quantity,source:window.wikiDataset?.pokemon?.[String(d.pokemonId)]?.source||'https://pixelmonmod.com/wiki/Drops',sourceType:'wiki'})}}}
  window.wikiLoaded=true;
 }
 async function loadWikiReference(){
