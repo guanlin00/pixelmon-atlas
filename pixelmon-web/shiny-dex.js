@@ -3,7 +3,7 @@
 (() => {
  const BASE='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
  const G=[['全部世代',1,1025],['第一代・關都',1,151],['第二代・城都',152,251],['第三代・豐緣',252,386],['第四代・神奧',387,493],['第五代・合眾',494,649],['第六代・卡洛斯',650,721],['第七代・阿羅拉',722,809],['第八代・伽勒爾',810,905],['第九代・帕底亞',906,1025]];
- const state={query:'',gen:0,limit:60},missing=new Set();
+ const state={query:'',gen:0,limit:1025},missing=new Set();
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
  const pad=n=>'#'+String(n).padStart(4,'0');
  const all=()=>typeof POKEMON==='undefined'?[]:[...POKEMON].filter(p=>p.id>=1&&p.id<=1025).sort((a,b)=>a.id-b.id);
@@ -15,7 +15,7 @@
   const hits=matching();
   return '<p class="shiny-count">搜尋結果 '+hits.length+' 隻</p><div class="shiny-grid">'+hits.slice(0,state.limit).map(p=>
    '<a class="shiny-card" href="#pokemon/'+p.id+'">'+shinyImg(p)+'<small>'+pad(p.id)+'</small><strong>'+esc(p.zh)+'</strong><small>'+esc(p.en)+'</small></a>').join('')+
-   '</div>'+(hits.length>state.limit?'<button class="btn quiet shiny-load-more" data-shiny-more>載入更多（'+state.limit+'/'+hits.length+'）</button>':'');
+   '</div>'+'';
  }
  function render(){
   return '<section class="page-heading"><div class="eyebrow">Shiny / Pokédex</div><h1>✨ 異色圖鑑</h1><p>搜尋全國圖鑑 1～1025 隻寶可夢的異色外觀。點擊卡片即可查看一般與異色對照。</p></section>'+
@@ -31,8 +31,8 @@
  }
  window.renderShinyDex=render;
  window.renderShinyDetail=detail;
- document.addEventListener('input',e=>{if(e.target.id==='shiny-search'){state.query=e.target.value;state.limit=60;document.getElementById('shiny-results').innerHTML=results()}});
- document.addEventListener('change',e=>{if(e.target.id==='shiny-gen'){state.gen=Number(e.target.value)||0;state.limit=60;document.getElementById('shiny-results').innerHTML=results()}});
+ document.addEventListener('input',e=>{if(e.target.id==='shiny-search'){state.query=e.target.value;state.limit=1025;document.getElementById('shiny-results').innerHTML=results()}});
+ document.addEventListener('change',e=>{if(e.target.id==='shiny-gen'){state.gen=Number(e.target.value)||0;state.limit=1025;document.getElementById('shiny-results').innerHTML=results()}});
  document.addEventListener('click',e=>{if(e.target.closest('[data-shiny-more]')){state.limit+=60;document.getElementById('shiny-results').innerHTML=results()}});
  // Fallback only to another SHINY image, never a normal-color image.
  document.addEventListener('error',e=>{
