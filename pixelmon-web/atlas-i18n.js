@@ -155,7 +155,7 @@
    const cells=row.querySelectorAll('td');if(cells.length<6)return;
    for(let i of [0,3,4,5]){
     const cell=cells[i];if(cell.dataset.atlasOriginal===undefined)cell.dataset.atlasOriginal=normalized(cell.textContent);
-    if(i===0||i===4)cell.title=cell.dataset.atlasOriginal;
+    if((i===0||i===4)&&!cell.title)cell.title=cell.dataset.atlasOriginal;
     const val=converters[i](cell.dataset.atlasOriginal);
     if(cell.textContent!==val)cell.textContent=val;
    }
