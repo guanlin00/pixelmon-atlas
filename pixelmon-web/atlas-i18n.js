@@ -34,6 +34,9 @@
  };
  const place = {
   'Super Rod':'厲害釣竿','Good Rod':'好釣竿','Old Rod':'破舊釣竿',
+  'Super Rod Lava':'熔岩中使用厲害釣竿','Good Rod Lava':'熔岩中使用好釣竿','Old Rod Lava':'熔岩中使用破舊釣竿','Oas Rod':'Oas Rod（來源名稱待核對）',
+  'Liquid Floor':'液體表面','Surface Lava':'熔岩表面','Underground Lava':'地下熔岩',
+  'Curry Spicy':'辣味咖哩','Curry Dry':'澀味咖哩','Curry Sweet':'甜味咖哩','Curry Bitter':'苦味咖哩','Curry Sour':'酸味咖哩',
   'Land':'陸地','Air':'空中','Water':'水中','Underground':'地下','Tree Top':'樹頂',
   'Tree Tops':'樹頂','Surface Water':'水面','Water Surface':'水面','Seafloor':'海床',
   'Underwater':'水下','Lava':'熔岩中','Fishing':'釣魚','Forage':'野外採集',
