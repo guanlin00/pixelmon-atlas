@@ -124,3 +124,6 @@ body.light .toast{background:#0c776c;color:#fff}
 
 /* Keep Pokédex spawn summaries compact even with long modded biome names. */
 .catalog .result-card .card-foot{min-width:0;overflow:hidden;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;max-height:3.2em}
+
+/* One-line biome preview; full environment list remains in the card tooltip/detail. */
+.catalog .result-card .card-foot{display:block;box-sizing:border-box;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;max-width:100%;max-height:none;min-height:0;-webkit-line-clamp:unset;line-clamp:unset;overflow-wrap:normal;word-break:normal}
