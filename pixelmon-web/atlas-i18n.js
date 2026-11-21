@@ -156,7 +156,7 @@
    for(let i of [0,3,4,5]){
     const cell=cells[i];if(cell.dataset.atlasOriginal===undefined)cell.dataset.atlasOriginal=normalized(cell.textContent);
     if((i===0||i===4)&&!cell.title)cell.title=cell.dataset.atlasOriginal;
-    const val=converters[i](cell.dataset.atlasOriginal);
+    const val=i===0&&cell.dataset.biomeId&&window.atlasBiomeLabels?window.atlasBiomeLabels.translate(cell.dataset.biomeId):converters[i](cell.dataset.atlasOriginal);
     if(cell.textContent!==val)cell.textContent=val;
    }
   });
