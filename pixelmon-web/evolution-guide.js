@@ -35,7 +35,7 @@
     '<div class="empty"><h3>沒有符合條件的進化資料</h3><p>請更換關鍵字或搜尋種類。</p></div>');
  }
  function render(){
-  return '<section class="page-heading"><div><div class="eyebrow">Evolution Guide</div><h1>進化條件查詢</h1>'+
+  return '<section class="page-heading"><div><div class="eyebrow">Evolution Guide</div><h1>進化條件</h1>'+
   '<p>查寶可夢的進化分支、進化石、等級、交換、親密度及特殊條件。點擊圖片可開啟寶可夢詳細資料。</p></div></section>'+
   '<section class="panel atlas-evo-search"><input class="search-input" type="search" id="evolution-query" value="'+esc(state.query)+'" placeholder="搜尋伊布、皮卡丘、進化石、等級…">'+
   '<div class="atlas-evo-category">'+categories.map(([id,name])=>'<button type="button" class="chip '+(state.category===id?'active':'')+'" data-evolution-category="'+id+'">'+name+'</button>').join('')+'</div></section>'+
