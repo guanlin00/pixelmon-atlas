@@ -7,12 +7,12 @@
     "dexEnd": 809,
     "requested": 88,
     "updated": "2026-11-21",
-    "notes": "Imported only records with matching National Dex ID and an actual Drops table; missing pages explicitly audited. No version compatibility claim.",
-    "imported": 82,
-    "missing": 6,
-    "withSpawns": 74,
+    "notes": "Records require matching National Dex ID and at least one of: actual Spawn section or Drops table. Missing sections remain explicitly unverified, not zero. Data from third-party mirror, no version compatibility claim.",
+    "imported": 87,
+    "missing": 1,
+    "withSpawns": 79,
     "withDrops": 82,
-    "spawnRows": 349,
+    "spawnRows": 363,
     "dropRows": 256
   },
   "records": [
@@ -190,11 +190,11 @@
     {
       "id": 741,
       "slug": "oricorio",
-      "status": "unavailable",
-      "spawnRules": 0,
+      "status": "imported",
+      "spawnRules": 2,
       "drops": 0,
-      "source": null,
-      "error": "oricorio: missing drop table"
+      "source": "https://pixelmon.site/oricorio/",
+      "error": null
     },
     {
       "id": 742,
@@ -473,7 +473,7 @@
       "spawnRules": 0,
       "drops": 0,
       "source": null,
-      "error": "type-null: missing drop table; typenull: missing drop table"
+      "error": "type-null: neither usable spawn nor drop table; typenull: neither usable spawn nor drop table"
     },
     {
       "id": 773,
@@ -586,38 +586,38 @@
     {
       "id": 785,
       "slug": "tapu-koko",
-      "status": "unavailable",
-      "spawnRules": 0,
+      "status": "imported",
+      "spawnRules": 3,
       "drops": 0,
-      "source": null,
-      "error": "tapu-koko: missing drop table; tapukoko: missing drop table"
+      "source": "https://pixelmon.site/tapu-koko/",
+      "error": null
     },
     {
       "id": 786,
       "slug": "tapu-lele",
-      "status": "unavailable",
-      "spawnRules": 0,
+      "status": "imported",
+      "spawnRules": 3,
       "drops": 0,
-      "source": null,
-      "error": "tapu-lele: missing drop table; tapulele: missing drop table"
+      "source": "https://pixelmon.site/tapu-lele/",
+      "error": null
     },
     {
       "id": 787,
       "slug": "tapu-bulu",
-      "status": "unavailable",
-      "spawnRules": 0,
+      "status": "imported",
+      "spawnRules": 3,
       "drops": 0,
-      "source": null,
-      "error": "tapu-bulu: missing drop table; tapubulu: missing drop table"
+      "source": "https://pixelmon.site/tapu-bulu/",
+      "error": null
     },
     {
       "id": 788,
       "slug": "tapu-fini",
-      "status": "unavailable",
-      "spawnRules": 0,
+      "status": "imported",
+      "spawnRules": 3,
       "drops": 0,
-      "source": null,
-      "error": "tapu-fini: missing drop table; tapufini: missing drop table"
+      "source": "https://pixelmon.site/tapu-fini/",
+      "error": null
     },
     {
       "id": 789,
@@ -811,34 +811,9 @@
   ],
   "missing": [
     {
-      "id": 741,
-      "slug": "oricorio",
-      "reason": "oricorio: missing drop table"
-    },
-    {
       "id": 772,
       "slug": "type-null",
-      "reason": "type-null: missing drop table; typenull: missing drop table"
-    },
-    {
-      "id": 785,
-      "slug": "tapu-koko",
-      "reason": "tapu-koko: missing drop table; tapukoko: missing drop table"
-    },
-    {
-      "id": 786,
-      "slug": "tapu-lele",
-      "reason": "tapu-lele: missing drop table; tapulele: missing drop table"
-    },
-    {
-      "id": 787,
-      "slug": "tapu-bulu",
-      "reason": "tapu-bulu: missing drop table; tapubulu: missing drop table"
-    },
-    {
-      "id": 788,
-      "slug": "tapu-fini",
-      "reason": "tapu-fini: missing drop table; tapufini: missing drop table"
+      "reason": "type-null: neither usable spawn nor drop table; typenull: neither usable spawn nor drop table"
     }
   ]
 }
