@@ -246,3 +246,6 @@ body.light .atlas-favorite-btn.is-favorite{color:#b68300;background:#fff9e5;bord
 .atlas-move-links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
 .atlas-pokemon-moves>p{color:var(--muted);line-height:1.8}
 @media(max-width:650px){.atlas-move-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-move-filters label:first-child{grid-column:1/-1}.atlas-evo-pair img{width:64px;height:64px}}
+
+/* Keep the TM prefix visually separated from its Paldea number. */
+.atlas-tm-code{display:inline-flex;align-items:baseline;gap:8px;white-space:nowrap;font-variant-numeric:tabular-nums}
