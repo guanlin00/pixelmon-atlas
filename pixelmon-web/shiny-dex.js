@@ -45,7 +45,7 @@
  const originalRender=window.render;
  if(typeof originalRender==='function')window.render=function(){
   const out=originalRender.apply(this,arguments);
-  if(location.hash.split('/')[0]==='#shiny'){
+  if(location.hash.split('/')[0]==='#shiny'&&(window.nationalDexImported||window.catalogFailed)){
    const app=document.getElementById('app');app.innerHTML=render();
    document.getElementById('breadcrumb').textContent='異色圖鑑';
    document.querySelectorAll('.side-nav a').forEach(a=>a.classList.toggle('active',a.dataset.route==='shiny'));
