@@ -33,6 +33,7 @@
   'Extreme Hills':'高山','Mesa':'惡地','Snowy Slopes':'積雪山坡','Windswept Gravelly Hills':'風襲礫石丘陵','Windswept Savanna':'風襲莽原','Savanna Plateau':'莽原高地','Savanna':'莽原','Deep Cold Ocean':'寒冷深海','Deep Lukewarm Ocean':'溫暖深海','Snowy Beach':'積雪海灘','Lakes':'湖泊類','Plains (Category)':'平原類','Ice Spikes':'冰刺平原','Windswept Forest':'風襲森林','Deep Warm Ocean':'溫暖深海','Any':'不限','None':'無限制'
  };
  const place = {
+  'Super Rod':'厲害釣竿','Good Rod':'好釣竿','Old Rod':'破舊釣竿',
   'Land':'陸地','Air':'空中','Water':'水中','Underground':'地下','Tree Top':'樹頂',
   'Tree Tops':'樹頂','Surface Water':'水面','Water Surface':'水面','Seafloor':'海床',
   'Underwater':'水下','Lava':'熔岩中','Fishing':'釣魚','Forage':'野外採集',
@@ -82,6 +83,12 @@
  // Keep the complete original in the cell tooltip rather than repeating it inline.
  function translateSpawnBiome(raw){
   const t=normalized(raw);if(blank.has(t))return '未指定生態域';
+  // app.js already converts some English biome identifiers into Traditional Chinese.
+  // Do not treat those labels as untranslated English or translate them twice.
+  if(/[\u3400-\u9fff]/.test(t)&&!/#pixelmon:spawning\/|[a-z][a-z0-9_]*:[a-z0-9_\/.-]+/i.test(t)){
+   if(/（[^（）]+）/.test(t))return t;
+   if(Object.values(biome).includes(t))return t;
+  }
   const tags=[...t.matchAll(/#pixelmon:spawning\/([a-z0-9_]+)/gi)];
   const known={forests:'Forests',birches:'Birches',plains:'Plains',taigas:'Taigas',mesas:'Mesas',arid:'Arid',swamps:'Swamps',jungles:'Jungles',savannas:'Savannas',oceans:'Oceans',rivers:'Rivers',beaches:'Beaches',hills:'Hills',mountains:'Mountains',cold:'Cold',freezing:'Freezing',snowy:'Snowy',evil:'Evil'};
   if(tags.length){
@@ -99,14 +106,41 @@
   if(key)return biome[key]+'（'+key+'）';
   return translatePhrase(t,biome);
  }
- function translateCondition(raw){const t=normalized(raw);if(blank.has(t))return '無特殊條件';
+ function translateSpawnSpec(input){
+  const tokenMap={form:{battle_bond:'牽絆變身',ash:'小智形態'},palette:{alter:'Alter 特殊外觀'},gender:{male:'雄性',female:'雌性',genderless:'無性別'}};
+  const statNames={ivhp:'HP',ivatk:'攻擊',ivdef:'防禦',ivspatk:'特攻',ivspdef:'特防',ivspd:'速度'};
+  const pairs=[...input.matchAll(/([a-z][a-z0-9_]*):([^\\s]+)/gi)];
+  const parts=[],ivs=[],unknown=[];
+  for(const [,name,value] of pairs){
+   const k=name.toLowerCase(),v=value.replace(/[,;]+$/,'');
+   if(k==='species'){parts.push('寶可夢：'+v);continue}
+   if(k==='form'){parts.push('形態：'+(tokenMap.form[v]||v.replaceAll('_',' ')));continue}
+   if(k==='palette'){parts.push('外觀：'+(tokenMap.palette[v]||v.replaceAll('_',' ')));continue}
+   if(k==='gender'){parts.push('性別：'+(tokenMap.gender[v]||v));continue}
+   if(statNames[k]){ivs.push(statNames[k]+' '+v);continue}
+   unknown.push(name+':'+v);
+  }
+  if(ivs.length)parts.push('個體值條件：'+ivs.join('／'));
+  if(unknown.length)parts.push('其他規格：'+unknown.join('、'));
+  return parts.length?parts.join('；'):input;
+ }
+ function translateCondition(raw){
+  const t=normalized(raw);if(blank.has(t))return '無特殊條件';
   if(conditions[t])return `${conditions[t]}（${t}）`;
-  if(/[,;/]|\s+and\s+|\s+or\s+/i.test(t)){
-   const sep=t.match(/\s+and\s+/i)?/\s+and\s+/i:t.match(/\s+or\s+/i)?/\s+or\s+/i:/\s*[,;/]\s*/;
-   const join=t.match(/\s+and\s+/i)?' 且 ':t.match(/\s+or\s+/i)?' 或 ':'、';
+  // The datapack mixes a readable level range with compact species/form/palette/IV specs.
+  // Convert the latter to labels without changing numerical values or dropping conditions.
+  if(t.includes('形態／規格：')){
+   const [before,...rest]=t.split('形態／規格：');
+   const prefix=before.replace(/[；;\\s]+$/,'');
+   const spec=translateSpawnSpec(rest.join('形態／規格：'));
+   return [prefix,spec].filter(Boolean).join('；');
+  }
+  if(/[,;/]|\\s+and\\s+|\\s+or\\s+/i.test(t)){
+   const sep=t.match(/\\s+and\\s+/i)?/\\s+and\\s+/i:t.match(/\\s+or\\s+/i)?/\\s+or\\s+/i:/\\s*[,;/]\\s*/;
+   const join=t.match(/\\s+and\\s+/i)?' 且 ':t.match(/\\s+or\\s+/i)?' 或 ':'、';
    return t.split(sep).map(x=>translateCondition(x)).join(join);
   }
-  if(/[\u3400-\u9fff]/.test(t))return t;
+  if(/[\\u3400-\\u9fff]/.test(t))return t;
   logMissing.add(t);return `待翻譯（${t}）`;
  }
  const converters=[translateSpawnBiome,null,null,v=>translatePhrase(v,place,{compound:true}),translateCondition,v=>translatePhrase(v,rarity)];
@@ -116,7 +150,7 @@
    const cells=row.querySelectorAll('td');if(cells.length<6)return;
    for(let i of [0,3,4,5]){
     const cell=cells[i];if(cell.dataset.atlasOriginal===undefined)cell.dataset.atlasOriginal=normalized(cell.textContent);
-    if(i===0)cell.title=cell.dataset.atlasOriginal;
+    if(i===0||i===4)cell.title=cell.dataset.atlasOriginal;
     const val=converters[i](cell.dataset.atlasOriginal);
     if(cell.textContent!==val)cell.textContent=val;
    }
