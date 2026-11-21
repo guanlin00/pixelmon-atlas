@@ -37,7 +37,7 @@
   'Tree Tops':'樹頂','Surface Water':'水面','Water Surface':'水面','Seafloor':'海床',
   'Underwater':'水下','Lava':'熔岩中','Fishing':'釣魚','Forage':'野外採集',
   'Sweet Scent':'甜甜香氣','Headbutt':'撞樹','Rock Smash':'碎岩','Rock smash':'碎岩',
-  'Indoors':'室內','Lava Floor':'熔岩表面','Underground Water':'地下水域','Cave':'洞窟','Caves':'洞窟','Manmade':'人造區域','Treetop':'樹冠','Any':'不限'
+  'Grass':'草叢','Curry':'咖哩','Cave Rock':'洞穴岩石','Indoors':'室內','Lava Floor':'熔岩表面','Underground Water':'地下水域','Cave':'洞窟','Caves':'洞窟','Manmade':'人造區域','Treetop':'樹冠','Any':'不限'
  };
  const rarity = {
   'Common':'常見','Uncommon':'不常見','Rare':'稀有','Ultra Rare':'極稀有',
@@ -58,6 +58,16 @@
  function translatePhrase(raw,dict,{compound=false}={}){
   const t=normalized(raw);if(blank.has(t))return '無特殊限制';
   if(dict[t])return `${dict[t]}（${t}）`;
+  const tag=t.match(/^#pixelmon:spawning\/(.+)$/i);
+  if(tag){
+   const en=tag[1].replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+   return (biome[en]||'生成分類')+'（'+en+' · '+t+'）';
+  }
+  const namespaced=t.match(/^([a-z0-9_]+):([a-z0-9_\/.-]+)$/i);
+  if(namespaced){
+   const en=namespaced[2].replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+   return (biome[en]||'模組生態域')+'（'+en+' · '+t+'）';
+  }
   if(/^權重\s*\d+(?:\.\d+)?$/.test(t))return `${t}（非百分比）`;
   if(compound && /[,;/]/.test(t)) return t.split(/\s*[,;/]\s*/).filter(Boolean).map(x=>translatePhrase(x,dict)).join('、');
   if(compound && /\s+or\s+/i.test(t))return t.split(/\s+or\s+/i).map(x=>translatePhrase(x,dict)).join(' 或 ');
