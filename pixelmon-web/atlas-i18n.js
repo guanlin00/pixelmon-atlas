@@ -6,10 +6,10 @@
 (() => {
  const biome = {
   'Mountainous':'山岳地帶','Volcanic':'火山地帶','Eroded Badlands':'侵蝕惡地','Ultra Crater':'究極隕石坑',
-  'Birches':'樺木林類','Forests':'森林類','Ultra Forest':'究極森林','Crag Gardens':'岩壁花園',
-  'Arid':'乾燥地帶','Plains':'平原類','Taigas':'針葉林類','Mesas':'惡地類','Evil':'陰暗地帶',
-  'Swamps':'沼澤類','Jungles':'叢林類','Savannas':'莽原類','Oceans':'海洋類','Rivers':'河流類',
-  'Beaches':'海灘類','Hills':'丘陵類','Mountains':'山岳類','Cold':'寒冷地帶','Freezing':'冰凍地帶',
+  'Birches':'樺木林','Forests':'森林','Ultra Forest':'究極森林','Crag Gardens':'岩壁花園',
+  'Arid':'乾燥地帶','Plains':'平原','Taigas':'針葉林','Mesas':'惡地','Evil':'陰暗地帶',
+  'Swamps':'沼澤','Jungles':'叢林','Savannas':'莽原','Oceans':'海洋','Rivers':'河流',
+  'Beaches':'海灘','Hills':'丘陵','Mountains':'山岳','Cold':'寒冷地帶','Freezing':'冰凍地帶',
   'Snowy':'積雪地帶','Ice Plains':'冰原','Desert':'沙漠','Desert Hills':'沙漠丘陵',
   'Forest':'森林','Flower Forest':'繁花森林','Birch Forest':'樺木森林','Dark Forest':'黑森林',
   'Jungle':'叢林','Bamboo Jungle':'竹林','Sparse Jungle':'稀疏叢林','Taiga':'針葉林',
@@ -30,7 +30,7 @@
   'Ultra Space':'究極空間','Ultra Plant':'究極植物','Ultra Forest':'究極森林',
   'Lush Red Desert':'繁茂紅沙漠','Lush Desert':'繁茂沙漠','Mojave Desert':'莫哈維沙漠',
   'DesertHills':'沙漠丘陵','Roofed Forest':'黑森林','Mega Taiga':'巨木針葉林',
-  'Extreme Hills':'高山','Mesa':'惡地','Snowy Slopes':'積雪山坡','Windswept Gravelly Hills':'風襲礫石丘陵','Windswept Savanna':'風襲莽原','Savanna Plateau':'莽原高地','Savanna':'莽原','Deep Cold Ocean':'寒冷深海','Deep Lukewarm Ocean':'溫暖深海','Snowy Beach':'積雪海灘','Lakes':'湖泊類','Plains (Category)':'平原類','Ice Spikes':'冰刺平原','Windswept Forest':'風襲森林','Deep Warm Ocean':'溫暖深海','Any':'不限','None':'無限制'
+  'Extreme Hills':'高山','Mesa':'惡地','Snowy Slopes':'積雪山坡','Windswept Gravelly Hills':'風襲礫石丘陵','Windswept Savanna':'風襲莽原','Savanna Plateau':'莽原高地','Savanna':'莽原','Deep Cold Ocean':'寒冷深海','Deep Lukewarm Ocean':'溫暖深海','Snowy Beach':'積雪海灘','Lakes':'湖泊','Plains (Category)':'平原','Ice Spikes':'冰刺平原','Windswept Forest':'風襲森林','Deep Warm Ocean':'溫暖深海','Any':'不限','None':'無限制'
  };
  const place = {
   'Super Rod':'厲害釣竿','Good Rod':'好釣竿','Old Rod':'破舊釣竿',
