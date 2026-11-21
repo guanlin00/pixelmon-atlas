@@ -215,11 +215,18 @@ async function loadItems(){
   const source=await catalogRes.json();
   const added=atlasInstallCatalog(source);
   let registryCount=0;
-  if(registryRes.ok){registryCount=atlasMergeRegistry(await registryRes.json());}
-  else console.warn('Item-ID reference unavailable; Wiki categories remain available');
+  if(registryRes.ok){
+   try{
+    const raw=await registryRes.text();
+    if(raw.trim())registryCount=atlasMergeRegistry(JSON.parse(raw));
+    else console.warn('Pixelmon Item-ID registry file is empty; keeping Wiki categories');
+   }catch(registryError){console.warn('Pixelmon Item-ID registry could not be parsed; Wiki categories still available',registryError)}
+  }else console.warn('Item-ID reference unavailable; Wiki categories remain available');
   let minecraftCount=0;
-  if(minecraftRes.ok)minecraftCount=atlasMergeMinecraft(await minecraftRes.json());
-  else console.warn('Minecraft vanilla item index unavailable');
+  if(minecraftRes.ok){
+   try{minecraftCount=atlasMergeMinecraft(await minecraftRes.json());}
+   catch(mcError){console.warn('Minecraft item index could not be parsed',mcError)}
+  }else console.warn('Minecraft vanilla item index unavailable');
   // Enrich selected items from verified individual official Wiki pages after all catalog merges.
   const reviewedCount=window.atlasApplyReviewedItemMethods?.(ITEMS)||0;
   if(route()==='items'&&typeof atlasRefreshItemList==='function'){
