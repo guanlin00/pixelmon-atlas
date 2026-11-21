@@ -11,10 +11,12 @@
     "requested": 135,
     "imported": 135,
     "withSpawns": 135,
-    "withDrops": 133,
-    "withDropEntries": 133,
+    "withDrops": 135,
+    "withDropEntries": 135,
     "spawnRows": 951,
-    "dropRows": 409
+    "dropRows": 414,
+    "withAnyDrops": 135,
+    "formDropRows": 14
   },
   "records": [
     {
@@ -23,7 +25,8 @@
       "status": "official JAR imported",
       "spawnRows": 4,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 253,
@@ -31,7 +34,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 254,
@@ -39,7 +43,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 255,
@@ -47,7 +52,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 256,
@@ -55,7 +61,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 257,
@@ -63,7 +70,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 258,
@@ -71,7 +79,8 @@
       "status": "official JAR imported",
       "spawnRows": 8,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 259,
@@ -79,7 +88,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 260,
@@ -87,7 +97,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 261,
@@ -95,7 +106,8 @@
       "status": "official JAR imported",
       "spawnRows": 9,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 262,
@@ -103,23 +115,26 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 263,
       "name": "Zigzagoon",
       "status": "official JAR imported",
       "spawnRows": 20,
-      "dropRows": 0,
-      "dropEntryPresent": false
+      "dropRows": 2,
+      "dropEntryPresent": true,
+      "alternateFormCount": 1
     },
     {
       "id": 264,
       "name": "Linoone",
       "status": "official JAR imported",
       "spawnRows": 14,
-      "dropRows": 0,
-      "dropEntryPresent": false
+      "dropRows": 3,
+      "dropEntryPresent": true,
+      "alternateFormCount": 1
     },
     {
       "id": 265,
@@ -127,7 +142,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 266,
@@ -135,7 +151,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 267,
@@ -143,7 +160,8 @@
       "status": "official JAR imported",
       "spawnRows": 14,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 268,
@@ -151,7 +169,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 269,
@@ -159,7 +178,8 @@
       "status": "official JAR imported",
       "spawnRows": 14,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 270,
@@ -167,7 +187,8 @@
       "status": "official JAR imported",
       "spawnRows": 11,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 271,
@@ -175,7 +196,8 @@
       "status": "official JAR imported",
       "spawnRows": 10,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 272,
@@ -183,7 +205,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 273,
@@ -191,7 +214,8 @@
       "status": "official JAR imported",
       "spawnRows": 11,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 274,
@@ -199,7 +223,8 @@
       "status": "official JAR imported",
       "spawnRows": 4,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 275,
@@ -207,7 +232,8 @@
       "status": "official JAR imported",
       "spawnRows": 4,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 276,
@@ -215,7 +241,8 @@
       "status": "official JAR imported",
       "spawnRows": 18,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 277,
@@ -223,7 +250,8 @@
       "status": "official JAR imported",
       "spawnRows": 12,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 278,
@@ -231,7 +259,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 279,
@@ -239,7 +268,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 280,
@@ -247,7 +277,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 281,
@@ -255,7 +286,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 282,
@@ -263,7 +295,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 283,
@@ -271,7 +304,8 @@
       "status": "official JAR imported",
       "spawnRows": 11,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 284,
@@ -279,7 +313,8 @@
       "status": "official JAR imported",
       "spawnRows": 8,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 285,
@@ -287,7 +322,8 @@
       "status": "official JAR imported",
       "spawnRows": 11,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 286,
@@ -295,7 +331,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 287,
@@ -303,7 +340,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 288,
@@ -311,7 +349,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 289,
@@ -319,7 +358,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 290,
@@ -327,7 +367,8 @@
       "status": "official JAR imported",
       "spawnRows": 8,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 291,
@@ -335,7 +376,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 292,
@@ -343,7 +385,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 293,
@@ -351,7 +394,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 1,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 294,
@@ -359,7 +403,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 295,
@@ -367,7 +412,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 296,
@@ -375,7 +421,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 297,
@@ -383,7 +430,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 298,
@@ -391,7 +439,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 299,
@@ -399,7 +448,8 @@
       "status": "official JAR imported",
       "spawnRows": 12,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 300,
@@ -407,7 +457,8 @@
       "status": "official JAR imported",
       "spawnRows": 9,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 301,
@@ -415,7 +466,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 302,
@@ -423,7 +475,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 303,
@@ -431,7 +484,8 @@
       "status": "official JAR imported",
       "spawnRows": 11,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 304,
@@ -439,7 +493,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 305,
@@ -447,7 +502,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 306,
@@ -455,7 +511,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 307,
@@ -463,7 +520,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 308,
@@ -471,7 +529,8 @@
       "status": "official JAR imported",
       "spawnRows": 4,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 309,
@@ -479,7 +538,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 310,
@@ -487,7 +547,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 311,
@@ -495,7 +556,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 312,
@@ -503,7 +565,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 313,
@@ -511,7 +574,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 314,
@@ -519,7 +583,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 315,
@@ -527,7 +592,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 316,
@@ -535,7 +601,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 317,
@@ -543,7 +610,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 318,
@@ -551,7 +619,8 @@
       "status": "official JAR imported",
       "spawnRows": 11,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 319,
@@ -559,7 +628,8 @@
       "status": "official JAR imported",
       "spawnRows": 14,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 320,
@@ -567,7 +637,8 @@
       "status": "official JAR imported",
       "spawnRows": 4,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 321,
@@ -575,7 +646,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 322,
@@ -583,7 +655,8 @@
       "status": "official JAR imported",
       "spawnRows": 10,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 323,
@@ -591,7 +664,8 @@
       "status": "official JAR imported",
       "spawnRows": 10,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 324,
@@ -599,7 +673,8 @@
       "status": "official JAR imported",
       "spawnRows": 31,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 325,
@@ -607,7 +682,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 326,
@@ -615,7 +691,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 327,
@@ -623,7 +700,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 328,
@@ -631,7 +709,8 @@
       "status": "official JAR imported",
       "spawnRows": 4,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 329,
@@ -639,7 +718,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 330,
@@ -647,7 +727,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 331,
@@ -655,7 +736,8 @@
       "status": "official JAR imported",
       "spawnRows": 8,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 332,
@@ -663,7 +745,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 333,
@@ -671,7 +754,8 @@
       "status": "official JAR imported",
       "spawnRows": 18,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 334,
@@ -679,7 +763,8 @@
       "status": "official JAR imported",
       "spawnRows": 17,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 335,
@@ -687,7 +772,8 @@
       "status": "official JAR imported",
       "spawnRows": 9,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 336,
@@ -695,7 +781,8 @@
       "status": "official JAR imported",
       "spawnRows": 9,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 337,
@@ -703,7 +790,8 @@
       "status": "official JAR imported",
       "spawnRows": 18,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 338,
@@ -711,7 +799,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 339,
@@ -719,7 +808,8 @@
       "status": "official JAR imported",
       "spawnRows": 10,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 340,
@@ -727,7 +817,8 @@
       "status": "official JAR imported",
       "spawnRows": 12,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 341,
@@ -735,7 +826,8 @@
       "status": "official JAR imported",
       "spawnRows": 21,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 342,
@@ -743,7 +835,8 @@
       "status": "official JAR imported",
       "spawnRows": 11,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 343,
@@ -751,7 +844,8 @@
       "status": "official JAR imported",
       "spawnRows": 8,
       "dropRows": 7,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 344,
@@ -759,7 +853,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 8,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 345,
@@ -767,7 +862,8 @@
       "status": "official JAR imported",
       "spawnRows": 1,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 346,
@@ -775,7 +871,8 @@
       "status": "official JAR imported",
       "spawnRows": 1,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 347,
@@ -783,7 +880,8 @@
       "status": "official JAR imported",
       "spawnRows": 1,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 348,
@@ -791,7 +889,8 @@
       "status": "official JAR imported",
       "spawnRows": 1,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 349,
@@ -799,7 +898,8 @@
       "status": "official JAR imported",
       "spawnRows": 12,
       "dropRows": 1,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 350,
@@ -807,7 +907,8 @@
       "status": "official JAR imported",
       "spawnRows": 12,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 351,
@@ -815,7 +916,8 @@
       "status": "official JAR imported",
       "spawnRows": 12,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 3
     },
     {
       "id": 352,
@@ -823,7 +925,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 353,
@@ -831,7 +934,8 @@
       "status": "official JAR imported",
       "spawnRows": 10,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 354,
@@ -839,7 +943,8 @@
       "status": "official JAR imported",
       "spawnRows": 10,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 355,
@@ -847,7 +952,8 @@
       "status": "official JAR imported",
       "spawnRows": 10,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 356,
@@ -855,7 +961,8 @@
       "status": "official JAR imported",
       "spawnRows": 9,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 357,
@@ -863,7 +970,8 @@
       "status": "official JAR imported",
       "spawnRows": 4,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 358,
@@ -871,7 +979,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 5,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 359,
@@ -879,7 +988,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 360,
@@ -887,7 +997,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 361,
@@ -895,7 +1006,8 @@
       "status": "official JAR imported",
       "spawnRows": 6,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 362,
@@ -903,7 +1015,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 363,
@@ -911,7 +1024,8 @@
       "status": "official JAR imported",
       "spawnRows": 8,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 364,
@@ -919,7 +1033,8 @@
       "status": "official JAR imported",
       "spawnRows": 8,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 365,
@@ -927,7 +1042,8 @@
       "status": "official JAR imported",
       "spawnRows": 7,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 366,
@@ -935,7 +1051,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 367,
@@ -943,7 +1060,8 @@
       "status": "official JAR imported",
       "spawnRows": 9,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 368,
@@ -951,7 +1069,8 @@
       "status": "official JAR imported",
       "spawnRows": 12,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 369,
@@ -959,7 +1078,8 @@
       "status": "official JAR imported",
       "spawnRows": 10,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 370,
@@ -967,7 +1087,8 @@
       "status": "official JAR imported",
       "spawnRows": 8,
       "dropRows": 1,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 371,
@@ -975,7 +1096,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 372,
@@ -983,7 +1105,8 @@
       "status": "official JAR imported",
       "spawnRows": 4,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 373,
@@ -991,7 +1114,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 374,
@@ -999,7 +1123,8 @@
       "status": "official JAR imported",
       "spawnRows": 13,
       "dropRows": 2,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 375,
@@ -1007,7 +1132,8 @@
       "status": "official JAR imported",
       "spawnRows": 9,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 376,
@@ -1015,7 +1141,8 @@
       "status": "official JAR imported",
       "spawnRows": 13,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 377,
@@ -1023,7 +1150,8 @@
       "status": "official JAR imported",
       "spawnRows": 1,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 378,
@@ -1031,7 +1159,8 @@
       "status": "official JAR imported",
       "spawnRows": 1,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 379,
@@ -1039,7 +1168,8 @@
       "status": "official JAR imported",
       "spawnRows": 1,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 380,
@@ -1047,7 +1177,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 381,
@@ -1055,7 +1186,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 382,
@@ -1063,7 +1195,8 @@
       "status": "official JAR imported",
       "spawnRows": 5,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 383,
@@ -1071,7 +1204,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 384,
@@ -1079,7 +1213,8 @@
       "status": "official JAR imported",
       "spawnRows": 3,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 385,
@@ -1087,7 +1222,8 @@
       "status": "official JAR imported",
       "spawnRows": 1,
       "dropRows": 3,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     },
     {
       "id": 386,
@@ -1095,7 +1231,8 @@
       "status": "official JAR imported",
       "spawnRows": 2,
       "dropRows": 4,
-      "dropEntryPresent": true
+      "dropEntryPresent": true,
+      "alternateFormCount": 0
     }
   ]
 }
