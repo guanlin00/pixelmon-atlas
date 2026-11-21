@@ -1,0 +1,1236 @@
+{
+  "metadata": {
+    "source": "https://pixelmon.site/",
+    "sourceType": "THIRD-PARTY Pixelmon reference, not official Pixelmon Wiki",
+    "generation": 3,
+    "dexStart": 252,
+    "dexEnd": 386,
+    "requested": 135,
+    "updated": "2026-11-21",
+    "notes": "Imported only records with matching National Dex ID and an actual Drops table; missing pages explicitly audited. No version compatibility claim.",
+    "imported": 135,
+    "missing": 0,
+    "withSpawns": 134,
+    "withDrops": 135,
+    "spawnRows": 641,
+    "dropRows": 403
+  },
+  "records": [
+    {
+      "id": 252,
+      "slug": "treecko",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 2,
+      "source": "https://pixelmon.site/treecko/",
+      "error": null
+    },
+    {
+      "id": 253,
+      "slug": "grovyle",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/grovyle/",
+      "error": null
+    },
+    {
+      "id": 254,
+      "slug": "sceptile",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 4,
+      "source": "https://pixelmon.site/sceptile/",
+      "error": null
+    },
+    {
+      "id": 255,
+      "slug": "torchic",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/torchic/",
+      "error": null
+    },
+    {
+      "id": 256,
+      "slug": "combusken",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/combusken/",
+      "error": null
+    },
+    {
+      "id": 257,
+      "slug": "blaziken",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 4,
+      "source": "https://pixelmon.site/blaziken/",
+      "error": null
+    },
+    {
+      "id": 258,
+      "slug": "mudkip",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/mudkip/",
+      "error": null
+    },
+    {
+      "id": 259,
+      "slug": "marshtomp",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/marshtomp/",
+      "error": null
+    },
+    {
+      "id": 260,
+      "slug": "swampert",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 4,
+      "source": "https://pixelmon.site/swampert/",
+      "error": null
+    },
+    {
+      "id": 261,
+      "slug": "poochyena",
+      "status": "imported",
+      "spawnRules": 7,
+      "drops": 2,
+      "source": "https://pixelmon.site/poochyena/",
+      "error": null
+    },
+    {
+      "id": 262,
+      "slug": "mightyena",
+      "status": "imported",
+      "spawnRules": 8,
+      "drops": 3,
+      "source": "https://pixelmon.site/mightyena/",
+      "error": null
+    },
+    {
+      "id": 263,
+      "slug": "zigzagoon",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 2,
+      "source": "https://pixelmon.site/zigzagoon/",
+      "error": null
+    },
+    {
+      "id": 264,
+      "slug": "linoone",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/linoone/",
+      "error": null
+    },
+    {
+      "id": 265,
+      "slug": "wurmple",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 2,
+      "source": "https://pixelmon.site/wurmple/",
+      "error": null
+    },
+    {
+      "id": 266,
+      "slug": "silcoon",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/silcoon/",
+      "error": null
+    },
+    {
+      "id": 267,
+      "slug": "beautifly",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/beautifly/",
+      "error": null
+    },
+    {
+      "id": 268,
+      "slug": "cascoon",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/cascoon/",
+      "error": null
+    },
+    {
+      "id": 269,
+      "slug": "dustox",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/dustox/",
+      "error": null
+    },
+    {
+      "id": 270,
+      "slug": "lotad",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 2,
+      "source": "https://pixelmon.site/lotad/",
+      "error": null
+    },
+    {
+      "id": 271,
+      "slug": "lombre",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/lombre/",
+      "error": null
+    },
+    {
+      "id": 272,
+      "slug": "ludicolo",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/ludicolo/",
+      "error": null
+    },
+    {
+      "id": 273,
+      "slug": "seedot",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/seedot/",
+      "error": null
+    },
+    {
+      "id": 274,
+      "slug": "nuzleaf",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/nuzleaf/",
+      "error": null
+    },
+    {
+      "id": 275,
+      "slug": "shiftry",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/shiftry/",
+      "error": null
+    },
+    {
+      "id": 276,
+      "slug": "taillow",
+      "status": "imported",
+      "spawnRules": 10,
+      "drops": 2,
+      "source": "https://pixelmon.site/taillow/",
+      "error": null
+    },
+    {
+      "id": 277,
+      "slug": "swellow",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 4,
+      "source": "https://pixelmon.site/swellow/",
+      "error": null
+    },
+    {
+      "id": 278,
+      "slug": "wingull",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/wingull/",
+      "error": null
+    },
+    {
+      "id": 279,
+      "slug": "pelipper",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 4,
+      "source": "https://pixelmon.site/pelipper/",
+      "error": null
+    },
+    {
+      "id": 280,
+      "slug": "ralts",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/ralts/",
+      "error": null
+    },
+    {
+      "id": 281,
+      "slug": "kirlia",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/kirlia/",
+      "error": null
+    },
+    {
+      "id": 282,
+      "slug": "gardevoir",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 4,
+      "source": "https://pixelmon.site/gardevoir/",
+      "error": null
+    },
+    {
+      "id": 283,
+      "slug": "surskit",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/surskit/",
+      "error": null
+    },
+    {
+      "id": 284,
+      "slug": "masquerain",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/masquerain/",
+      "error": null
+    },
+    {
+      "id": 285,
+      "slug": "shroomish",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 2,
+      "source": "https://pixelmon.site/shroomish/",
+      "error": null
+    },
+    {
+      "id": 286,
+      "slug": "breloom",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 4,
+      "source": "https://pixelmon.site/breloom/",
+      "error": null
+    },
+    {
+      "id": 287,
+      "slug": "slakoth",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/slakoth/",
+      "error": null
+    },
+    {
+      "id": 288,
+      "slug": "vigoroth",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/vigoroth/",
+      "error": null
+    },
+    {
+      "id": 289,
+      "slug": "slaking",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/slaking/",
+      "error": null
+    },
+    {
+      "id": 290,
+      "slug": "nincada",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/nincada/",
+      "error": null
+    },
+    {
+      "id": 291,
+      "slug": "ninjask",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 4,
+      "source": "https://pixelmon.site/ninjask/",
+      "error": null
+    },
+    {
+      "id": 292,
+      "slug": "shedinja",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 4,
+      "source": "https://pixelmon.site/shedinja/",
+      "error": null
+    },
+    {
+      "id": 293,
+      "slug": "whismur",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 1,
+      "source": "https://pixelmon.site/whismur/",
+      "error": null
+    },
+    {
+      "id": 294,
+      "slug": "loudred",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/loudred/",
+      "error": null
+    },
+    {
+      "id": 295,
+      "slug": "exploud",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 4,
+      "source": "https://pixelmon.site/exploud/",
+      "error": null
+    },
+    {
+      "id": 296,
+      "slug": "makuhita",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 2,
+      "source": "https://pixelmon.site/makuhita/",
+      "error": null
+    },
+    {
+      "id": 297,
+      "slug": "hariyama",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/hariyama/",
+      "error": null
+    },
+    {
+      "id": 298,
+      "slug": "azurill",
+      "status": "imported",
+      "spawnRules": 0,
+      "drops": 2,
+      "source": "https://pixelmon.site/azurill/",
+      "error": null
+    },
+    {
+      "id": 299,
+      "slug": "nosepass",
+      "status": "imported",
+      "spawnRules": 10,
+      "drops": 4,
+      "source": "https://pixelmon.site/nosepass/",
+      "error": null
+    },
+    {
+      "id": 300,
+      "slug": "skitty",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/skitty/",
+      "error": null
+    },
+    {
+      "id": 301,
+      "slug": "delcatty",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/delcatty/",
+      "error": null
+    },
+    {
+      "id": 302,
+      "slug": "sableye",
+      "status": "imported",
+      "spawnRules": 7,
+      "drops": 4,
+      "source": "https://pixelmon.site/sableye/",
+      "error": null
+    },
+    {
+      "id": 303,
+      "slug": "mawile",
+      "status": "imported",
+      "spawnRules": 12,
+      "drops": 3,
+      "source": "https://pixelmon.site/mawile/",
+      "error": null
+    },
+    {
+      "id": 304,
+      "slug": "aron",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/aron/",
+      "error": null
+    },
+    {
+      "id": 305,
+      "slug": "lairon",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/lairon/",
+      "error": null
+    },
+    {
+      "id": 306,
+      "slug": "aggron",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 4,
+      "source": "https://pixelmon.site/aggron/",
+      "error": null
+    },
+    {
+      "id": 307,
+      "slug": "meditite",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 2,
+      "source": "https://pixelmon.site/meditite/",
+      "error": null
+    },
+    {
+      "id": 308,
+      "slug": "medicham",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/medicham/",
+      "error": null
+    },
+    {
+      "id": 309,
+      "slug": "electrike",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 2,
+      "source": "https://pixelmon.site/electrike/",
+      "error": null
+    },
+    {
+      "id": 310,
+      "slug": "manectric",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/manectric/",
+      "error": null
+    },
+    {
+      "id": 311,
+      "slug": "plusle",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 3,
+      "source": "https://pixelmon.site/plusle/",
+      "error": null
+    },
+    {
+      "id": 312,
+      "slug": "minun",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 3,
+      "source": "https://pixelmon.site/minun/",
+      "error": null
+    },
+    {
+      "id": 313,
+      "slug": "volbeat",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/volbeat/",
+      "error": null
+    },
+    {
+      "id": 314,
+      "slug": "illumise",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/illumise/",
+      "error": null
+    },
+    {
+      "id": 315,
+      "slug": "roselia",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 4,
+      "source": "https://pixelmon.site/roselia/",
+      "error": null
+    },
+    {
+      "id": 316,
+      "slug": "gulpin",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 2,
+      "source": "https://pixelmon.site/gulpin/",
+      "error": null
+    },
+    {
+      "id": 317,
+      "slug": "swalot",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/swalot/",
+      "error": null
+    },
+    {
+      "id": 318,
+      "slug": "carvanha",
+      "status": "imported",
+      "spawnRules": 14,
+      "drops": 2,
+      "source": "https://pixelmon.site/carvanha/",
+      "error": null
+    },
+    {
+      "id": 319,
+      "slug": "sharpedo",
+      "status": "imported",
+      "spawnRules": 17,
+      "drops": 3,
+      "source": "https://pixelmon.site/sharpedo/",
+      "error": null
+    },
+    {
+      "id": 320,
+      "slug": "wailmer",
+      "status": "imported",
+      "spawnRules": 9,
+      "drops": 3,
+      "source": "https://pixelmon.site/wailmer/",
+      "error": null
+    },
+    {
+      "id": 321,
+      "slug": "wailord",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/wailord/",
+      "error": null
+    },
+    {
+      "id": 322,
+      "slug": "numel",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/numel/",
+      "error": null
+    },
+    {
+      "id": 323,
+      "slug": "camerupt",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 4,
+      "source": "https://pixelmon.site/camerupt/",
+      "error": null
+    },
+    {
+      "id": 324,
+      "slug": "torkoal",
+      "status": "imported",
+      "spawnRules": 11,
+      "drops": 3,
+      "source": "https://pixelmon.site/torkoal/",
+      "error": null
+    },
+    {
+      "id": 325,
+      "slug": "spoink",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/spoink/",
+      "error": null
+    },
+    {
+      "id": 326,
+      "slug": "grumpig",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 4,
+      "source": "https://pixelmon.site/grumpig/",
+      "error": null
+    },
+    {
+      "id": 327,
+      "slug": "spinda",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 3,
+      "source": "https://pixelmon.site/spinda/",
+      "error": null
+    },
+    {
+      "id": 328,
+      "slug": "trapinch",
+      "status": "imported",
+      "spawnRules": 1,
+      "drops": 2,
+      "source": "https://pixelmon.site/trapinch/",
+      "error": null
+    },
+    {
+      "id": 329,
+      "slug": "vibrava",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/vibrava/",
+      "error": null
+    },
+    {
+      "id": 330,
+      "slug": "flygon",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 4,
+      "source": "https://pixelmon.site/flygon/",
+      "error": null
+    },
+    {
+      "id": 331,
+      "slug": "cacnea",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 2,
+      "source": "https://pixelmon.site/cacnea/",
+      "error": null
+    },
+    {
+      "id": 332,
+      "slug": "cacturne",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 3,
+      "source": "https://pixelmon.site/cacturne/",
+      "error": null
+    },
+    {
+      "id": 333,
+      "slug": "swablu",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/swablu/",
+      "error": null
+    },
+    {
+      "id": 334,
+      "slug": "altaria",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/altaria/",
+      "error": null
+    },
+    {
+      "id": 335,
+      "slug": "zangoose",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/zangoose/",
+      "error": null
+    },
+    {
+      "id": 336,
+      "slug": "seviper",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/seviper/",
+      "error": null
+    },
+    {
+      "id": 337,
+      "slug": "lunatone",
+      "status": "imported",
+      "spawnRules": 9,
+      "drops": 3,
+      "source": "https://pixelmon.site/lunatone/",
+      "error": null
+    },
+    {
+      "id": 338,
+      "slug": "solrock",
+      "status": "imported",
+      "spawnRules": 9,
+      "drops": 3,
+      "source": "https://pixelmon.site/solrock/",
+      "error": null
+    },
+    {
+      "id": 339,
+      "slug": "barboach",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/barboach/",
+      "error": null
+    },
+    {
+      "id": 340,
+      "slug": "whiscash",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/whiscash/",
+      "error": null
+    },
+    {
+      "id": 341,
+      "slug": "corphish",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 2,
+      "source": "https://pixelmon.site/corphish/",
+      "error": null
+    },
+    {
+      "id": 342,
+      "slug": "crawdaunt",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 3,
+      "source": "https://pixelmon.site/crawdaunt/",
+      "error": null
+    },
+    {
+      "id": 343,
+      "slug": "baltoy",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 2,
+      "source": "https://pixelmon.site/baltoy/",
+      "error": null
+    },
+    {
+      "id": 344,
+      "slug": "claydol",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/claydol/",
+      "error": null
+    },
+    {
+      "id": 345,
+      "slug": "lileep",
+      "status": "imported",
+      "spawnRules": 1,
+      "drops": 3,
+      "source": "https://pixelmon.site/lileep/",
+      "error": null
+    },
+    {
+      "id": 346,
+      "slug": "cradily",
+      "status": "imported",
+      "spawnRules": 1,
+      "drops": 3,
+      "source": "https://pixelmon.site/cradily/",
+      "error": null
+    },
+    {
+      "id": 347,
+      "slug": "anorith",
+      "status": "imported",
+      "spawnRules": 1,
+      "drops": 3,
+      "source": "https://pixelmon.site/anorith/",
+      "error": null
+    },
+    {
+      "id": 348,
+      "slug": "armaldo",
+      "status": "imported",
+      "spawnRules": 1,
+      "drops": 3,
+      "source": "https://pixelmon.site/armaldo/",
+      "error": null
+    },
+    {
+      "id": 349,
+      "slug": "feebas",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 1,
+      "source": "https://pixelmon.site/feebas/",
+      "error": null
+    },
+    {
+      "id": 350,
+      "slug": "milotic",
+      "status": "imported",
+      "spawnRules": 8,
+      "drops": 4,
+      "source": "https://pixelmon.site/milotic/",
+      "error": null
+    },
+    {
+      "id": 351,
+      "slug": "castform",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 3,
+      "source": "https://pixelmon.site/castform/",
+      "error": null
+    },
+    {
+      "id": 352,
+      "slug": "kecleon",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/kecleon/",
+      "error": null
+    },
+    {
+      "id": 353,
+      "slug": "shuppet",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/shuppet/",
+      "error": null
+    },
+    {
+      "id": 354,
+      "slug": "banette",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 4,
+      "source": "https://pixelmon.site/banette/",
+      "error": null
+    },
+    {
+      "id": 355,
+      "slug": "duskull",
+      "status": "imported",
+      "spawnRules": 9,
+      "drops": 3,
+      "source": "https://pixelmon.site/duskull/",
+      "error": null
+    },
+    {
+      "id": 356,
+      "slug": "dusclops",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 4,
+      "source": "https://pixelmon.site/dusclops/",
+      "error": null
+    },
+    {
+      "id": 357,
+      "slug": "tropius",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 4,
+      "source": "https://pixelmon.site/tropius/",
+      "error": null
+    },
+    {
+      "id": 358,
+      "slug": "chimecho",
+      "status": "imported",
+      "spawnRules": 1,
+      "drops": 4,
+      "source": "https://pixelmon.site/chimecho/",
+      "error": null
+    },
+    {
+      "id": 359,
+      "slug": "absol",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/absol/",
+      "error": null
+    },
+    {
+      "id": 360,
+      "slug": "wynaut",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 2,
+      "source": "https://pixelmon.site/wynaut/",
+      "error": null
+    },
+    {
+      "id": 361,
+      "slug": "snorunt",
+      "status": "imported",
+      "spawnRules": 12,
+      "drops": 2,
+      "source": "https://pixelmon.site/snorunt/",
+      "error": null
+    },
+    {
+      "id": 362,
+      "slug": "glalie",
+      "status": "imported",
+      "spawnRules": 7,
+      "drops": 3,
+      "source": "https://pixelmon.site/glalie/",
+      "error": null
+    },
+    {
+      "id": 363,
+      "slug": "spheal",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 2,
+      "source": "https://pixelmon.site/spheal/",
+      "error": null
+    },
+    {
+      "id": 364,
+      "slug": "sealeo",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/sealeo/",
+      "error": null
+    },
+    {
+      "id": 365,
+      "slug": "walrein",
+      "status": "imported",
+      "spawnRules": 6,
+      "drops": 3,
+      "source": "https://pixelmon.site/walrein/",
+      "error": null
+    },
+    {
+      "id": 366,
+      "slug": "clamperl",
+      "status": "imported",
+      "spawnRules": 9,
+      "drops": 4,
+      "source": "https://pixelmon.site/clamperl/",
+      "error": null
+    },
+    {
+      "id": 367,
+      "slug": "huntail",
+      "status": "imported",
+      "spawnRules": 13,
+      "drops": 4,
+      "source": "https://pixelmon.site/huntail/",
+      "error": null
+    },
+    {
+      "id": 368,
+      "slug": "gorebyss",
+      "status": "imported",
+      "spawnRules": 19,
+      "drops": 4,
+      "source": "https://pixelmon.site/gorebyss/",
+      "error": null
+    },
+    {
+      "id": 369,
+      "slug": "relicanth",
+      "status": "imported",
+      "spawnRules": 13,
+      "drops": 3,
+      "source": "https://pixelmon.site/relicanth/",
+      "error": null
+    },
+    {
+      "id": 370,
+      "slug": "luvdisc",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 2,
+      "source": "https://pixelmon.site/luvdisc/",
+      "error": null
+    },
+    {
+      "id": 371,
+      "slug": "bagon",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 2,
+      "source": "https://pixelmon.site/bagon/",
+      "error": null
+    },
+    {
+      "id": 372,
+      "slug": "shelgon",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 3,
+      "source": "https://pixelmon.site/shelgon/",
+      "error": null
+    },
+    {
+      "id": 373,
+      "slug": "salamence",
+      "status": "imported",
+      "spawnRules": 4,
+      "drops": 4,
+      "source": "https://pixelmon.site/salamence/",
+      "error": null
+    },
+    {
+      "id": 374,
+      "slug": "beldum",
+      "status": "imported",
+      "spawnRules": 13,
+      "drops": 2,
+      "source": "https://pixelmon.site/beldum/",
+      "error": null
+    },
+    {
+      "id": 375,
+      "slug": "metang",
+      "status": "imported",
+      "spawnRules": 12,
+      "drops": 3,
+      "source": "https://pixelmon.site/metang/",
+      "error": null
+    },
+    {
+      "id": 376,
+      "slug": "metagross",
+      "status": "imported",
+      "spawnRules": 12,
+      "drops": 4,
+      "source": "https://pixelmon.site/metagross/",
+      "error": null
+    },
+    {
+      "id": 377,
+      "slug": "regirock",
+      "status": "imported",
+      "spawnRules": 3,
+      "drops": 4,
+      "source": "https://pixelmon.site/regirock/",
+      "error": null
+    },
+    {
+      "id": 378,
+      "slug": "regice",
+      "status": "imported",
+      "spawnRules": 7,
+      "drops": 4,
+      "source": "https://pixelmon.site/regice/",
+      "error": null
+    },
+    {
+      "id": 379,
+      "slug": "registeel",
+      "status": "imported",
+      "spawnRules": 1,
+      "drops": 4,
+      "source": "https://pixelmon.site/registeel/",
+      "error": null
+    },
+    {
+      "id": 380,
+      "slug": "latias",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/latias/",
+      "error": null
+    },
+    {
+      "id": 381,
+      "slug": "latios",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 3,
+      "source": "https://pixelmon.site/latios/",
+      "error": null
+    },
+    {
+      "id": 382,
+      "slug": "kyogre",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 4,
+      "source": "https://pixelmon.site/kyogre/",
+      "error": null
+    },
+    {
+      "id": 383,
+      "slug": "groudon",
+      "status": "imported",
+      "spawnRules": 1,
+      "drops": 4,
+      "source": "https://pixelmon.site/groudon/",
+      "error": null
+    },
+    {
+      "id": 384,
+      "slug": "rayquaza",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 4,
+      "source": "https://pixelmon.site/rayquaza/",
+      "error": null
+    },
+    {
+      "id": 385,
+      "slug": "jirachi",
+      "status": "imported",
+      "spawnRules": 5,
+      "drops": 3,
+      "source": "https://pixelmon.site/jirachi/",
+      "error": null
+    },
+    {
+      "id": 386,
+      "slug": "deoxys",
+      "status": "imported",
+      "spawnRules": 2,
+      "drops": 4,
+      "source": "https://pixelmon.site/deoxys/",
+      "error": null
+    }
+  ],
+  "missing": []
+}
