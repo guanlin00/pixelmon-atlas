@@ -109,7 +109,7 @@
  function translateSpawnSpec(input){
   const tokenMap={form:{battle_bond:'牽絆變身',ash:'小智形態'},palette:{alter:'Alter 特殊外觀'},gender:{male:'雄性',female:'雌性',genderless:'無性別'}};
   const statNames={ivhp:'HP',ivatk:'攻擊',ivdef:'防禦',ivspatk:'特攻',ivspdef:'特防',ivspd:'速度'};
-  const pairs=[...input.matchAll(/([a-z][a-z0-9_]*):([^\\s]+)/gi)];
+  const pairs=[...input.matchAll(/([a-z][a-z0-9_]*):([^\s]+)/gi)];
   const parts=[],ivs=[],unknown=[];
   for(const [,name,value] of pairs){
    const k=name.toLowerCase(),v=value.replace(/[,;]+$/,'');
@@ -131,16 +131,16 @@
   // Convert the latter to labels without changing numerical values or dropping conditions.
   if(t.includes('形態／規格：')){
    const [before,...rest]=t.split('形態／規格：');
-   const prefix=before.replace(/[；;\\s]+$/,'');
+   const prefix=before.replace(/[；;\s]+$/,'');
    const spec=translateSpawnSpec(rest.join('形態／規格：'));
    return [prefix,spec].filter(Boolean).join('；');
   }
-  if(/[,;/]|\\s+and\\s+|\\s+or\\s+/i.test(t)){
-   const sep=t.match(/\\s+and\\s+/i)?/\\s+and\\s+/i:t.match(/\\s+or\\s+/i)?/\\s+or\\s+/i:/\\s*[,;/]\\s*/;
-   const join=t.match(/\\s+and\\s+/i)?' 且 ':t.match(/\\s+or\\s+/i)?' 或 ':'、';
+  if(/[,;/]|\s+and\s+|\s+or\s+/i.test(t)){
+   const sep=t.match(/\s+and\s+/i)?/\s+and\s+/i:t.match(/\s+or\s+/i)?/\s+or\s+/i:/\s*[,;/]\s*/;
+   const join=t.match(/\s+and\s+/i)?' 且 ':t.match(/\s+or\s+/i)?' 或 ':'、';
    return t.split(sep).map(x=>translateCondition(x)).join(join);
   }
-  if(/[\\u3400-\\u9fff]/.test(t))return t;
+  if(/[\u3400-\u9fff]/.test(t))return t;
   logMissing.add(t);return `待翻譯（${t}）`;
  }
  const converters=[translateSpawnBiome,null,null,v=>translatePhrase(v,place,{compound:true}),translateCondition,v=>translatePhrase(v,rarity)];
