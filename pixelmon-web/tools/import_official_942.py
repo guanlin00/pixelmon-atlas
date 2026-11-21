@@ -75,13 +75,16 @@ def scan_drops(archive,species):
     if not isinstance(raw,list):raise ValueError('Unexpected official pokedrops structure')
     by_name={normalize(rec['name']):dex for dex,rec in species.items()}
     records={}
+    alternate=collections.defaultdict(dict)
     unmatched=[]
     for entry in raw:
-        pokemon=entry.get('pokemon')
-        id=by_name.get(normalize(pokemon))
+        pokemon=str(entry.get('pokemon') or '')
+        base_name=re.split(r'\s+(?:form|palette):',pokemon,maxsplit=1,flags=re.I)[0]
+        id=by_name.get(normalize(base_name))
         if id is None:
-            unmatched.append(str(pokemon))
+            unmatched.append(pokemon)
             continue
+        variant=pokemon[len(base_name):].strip()
         items=[]
         for item in entry.get('items',[]):
             if not isinstance(item,dict):continue
@@ -98,15 +101,17 @@ def scan_drops(archive,species):
                           'gameItemId':str(rawid),
                           'chance':ch,'quantity':qty,
                           'min':lo,'max':hi,'chanceFraction':rawchance})
-        if id in records:
-            # Some variants have their own tables; do not quietly mix them.
-            print('DUPLICATE_DROP_SPECIES',id,pokemon,flush=True)
-            continue
-        records[id]=items
-    if len(records)<950:
-        raise ValueError('Too few official drop entries, got '+str(len(records)))
-    print('OFFICIAL_DROPS',len(records),'UNMATCHED_NAMES',len(unmatched),unmatched[:45],flush=True)
-    return records,unmatched
+        if not variant or re.match(r'form:base\b',variant,flags=re.I):
+            if id not in records or not variant:
+                records[id]=items
+        else:
+            alternate[id][variant]=items
+    covered=set(records)|set(alternate)
+    if len(covered)<950:
+        raise ValueError('Too few official drop entries, got '+str(len(covered)))
+    print('OFFICIAL_DROPS',len(records),'WITH_SPECIAL_FORMS',len(alternate),
+          'COVERED_SPECIES',len(covered),'UNMATCHED_NAMES',len(unmatched),unmatched[:45],flush=True)
+    return records,dict(alternate),unmatched
 
 def condition_text(obj):
     """Display only verbatim constraints and simple well-known keys."""
@@ -189,7 +194,7 @@ def parse_spawns(archive,species):
           'GROUPS',categories,'UNLINKED',len(unlinked),'SAMPLE',unlinked[:12],flush=True)
     return records,unlinked,categories
 
-def save_data(species,drops,spawns,sha256,missing_species,unmatched,unlinked):
+def save_data(species,drops,alternate,spawns,sha256,missing_species,unmatched,unlinked):
     progress={'modVersion':VERSION,'sha256':sha256,'source':SOURCE_URL,'updated':datetime.date.today().isoformat(),
               'generations':[],'missingDexInJar':missing_species,
               'unmatchedDropNames':unmatched,
@@ -208,31 +213,37 @@ def save_data(species,drops,spawns,sha256,missing_species,unmatched,unlinked):
             info=species[id]
             spawnrows=spawns.get(id,[])
             droprows=drops.get(id,[])
+            variant_drops=alternate.get(id,{})
             entry={'source':SOURCE_URL,'sourceFile':info['path'],
-                   'spawn':spawnrows,'drops':droprows,
+                   'spawn':spawnrows,'drops':droprows,'formDrops':variant_drops,
                    'verification':{
                       'sourceStatus':'Verified from original Pixelmon 9.4.2 JAR datapack',
                       'modVersion':VERSION,
                       'spawnSectionPresent':bool(spawnrows),
-                      'dropsSectionPresent':id in drops,
+                      'dropsSectionPresent':id in drops or bool(variant_drops),
                       'notes':'Individual forms and palettes may need separate interpretation. 0 spawn rows is NOT a claim of unobtainability.'
                    }}
             out['pokemon'][str(id)]=entry
-            for drop in droprows:
-                out['items'].setdefault(drop['item'],[]).append({
-                  'pokemonId':id,'chance':drop['chance'],
-                  'quantity':drop['quantity'],'gameItemId':drop['gameItemId']})
+            for form,rows in [('一般形態',droprows)]+list(variant_drops.items()):
+                for drop in rows:
+                    out['items'].setdefault(drop['item'],[]).append({
+                      'pokemonId':id,'chance':drop['chance'],
+                      'quantity':drop['quantity'],'gameItemId':drop['gameItemId'],
+                      'form':form if form!='一般形態' else None})
             audit.append({'id':id,'name':info['name'],
                           'status':'official JAR imported',
                           'spawnRows':len(spawnrows),'dropRows':len(droprows),
-                          'dropEntryPresent':id in drops})
+                          'dropEntryPresent':id in drops or bool(variant_drops),
+                          'alternateFormCount':len(variant_drops)})
         n=len(out['pokemon'])
         out['metadata'].update({'requested':b-a+1,'imported':n,
                                 'withSpawns':sum(bool(x['spawn']) for x in out['pokemon'].values()),
                                 'withDrops':sum(bool(x['drops']) for x in out['pokemon'].values()),
                                 'withDropEntries':sum(x['verification']['dropsSectionPresent'] for x in out['pokemon'].values()),
                                 'spawnRows':sum(len(x['spawn']) for x in out['pokemon'].values()),
-                                'dropRows':sum(len(x['drops']) for x in out['pokemon'].values())})
+                                'dropRows':sum(len(x['drops']) for x in out['pokemon'].values()),
+                   'withAnyDrops':sum(bool(x['drops'] or x['formDrops']) for x in out['pokemon'].values()),
+                   'formDropRows':sum(sum(len(v) for v in x['formDrops'].values()) for x in out['pokemon'].values())})
         (ROOT/f'official-942-gen{gen}.json').write_text(json.dumps(out,ensure_ascii=False,separators=(',',':'))+'\n','utf-8')
         (ROOT/f'official-942-gen{gen}-audit.json').write_text(json.dumps({'metadata':out['metadata'],'records':audit},ensure_ascii=False,indent=2)+'\n','utf-8')
         progress['generations'].append(out['metadata'])
@@ -248,9 +259,9 @@ def main():
     jar,sha=get_package()
     with zipfile.ZipFile(jar) as z:
         species,missing=scan_species(z)
-        drops,unmatched=scan_drops(z,species)
+        drops,alternate,unmatched=scan_drops(z,species)
         spawns,unlinked,categories=parse_spawns(z,species)
-    save_data(species,drops,spawns,sha,missing,unmatched,unlinked)
+    save_data(species,drops,alternate,spawns,sha,missing,unmatched,unlinked)
     jar.unlink(missing_ok=True)
 
 if __name__=='__main__':
