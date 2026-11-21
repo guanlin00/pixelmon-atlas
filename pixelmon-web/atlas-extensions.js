@@ -209,6 +209,9 @@ async function loadItems(){
   if(route()==='items'&&typeof atlasRefreshItemList==='function'){
    if(location.hash==='#items'&&typeof window.render==='function')window.render();
    else atlasRefreshItemList();
+  }else if((route()==='pokemon'||route()==='legendary')&&typeof window.render==='function'){
+   // Also refresh drop names and textures on Pokémon pages after the vanilla index arrives.
+   window.render();
   }
   console.info('Pixelmon Wiki categories:',source.categories.length,'new Wiki cards:',added,'new ID-index cards:',registryCount,'new Minecraft cards:',minecraftCount);
  }catch(e){
@@ -230,5 +233,5 @@ const css=make('style');css.textContent=`
 .atlas-item-directory{margin-top:24px}#atlasExtraItemQuery{width:100%;border:1px solid var(--border);background:var(--surface2);color:var(--text);padding:12px;border-radius:9px}.atlas-extra-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:9px}.atlas-extra-item{display:flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface2);border-radius:9px;padding:8px;word-break:break-word;font-size:12px}.atlas-item-pic{width:36px;height:36px;display:grid;place-items:center;flex-shrink:0;background:var(--surface);border-radius:8px}.atlas-item-pic img{max-width:30px;max-height:30px;width:30px;height:30px;object-fit:contain;image-rendering:pixelated}.atlas-item-fallback{display:none;width:30px;height:30px;place-items:center;font-size:22px;color:var(--muted)}.atlas-item-labels{display:grid;gap:3px;min-width:0}.atlas-item-labels strong{font-size:12px;color:var(--text);font-weight:700}.atlas-item-labels small{font-size:10px;color:var(--muted);word-break:break-word}
 .atlas-extra-item img{height:30px;width:30px;object-fit:contain;image-rendering:pixelated}
 @media(max-width:1350px){.catalog:has(.atlas-gen){grid-template-columns:250px minmax(0,1fr)}.atlas-gen{grid-column:1/-1;grid-row:1;position:static;max-height:none}.atlas-gen-buttons{grid-template-columns:repeat(5,minmax(0,1fr))}}@media(max-width:900px){.catalog:has(.atlas-gen){grid-template-columns:1fr}.atlas-gen{grid-column:1;grid-row:1}.catalog:has(.atlas-gen)>.filters{grid-column:1;grid-row:2}.catalog:has(.atlas-gen)>section{grid-column:1;grid-row:3}.atlas-gen-buttons{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:480px){.atlas-gen-buttons,.atlas-form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-form-picture{height:110px}}`;
-document.head.append(css);update();
+document.head.append(css);update();loadItems();
 })();
