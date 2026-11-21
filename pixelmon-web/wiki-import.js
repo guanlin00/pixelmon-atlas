@@ -21,7 +21,7 @@ function importWikiReference(data){
  }
  for(const [en,refs] of Object.entries(items)){
   let i=ITEMS.find(x=>x.id===wikiItemId(en));
-  if(!i){i={id:wikiItemId(en),zh:WIKI_ITEM_ZH[en]||en,en,icon:'◇',texture:WIKI_ITEM_TEXTURES[en]||null,kind:'Pixelmon Wiki 掉落物',desc:'官方 Wiki 收錄的寶可夢掉落道具，請核對 9.4.2 設定。'};ITEMS.push(i)}
+  if(!i){i={id:wikiItemId(en),zh:WIKI_ITEM_ZH[en]||en,en,icon:'◇',texture:WIKI_ITEM_TEXTURES[en]||null,kind:'Pixelmon Wiki 掉落物',desc:'Pixelmon 掉落物資料；實際來源可能是官方 9.4.2 遊戲檔或第三方圖鑑，請查看寶可夢條目。'};ITEMS.push(i)}
   const newRefs=refs.filter(x=>POKEMON.some(p=>p.id===Number(x.pokemonId))).map(x=>({...x,pokemonId:Number(x.pokemonId)}));
   const merged=[...(i.wikiDrops||[]),...newRefs];
   i.wikiDrops=[...new Map(merged.map(x=>[x.pokemonId+'|'+x.chance+'|'+x.quantity,x])).values()];
@@ -30,17 +30,27 @@ function importWikiReference(data){
  window.wikiLoaded=true;
 }
 async function loadWikiReference(){
- const paths=['wiki-reference.json',...Array.from({length:8},(_,i)=>'wiki-reference-gen'+(i+2)+'.json')];
+ // Prefer Pixelmon's actual 9.4.2 datapack; use the third-party Wiki
+ // mirror only for generations without a valid official-file extraction.
  const imported=[];const unavailable=[];
- for(const path of paths){
-  try{
-   const response=await fetch(path,{cache:'no-store'});
-   if(!response.ok){unavailable.push(path+' HTTP '+response.status);continue}
-   const data=await response.json();
-   if(!data.pokemon)throw Error(path+' lacks pokemon');
-   importWikiReference(data);
-   imported.push({path,count:Object.keys(data.pokemon).length,metadata:data.metadata||{}});
-  }catch(error){unavailable.push(path+': '+error.message)}
+ for(let generation=1;generation<=9;generation++){
+  const candidates=[
+   'official-942-gen'+generation+'.json',
+   generation===1?'wiki-reference.json':'wiki-reference-gen'+generation+'.json'
+  ];
+  let loaded=false;
+  for(const path of candidates){
+   try{
+    const response=await fetch(path,{cache:'no-store'});
+    if(!response.ok){if(response.status!==404)unavailable.push(path+' HTTP '+response.status);continue}
+    const data=await response.json();
+    if(!data.pokemon||!Object.keys(data.pokemon).length)throw Error('empty Pokémon dataset');
+    importWikiReference(data);
+    imported.push({path,count:Object.keys(data.pokemon).length,metadata:data.metadata||{}});
+    loaded=true;break;
+   }catch(error){unavailable.push(path+': '+error.message)}
+  }
+  if(!loaded)unavailable.push('generation '+generation+' has no importable reference');
  }
  window.wikiImportProgress={imported,unavailable,total:imported.reduce((n,x)=>n+x.count,0)};
  window.wikiReferencePath=imported.map(x=>x.path).join(', ');
