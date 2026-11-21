@@ -167,7 +167,9 @@ function legendaryMCModSpawn(p){
   const biomes=r.biomes.length?r.biomes.map(x=>window.atlasBiomeLabels?.translateHistoric(x)||x).join('、'):'不適用／未列出';
   const note=r.notes?esc(r.notes):'—';
   const form=r.form==='normal'?'一般形態':r.form==='galar'?'伽勒爾形態':r.form+' 特殊材質';
-  return '<tr><td>'+esc(form)+'</td><td>'+esc(r.time)+'</td><td>'+esc(biomes)+'</td><td>'+esc(r.location)+'</td><td>'+esc(r.rarity)+'</td><td>'+note+'</td></tr>';
+  const shrineNotes={'寒冽神社':'寒冽神社（急凍鳥召喚祭壇）','熾炎神社':'熾炎神社（火焰鳥召喚祭壇）','雷泣神社':'雷泣神社（閃電鳥召喚祭壇）'};
+  const location=shrineNotes[r.location]||r.location;
+  return '<tr><td>'+esc(form)+'</td><td>'+esc(r.time)+'</td><td>'+esc(biomes)+'</td><td>'+esc(location)+'</td><td>'+esc(r.rarity)+'</td><td>'+note+'</td></tr>';
  }).join('');
  return '<section class="atlas-historic-spawns"><h3>MC百科・傳說寶可夢生成參考（8.4.2）</h3><p class="soft">下表是來源所記載的舊版生成規則，與上方現行參考資料分開呈現，不能保證適用於目前 Pixelmon 或伺服器設定；稀有度數值並非百分比。</p><div class="spawn-table-wrap"><table class="data-table"><thead><tr><th>形態</th><th>時間</th><th>地形／結構（中文參考）</th><th>生成地點／取得方式</th><th>稀有度權重</th><th>條件</th></tr></thead><tbody>'+rows+'</tbody></table></div><p><a class="inline-link" href="https://www.mcmod.cn/item/464852.html" target="_blank" rel="noopener noreferrer">查看 MC百科原始資料 ↗</a></p></section>';
 }
