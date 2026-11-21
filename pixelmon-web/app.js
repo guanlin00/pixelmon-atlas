@@ -83,7 +83,7 @@ const app=document.querySelector('#app');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Compact biome labels for cards and active filters. Keep raw tags in the underlying
 // spawn rules; those IDs are needed for matching and source verification.
-const BIOME_CARD_LABELS={forests:'森林類',birches:'樺木林類',plains:'平原類',taigas:'針葉林類',arid:'乾燥地帶類',mesas:'惡地類',swamps:'沼澤類',jungles:'叢林類',savannas:'莽原類',oceans:'海洋類',rivers:'河流類',beaches:'海灘類',hills:'丘陵類',mountains:'山岳類',mountainous:'山岳地帶',cold:'寒冷地帶',freezing:'冰凍地帶',snowy:'積雪地帶',evil:'陰暗地帶',end:'終界類',ultra_forest:'究極森林',crag_gardens:'岩壁花園',eroded_badlands:'侵蝕惡地',badlands:'惡地',forest:'森林',birch_forest:'樺木森林',desert:'沙漠'};
+const BIOME_CARD_LABELS={forests:'森林',birches:'樺木林',plains:'平原',taigas:'針葉林',arid:'乾燥地帶',mesas:'惡地',swamps:'沼澤',jungles:'叢林',savannas:'莽原',oceans:'海洋',rivers:'河流',beaches:'海灘',hills:'丘陵',mountains:'山岳',mountainous:'山岳地帶',cold:'寒冷地帶',freezing:'冰凍地帶',snowy:'積雪地帶',evil:'陰暗地帶',end:'終界',ultra_forest:'究極森林',crag_gardens:'岩壁花園',eroded_badlands:'侵蝕惡地',badlands:'惡地',forest:'森林',birch_forest:'樺木森林',desert:'沙漠'};
 function biName(raw){
  const id=String(raw||'').trim();
  const tag=id.match(/#pixelmon:spawning\/([a-z0-9_]+)/i);
