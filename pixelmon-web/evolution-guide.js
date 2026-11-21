@@ -3,11 +3,11 @@
  * Most method labels are PokeAPI main-series references and may need Pixelmon verification.
  * Eevee's eight methods are cross-checked against Pixelmon Wiki. */
 (() => {
- const lookup=new Map(ATLAS_EVOLUTION_CONDITIONS.map(([id,label,category])=>[id,{label,category,official:([134,135,136,196,197,470,471,700].includes(id))}]));
+ const lookup=new Map(ATLAS_EVOLUTION_CONDITIONS.map(([id,label,category,official,source])=>[id,{label,category,official:!!official,source:source||null}]));
  const categories=[['all','全部'],['level','等級'],['item','進化道具'],['trade','交換'],['friendship','親密度'],['time','時間'],['special','特殊條件']];
  const state={query:'',category:'all'};
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const label=id=>lookup.get(+id)?.label||'進化條件尚待核對';
+ const label=id=>lookup.get(+id)?.label||'未收錄此形態的獨立進化條件';
  const pokemon=id=>POKEMON.find(p=>p.id===+id);
  function pairs(){
   const q=state.query.trim().toLowerCase();
@@ -26,7 +26,7 @@
    '<a href="#pokemon/'+prev.id+'">'+sprites(prev.id)+'<span>'+esc(prev.zh)+'</span></a><span class="atlas-evo-arrow">→</span>'+
    '<a href="#pokemon/'+p.id+'">'+sprites(p.id)+'<span>'+esc(p.zh)+'</span></a>'+
    '</div><strong>'+esc(label(p.id))+'</strong>'+
-   '<small>'+(x?.official?'Pixelmon Wiki 參考':'主系列資料參考；Pixelmon 條件待核對')+'</small></article>';
+   '<small>'+(x?.official?'已對照 Pixelmon 官方 Wiki':'主系列資料參考（可能與 Pixelmon 版本不同）')+'</small>'+(x?.source?'<a class="atlas-evo-source" href="'+esc(x.source)+'" target="_blank" rel="noopener noreferrer">查看進化條件來源 ↗</a>':'')+'</article>';
  }
  function entries(){
   const list=pairs();
@@ -40,7 +40,7 @@
   '<section class="panel atlas-evo-search"><input class="search-input" type="search" id="evolution-query" value="'+esc(state.query)+'" placeholder="搜尋伊布、皮卡丘、進化石、等級…">'+
   '<div class="atlas-evo-category">'+categories.map(([id,name])=>'<button type="button" class="chip '+(state.category===id?'active':'')+'" data-evolution-category="'+id+'">'+name+'</button>').join('')+'</div></section>'+
   '<div id="evolution-results">'+entries()+'</div>'+
-  '<p class="atlas-info-notice">進化關係與大多數條件取自 PokéAPI 主系列資料，與 Pixelmon 9.4.2 可能不同；伊布的八種進化已參考 Pixelmon 官方 Wiki 個別頁面。<a href="https://pixelmonmod.com/wiki/Eevee" target="_blank" rel="noopener">查看伊布 Wiki 來源</a></p>';
+  '<p class="atlas-info-notice">進化關係與尚未經官方 Wiki 逐項確認的普通條件以 PokéAPI 主系列資料作為參考；有 Pixelmon Wiki 個別證據的特殊進化、地區形態及伊布分支會標出來源。若使用自訂伺服器，實際進化規則可能不同。<a href="https://pixelmonmod.com/wiki/Eevee" target="_blank" rel="noopener">查看伊布 Wiki 來源</a></p>';
  }
  window.AtlasEvolution={render,label,lookup};
  document.addEventListener('input',e=>{
