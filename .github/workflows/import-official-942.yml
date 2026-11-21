@@ -1,0 +1,29 @@
+name: Import official Pixelmon 9.4.2 spawning and drops
+on:
+  push:
+    paths:
+      - .github/workflows/import-official-942.yml
+      - pixelmon-web/tools/import_official_942.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pixelmon-official-942
+  cancel-in-progress: false
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify and extract actual Pixelmon 9.4.2 species data
+        run: python pixelmon-web/tools/import_official_942.py
+      - name: Commit generation-by-generation source and audit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pixelmon-web/official-942-gen*.json pixelmon-web/official-942-progress.json
+          git diff --cached --quiet || (git commit -m "data: import official 9.4.2 generation 1-9 spawn/drop definitions with audit" && git pull --rebase origin main && git push origin HEAD:main)
