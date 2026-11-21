@@ -43,6 +43,6 @@ async function importNationalDex(){
  window.nationalDexImported=true;
  setCatalogStatus(`已載入 ${loaded.length} 隻全國圖鑑資料（中文、英文、屬性、分類）`);
  if(typeof render==='function')render();
- }catch(err){if(typeof loadWikiReference==='function')await loadWikiReference();console.warn('Pokédex import unavailable',err);setCatalogStatus('圖鑑來源暫時無法載入，僅顯示已內建的部分資料。請保持連線並重新整理。')}
+ }catch(err){window.catalogFailed=true;console.warn('Pokédex import unavailable',err);try{if(typeof loadWikiReference==='function')await loadWikiReference()}catch(wikiError){console.warn('Wiki reference unavailable',wikiError)}setCatalogStatus('圖鑑來源暫時無法載入，僅顯示已內建的部分資料。請保持連線並重新整理。');if(typeof render==='function')render()}
 }
 importNationalDex();
