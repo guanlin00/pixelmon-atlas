@@ -245,6 +245,31 @@ function atlasCategoryButtons(){const choices=['all',...(window.atlasItemCategor
 function renderItems(){const result=atlasItemResults();return `<section class="page-heading"><div><div class="eyebrow">Items / Reverse Lookup</div><h1>道具百科</h1><p>分開收錄 Pixelmon 專屬道具與 Minecraft 原版方塊；依用途分類，點開單一道具查看配方、取得來源及是否已核實。</p></div></section><input class="search-input" type="search" id="itemSearch" value="${esc(atlasItemQuery)}" placeholder="⌕　搜尋中文或英文：零餘果、藤蔓、Chesto Berry…"><div class="atlas-categories" id="atlasCategories">${atlasCategoryButtons()}</div><p id="itemCount" class="soft">符合 ${result.total} 種道具${result.total>atlasItemVisible?' · 往下滑可自動載入更多':''}</p><section class="item-grid" id="itemResults" style="margin-top:18px">${result.markup}</section>`}
 function itemCard(i){return `<a class="panel item-card" href="#items/${esc(i.id)}"><div class="item-icon">${itemPicture(i)}</div><div class="eyebrow">${esc(i.kind||'道具')}</div><h3>${esc(i.zh)}</h3><small class="soft">${esc(i.en)}</small><p>${esc(i.desc||'')}</p><span class="inline-link">查看詳情 →</span></a>`}
 
+// Translate third-party acquisition tables without changing their source data.
+const ATLAS_ACQUISITION_HEADERS={
+ 'pokemon':'寶可夢','pokémon':'寶可夢','count':'數量','chance':'機率',
+ 'item':'道具','items':'道具','quantity':'數量','amount':'數量',
+ 'drop':'掉落物','drops':'掉落物','rarity':'稀有度','weight':'權重',
+ 'biome':'生態域','location':'位置','method':'取得方式','source':'來源',
+ 'level':'等級','type':'類型','conditions':'條件','condition':'條件',
+ 'recipe':'合成配方','ingredient':'材料','ingredients':'材料',
+ 'slot':'欄位','price':'價格','cost':'價格','probability':'機率'
+};
+const ATLAS_ACQUISITION_NAMES={
+ 'ho-oh':'鳳王','rayquaza':'烈空坐','deoxys':'代歐奇希斯',
+ 'spiritomb':'花岩怪','zekrom':'捷克羅姆'
+};
+function atlasAcquisitionCell(cell){
+ const raw=String(cell??'').trim();
+ if(!raw)return raw;
+ const lower=raw.toLowerCase();
+ if(ATLAS_ACQUISITION_HEADERS[lower])return ATLAS_ACQUISITION_HEADERS[lower];
+ const normal=lower.normalize('NFKD').replace(/[’']/g,'').replace(/[^a-z0-9]/g,'');
+ const match=POKEMON.find(p=>p.en&&p.en.toLowerCase().normalize('NFKD').replace(/[’']/g,'').replace(/[^a-z0-9]/g,'')===normal);
+ if(match)return match.zh;
+ if(ATLAS_ACQUISITION_NAMES[lower])return ATLAS_ACQUISITION_NAMES[lower];
+ return raw;
+}
 function atlasIndividualAcquisition(i){
  const methods=i.pixelmonIndividualMethods||[];
  if(!methods.length&&!i.pixelmonCreativeCommand)return '';
@@ -256,7 +281,7 @@ function atlasIndividualAcquisition(i){
       name=shop?'可向寶可夢商店店員購買':m.text;
    }
    const rows=Array.isArray(m.rows)?m.rows:[];
-   const table=rows.length?'<div class="atlas-acquisition-table"><table><tbody>'+rows.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(cell)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>':'';
+   const table=rows.length?'<div class="atlas-acquisition-table"><table><tbody>'+rows.map(row=>'<tr>'+row.map(cell=>'<td>'+esc(atlasAcquisitionCell(cell))+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>':'';
    return '<div class="atlas-acquisition-entry"><strong>'+esc(name)+'</strong>'+table+'</div>';
  }).join('');
  return '<section class="atlas-evidence"><h3>個別來源記載的取得途徑</h3>'+cards
