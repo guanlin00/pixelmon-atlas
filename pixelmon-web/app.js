@@ -288,8 +288,22 @@ function atlasIndividualAcquisition(i){
  +(i.pixelmonCreativeCommand?'<div class="atlas-acquisition-entry"><strong>創造模式／管理員指令</strong><code>'+esc(i.pixelmonCreativeCommand)+'</code></div>':'')
  +'<p class="soft" style="font-size:12px">以上為第三方參考網站個別條目記載，戰利品權重不是直接掉落機率；生存模式、伺服器設定與版本可能不同。</p></section>';
 }
+// Cosmetic palettes (e.g. palette:christmas) are not separate drop sources.
+// Preserve actual alternate forms and entries with different chance/quantity.
+function atlasDropFormKey(form){
+ return String(form||'').split(/[|;,]/).map(x=>x.trim()).filter(x=>x&&!/^palette\s*:/i.test(x)).join(' | ');
+}
+function atlasUniqueItemDrops(rows){
+ const result=new Map();
+ for(const d of rows){
+  const form=atlasDropFormKey(d.form);
+  const key=[d.p.id,form,String(d.chance).trim(),String(d.quantity).trim()].join('\u001f');
+  if(!result.has(key))result.set(key,{...d,form:form||null});
+ }
+ return [...result.values()];
+}
 function renderItemDetail(i){
- const entries=(i.wikiDrops?.length?i.wikiDrops.map(d=>({p:POKEMON.find(x=>x.id===d.pokemonId),chance:d.chance,quantity:d.quantity,form:d.form||null})):i.id==='pearl'?PEARL_DROPS.map(([id,zh,en,chance,quantity])=>({p:POKEMON.find(x=>x.id===id),chance,quantity,form:null})):[]).filter(x=>x.p);
+ const entries=atlasUniqueItemDrops((i.wikiDrops?.length?i.wikiDrops.map(d=>({p:POKEMON.find(x=>x.id===d.pokemonId),chance:d.chance,quantity:d.quantity,form:d.form||null})):i.id==='pearl'?PEARL_DROPS.map(([id,zh,en,chance,quantity])=>({p:POKEMON.find(x=>x.id===id),chance,quantity,form:null})):[]).filter(x=>x.p));
  const info=VERIFIED_ITEM_DATA[i.id];const catalogSource=i.pixelmonDetailSource||i.minecraftDetailSource||i.wikiSource||null;const recipe=i.pixelmonRecipe||i.minecraftRecipe;const acquisition=i.pixelmonMethod||i.minecraftMethod||'';const methodLink=i.pixelmonMethodSource||i.minecraftMethodSource||catalogSource;const officialDropsUrl='https://pixelmonmod.com/wiki/Drops';const isPixelmonItem=!i.minecraftGameId;const review=Boolean(i.pixelmonMethodSource&&i.pixelmonMethodStatus?.includes('官方 Wiki'));
  return `<div class="back"><a class="btn quiet" href="#items">← 返回道具百科</a><span class="soft" style="font-size:12px;margin-left:12px">點擊卡片外側的空白處也可返回列表</span></div><section class="detail-main item-detail-page">
  <div class="item-hero-new"><div class="item-avatar">${itemPicture(i)}</div><div><div class="eyebrow">ITEM DATABASE · ${i.kind}</div><h1>${i.zh}</h1><p>${i.en}</p><div class="source-meta">${info?'已匯入官方 Wiki 資料':(entries.length?'已有掉落物參考紀錄':i.pixelmonGameId?'Pixelmon 道具 ID 參考資料':i.minecraftGameId?'Minecraft 原版物品與配方參考資料':catalogSource?'已收錄於 Pixelmon Wiki，道具取得方式待核實':'資料待核對')} · Pixelmon Atlas</div></div></div>
