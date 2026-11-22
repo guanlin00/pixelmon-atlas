@@ -4,6 +4,19 @@ const WIKI_ITEM_TEXTURES = {"Vines":"vine","Twisting Vines":"twisting_vines","Bl
 const WIKI_BIOME_ZH={'Birches':'樺木林','Forests':'森林','Ultra Forest':'究極森林','Crag Gardens':'岩壁花園','Arid':'乾燥地帶','Plains':'平原','Taigas':'針葉林','Mesas':'惡地','Land':'陸地'};
 const WIKI_ITEM_ZH = {"Vines":"藤蔓","Twisting Vines":"扭曲藤蔓","Grass Gem":"草之寶石","Big Root":"大根莖","Blaze Powder":"烈焰粉","Charcoal":"木炭","Blaze Rod":"烈焰桿","Fire Gem":"火之寶石","Magma Cream":"岩漿球","Fire Stone Shard":"火之石碎片","Kelp":"海帶","Scute":"鱗甲","Seagrass":"海草","Water Gem":"水之寶石","Prismarine Crystals":"海磷晶體","String":"線","Cobweb":"蜘蛛網","Cornflower":"矢車菊","Shed Shell":"美麗空殼","Chorus Flower":"歌萊花","Silver Powder":"銀粉","Feather":"羽毛","Raw Chicken":"生雞肉","Glowstone Dust":"螢石粉","Thunder Stone Shard":"雷之石碎片","Pikanium Z":"皮卡丘Z","Apple":"蘋果","Cookie":"餅乾","Chesto Berry":"零餘果","Snorlium Z":"卡比獸Z","Ender Pearl":"終界珍珠"};
 function wikiItemId(en){if(en==='Ender Pearl')return 'pearl';return 'wiki:'+en.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'')}
+// Keep the first distinct drop rule; palette tags denote appearance only.
+function wikiDropFormKey(form){
+ return String(form||'').split(/[|;,]/).map(x=>x.trim()).filter(x=>x&&!/^palette\s*:/i.test(x)).join(' | ');
+}
+function wikiDeduplicateDropRefs(rows){
+ const unique=new Map();
+ for(const row of rows){
+  const form=wikiDropFormKey(row.form);
+  const key=[row.pokemonId,form,String(row.chance).trim(),String(row.quantity).trim()].join('\u001f');
+  if(!unique.has(key))unique.set(key,{...row,form:form||null});
+ }
+ return [...unique.values()];
+}
 function importWikiReference(data){
  if(!data||typeof data!=='object'||!data.pokemon) return;
  window.wikiDataset={...(window.wikiDataset||{}),pokemon:{...(window.wikiDataset?.pokemon||{}),...data.pokemon},items:{...(window.wikiDataset?.items||{}),...(data.items||{})}};
@@ -34,7 +47,7 @@ function importWikiReference(data){
   else if(i.zh===en||!i.zh)i.zh=translated;
   const newRefs=refs.filter(x=>POKEMON.some(p=>p.id===Number(x.pokemonId))).map(x=>({...x,pokemonId:Number(x.pokemonId)}));
   const merged=[...(i.wikiDrops||[]),...newRefs];
-  i.wikiDrops=[...new Map(merged.map(x=>[x.pokemonId+'|'+(x.form||'base')+'|'+x.chance+'|'+x.quantity,x])).values()];
+  i.wikiDrops=wikiDeduplicateDropRefs(merged);
  }
  for(const i of ITEMS){for(const d of i.wikiDrops||[]){const p=POKEMON.find(x=>x.id===d.pokemonId);if(!p)continue;p.verifiedDrops=p.verifiedDrops||[];if(d.form)continue;if(!p.verifiedDrops.some(x=>x.item===i.id&&String(x.chance)===String(d.chance)&&String(x.quantity)===String(d.quantity))){p.verifiedDrops.push({item:i.id,chance:d.chance,quantity:d.quantity,source:window.wikiDataset?.pokemon?.[String(d.pokemonId)]?.source||'https://pixelmonmod.com/wiki/Drops',sourceType:'wiki'})}}}
  window.wikiLoaded=true;
