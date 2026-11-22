@@ -249,3 +249,26 @@ body.light .atlas-favorite-btn.is-favorite{color:#b68300;background:#fff9e5;bord
 
 /* Keep the TM prefix visually separated from its Paldea number. */
 .atlas-tm-code{display:inline-flex;align-items:baseline;gap:8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* Nature guide (dark and light themes share existing surface variables). */
+.nature-guide{max-width:1050px}
+.nature-explain{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-weight:700;margin-bottom:14px}
+.nature-up{color:#4cdbbd;font-weight:800}
+.nature-down{color:#ff9387;font-weight:800}
+.nature-neutral{color:var(--muted)}
+body.light .nature-up{color:#087e62}
+body.light .nature-down{color:#ba4842}
+.nature-filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,220px);gap:16px;margin:20px 0}
+.nature-filters label{display:flex;flex-direction:column;gap:8px;font-weight:700}
+.nature-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:12px}
+.nature-table{border-collapse:collapse;width:100%;min-width:560px;font-size:13px}
+.nature-table td,.nature-table th{padding:12px 15px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+.nature-table tr:last-child td{border-bottom:0}
+.nature-table th{background:var(--surface2);color:var(--muted)}
+.nature-table td:first-child strong,.nature-table td:first-child small{display:block}
+.nature-table td:first-child small{color:var(--muted);margin-top:4px}
+@media(max-width:620px){.nature-filters{grid-template-columns:1fr}.nature-table td,.nature-table th{padding:10px 12px}}
+/* Keep lengthy navigation accessible on smaller-height screens. */
+.sidebar{overflow-y:auto;overscroll-behavior:contain}
+.sidebar .side-nav{flex-shrink:0}
+.sidebar-bottom{flex-shrink:0}
