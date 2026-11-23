@@ -272,3 +272,10 @@ body.light .nature-down{color:#ba4842}
 .sidebar{overflow-y:auto;overscroll-behavior:contain}
 .sidebar .side-nav{flex-shrink:0}
 .sidebar-bottom{flex-shrink:0}
+
+/* EV training biome selector and contextual encounter details. */
+.ev-controls{grid-template-columns:minmax(190px,1.7fr) repeat(2,minmax(125px,1fr));}
+.ev-encounter{display:block;margin-top:7px;line-height:1.55;color:var(--muted);font-size:11px;white-space:normal;overflow-wrap:anywhere;}
+.ev-card-body{min-width:0;}
+@media(max-width:850px){.ev-controls{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:520px){.ev-controls{grid-template-columns:1fr 1fr;}.ev-controls label:first-child,.ev-controls label:last-child{grid-column:1/-1;}}
