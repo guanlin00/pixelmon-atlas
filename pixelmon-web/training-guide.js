@@ -28,7 +28,7 @@
     main=attackIndex;secondary=spe>=65?5:0;
     nature=spe>=85?props[role].fastNature:props[role].nature;
     ev=[4,0,0,0,0,0];ev[main]=252;ev[secondary]=252;ev[0]=(main!==0&&secondary!==0)?4:ev[0];
-    if(secondary===0)ev=[252,0,0,0,0,0],ev[main]=252;
+    if(secondary===0){ev=[252,0,0,0,0,4];ev[main]=252;}
     reason=(role==='physical'?'物攻':'特攻')+'種族值 '+s[main]+'，速度 '+spe+'，以'+attr[main]+'和'+attr[secondary]+'為主要投入方向';
   }else{
     main=role==='defensive'?2:4;secondary=0;
