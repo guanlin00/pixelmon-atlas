@@ -279,3 +279,20 @@ body.light .nature-down{color:#ba4842}
 .ev-card-body{min-width:0;}
 @media(max-width:850px){.ev-controls{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:520px){.ev-controls{grid-template-columns:1fr 1fr;}.ev-controls label:first-child,.ev-controls label:last-child{grid-column:1/-1;}}
+
+/* Suggested Pokémon builds: reuse the existing theme palette. */
+.atlas-training{padding:8px 0 18px}
+.atlas-training h3{font-size:21px;margin:9px 0}
+.atlas-training h4{font-size:16px;margin:24px 0 12px}
+.atlas-training-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.atlas-training-part{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:14px;min-width:0}
+.atlas-training-part strong{display:block;color:var(--accent);font-size:12px}
+.atlas-training-part p{font-weight:650;font-size:14px;line-height:1.8;margin:7px 0}
+.atlas-training-part small{color:var(--muted);font-size:12px}
+.atlas-training-moves{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;list-style:none;counter-reset:trainingmoves;padding:0;margin:12px 0}
+.atlas-training-moves li{counter-increment:trainingmoves;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:13px;min-width:0}
+.atlas-training-moves li:before{content:counter(trainingmoves) " · ";color:var(--accent);font-weight:800}
+.atlas-training-moves strong{font-size:14px}
+.atlas-training-moves small{display:block;color:var(--muted);margin-top:5px}
+.atlas-training-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}
+@media(max-width:620px){.atlas-training-grid,.atlas-training-moves{grid-template-columns:1fr}}
