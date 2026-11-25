@@ -18,7 +18,9 @@
  }).join('');
  function matchesBiome(p){
   if(!st.biome)return [];
-  return (p.rules||[]).filter(r=>r.verified&&r.biome===st.biome&&battleLocations.test(String(r.location||'').trim())&&
+  // The vanilla Mushroom Fields biome belongs to Pixelmon's Mushroom spawning tag.
+  const ruleBiome=st.biome==='minecraft:mushroom_fields'?'#pixelmon:spawning/mushroom':st.biome;
+  return (p.rules||[]).filter(r=>r.verified&&r.biome===ruleBiome&&battleLocations.test(String(r.location||'').trim())&&
    !/\b(?:palette|species):/i.test(String(r.condition||'')));
  }
  function encounter(p){
@@ -71,7 +73,7 @@
   '<label>依世代搜尋<select class="select" id="ev-gen">'+options(gens.map((g,i)=>[i,g[0]]),st.gen)+'</select></label>'+ 
   '<label>地形／生態域<select class="select" id="ev-biome">'+biomeChoices()+'</select></label>'+
   '</section><section id="ev-results">'+results()+'</section>'+
-  '<p class="ev-note">地形依 Pixelmon 9.4.2 已匯入的生成條件比對。標示「分類」的是 Pixelmon 生態域標籤，不是單一 Minecraft 地形；地形篩選只列出有陸地、草地、水中、空中等戰鬥生成紀錄的寶可夢，排除 Curry、Forage 等非直接對戰取得方式。出沒仍受時間、天氣、等級、特殊條件與伺服器設定影響；列表不是保證出現或出現機率排名。</p>'+ 
+  '<p class="ev-note">地形依 Pixelmon 9.4.2 已匯入的生成條件比對。標示「分類」的是 Pixelmon 生態域標籤，不是單一 Minecraft 地形；蘑菇島／蘑菇原野會以官方 Mushroom 生態域分類的生成規則比對；地形篩選只列出有陸地、草地、水中、空中等戰鬥生成紀錄的寶可夢，排除 Curry、Forage 等非直接對戰取得方式。出沒仍受時間、天氣、等級、特殊條件與伺服器設定影響；列表不是保證出現或出現機率排名。</p>'+ 
   '<p class="ev-note">資料來源：PokéAPI 的一般形態努力值資料。這是主系列參考值，尚未逐一核對 Pixelmon 9.4.2 特殊形態及伺服器修改；不含努力值道具、寶可病毒等加成。</p>';
  }
  function detail(p){return '<section class="ev-detail"><h3>擊敗後獲得的努力值（EV）</h3>'+
